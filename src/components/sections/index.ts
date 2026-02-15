@@ -1,0 +1,5 @@
+export { HeroSection } from './HeroSection'
+export { IndustrySolutionsSection } from './IndustrySolutionsSection'
+export { WhyPartnerSection } from './WhyPartnerSection'
+export { InnovationPortfolioSection } from './InnovationPortfolioSection'
+export { CTASection } from './CTASection'
