@@ -7,44 +7,44 @@ const IndustrySolutionsSection = () => {
   const industries = [
     {
       title: 'Manufacturing Solutions',
-      description: 'Transform your manufacturing operations with AI-powered predictive maintenance, quality control, and process optimization.',
+      description: 'AI training and custom development for manufacturers. Capture tribal knowledge, optimize processes, and reduce system costs.',
       icon: faIndustry,
       color: 'primary',
       features: [
-        'Predictive maintenance systems',
-        'AI-powered quality control',
-        'Production optimization',
-        'Smart automation integration'
+        'AI Readiness Assessments',
+        'Tribal knowledge capture (SmartHive)',
+        'Process optimization',
+        'TSVMap Methodology'
       ],
-      caseStudy: '35% reduction in quality defects through AI vision systems',
+      caseStudy: '8+ MEP partnerships including SCMEP, Purdue MEP, Georgia MEP',
       href: '/manufacturing'
     },
     {
       title: 'Healthcare Technology',
-      description: 'Improve patient outcomes and operational efficiency with healthcare-specific AI and data analytics solutions.',
+      description: 'AI solutions for healthcare operations, compliance, and workflow optimization with security-first approach.',
       icon: faHospital,
       color: 'accent',
       features: [
-        'Operational efficiency systems',
-        'Clinical decision support',
-        'Regulatory compliance tools',
-        'Healthcare data analytics'
+        'Operational efficiency AI',
+        'Compliance-aware solutions',
+        'Workflow automation',
+        'AI training programs'
       ],
-      caseStudy: '25% improvement in patient scheduling efficiency',
+      caseStudy: 'Custom AI solutions designed for healthcare compliance',
       href: '/healthcare'
     },
     {
       title: 'Commercial Business AI',
-      description: 'Drive growth and competitive advantage with business intelligence, automation, and customer experience enhancement.',
+      description: 'AI education and custom development for businesses with 10-600 employees looking to leverage AI strategically.',
       icon: faBuilding,
       color: 'warning',
       features: [
-        'Business intelligence & analytics',
-        'Process automation',
-        'Customer experience AI',
-        'Digital transformation'
+        'AI education & training',
+        'Custom AI development',
+        'Business process automation',
+        'AI strategy consulting'
       ],
-      caseStudy: '40% increase in customer engagement through AI personalization',
+      caseStudy: 'Ideal for $10M-$500M revenue companies',
       href: '/commercial'
     }
   ]

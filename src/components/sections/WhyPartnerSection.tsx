@@ -13,32 +13,32 @@ const WhyPartnerSection = () => {
   const advantages = [
     {
       icon: faBullseye,
-      title: 'Industry Specialization',
-      description: 'Deep expertise in Manufacturing, Healthcare & Commercial Business',
+      title: 'AI Education Expert',
+      description: 'Creator of Purdue MEP AI Series, AI the Spreadsheet Killer, 12 Week AI Bootcamp',
       color: 'secondary'
     },
     {
       icon: faRocket,
-      title: 'AI Technology Leadership',
-      description: 'Creator of SmartHive.online and custom AI solutions',
+      title: 'Custom AI Development',
+      description: 'Creator of SmartHive.online - captures tribal knowledge as AI personas',
       color: 'primary'
     },
     {
       icon: faCheck,
-      title: 'Proven Results',
-      description: '42+ years of successful technology implementations',
+      title: 'Proven Methodologies',
+      description: 'TSVMap Methodology and AI Readiness Assessment with 30+ implementations',
       color: 'success'
     },
     {
       icon: faLightbulb,
-      title: 'Practical Solutions',
-      description: 'Making enterprise AI accessible and affordable for all businesses',
+      title: '45+ Developer Team Access',
+      description: 'Solo consultant with access to expert development resources when needed',
       color: 'warning'
     },
     {
       icon: faChartBar,
-      title: 'Measurable Outcomes',
-      description: 'Track record of efficiency gains and cost reductions',
+      title: 'Real Savings',
+      description: 'Saved manufacturers $50K - $1M in system expenses per engagement',
       color: 'accent'
     }
   ]
@@ -78,18 +78,18 @@ const WhyPartnerSection = () => {
 
         <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 text-center">
           <h3 className="text-2xl font-bold text-secondary mb-4">
-            Ready to Transform Your Business?
+            Start With 2 Hours Free AI Consulting
           </h3>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Whether you&apos;re in Manufacturing, Healthcare, or Commercial Business, 
-            we have the industry-specific expertise to drive your digital transformation.
+            Whether you&apos;re in Manufacturing, Healthcare, or Commercial Business,
+            discover how AI can transform your operations with no upfront commitment.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
-              <Link href="/contact">Book Industry Consultation</Link>
+              <Link href="/book-time">Get Your Free Consultation</Link>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <Link href="/resources">Download Capability Statement</Link>
+              <Link href="/services">View Our Services</Link>
             </Button>
           </div>
         </div>

@@ -2,269 +2,154 @@ import React from 'react'
 import Link from 'next/link'
 import { Metadata } from 'next'
 import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Icon } from '@/components/ui'
-import { 
-  faChartBar, 
-  faCogs, 
-  faRocket, 
-  faLaptop, 
-  faShoppingCart, 
-  faUniversity, 
-  faBriefcase, 
-  faCode, 
-  faCheck, 
-  faCircle, 
-  faDatabase, 
-  faRobot, 
-  faCloud, 
-  faSmile 
+import {
+  faChartBar,
+  faCogs,
+  faGraduationCap,
+  faBrain,
+  faCheck,
+  faCircle,
+  faHandshake,
+  faLightbulb
 } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
-  title: 'Commercial Business Solutions - AI & Digital Transformation | Werne Enterprises',
-  description: 'Drive growth and competitive advantage with business intelligence, automation, and customer experience AI for commercial businesses. 42+ years of proven results.',
+  title: 'Commercial Business Solutions - AI Training & Consulting | Werne Enterprises',
+  description: 'AI education, consulting, and custom development for commercial businesses. 9 years experience. 2 hours free AI consulting.',
 }
 
 const CommercialPage = () => {
   const solutions = [
     {
-      title: 'Business Intelligence & Analytics',
-      description: 'Transform data into actionable insights with advanced analytics and AI-powered business intelligence.',
-      icon: faChartBar,
+      title: 'AI Training for Business',
+      description: 'Comprehensive AI education programs to build your team\'s capabilities.',
+      icon: faGraduationCap,
       color: 'primary',
       benefits: [
-        '50% faster decision-making',
-        '35% improvement in forecasting accuracy',
-        '40% increase in operational efficiency',
-        'Real-time performance insights'
+        'Business-specific AI curriculum',
+        'Practical implementation training',
+        'Team capability building',
+        'Change management support'
       ],
       features: [
-        'Advanced data visualization',
-        'Predictive analytics models',
-        'Real-time dashboards',
-        'Automated reporting systems',
-        'Performance KPI tracking',
-        'Market trend analysis'
+        'AI fundamentals for business',
+        'Process automation concepts',
+        'Data analytics applications',
+        'Tool selection guidance',
+        'Implementation planning',
+        'Hands-on exercises'
+      ]
+    },
+    {
+      title: 'Custom AI Development',
+      description: 'Build AI solutions with SmartHive.online and custom development for your business needs.',
+      icon: faBrain,
+      color: 'secondary',
+      benefits: [
+        'Tribal knowledge capture',
+        'Custom workflow automation',
+        'AI-assisted operations',
+        'Knowledge preservation'
       ],
-      case_study: 'Retail chain increased sales by 25% using AI-powered demand forecasting'
+      features: [
+        'SmartHive.online platform',
+        'Business-specific AI personas',
+        'Process automation',
+        'Integration planning',
+        'Training support',
+        'Ongoing optimization'
+      ]
+    },
+    {
+      title: 'Business Intelligence',
+      description: 'AI consulting for data-driven decision making and business analytics.',
+      icon: faChartBar,
+      color: 'accent',
+      benefits: [
+        'Data strategy development',
+        'Analytics implementation',
+        'Reporting automation',
+        'Decision support systems'
+      ],
+      features: [
+        'Current state assessment',
+        'Data readiness evaluation',
+        'Analytics tool selection',
+        'Dashboard development',
+        'Process integration',
+        'Team training'
+      ]
     },
     {
       title: 'Process Automation',
-      description: 'Streamline operations and reduce costs with intelligent automation of repetitive business processes.',
+      description: 'AI consulting for streamlining operations and reducing manual work.',
       icon: faCogs,
-      color: 'secondary',
+      color: 'warning',
       benefits: [
-        '60% reduction in manual tasks',
-        '45% decrease in processing time',
-        '80% improvement in accuracy',
-        'Significant cost savings'
-      ],
-      features: [
-        'Robotic Process Automation (RPA)',
         'Workflow optimization',
-        'Document processing automation',
-        'Integration with existing systems',
-        'Exception handling',
-        'Audit trail and compliance'
-      ],
-      case_study: 'Financial services firm automated 70% of back-office operations, saving $1.2M annually'
-    },
-    {
-      title: 'Customer Experience AI',
-      description: 'Enhance customer satisfaction and loyalty with AI-powered personalization and support systems.',
-      icon: faRocket,
-      color: 'accent',
-      benefits: [
-        '40% increase in customer engagement',
-        '35% improvement in satisfaction scores',
-        '50% reduction in response time',
-        'Personalized customer journeys'
+        'Manual task reduction',
+        'Operational efficiency',
+        'Cost optimization'
       ],
       features: [
-        'AI chatbots and virtual assistants',
-        'Personalization engines',
-        'Sentiment analysis',
-        'Customer behavior prediction',
-        'Omnichannel integration',
-        'Real-time recommendations'
-      ],
-      case_study: 'E-commerce company increased conversion rates by 40% through AI personalization'
-    },
-    {
-      title: 'Digital Transformation',
-      description: 'Comprehensive digital transformation strategy and implementation for competitive advantage.',
-      icon: faLaptop,
-      color: 'warning',
-      benefits: [
-        '45% improvement in operational agility',
-        '30% faster time-to-market',
-        '55% increase in digital revenue',
-        'Enhanced competitive positioning'
-      ],
-      features: [
-        'Digital strategy development',
-        'Cloud migration and optimization',
-        'API-first architecture',
-        'Data modernization',
-        'Mobile-first solutions',
-        'Legacy system integration'
-      ],
-      case_study: 'Manufacturing company achieved 50% revenue growth through digital transformation'
-    }
-  ]
-
-  const businessTypes = [
-    {
-      type: 'Retail & E-commerce',
-      icon: faShoppingCart,
-      color: 'primary',
-      challenges: [
-        'Inventory management complexity',
-        'Customer acquisition costs',
-        'Omnichannel coordination',
-        'Price optimization'
-      ],
-      solutions: [
-        'AI-powered inventory optimization',
-        'Customer lifetime value analysis',
-        'Unified commerce platforms',
-        'Dynamic pricing algorithms'
-      ],
-      results: '40% improvement in inventory turnover, 25% increase in customer retention'
-    },
-    {
-      type: 'Financial Services',
-      icon: faUniversity,
-      color: 'secondary',
-      challenges: [
-        'Regulatory compliance complexity',
-        'Risk management',
-        'Customer onboarding efficiency',
-        'Fraud detection and prevention'
-      ],
-      solutions: [
-        'Automated compliance monitoring',
-        'AI-powered risk assessment',
-        'Digital onboarding platforms',
-        'Real-time fraud detection'
-      ],
-      results: '60% faster onboarding, 80% reduction in fraud losses'
-    },
-    {
-      type: 'Professional Services',
-      icon: faBriefcase,
-      color: 'accent',
-      challenges: [
-        'Project management efficiency',
-        'Resource allocation optimization',
-        'Client communication',
-        'Knowledge management'
-      ],
-      solutions: [
-        'AI project management tools',
-        'Resource optimization systems',
-        'Client portal platforms',
-        'Knowledge management systems'
-      ],
-      results: '35% improvement in project delivery, 50% better resource utilization'
-    },
-    {
-      type: 'Technology Companies',
-      icon: faCode,
-      color: 'warning',
-      challenges: [
-        'Product development acceleration',
-        'Customer acquisition scaling',
-        'Data-driven decision making',
-        'Competitive differentiation'
-      ],
-      solutions: [
-        'Agile development platforms',
-        'Growth hacking automation',
-        'Advanced analytics systems',
-        'AI-powered product features'
-      ],
-      results: '50% faster product delivery, 45% improvement in user engagement'
-    }
-  ]
-
-  const capabilities = [
-    {
-      category: 'Data & Analytics',
-      icon: '📊',
-      technologies: [
-        'Business Intelligence platforms',
-        'Machine Learning models',
-        'Predictive analytics',
-        'Data warehousing',
-        'Real-time analytics',
-        'Data visualization'
-      ]
-    },
-    {
-      category: 'Automation & AI',
-      icon: '🤖',
-      technologies: [
-        'Robotic Process Automation',
-        'Intelligent document processing',
-        'Workflow automation',
-        'AI-powered chatbots',
-        'Computer vision',
-        'Natural language processing'
-      ]
-    },
-    {
-      category: 'Cloud & Infrastructure',
-      icon: '☁️',
-      technologies: [
-        'Cloud migration and optimization',
-        'Microservices architecture',
-        'API development',
-        'DevOps automation',
-        'Security frameworks',
-        'Scalable infrastructure'
-      ]
-    },
-    {
-      category: 'Customer Experience',
-      icon: '😊',
-      technologies: [
-        'Personalization engines',
-        'Customer journey mapping',
-        'Omnichannel platforms',
-        'Customer analytics',
-        'Marketing automation',
-        'Customer support AI'
+        'Process analysis',
+        'Automation opportunities',
+        'Tool recommendations',
+        'Implementation roadmap',
+        'Change management',
+        'Results measurement'
       ]
     }
   ]
 
-  const implementation = [
+  const aiApplications = [
     {
-      phase: 'Strategy & Assessment',
-      duration: '2-4 weeks',
-      description: 'Comprehensive business analysis and digital transformation strategy development'
+      area: 'Customer Experience',
+      description: 'AI applications for improving customer interactions and service.',
+      examples: [
+        'Customer service automation',
+        'Communication personalization',
+        'Response optimization',
+        'Feedback analysis'
+      ]
     },
     {
-      phase: 'Solution Design',
-      duration: '3-6 weeks',
-      description: 'Detailed solution architecture and implementation planning'
+      area: 'Operations & Efficiency',
+      description: 'AI for streamlining business operations and workflows.',
+      examples: [
+        'Process automation',
+        'Document processing',
+        'Scheduling optimization',
+        'Resource allocation'
+      ]
     },
     {
-      phase: 'Development & Integration',
-      duration: '8-16 weeks',
-      description: 'Custom development and integration with existing systems'
+      area: 'Sales & Marketing',
+      description: 'AI applications for sales enablement and marketing automation.',
+      examples: [
+        'Lead qualification',
+        'Content generation',
+        'Campaign optimization',
+        'Customer insights'
+      ]
     },
     {
-      phase: 'Testing & Deployment',
-      duration: '2-4 weeks',
-      description: 'Comprehensive testing and phased deployment to production'
-    },
-    {
-      phase: 'Optimization & Support',
-      duration: 'Ongoing',
-      description: 'Continuous optimization and technical support'
+      area: 'Knowledge Management',
+      description: 'Capture and preserve business knowledge with AI.',
+      examples: [
+        'Expertise preservation',
+        'Training content creation',
+        'Documentation automation',
+        'Best practice capture'
+      ]
     }
   ]
+
+  const idealClient = {
+    employees: '10-600',
+    revenue: '$10M-$500M',
+    description: 'Mid-sized businesses ready to strategically adopt AI'
+  }
 
   return (
     <>
@@ -273,41 +158,41 @@ const CommercialPage = () => {
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="warning" size="lg" className="mb-6">
-              Commercial Business Solutions
+              Commercial Business AI Solutions
             </Badge>
-            
+
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              Drive Growth with{' '}
+              AI Solutions for{' '}
               <span className="text-warning">Commercial</span>{' '}
-              AI Solutions
+              Business
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Accelerate business growth and competitive advantage with AI-powered business intelligence, 
-              automation, and customer experience solutions tailored for commercial enterprises.
+              AI education, custom development, and consulting for commercial businesses.
+              Capture tribal knowledge, automate processes, and build your team&apos;s AI capabilities.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="xl" asChild>
-                <Link href="/contact">Schedule Business Assessment</Link>
+                <Link href="/book-time">Get 2 Hours Free Consulting</Link>
               </Button>
               <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-secondary" asChild>
-                <Link href="#solutions">Explore Business Solutions</Link>
+                <Link href="#solutions">Explore Solutions</Link>
               </Button>
             </div>
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
-                <div className="text-3xl font-bold text-warning mb-2">300+</div>
-                <div className="text-gray-300">Commercial Clients</div>
+                <div className="text-3xl font-bold text-warning mb-2">9</div>
+                <div className="text-gray-300">Years Consulting Experience</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary mb-2">45%</div>
-                <div className="text-gray-300">Average Revenue Growth</div>
+                <div className="text-3xl font-bold text-primary mb-2">30+</div>
+                <div className="text-gray-300">Successful Implementations</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-accent mb-2">6x</div>
-                <div className="text-gray-300">ROI Within 12 Months</div>
+                <div className="text-3xl font-bold text-accent mb-2">2 Hours</div>
+                <div className="text-gray-300">Free Consultation</div>
               </div>
             </div>
           </div>
@@ -322,127 +207,51 @@ const CommercialPage = () => {
               Commercial AI Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to accelerate growth, 
-              improve efficiency, and create competitive advantages.
-            </p>
-          </div>
-
-          <div className="space-y-12">
-            {solutions.map((solution, index) => (
-              <Card key={index} className="overflow-hidden">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  <div className="p-8">
-                    <div className="flex items-center mb-6">
-                      <Icon icon={solution.icon} size="xl" color="primary" className="mr-4" />
-                      <div>
-                        <h3 className="text-3xl font-bold text-secondary">{solution.title}</h3>
-                        <p className="text-lg text-gray-600 mt-2">{solution.description}</p>
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-6">
-                      <div>
-                        <h4 className="text-lg font-semibold text-secondary mb-3">Key Benefits</h4>
-                        <ul className="space-y-2">
-                          {solution.benefits.map((benefit, benefitIndex) => (
-                            <li key={benefitIndex} className="flex items-start">
-                              <span className="text-warning mr-2">✓</span>
-                              <span className="text-gray-700">{benefit}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      
-                      <div className="bg-warning/10 p-4 rounded-lg">
-                        <div className="text-sm font-medium text-warning mb-1">Success Story</div>
-                        <div className="text-sm text-gray-700">{solution.case_study}</div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-gray-100 p-8">
-                    <h4 className="text-lg font-semibold text-secondary mb-4">Solution Features</h4>
-                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                      {solution.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start">
-                          <span className="text-primary mr-2">•</span>
-                          <span className="text-gray-700 text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    
-                    <div className="mt-6">
-                      <Button asChild className="w-full">
-                        <Link href="/contact">Learn More</Link>
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Business Types */}
-      <section className="py-20 bg-white">
-        <Container>
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
-              Industry Expertise
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Specialized solutions for different types of commercial businesses 
-              and their unique challenges.
+              Comprehensive AI services designed for commercial businesses with
+              {idealClient.employees} employees and {idealClient.revenue} in revenue.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {businessTypes.map((business, index) => (
+            {solutions.map((solution, index) => (
               <Card key={index} className="h-full">
                 <CardHeader>
                   <div className="flex items-center mb-4">
-                    <Icon icon={business.icon} size="xl" color="primary" className="mr-4" />
-                    <CardTitle className="text-2xl">{business.type}</CardTitle>
+                    <div className="mr-4">
+                      <Icon
+                        icon={solution.icon}
+                        size="4xl"
+                        color={solution.color as 'primary' | 'secondary' | 'accent' | 'warning'}
+                      />
+                    </div>
+                    <div>
+                      <CardTitle className="text-2xl">{solution.title}</CardTitle>
+                      <p className="text-lg text-gray-600 mt-2">{solution.description}</p>
+                    </div>
                   </div>
                 </CardHeader>
-                
+
                 <CardContent className="flex-1">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-4">
                     <div>
-                      <h4 className="font-semibold text-secondary mb-3">Key Challenges</h4>
+                      <h4 className="font-semibold text-secondary mb-2">Key Benefits</h4>
                       <ul className="space-y-2">
-                        {business.challenges.map((challenge, challengeIndex) => (
-                          <li key={challengeIndex} className="flex items-start">
-                            <span className="text-danger mr-2">•</span>
-                            <span className="text-gray-700 text-sm">{challenge}</span>
+                        {solution.benefits.map((benefit, benefitIndex) => (
+                          <li key={benefitIndex} className="flex items-start">
+                            <div className="mr-2 mt-1">
+                              <Icon icon={faCheck} size="lg" color="success" />
+                            </div>
+                            <span className="text-gray-700">{benefit}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
-                    
-                    <div>
-                      <h4 className="font-semibold text-secondary mb-3">Our Solutions</h4>
-                      <ul className="space-y-2">
-                        {business.solutions.map((solution, solutionIndex) => (
-                          <li key={solutionIndex} className="flex items-start">
-                            <span className="text-warning mr-2">✓</span>
-                            <span className="text-gray-700 text-sm">{solution}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                  
-                  <div className="mt-6 bg-gray-100 p-4 rounded-lg">
-                    <div className="text-sm font-medium text-secondary mb-1">Proven Results</div>
-                    <div className="text-sm text-gray-700">{business.results}</div>
                   </div>
                 </CardContent>
-                
+
                 <CardFooter>
-                  <Button asChild className="w-full" variant="outline">
-                    <Link href="/contact">Discuss Your Business</Link>
+                  <Button asChild className="w-full">
+                    <Link href="/book-time">Learn More</Link>
                   </Button>
                 </CardFooter>
               </Card>
@@ -451,33 +260,34 @@ const CommercialPage = () => {
         </Container>
       </section>
 
-      {/* Capabilities */}
-      <section className="py-20 bg-gray-50">
+      {/* AI Applications */}
+      <section className="py-20 bg-white">
         <Container>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
-              Technology Capabilities
+              AI Applications for Business
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive technology stack and capabilities to support 
-              your digital transformation journey.
+              Areas where AI can improve your business operations and customer experience.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {capabilities.map((capability, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {aiApplications.map((application, index) => (
               <Card key={index} className="h-full">
                 <CardHeader>
-                  <div className="text-4xl mb-4 text-center">{capability.icon}</div>
-                  <CardTitle className="text-xl text-center">{capability.category}</CardTitle>
+                  <CardTitle className="text-2xl">{application.area}</CardTitle>
+                  <CardDescription className="text-lg">{application.description}</CardDescription>
                 </CardHeader>
-                
-                <CardContent className="flex-1">
+
+                <CardContent>
                   <ul className="space-y-2">
-                    {capability.technologies.map((tech, techIndex) => (
-                      <li key={techIndex} className="flex items-start">
-                        <span className="text-warning mr-2">•</span>
-                        <span className="text-gray-700 text-sm">{tech}</span>
+                    {application.examples.map((example, exampleIndex) => (
+                      <li key={exampleIndex} className="flex items-start">
+                        <div className="mr-2 mt-1">
+                          <Icon icon={faCircle} size="lg" color="warning" />
+                        </div>
+                        <span className="text-gray-700">{example}</span>
                       </li>
                     ))}
                   </ul>
@@ -488,30 +298,101 @@ const CommercialPage = () => {
         </Container>
       </section>
 
-      {/* Implementation Process */}
+      {/* SmartHive Feature */}
+      <section className="py-20 bg-gray-50">
+        <Container>
+          <div className="max-w-4xl mx-auto text-center">
+            <Badge variant="accent" size="lg" className="mb-6">
+              Featured Solution
+            </Badge>
+
+            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
+              Capture Business Knowledge with SmartHive
+            </h2>
+
+            <p className="text-xl text-gray-600 mb-8">
+              Your experienced team members hold valuable institutional knowledge.
+              SmartHive.online captures that expertise and transforms it into AI personas
+              that are always available to support operations and train new employees.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <Card>
+                <CardContent className="p-6 text-center">
+                  <div className="text-4xl mb-3">👨‍💼</div>
+                  <h3 className="font-semibold text-secondary mb-2">Interview Experts</h3>
+                  <p className="text-gray-600 text-sm">Capture knowledge from your most experienced team members</p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardContent className="p-6 text-center">
+                  <div className="text-4xl mb-3">🤖</div>
+                  <h3 className="font-semibold text-secondary mb-2">Create AI Personas</h3>
+                  <p className="text-gray-600 text-sm">Transform expertise into always-available AI assistants</p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardContent className="p-6 text-center">
+                  <div className="text-4xl mb-3">📚</div>
+                  <h3 className="font-semibold text-secondary mb-2">Preserve Knowledge</h3>
+                  <p className="text-gray-600 text-sm">Business knowledge that stays with your company</p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <Button size="xl" asChild>
+              <a href="https://smarthive.online" target="_blank" rel="noopener noreferrer">
+                Learn More About SmartHive
+              </a>
+            </Button>
+          </div>
+        </Container>
+      </section>
+
+      {/* Why Choose Us */}
       <section className="py-20 bg-white">
         <Container>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
-              Implementation Process
+              Why Work With Us
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our proven methodology ensures successful implementation with 
-              measurable business results.
+              9 years of consulting experience helping businesses adopt technology strategically.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-            {implementation.map((phase, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-warning text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  {index + 1}
-                </div>
-                <h3 className="text-lg font-semibold text-secondary mb-2">{phase.phase}</h3>
-                <div className="text-sm text-warning font-medium mb-3">{phase.duration}</div>
-                <p className="text-gray-600 text-sm">{phase.description}</p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="text-center">
+              <CardContent className="p-8">
+                <Icon icon={faHandshake} size="3xl" color="primary" className="mb-4" />
+                <h3 className="text-xl font-semibold text-secondary mb-3">Experienced Partner</h3>
+                <p className="text-gray-600">
+                  9 years helping businesses navigate technology decisions with 30+ successful implementations.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center">
+              <CardContent className="p-8">
+                <Icon icon={faLightbulb} size="3xl" color="warning" className="mb-4" />
+                <h3 className="text-xl font-semibold text-secondary mb-3">Practical Approach</h3>
+                <p className="text-gray-600">
+                  Focus on practical AI applications that deliver real business value, not hype.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center">
+              <CardContent className="p-8">
+                <Icon icon={faBrain} size="3xl" color="accent" className="mb-4" />
+                <h3 className="text-xl font-semibold text-secondary mb-3">Custom Solutions</h3>
+                <p className="text-gray-600">
+                  AI solutions tailored to your specific business needs with SmartHive.online and custom development.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </Container>
       </section>
@@ -521,29 +402,29 @@ const CommercialPage = () => {
         <Container>
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Business Results
+              Proven Track Record
             </h2>
             <p className="text-xl text-gray-100 max-w-3xl mx-auto">
-              Our commercial solutions deliver measurable business outcomes and sustainable growth.
+              9 years of consulting experience across manufacturing, healthcare, and commercial businesses.
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">45%</div>
-              <div className="text-gray-100">Revenue Growth</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">30+</div>
+              <div className="text-gray-100">Successful Implementations</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">40%</div>
-              <div className="text-gray-100">Efficiency Improvement</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">0</div>
+              <div className="text-gray-100">Implementation Failures</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">60%</div>
-              <div className="text-gray-100">Cost Reduction</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">9</div>
+              <div className="text-gray-100">Years Experience</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">6x</div>
-              <div className="text-gray-100">ROI Achievement</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">$50K-$1M</div>
+              <div className="text-gray-100">Saved Per Client</div>
             </div>
           </div>
         </Container>
@@ -554,18 +435,18 @@ const CommercialPage = () => {
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Accelerate Your Business Growth?
+              Start With 2 Hours Free
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let&apos;s discuss how our commercial AI solutions can drive growth, 
-              improve efficiency, and create competitive advantages for your business.
+              No commitment required. Let&apos;s discuss your business AI goals
+              and see if we&apos;re a good fit.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="xl" variant="warning" asChild>
-                <Link href="/contact">Schedule Business Assessment</Link>
+                <Link href="/book-time">Book Free Consultation</Link>
               </Button>
               <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-secondary" asChild>
-                <Link href="/case-studies">View Success Stories</Link>
+                <Link href="/services">View All Services</Link>
               </Button>
             </div>
           </div>

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     default: "AI Innovation Services | Manufacturing, Healthcare & Commercial | Werne Enterprises",
     template: "%s | Werne Enterprises"
   },
-  description: "Transform your business with AI innovation services. 42+ years experience in manufacturing, healthcare & commercial solutions. RAG, MCP & custom AI development. Free consultation.",
+  description: "Transform your business with AI education, consulting & custom AI development. 27+ years technology experience serving manufacturing, healthcare & commercial business. 2 hours free AI consulting.",
   keywords: [
     "AI innovation services",
     "artificial intelligence consulting",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     url: "https://werneenterprises.com",
     siteName: "Werne Enterprises",
     title: "AI Innovation Services | Manufacturing, Healthcare & Commercial",
-    description: "Transform your business with AI innovation services. 42+ years experience in manufacturing, healthcare & commercial solutions. RAG, MCP & custom AI development.",
+    description: "Transform your business with AI education, consulting & custom AI development. 27+ years technology experience serving manufacturing, healthcare & commercial business.",
     images: [
       {
         url: "/og-image.jpg",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AI Innovation Services | Manufacturing, Healthcare & Commercial",
-    description: "Transform your business with AI innovation services. 42+ years experience in manufacturing, healthcare & commercial solutions.",
+    description: "Transform your business with AI education, consulting & custom AI development. 27+ years technology experience.",
     images: ["/twitter-image.jpg"],
     creator: "@werneenterprises",
   },
@@ -79,11 +79,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "your-google-verification-code",
-    yandex: "your-yandex-verification-code",
-    yahoo: "your-yahoo-verification-code",
-  },
+  // verification codes should be added when ready for production
 };
 
 export default function RootLayout({
@@ -95,40 +91,25 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Werne Enterprises LLC",
-    "description": "AI Innovation for Manufacturing, Healthcare & Commercial Business",
+    "description": "AI Education, Consulting & Custom Development for Manufacturing, Healthcare & Commercial Business",
     "url": "https://werneenterprises.com",
     "logo": "https://werneenterprises.com/logo.png",
     "image": "https://werneenterprises.com/og-image.jpg",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Greer",
+      "addressLocality": "Greenville",
       "addressRegion": "SC",
       "addressCountry": "US"
     },
     "sameAs": [
-      "https://linkedin.com/company/werne-enterprises",
-      "https://twitter.com/werneenterprises"
+      "https://linkedin.com/in/deverenwerne"
     ],
-    "foundingDate": "1982",
-    "numberOfEmployees": "10-50",
-    "industry": "Artificial Intelligence",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "127"
-    },
+    "foundingDate": "1998",
+    "numberOfEmployees": "1",
+    "industry": "Artificial Intelligence Consulting",
     "areaServed": {
       "@type": "Country",
       "name": "United States"
-    },
-    "serviceArea": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": 34.9518,
-        "longitude": -82.2271
-      },
-      "geoRadius": "50000"
     }
   };
 
@@ -148,37 +129,31 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Werne Enterprises LLC",
-    "image": "https://werneenterprises.com/office.jpg",
-    "telephone": "+1-XXX-XXX-XXXX",
+    "image": "https://werneenterprises.com/og-image.jpg",
+    "telephone": "+1-864-991-5656",
+    "email": "deveren@werneenterprises.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Business Address",
-      "addressLocality": "Greer",
+      "addressLocality": "Greenville",
       "addressRegion": "SC",
-      "postalCode": "29650",
       "addressCountry": "US"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 34.9518,
-      "longitude": -82.2271
+      "latitude": 34.8526,
+      "longitude": -82.3940
     },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": [
         "Monday",
-        "Tuesday", 
+        "Tuesday",
         "Wednesday",
         "Thursday",
         "Friday"
       ],
       "opens": "09:00",
       "closes": "17:00"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "127"
     }
   };
 

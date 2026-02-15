@@ -38,20 +38,24 @@ const Footer = () => {
                 Werne <span className="text-primary">Enterprises</span>
               </div>
               <p className="text-gray-300 mb-6 max-w-md">
-                Pioneering AI Innovation for Manufacturing, Healthcare & Commercial Business. 
-                42+ years of technology leadership delivering practical, measurable results.
+                AI Education, Consulting & Custom Development for Manufacturing, Healthcare & Commercial Business.
+                27+ years of technology experience delivering practical, measurable results.
               </p>
               <div className="space-y-2 text-sm text-gray-300">
-                <p>607 Creekway Court</p>
-                <p>Greer, SC 29651</p>
+                <p>Greenville, SC</p>
                 <p className="pt-2">
                   <a href="tel:8649915656" className="hover:text-primary transition-colors">
                     864-991-5656
                   </a>
                 </p>
                 <p>
-                  <a href="mailto:info@werneenterprises.com" className="hover:text-primary transition-colors">
-                    info@werneenterprises.com
+                  <a href="mailto:deveren@werneenterprises.com" className="hover:text-primary transition-colors">
+                    deveren@werneenterprises.com
+                  </a>
+                </p>
+                <p className="pt-2">
+                  <a href="https://linkedin.com/in/deverenwerne" className="hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">
+                    LinkedIn
                   </a>
                 </p>
               </div>

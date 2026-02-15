@@ -44,7 +44,7 @@ const ContactPage = () => {
       icon: faEnvelope,
       description: 'Send us a detailed message about your project requirements and timeline.',
       action: 'Send Email',
-      href: 'mailto:info@werneenterprises.com',
+      href: 'mailto:deveren@werneenterprises.com',
       primary: false
     },
     {
@@ -52,7 +52,7 @@ const ContactPage = () => {
       icon: faPhone,
       description: 'Call us directly to discuss urgent projects or immediate technology needs.',
       action: 'Call Now',
-      href: 'tel:+1-555-WERNE-AI',
+      href: 'tel:+1-864-991-5656',
       primary: false
     },
     {
@@ -122,10 +122,10 @@ const ContactPage = () => {
   const offices = [
     {
       location: 'Headquarters',
-      address: '123 Innovation Drive\nTech Valley, CA 94000',
-      phone: '+1 (555) 123-4567',
-      email: 'info@werneenterprises.com',
-      hours: 'Monday - Friday: 8:00 AM - 6:00 PM PST'
+      address: 'Greenville, SC',
+      phone: '864-991-5656',
+      email: 'deveren@werneenterprises.com',
+      hours: 'Monday - Friday: 9:00 AM - 5:00 PM EST'
     }
   ]
 
@@ -140,7 +140,7 @@ const ContactPage = () => {
       method: 'General Inquiries',
       icon: faEnvelope,
       time: 'Within 4-6 hours',
-      description: 'Email responses during business hours (8 AM - 6 PM PST)'
+      description: 'Email responses during business hours (9 AM - 5 PM EST)'
     },
     {
       method: 'Urgent Support',
@@ -167,8 +167,8 @@ const ContactPage = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Ready to transform your business with AI innovation and technology solutions? 
-              Let&apos;s discuss how our 42+ years of experience can drive your success.
+              Ready to transform your business with AI innovation and technology solutions?
+              Start with 2 hours of FREE AI consulting and discover what&apos;s possible.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -400,8 +400,8 @@ const ContactPage = () => {
                 Serving Clients Nationwide
               </h3>
               <p className="text-gray-600 mb-6">
-                While our headquarters is located in California, we serve clients across the 
-                United States through on-site visits, remote consultations, and virtual 
+                Based in Greenville, SC, we serve clients across the
+                United States through on-site visits, remote consultations, and virtual
                 implementation support.
               </p>
               
@@ -470,7 +470,7 @@ const ContactPage = () => {
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-4">Have a different question?</p>
             <Button asChild variant="outline">
-              <Link href="mailto:info@werneenterprises.com">
+              <Link href="mailto:deveren@werneenterprises.com">
                 <span className="flex items-center">
                   <Icon icon={faEnvelope} size="xs" className="mr-2" />
                   Ask Us Directly
@@ -503,7 +503,7 @@ const ContactPage = () => {
                 </Link>
               </Button>
               <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-primary" asChild>
-                <Link href="mailto:info@werneenterprises.com">
+                <Link href="mailto:deveren@werneenterprises.com">
                   <span className="flex items-center">
                     <Icon icon={faEnvelope} size="sm" className="mr-2" />
                     Send Email Instead

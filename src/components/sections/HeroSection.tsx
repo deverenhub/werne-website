@@ -27,27 +27,26 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto text-center">
           <Badge variant="accent" size="lg" className="mb-6 animate-fade-in hover:animate-bounce-gentle">
             <Icon icon={faAward} className="mr-2" />
-            42+ Years of Technology Leadership
+            27+ Years in Technology | 2 Hours Free AI Consulting
           </Badge>
-          
+
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-slide-up">
-            Pioneering AI Innovation for{' '}
+            AI Education & Consulting for{' '}
             <span className="text-primary hover:animate-pulse-glow transition-all duration-300 cursor-default">Manufacturing</span>,{' '}
             <span className="text-accent hover:animate-pulse-glow transition-all duration-300 cursor-default">Healthcare</span> &{' '}
             <span className="text-warning hover:animate-pulse-glow transition-all duration-300 cursor-default">Commercial Business</span>
           </h1>
-          
+
           <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed animate-slide-up-delayed">
-            Transform your business through cutting-edge artificial intelligence and industry-specific 
-            technology solutions. We deliver practical, measurable results that drive efficiency, 
-            improve outcomes, and create competitive advantages.
+            Transform your business through AI education, custom AI development, and strategic consulting.
+            We help companies with 10-600 employees unlock the power of AI with practical, measurable results.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-scale-in" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
             <Button size="xl" shimmer magnetic variant="gradient" asChild>
-              <Link href="/contact">
+              <Link href="/book-time">
                 <Icon icon={faRocket} className="mr-2" />
-                Book Industry Consultation
+                Get 2 Hours Free AI Consulting
               </Link>
             </Button>
             <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-secondary hover:shadow-xl" asChild>
@@ -61,27 +60,27 @@ const HeroSection = () => {
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="animate-slide-right">
               <Icon icon={faBuilding} size="2xl" color="primary" className="mb-2" />
-              <AnimatedCounter 
-                value="500+" 
-                label="Businesses Transformed" 
+              <AnimatedCounter
+                value="30+"
+                label="Successful Implementations"
                 color="primary"
                 duration={2500}
               />
             </div>
             <div className="animate-slide-up">
               <Icon icon={faHandshake} size="2xl" color="accent" className="mb-2" />
-              <AnimatedCounter 
-                value="15" 
-                label="MEP Partnerships" 
+              <AnimatedCounter
+                value="8+"
+                label="MEP Partnerships"
                 color="accent"
                 duration={1500}
               />
             </div>
             <div className="animate-slide-left">
               <Icon icon={faDollarSign} size="2xl" color="warning" className="mb-2" />
-              <AnimatedCounter 
-                value="$10M+" 
-                label="Funding Facilitated" 
+              <AnimatedCounter
+                value="$50K-$1M"
+                label="Saved Per Client"
                 color="warning"
                 duration={3000}
               />

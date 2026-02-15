@@ -2,93 +2,89 @@ import React from 'react'
 import Link from 'next/link'
 import { Metadata } from 'next'
 import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Icon } from '@/components/ui'
-import { 
-  faCalendarCheck, 
-  faBrain, 
-  faChartLine, 
-  faIndustry, 
+import {
+  faCalendarCheck,
+  faBrain,
+  faChartLine,
+  faIndustry,
   faGraduationCap,
   faClock,
-  faUsers,
   faCheckCircle,
-  faFileText,
+  faFileAlt,
   faCogs,
   faShield,
-  faRocket,
-  faStar,
-  faEnvelope,
-  faPhone
+  faGift
 } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
-  title: 'Book Consultation - Schedule Your AI & Technology Assessment | Werne Enterprises',
-  description: 'Schedule your free consultation with Werne Enterprises technology experts. Discuss your AI innovation, digital transformation, and business optimization needs.',
+  title: 'Book 2 Hours Free AI Consulting | Werne Enterprises',
+  description: 'Schedule your FREE 2-hour AI consulting session. Discuss AI training, custom development, or consulting needs with 9 years of experience.',
 }
 
 const BookTimePage = () => {
   const consultationTypes = [
     {
-      type: 'AI Innovation Consultation',
+      type: 'AI Readiness Assessment',
       icon: faBrain,
-      duration: '60 minutes',
-      price: 'Free Initial Consultation',
-      description: 'Explore AI opportunities including RAG systems, MCP implementation, and custom AI development for your business.',
+      duration: 'Up to 2 hours',
+      price: 'FREE',
+      description: 'Evaluate your organization\'s preparedness for AI adoption and identify the best opportunities.',
       includes: [
-        'AI readiness assessment',
-        'Technology opportunity analysis',
+        'Current state analysis',
+        'Data readiness evaluation',
+        'AI opportunity identification',
         'Implementation roadmap discussion',
-        'ROI projections and timeline',
         'Next steps recommendations'
       ],
-      ideal_for: 'Technical teams and decision makers ready to explore AI solutions',
+      ideal_for: 'Organizations considering AI adoption',
       popular: true
     },
     {
-      type: 'Technology Strategy Session',
-      icon: faChartLine,
-      duration: '90 minutes',
-      price: 'Free Initial Consultation',
-      description: 'Comprehensive review of your technology landscape and digital transformation opportunities.',
+      type: 'AI Training Discussion',
+      icon: faGraduationCap,
+      duration: 'Up to 2 hours',
+      price: 'FREE',
+      description: 'Discuss your team\'s AI training needs and explore our education programs.',
       includes: [
-        'Current technology audit',
-        'Digital transformation roadmap',
-        'Strategic planning guidance',
-        'Investment prioritization',
-        'Change management strategy'
+        'Training needs assessment',
+        'Program recommendations',
+        'Curriculum overview',
+        'Implementation planning',
+        'Pricing discussion'
       ],
-      ideal_for: 'Executives and leadership teams planning major technology initiatives',
+      ideal_for: 'Teams wanting to build AI capabilities',
+      popular: false
+    },
+    {
+      type: 'Custom AI Development',
+      icon: faChartLine,
+      duration: 'Up to 2 hours',
+      price: 'FREE',
+      description: 'Explore custom AI solutions including SmartHive.online for tribal knowledge capture.',
+      includes: [
+        'Use case exploration',
+        'SmartHive.online demo',
+        'Technical requirements',
+        'Integration planning',
+        'Project scoping'
+      ],
+      ideal_for: 'Organizations needing custom AI solutions',
       popular: false
     },
     {
       type: 'Industry-Specific Consultation',
       icon: faIndustry,
-      duration: '45 minutes',
-      price: 'Free Initial Consultation',
-      description: 'Focused discussion on manufacturing, healthcare, or commercial business challenges and solutions.',
+      duration: 'Up to 2 hours',
+      price: 'FREE',
+      description: 'Focused discussion on manufacturing, healthcare, or commercial business AI challenges.',
       includes: [
         'Industry challenge analysis',
-        'Regulatory compliance review',
+        'Compliance considerations',
         'Best practices sharing',
         'Solution recommendations',
-        'Implementation timeline'
+        'Implementation approach'
       ],
-      ideal_for: 'Industry professionals seeking specialized technology solutions',
-      popular: false
-    },
-    {
-      type: 'Training & Education Planning',
-      icon: faGraduationCap,
-      duration: '30 minutes',
-      price: 'Free Initial Consultation',
-      description: 'Design custom training programs to build AI and technology capabilities within your organization.',
-      includes: [
-        'Skill gap assessment',
-        'Training program design',
-        'Learning objective planning',
-        'Resource requirements',
-        'Success measurement framework'
-      ],
-      ideal_for: 'HR leaders and training managers building team capabilities',
+      ideal_for: 'Industry professionals seeking specialized AI guidance',
       popular: false
     }
   ]
@@ -96,13 +92,12 @@ const BookTimePage = () => {
   const preparationChecklist = [
     {
       category: 'Business Information',
-      icon: faFileText,
+      icon: faFileAlt,
       items: [
         'Current business challenges and pain points',
         'Strategic objectives and goals',
-        'Budget considerations and timeline',
-        'Key stakeholders and decision makers',
-        'Success criteria and measurement methods'
+        'Budget considerations (if known)',
+        'Key stakeholders and decision makers'
       ]
     },
     {
@@ -111,9 +106,8 @@ const BookTimePage = () => {
       items: [
         'Current technology infrastructure overview',
         'Existing systems and platforms',
-        'Data sources and quality assessment',
-        'Technical team capabilities',
-        'Security and compliance requirements'
+        'Data sources and quality',
+        'Technical team capabilities'
       ]
     },
     {
@@ -121,10 +115,9 @@ const BookTimePage = () => {
       icon: faShield,
       items: [
         'Industry-specific challenges',
-        'Regulatory requirements',
+        'Regulatory requirements (if applicable)',
         'Competitive landscape',
-        'Market pressures and opportunities',
-        'Industry best practices awareness'
+        'Timeline considerations'
       ]
     }
   ]
@@ -132,81 +125,39 @@ const BookTimePage = () => {
   const whatToExpect = [
     {
       phase: 'Pre-Consultation',
-      description: 'We\'ll send you a brief questionnaire to understand your needs and challenges before our meeting.',
+      description: 'We\'ll send you a brief questionnaire to understand your needs before our meeting.',
       duration: '5-10 minutes'
     },
     {
       phase: 'Discovery Discussion',
-      description: 'We\'ll explore your business challenges, objectives, and current technology landscape.',
-      duration: '20-30 minutes'
+      description: 'We\'ll explore your business challenges, objectives, and current situation.',
+      duration: '30-45 minutes'
     },
     {
       phase: 'Solution Exploration',
-      description: 'We\'ll discuss potential solutions, approaches, and implementation strategies.',
-      duration: '20-30 minutes'
+      description: 'We\'ll discuss potential solutions, approaches, and how we might help.',
+      duration: '45-60 minutes'
     },
     {
-      phase: 'Next Steps Planning',
-      description: 'We\'ll outline potential next steps, timelines, and provide preliminary recommendations.',
-      duration: '10-15 minutes'
+      phase: 'Next Steps',
+      description: 'We\'ll outline potential next steps and provide preliminary recommendations.',
+      duration: '15-30 minutes'
     },
     {
-      phase: 'Follow-up Resources',
-      description: 'We\'ll send you relevant resources, case studies, and a summary of our discussion.',
+      phase: 'Follow-up',
+      description: 'We\'ll send you a summary of our discussion and any relevant resources.',
       duration: 'Within 24 hours'
-    }
-  ]
-
-  const calendlyOptions = [
-    {
-      title: 'Quick Discovery Call',
-      duration: '30 minutes',
-      description: 'Brief introductory call to understand your needs and determine the best next steps.',
-      calendlyUrl: 'https://calendly.com/werne-enterprises/discovery-call'
-    },
-    {
-      title: 'Comprehensive Consultation',
-      duration: '60 minutes',
-      description: 'In-depth consultation to explore your challenges and develop solution recommendations.',
-      calendlyUrl: 'https://calendly.com/werne-enterprises/consultation'
-    },
-    {
-      title: 'Strategy Session',
-      duration: '90 minutes',
-      description: 'Strategic planning session for major technology initiatives and digital transformation.',
-      calendlyUrl: 'https://calendly.com/werne-enterprises/strategy-session'
-    }
-  ]
-
-  const testimonials = [
-    {
-      quote: 'The initial consultation provided incredible value. Within 60 minutes, we had a clear roadmap for our AI implementation that saved us months of research.',
-      author: 'Sarah Chen',
-      title: 'CTO, Manufacturing Solutions Inc.',
-      industry: 'Manufacturing'
-    },
-    {
-      quote: 'Deveren\'s expertise in healthcare technology helped us navigate complex compliance requirements while implementing innovative solutions.',
-      author: 'Dr. Michael Rodriguez',
-      title: 'Chief Medical Officer, Regional Health Network',
-      industry: 'Healthcare'
-    },
-    {
-      quote: 'The strategic insights from our consultation directly contributed to our 40% revenue growth in the following year.',
-      author: 'Jennifer Walsh',
-      title: 'CEO, TechStart Solutions',
-      industry: 'Commercial'
     }
   ]
 
   const faq = [
     {
-      question: 'Is the initial consultation really free?',
-      answer: 'Yes, absolutely. We believe in providing value upfront and building relationships based on trust and expertise. There are no hidden fees or obligations.'
+      question: 'Is the 2 hours really free?',
+      answer: 'Yes, absolutely. We believe in providing value upfront and building relationships based on trust. The 2 hours are completely free with no hidden fees or obligations.'
     },
     {
       question: 'What if I\'m not sure which consultation type is right for me?',
-      answer: 'Start with our Quick Discovery Call. We\'ll help you determine the best approach and can always schedule a more comprehensive session if needed.'
+      answer: 'No problem! Just pick the one that seems closest to your needs. We\'ll adjust our discussion based on what you actually need help with.'
     },
     {
       question: 'Can I bring other team members to the consultation?',
@@ -217,8 +168,12 @@ const BookTimePage = () => {
       answer: 'We\'ll provide a summary of our discussion, relevant resources, and clear next steps if you choose to move forward. There\'s no pressure to commit to anything.'
     },
     {
-      question: 'Do you work with companies outside your three core industries?',
-      answer: 'While we specialize in manufacturing, healthcare, and commercial business, our technology expertise applies broadly. Contact us to discuss your specific industry.'
+      question: 'Do you work with companies outside manufacturing, healthcare, and commercial?',
+      answer: 'While we specialize in these three industries, our AI expertise applies broadly. Contact us to discuss your specific industry.'
+    },
+    {
+      question: 'How quickly can I get on your calendar?',
+      answer: 'We typically can schedule consultations within 1-2 weeks. Contact us to find a time that works for you.'
     }
   ]
 
@@ -228,90 +183,104 @@ const BookTimePage = () => {
       <section className="bg-gradient-to-br from-secondary via-secondary-dark to-secondary py-20 lg:py-32 text-white">
         <Container>
           <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="primary" size="lg" className="mb-6">
-              Free Consultation Available
+            <Badge variant="accent" size="lg" className="mb-6">
+              <Icon icon={faGift} className="mr-2" />
+              No Cost, No Obligation
             </Badge>
-            
+
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              Book Your{' '}
-              <span className="text-primary">Technology</span>{' '}
-              Consultation
+              Get{' '}
+              <span className="text-primary">2 Hours FREE</span>{' '}
+              AI Consulting
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Schedule a free consultation with our technology experts to explore how AI innovation 
-              and digital transformation can drive your business forward.
+              Start your AI journey with a free consultation. We&apos;ll discuss your challenges,
+              explore solutions, and determine if we&apos;re a good fit—no strings attached.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="xl" asChild>
                 <Link href="#schedule-now">Schedule Free Consultation</Link>
               </Button>
               <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-secondary" asChild>
-                <Link href="#consultation-types">Explore Options</Link>
+                <Link href="#consultation-types">See What We Discuss</Link>
               </Button>
             </div>
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
-                <Icon icon={faStar} size="xl" color="primary" className="mb-4" />
-                <div className="text-3xl font-bold text-primary mb-2">Free</div>
-                <div className="text-gray-300">Initial Consultation</div>
+                <Icon icon={faGift} size="xl" color="primary" className="mb-4" />
+                <div className="text-3xl font-bold text-primary mb-2">2 Hours</div>
+                <div className="text-gray-300">Completely Free</div>
               </div>
               <div>
                 <Icon icon={faClock} size="xl" color="accent" className="mb-4" />
-                <div className="text-3xl font-bold text-accent mb-2">24hrs</div>
-                <div className="text-gray-300">Response Time</div>
+                <div className="text-3xl font-bold text-accent mb-2">9 Years</div>
+                <div className="text-gray-300">Consulting Experience</div>
               </div>
               <div>
-                <Icon icon={faRocket} size="xl" color="warning" className="mb-4" />
-                <div className="text-3xl font-bold text-warning mb-2">42+</div>
-                <div className="text-gray-300">Years Experience</div>
+                <Icon icon={faCheckCircle} size="xl" color="warning" className="mb-4" />
+                <div className="text-3xl font-bold text-warning mb-2">30+</div>
+                <div className="text-gray-300">Successful Implementations</div>
               </div>
             </div>
           </div>
         </Container>
       </section>
 
-      {/* Quick Schedule Section */}
+      {/* Schedule Section */}
       <section id="schedule-now" className="py-20 bg-gray-50">
         <Container>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
-              Schedule Your Consultation
+              Schedule Your Free Consultation
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the consultation format that best fits your needs and schedule.
+              Ready to start? Contact us to schedule your 2 hours free AI consulting.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {calendlyOptions.map((option, index) => (
-              <Card key={index} className="text-center h-full">
-                <CardHeader>
-                  <CardTitle className="text-2xl">{option.title}</CardTitle>
-                  <div className="text-xl text-primary font-semibold">{option.duration}</div>
-                  <CardDescription className="text-lg">
-                    {option.description}
-                  </CardDescription>
-                </CardHeader>
-                
-                <CardFooter>
+          <div className="max-w-2xl mx-auto">
+            <Card className="ring-2 ring-primary border-primary">
+              <div className="bg-primary text-white text-center py-3 text-lg font-medium rounded-t-xl">
+                <Icon icon={faGift} className="mr-2" />
+                2 Hours FREE AI Consulting
+              </div>
+
+              <CardContent className="p-8">
+                <div className="text-center mb-8">
+                  <p className="text-lg text-gray-600">
+                    Contact us to schedule your free consultation. We&apos;ll find a time
+                    that works for you and discuss your AI goals.
+                  </p>
+                </div>
+
+                <div className="space-y-6">
+                  <div className="bg-gray-100 p-6 rounded-lg">
+                    <h3 className="font-semibold text-secondary mb-3">Contact Options</h3>
+                    <div className="space-y-3">
+                      <p className="flex items-center">
+                        <span className="font-medium w-24">Email:</span>
+                        <a href="mailto:deveren@werneenterprises.com" className="text-primary hover:underline">
+                          deveren@werneenterprises.com
+                        </a>
+                      </p>
+                      <p className="flex items-center">
+                        <span className="font-medium w-24">Phone:</span>
+                        <a href="tel:864-991-5656" className="text-primary hover:underline">
+                          864-991-5656
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+
                   <Button asChild className="w-full" size="lg">
-                    <Link href={option.calendlyUrl} target="_blank" rel="noopener noreferrer">
-                      Schedule Now
-                    </Link>
+                    <Link href="/contact">Contact Us to Schedule</Link>
                   </Button>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
-          
-          <div className="text-center mt-12">
-            <p className="text-gray-600 mb-4">Prefer a different time or have special requirements?</p>
-            <Button asChild variant="outline">
-              <Link href="/contact">Contact Us Directly</Link>
-            </Button>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </Container>
       </section>
@@ -321,65 +290,70 @@ const BookTimePage = () => {
         <Container>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
-              Consultation Options
+              What We Can Discuss
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We offer different types of consultations based on your specific needs and objectives.
+              Your free consultation can focus on any of these areas based on your needs.
             </p>
           </div>
 
-          <div className="space-y-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {consultationTypes.map((consultation, index) => (
-              <Card key={index} className={`overflow-hidden ${consultation.popular ? 'ring-2 ring-primary border-primary' : ''}`}>
+              <Card key={index} className={`h-full ${consultation.popular ? 'ring-2 ring-primary border-primary' : ''}`}>
                 {consultation.popular && (
                   <div className="bg-primary text-white text-center py-2 text-sm font-medium">
                     Most Popular
                   </div>
                 )}
-                
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                  <div className="p-8">
-                    <div className="mb-6">
-                      <Icon icon={consultation.icon} size="2xl" color="primary" className="mb-4" />
+
+                <CardHeader>
+                  <div className="flex items-center mb-4">
+                    <Icon icon={consultation.icon} size="xl" color="primary" className="mr-4" />
+                    <div>
+                      <CardTitle className="text-2xl">{consultation.type}</CardTitle>
+                      <div className="flex items-center gap-3 mt-2">
+                        <Badge variant="accent">
+                          <Icon icon={faClock} size="xs" className="mr-1" />
+                          {consultation.duration}
+                        </Badge>
+                        <Badge variant="primary" className="bg-green-600">
+                          {consultation.price}
+                        </Badge>
+                      </div>
                     </div>
-                    <div className="flex items-center justify-between mb-4">
-                      <h3 className="text-2xl font-bold text-secondary">{consultation.type}</h3>
-                      <Badge variant="accent">
-                        <Icon icon={faClock} size="xs" className="mr-1" />
-                        {consultation.duration}
-                      </Badge>
+                  </div>
+                  <CardDescription className="text-lg">{consultation.description}</CardDescription>
+                </CardHeader>
+
+                <CardContent className="flex-1">
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold text-secondary mb-2">What&apos;s Included</h4>
+                      <ul className="space-y-2">
+                        {consultation.includes.map((item, itemIndex) => (
+                          <li key={itemIndex} className="flex items-start">
+                            <Icon icon={faCheckCircle} size="sm" color="primary" className="mr-2 mt-0.5" />
+                            <span className="text-gray-700">{item}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                    
-                    <div className="text-xl text-primary font-semibold mb-4">{consultation.price}</div>
-                    <p className="text-gray-600 mb-6">{consultation.description}</p>
-                    
+
                     <div className="bg-gray-100 p-4 rounded-lg">
                       <div className="text-sm font-medium text-secondary mb-1">Ideal For</div>
                       <div className="text-sm text-gray-700">{consultation.ideal_for}</div>
                     </div>
                   </div>
-                  
-                  <div className="lg:col-span-2 bg-gray-50 p-8">
-                    <h4 className="text-lg font-semibold text-secondary mb-4">What&apos;s Included</h4>
-                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
-                      {consultation.includes.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-start">
-                          <Icon icon={faCheckCircle} size="xs" color="primary" className="mr-2 mt-1" />
-                          <span className="text-gray-700">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    
-                    <Button asChild className="w-full" variant={consultation.popular ? 'primary' : 'outline'}>
-                      <Link href="#schedule-now">
-                        <span className="flex items-center justify-center">
-                          <Icon icon={faCalendarCheck} size="xs" className="mr-2" />
-                          Schedule This Consultation
-                        </span>
-                      </Link>
-                    </Button>
-                  </div>
-                </div>
+                </CardContent>
+
+                <CardFooter>
+                  <Button asChild className="w-full">
+                    <Link href="#schedule-now">
+                      <Icon icon={faCalendarCheck} className="mr-2" />
+                      Schedule This Consultation
+                    </Link>
+                  </Button>
+                </CardFooter>
               </Card>
             ))}
           </div>
@@ -394,7 +368,7 @@ const BookTimePage = () => {
               How to Prepare
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get the most value from your consultation by preparing relevant information beforehand.
+              Get the most value from your consultation by thinking about these areas beforehand.
             </p>
           </div>
 
@@ -407,12 +381,12 @@ const BookTimePage = () => {
                   </div>
                   <CardTitle className="text-xl">{category.category}</CardTitle>
                 </CardHeader>
-                
+
                 <CardContent className="flex-1">
                   <ul className="space-y-3">
                     {category.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-start">
-                        <Icon icon={faCheckCircle} size="xs" color="primary" className="mr-2 mt-1" />
+                        <Icon icon={faCheckCircle} size="sm" color="primary" className="mr-2 mt-0.5" />
                         <span className="text-gray-700">{item}</span>
                       </li>
                     ))}
@@ -421,9 +395,11 @@ const BookTimePage = () => {
               </Card>
             ))}
           </div>
-          
+
           <div className="text-center mt-12">
-            <p className="text-gray-600 mb-4">Don&apos;t have all this information? No problem! We&apos;ll help you identify what&apos;s most important during our conversation.</p>
+            <p className="text-gray-600">
+              Don&apos;t have all this information? No problem! We&apos;ll help you work through it during our conversation.
+            </p>
           </div>
         </Container>
       </section>
@@ -436,12 +412,11 @@ const BookTimePage = () => {
               What to Expect
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our consultation process is designed to provide maximum value 
-              and clear next steps.
+              Our consultation process is designed to provide maximum value and clear next steps.
             </p>
           </div>
 
-          <div className="space-y-8">
+          <div className="max-w-3xl mx-auto space-y-8">
             {whatToExpect.map((phase, index) => (
               <div key={index} className="flex items-start">
                 <div className="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center text-lg font-bold mr-6 flex-shrink-0">
@@ -460,46 +435,15 @@ const BookTimePage = () => {
         </Container>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 bg-gray-50">
-        <Container>
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
-              What Clients Say
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Hear from leaders who have benefited from our consultation process.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="h-full">
-                <CardContent className="p-6">
-                  <div className="text-gray-600 mb-4 italic">
-                    &quot;{testimonial.quote}&quot;
-                  </div>
-                  <div className="border-t pt-4">
-                    <div className="font-semibold text-secondary">{testimonial.author}</div>
-                    <div className="text-sm text-gray-600">{testimonial.title}</div>
-                    <Badge variant="outline" size="lg" className="mt-2">{testimonial.industry}</Badge>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </Container>
-      </section>
-
       {/* FAQ */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <Container>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               Frequently Asked Questions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Common questions about our consultation process.
+              Common questions about our free consultation.
             </p>
           </div>
 
@@ -509,7 +453,7 @@ const BookTimePage = () => {
                 <CardHeader>
                   <CardTitle className="text-xl text-left">{item.question}</CardTitle>
                 </CardHeader>
-                
+
                 <CardContent>
                   <p className="text-gray-600">{item.answer}</p>
                 </CardContent>
@@ -527,16 +471,18 @@ const BookTimePage = () => {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-100 mb-8">
-              Take the first step toward transforming your business with AI and technology. 
-              Schedule your free consultation today and discover what&apos;s possible with 42+ years 
-              of proven technology leadership.
+              Take the first step toward AI adoption. Schedule your free 2-hour consultation
+              and discover how AI can help your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="xl" variant="secondary" asChild>
-                <Link href="#schedule-now">Schedule Free Consultation</Link>
+                <Link href="/contact">
+                  <Icon icon={faCalendarCheck} className="mr-2" />
+                  Schedule Free Consultation
+                </Link>
               </Button>
               <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-primary" asChild>
-                <Link href="/contact">Contact Us Instead</Link>
+                <Link href="/services">Explore Our Services</Link>
               </Button>
             </div>
           </div>

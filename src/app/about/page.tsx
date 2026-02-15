@@ -1,165 +1,186 @@
 import React from 'react'
 import Link from 'next/link'
 import { Metadata } from 'next'
-import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Icon } from '@/components/ui'
-import { 
-  faLightbulb, 
-  faBullseye, 
-  faBuilding, 
-  faHandshake, 
-  faShield, 
-  faBook, 
-  faMagnifyingGlass, 
-  faRocket, 
-  faCheck, 
-  faStar 
+import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, Badge, Icon } from '@/components/ui'
+import {
+  faBullseye,
+  faHandshake,
+  faShield,
+  faRocket,
+  faCheck,
+  faStar,
+  faGraduationCap,
+  faBrain,
+  faUsers
 } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
-  title: 'About Werne Enterprises - 42+ Years of Technology Leadership',
-  description: 'Learn about Werne Enterprises LLC, a technology leadership company with 42+ years of experience serving Manufacturing, Healthcare, and Commercial Business sectors.',
+  title: 'About Werne Enterprises - 27+ Years of Technology Experience',
+  description: 'Learn about Deveren Werne and Werne Enterprises - AI education, consulting, and custom development serving Manufacturing, Healthcare, and Commercial Business since 1998.',
 }
 
 const AboutPage = () => {
   const leadership = [
     {
       name: 'Deveren Werne',
-      role: 'Founder & CEO',
-      bio: 'With over 42 years of technology leadership experience, Deveren has been at the forefront of business transformation initiatives across manufacturing, healthcare, and commercial sectors. His vision for practical AI implementation has helped hundreds of organizations achieve measurable results.',
+      role: 'Founder & AI Consultant',
+      bio: 'Born in 1971, Deveren started with technology at age 13 in 1984 with an Atari and has been working professionally in technology since 1998 - 27+ years of hands-on experience. As a solo consultant with access to a 45+ developer team when needed, he brings a unique combination of deep technical expertise and practical business acumen.',
       expertise: [
-        'Technology Strategy & Leadership',
-        'AI Implementation & Integration',
-        'Digital Transformation',
-        'Business Process Optimization',
-        'Change Management',
-        'Industry 4.0 Solutions'
+        'AI Education & Training',
+        'Custom AI Development',
+        'AI Readiness Assessments',
+        'TSVMap Methodology',
+        'Manufacturing Technology',
+        'Business Process Optimization'
       ],
       achievements: [
-        '500+ successful business transformations',
-        '$10M+ in funding facilitated for clients',
-        '15 MEP partnerships established',
-        'Industry recognition for innovation leadership'
+        '30+ successful implementations, zero failures',
+        '8+ MEP partnerships (SCMEP, Purdue MEP, Georgia MEP, and more)',
+        'Saved manufacturers $50K - $1M in system expenses',
+        'Creator of SmartHive.online',
+        'Creator of AI training curriculum for MEP network'
       ]
     }
   ]
 
   const timeline = [
     {
-      year: '1982',
-      milestone: 'Company Founded',
-      description: 'Werne Enterprises established with a focus on manufacturing technology solutions and business optimization.'
+      year: '1984',
+      milestone: 'Technology Journey Begins',
+      description: 'At age 13, Deveren began exploring technology with an Atari, sparking a lifelong passion for innovation.'
     },
     {
-      year: '1990s',
-      milestone: 'Manufacturing Expertise',
-      description: 'Expanded services to include comprehensive manufacturing systems integration and process optimization.'
+      year: '1998',
+      milestone: 'Mojoe.net Founded',
+      description: 'Started professional technology career, beginning 27+ years of hands-on technology experience.'
     },
     {
-      year: '2000s',
-      milestone: 'Healthcare Expansion',
-      description: 'Extended expertise to healthcare sector, developing HIPAA-compliant solutions and clinical workflow optimization.'
+      year: '2001',
+      milestone: 'Liquid Video Technologies',
+      description: 'Co-founded Liquid Video Technologies with father Albert Werne, expanding into video and digital media solutions.'
     },
     {
-      year: '2010s',
-      milestone: 'Digital Transformation',
-      description: 'Pioneered digital transformation initiatives, helping businesses leverage emerging technologies for competitive advantage.'
+      year: '2018',
+      milestone: 'TSVMap Founded',
+      description: 'Created the TSVMap Methodology, a systematic approach to technology strategy and vendor management for manufacturers.'
     },
     {
       year: '2020s',
       milestone: 'AI Innovation Leadership',
-      description: 'Leading the charge in practical AI implementation, focusing on RAG systems, MCP protocols, and industry-specific AI solutions.'
+      description: 'Pioneered AI education and consulting, creating SmartHive.online, developing MEP AI training programs, and establishing 8+ MEP partnerships.'
     }
   ]
 
   const values = [
     {
-      value: 'Innovation Excellence',
-      icon: faLightbulb,
-      color: 'warning',
-      description: 'We constantly push the boundaries of what\'s possible, bringing cutting-edge AI and technology solutions to traditional industries.'
+      value: 'Education First',
+      icon: faGraduationCap,
+      color: 'primary',
+      description: 'We believe in empowering teams with AI knowledge. From our Purdue MEP AI Series to the 12 Week AI Bootcamp, we build lasting capabilities.'
     },
     {
       value: 'Practical Results',
       icon: faBullseye,
       color: 'secondary',
-      description: 'Every solution we deliver is designed to produce measurable business outcomes and sustainable competitive advantages.'
+      description: '30+ successful implementations with zero failures. Every solution is designed to produce measurable business outcomes.'
     },
     {
-      value: 'Industry Expertise',
-      icon: faBuilding,
+      value: 'Preserve Knowledge',
+      icon: faBrain,
       color: 'accent',
-      description: 'Deep understanding of manufacturing, healthcare, and commercial business challenges enables us to deliver tailored solutions.'
+      description: 'With SmartHive.online, we help capture tribal knowledge from experienced employees and turn it into AI personas that preserve institutional wisdom.'
     },
     {
-      value: 'Long-term Partnership',
+      value: 'Genuine Partnership',
       icon: faHandshake,
-      color: 'primary',
-      description: 'We build lasting relationships with our clients, supporting their growth and evolution over decades, not just projects.'
+      color: 'warning',
+      description: 'As a solo consultant, you work directly with me. No account managers, no handoffs - just direct access to expertise.'
     },
     {
-      value: 'Ethical Technology',
+      value: 'Real Savings',
       icon: faShield,
       color: 'success',
-      description: 'We prioritize responsible AI implementation, data privacy, and sustainable technology practices in all our solutions.'
+      description: 'We\'ve saved manufacturers $50K - $1M per engagement in system expenses. Results you can measure.'
     },
     {
-      value: 'Continuous Learning',
-      icon: faBook,
+      value: 'Proven Network',
+      icon: faUsers,
       color: 'secondary',
-      description: 'Our team stays at the forefront of technology trends, ensuring our clients benefit from the latest innovations and best practices.'
+      description: '8+ MEP partnerships and access to a 45+ developer team means we have the resources for projects of any scale.'
     }
   ]
 
   const achievements = [
     {
-      category: 'Business Impact',
+      category: 'Track Record',
       metrics: [
-        { label: 'Businesses Transformed', value: '500+' },
-        { label: 'Years of Experience', value: '42+' },
-        { label: 'Funding Facilitated', value: '$10M+' },
-        { label: 'Client Satisfaction Rate', value: '98%' }
+        { label: 'Successful Implementations', value: '30+' },
+        { label: 'Years in Technology', value: '27+' },
+        { label: 'Implementation Failures', value: '0' },
+        { label: 'Years Consulting', value: '9' }
       ]
     },
     {
-      category: 'Industry Recognition',
+      category: 'Partnerships',
       metrics: [
-        { label: 'MEP Partnerships', value: '15' },
-        { label: 'Industry Awards', value: '12+' },
-        { label: 'Speaking Engagements', value: '50+' },
-        { label: 'Published Articles', value: '25+' }
+        { label: 'MEP Partnerships', value: '8+' },
+        { label: 'Developer Team Access', value: '45+' },
+        { label: 'AI Training Programs', value: '4' },
+        { label: 'States Served', value: 'Nationwide' }
       ]
     },
     {
-      category: 'Technology Leadership',
+      category: 'Client Impact',
       metrics: [
-        { label: 'AI Projects Delivered', value: '100+' },
-        { label: 'Digital Transformations', value: '200+' },
-        { label: 'Process Optimizations', value: '300+' },
-        { label: 'Technology Implementations', value: '400+' }
+        { label: 'Savings Per Client', value: '$50K-$1M' },
+        { label: 'Ideal Company Size', value: '10-600' },
+        { label: 'Ideal Revenue', value: '$10M-$500M' },
+        { label: 'Free Consultation', value: '2 Hours' }
       ]
     }
   ]
 
-  const approach = [
+  const mepPartners = [
+    'SCMEP (South Carolina MEP)',
+    'FloridaMakes',
+    'Purdue MEP',
+    'Georgia MEP',
+    'MassMEP',
+    'TechSolve',
+    'Manufacturers Edge',
+    'DVIRC'
+  ]
+
+  const products = [
     {
-      principle: 'Industry-First Thinking',
-      description: 'We start with deep understanding of your industry challenges, not generic technology solutions.',
-      benefits: ['Relevant solutions', 'Faster adoption', 'Better outcomes']
+      name: 'SmartHive.online',
+      description: 'Captures employee tribal knowledge and creates AI personas',
+      type: 'AI Platform'
     },
     {
-      principle: 'Practical Implementation',
-      description: 'Our solutions are designed for real-world deployment with minimal disruption to operations.',
-      benefits: ['Smooth transitions', 'Quick ROI', 'Sustainable results']
+      name: 'Purdue MEP AI Series',
+      description: 'Comprehensive AI training for manufacturing professionals',
+      type: 'Training Program'
     },
     {
-      principle: 'Measurable Outcomes',
-      description: 'Every project includes clear success metrics and ongoing performance monitoring.',
-      benefits: ['Clear ROI', 'Continuous improvement', 'Accountability']
+      name: 'AI the Spreadsheet Killer',
+      description: 'Training on how AI transforms data management',
+      type: 'Training Program'
     },
     {
-      principle: 'Long-term Partnership',
-      description: 'We build relationships that extend beyond individual projects to support ongoing growth.',
-      benefits: ['Continued support', 'Strategic guidance', 'Technology evolution']
+      name: '12 Week AI Bootcamp',
+      description: 'Intensive AI implementation program',
+      type: 'Training Program'
+    },
+    {
+      name: 'TSVMap Methodology',
+      description: 'Technology strategy and vendor mapping system',
+      type: 'Methodology'
+    },
+    {
+      name: 'AI Readiness Assessment',
+      description: 'Evaluate your organization\'s AI preparedness',
+      type: 'Methodology'
     }
   ]
 
@@ -170,27 +191,27 @@ const AboutPage = () => {
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="primary" size="lg" className="mb-6">
-              42+ Years of Technology Leadership
+              27+ Years in Technology | 2 Hours Free AI Consulting
             </Badge>
-            
+
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
               About{' '}
               <span className="text-primary">Werne</span>{' '}
               Enterprises
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              For over four decades, we&apos;ve been transforming businesses through innovative technology 
-              solutions, helping organizations in manufacturing, healthcare, and commercial sectors 
-              achieve sustainable competitive advantages.
+              AI education, consulting, and custom development for businesses ready to
+              harness the power of artificial intelligence. Based in Greenville, SC,
+              serving clients nationwide.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="xl" asChild>
-                <Link href="/contact">Partner With Us</Link>
+                <Link href="/book-time">Get 2 Hours Free Consulting</Link>
               </Button>
               <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-secondary" asChild>
-                <Link href="#leadership">Meet Our Leadership</Link>
+                <Link href="#leadership">Meet Deveren</Link>
               </Button>
             </div>
           </div>
@@ -206,47 +227,47 @@ const AboutPage = () => {
                 Our Mission
               </h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                To empower businesses with practical AI and technology solutions that drive 
-                measurable results, improve operational efficiency, and create sustainable 
-                competitive advantages in an increasingly digital world.
+                To make AI accessible and practical for mid-sized businesses. We focus on
+                education, custom development, and strategic consulting that delivers
+                measurable results - not just technology for technology&apos;s sake.
               </p>
-              
-              <h3 className="text-2xl font-bold text-secondary mb-4">Our Vision</h3>
+
+              <h3 className="text-2xl font-bold text-secondary mb-4">Ideal Clients</h3>
               <p className="text-lg text-gray-600 leading-relaxed">
-                To be the trusted technology partner that bridges the gap between cutting-edge 
-                innovation and practical business applications, making advanced AI accessible 
-                and valuable for organizations of all sizes.
+                We work best with companies that have 10-600 employees and $10M-$500M in revenue.
+                Manufacturing, healthcare, and commercial businesses that are ready to
+                strategically adopt AI see the best results from our services.
               </p>
             </div>
-            
+
             <div className="space-y-6">
               <Card>
                 <CardContent className="p-6">
                   <div className="mb-4">
-                    <Icon icon={faBullseye} size="4xl" color="secondary" />
+                    <Icon icon={faGraduationCap} size="4xl" color="primary" />
                   </div>
-                  <h4 className="text-xl font-semibold text-secondary mb-2">Results-Driven</h4>
-                  <p className="text-gray-600">Every solution is measured by tangible business outcomes and sustainable improvements.</p>
+                  <h4 className="text-xl font-semibold text-secondary mb-2">AI Education</h4>
+                  <p className="text-gray-600">Multiple training programs including the Purdue MEP AI Series and 12 Week AI Bootcamp.</p>
                 </CardContent>
               </Card>
-              
+
               <Card>
                 <CardContent className="p-6">
                   <div className="mb-4">
-                    <Icon icon={faMagnifyingGlass} size="4xl" color="accent" />
+                    <Icon icon={faBrain} size="4xl" color="accent" />
                   </div>
-                  <h4 className="text-xl font-semibold text-secondary mb-2">Industry-Focused</h4>
-                  <p className="text-gray-600">Deep expertise in manufacturing, healthcare, and commercial business challenges.</p>
+                  <h4 className="text-xl font-semibold text-secondary mb-2">Custom AI Development</h4>
+                  <p className="text-gray-600">Creator of SmartHive.online - turn your team&apos;s tribal knowledge into AI personas.</p>
                 </CardContent>
               </Card>
-              
+
               <Card>
                 <CardContent className="p-6">
                   <div className="mb-4">
-                    <Icon icon={faRocket} size="4xl" color="primary" />
+                    <Icon icon={faRocket} size="4xl" color="warning" />
                   </div>
-                  <h4 className="text-xl font-semibold text-secondary mb-2">Innovation Leader</h4>
-                  <p className="text-gray-600">Pioneering practical AI implementations that deliver real-world business value.</p>
+                  <h4 className="text-xl font-semibold text-secondary mb-2">AI Consulting</h4>
+                  <p className="text-gray-600">9 years of consulting experience with 30+ implementations and zero failures.</p>
                 </CardContent>
               </Card>
             </div>
@@ -259,11 +280,11 @@ const AboutPage = () => {
         <Container>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
-              Leadership Team
+              Meet Deveren Werne
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experienced technology leaders with a proven track record of 
-              delivering transformational business results.
+              Solo consultant with 27+ years of technology experience and access to a
+              45+ developer team when projects require it.
             </p>
           </div>
 
@@ -275,7 +296,7 @@ const AboutPage = () => {
                   <div className="text-xl text-primary font-semibold mb-4">{leader.role}</div>
                   <p className="text-gray-600 leading-relaxed">{leader.bio}</p>
                 </div>
-                
+
                 <div className="bg-gray-50 p-8">
                   <h4 className="text-lg font-semibold text-secondary mb-4">Core Expertise</h4>
                   <ul className="space-y-2">
@@ -289,7 +310,7 @@ const AboutPage = () => {
                     ))}
                   </ul>
                 </div>
-                
+
                 <div className="bg-primary/5 p-8">
                   <h4 className="text-lg font-semibold text-secondary mb-4">Key Achievements</h4>
                   <ul className="space-y-2">
@@ -309,6 +330,57 @@ const AboutPage = () => {
         </Container>
       </section>
 
+      {/* MEP Partners */}
+      <section className="py-20 bg-gray-50">
+        <Container>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
+              MEP Network Partners
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Trusted partner of Manufacturing Extension Partnership organizations across the country.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {mepPartners.map((partner, index) => (
+              <Card key={index} className="text-center">
+                <CardContent className="p-6">
+                  <Icon icon={faHandshake} size="2xl" color="primary" className="mb-3" />
+                  <p className="font-semibold text-secondary">{partner}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Products & Methodologies */}
+      <section className="py-20 bg-white">
+        <Container>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
+              Products & Methodologies
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              AI platforms, training programs, and methodologies developed by Werne Enterprises.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {products.map((product, index) => (
+              <Card key={index} className="h-full">
+                <CardHeader>
+                  <Badge variant="outline" className="w-fit mb-2">{product.type}</Badge>
+                  <CardTitle className="text-xl">{product.name}</CardTitle>
+                  <CardDescription>{product.description}</CardDescription>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
+        </Container>
+      </section>
+
       {/* Company Timeline */}
       <section className="py-20 bg-gray-50">
         <Container>
@@ -317,7 +389,7 @@ const AboutPage = () => {
               Our Journey
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Four decades of innovation, growth, and business transformation across industries.
+              From an Atari in 1984 to leading AI consulting today.
             </p>
           </div>
 
@@ -345,7 +417,7 @@ const AboutPage = () => {
               Our Core Values
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              The principles that guide our approach to technology, business, and client relationships.
+              The principles that guide our approach to AI consulting and client relationships.
             </p>
           </div>
 
@@ -354,15 +426,15 @@ const AboutPage = () => {
               <Card key={index} className="text-center h-full">
                 <CardHeader>
                   <div className="mb-4">
-                    <Icon 
-                      icon={value.icon} 
-                      size="4xl" 
-                      color={value.color as 'primary' | 'secondary' | 'accent' | 'warning' | 'success'} 
+                    <Icon
+                      icon={value.icon}
+                      size="4xl"
+                      color={value.color as 'primary' | 'secondary' | 'accent' | 'warning' | 'success'}
                     />
                   </div>
                   <CardTitle className="text-xl">{value.value}</CardTitle>
                 </CardHeader>
-                
+
                 <CardContent className="flex-1">
                   <p className="text-gray-600">{value.description}</p>
                 </CardContent>
@@ -380,7 +452,7 @@ const AboutPage = () => {
               By the Numbers
             </h2>
             <p className="text-xl text-gray-100 max-w-3xl mx-auto">
-              Four decades of measurable impact and industry leadership.
+              Verified facts and figures from our work.
             </p>
           </div>
 
@@ -390,7 +462,7 @@ const AboutPage = () => {
                 <CardHeader>
                   <CardTitle className="text-xl text-center text-white">{category.category}</CardTitle>
                 </CardHeader>
-                
+
                 <CardContent>
                   <div className="grid grid-cols-2 gap-4">
                     {category.metrics.map((metric, metricIndex) => (
@@ -407,64 +479,23 @@ const AboutPage = () => {
         </Container>
       </section>
 
-      {/* Our Approach */}
-      <section className="py-20 bg-gray-50">
-        <Container>
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
-              Our Approach
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              The methodology that has driven our success for over four decades.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {approach.map((item, index) => (
-              <Card key={index} className="h-full">
-                <CardHeader>
-                  <CardTitle className="text-2xl">{item.principle}</CardTitle>
-                  <CardDescription className="text-lg">
-                    {item.description}
-                  </CardDescription>
-                </CardHeader>
-                
-                <CardContent>
-                  <h4 className="font-semibold text-secondary mb-3">Key Benefits</h4>
-                  <ul className="space-y-2">
-                    {item.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-start">
-                        <div className="mr-2 mt-1">
-                          <Icon icon={faCheck} size="lg" color="primary" />
-                        </div>
-                        <span className="text-gray-700">{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </Container>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-secondary text-white">
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Transform Your Business?
+              Start With 2 Hours Free
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Partner with Werne Enterprises and leverage four decades of technology leadership 
-              to drive your business forward with practical AI and digital transformation solutions.
+              No commitment required. Let&apos;s discuss your AI goals and see if we&apos;re a good fit.
+              I work directly with every client - no account managers or handoffs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="xl" variant="primary" asChild>
-                <Link href="/contact">Start Your Transformation</Link>
+                <Link href="/book-time">Book Your Free Consultation</Link>
               </Button>
               <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-secondary" asChild>
-                <Link href="/case-studies">View Our Success Stories</Link>
+                <Link href="/services">View Our Services</Link>
               </Button>
             </div>
           </div>

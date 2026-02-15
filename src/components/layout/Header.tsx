@@ -13,9 +13,9 @@ const Header = () => {
       name: 'Services',
       href: '/services',
       children: [
-        { name: 'AI Innovation', href: '/services/ai-innovation' },
-        { name: 'Consulting', href: '/services/consulting' },
-        { name: 'Education & Workshops', href: '/services/education' },
+        { name: 'Custom AI Development', href: '/services/ai-innovation' },
+        { name: 'AI Consulting', href: '/services/consulting' },
+        { name: 'AI Training', href: '/services/education' },
       ]
     },
     {
@@ -27,7 +27,7 @@ const Header = () => {
         { name: 'Commercial Business', href: '/commercial' },
       ]
     },
-    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Our Work', href: '/case-studies' },
     { name: 'Resources', href: '/resources' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
@@ -88,7 +88,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <Button asChild shimmer magnetic>
-              <Link href="/contact">Book Consultation</Link>
+              <Link href="/book-time">2 Hours Free</Link>
             </Button>
           </div>
 
@@ -146,7 +146,7 @@ const Header = () => {
               ))}
               <div className="pt-4">
                 <Button asChild className="w-full">
-                  <Link href="/contact">Book Consultation</Link>
+                  <Link href="/book-time">2 Hours Free Consulting</Link>
                 </Button>
               </div>
             </div>

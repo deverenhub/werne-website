@@ -16,24 +16,24 @@ const CTASection = () => {
       <Container className="relative z-10">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-slide-up">
-            Ready to Transform Your Industry?
+            Start With 2 Hours Free AI Consulting
           </h2>
           <p className="text-xl md:text-2xl mb-8 text-white/90 animate-slide-up-delayed">
-            Whether you&apos;re an enterprise seeking advanced technology solutions or a business 
-            ready to embrace AI, we&apos;re here to help you build your innovation future.
+            Discover how AI can transform your business. No commitment required.
+            Let&apos;s explore what&apos;s possible together.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-scale-in" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
-            <Button 
-              size="xl" 
+            <Button
+              size="xl"
               className="bg-white text-primary hover:bg-gray-100 hover:scale-105 hover:shadow-2xl"
               shimmer
               magnetic
               asChild
             >
-              <Link href="/contact">
+              <Link href="/book-time">
                 <Icon icon={faCalendarAlt} className="mr-2" />
-                Schedule a Consultation
+                Get Your Free 2 Hours
               </Link>
             </Button>
             <Button 
@@ -62,25 +62,24 @@ const CTASection = () => {
           
           <div className="border-t border-white/20 pt-8">
             <p className="text-lg text-white/80 mb-4">
-              Don&apos;t let your business fall behind in the AI revolution. 
-              Partner with Werne Enterprises to build a thriving innovation ecosystem.
+              27+ years in technology. 30+ successful implementations. Zero failures.
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm text-white/70">
               <span className="flex items-center gap-2 hover:text-white transition-colors duration-300 animate-slide-up" style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
                 <Icon icon={faCheck} size="lg" className="text-white animate-bounce-gentle" />
-                42+ Years Experience
+                8+ MEP Partnerships
               </span>
               <span className="flex items-center gap-2 hover:text-white transition-colors duration-300 animate-slide-up" style={{ animationDelay: '0.8s', animationFillMode: 'both' }}>
                 <Icon icon={faCheck} size="lg" className="text-white animate-bounce-gentle" style={{ animationDelay: '0.5s' }} />
-                Industry-Specific Solutions
+                $50K-$1M Saved Per Client
               </span>
               <span className="flex items-center gap-2 hover:text-white transition-colors duration-300 animate-slide-up" style={{ animationDelay: '1s', animationFillMode: 'both' }}>
                 <Icon icon={faCheck} size="lg" className="text-white animate-bounce-gentle" style={{ animationDelay: '1s' }} />
-                Proven ROI Results
+                AI Education Expert
               </span>
               <span className="flex items-center gap-2 hover:text-white transition-colors duration-300 animate-slide-up" style={{ animationDelay: '1.2s', animationFillMode: 'both' }}>
                 <Icon icon={faCheck} size="lg" className="text-white animate-bounce-gentle" style={{ animationDelay: '1.5s' }} />
-                MEP Partner Network
+                Creator of SmartHive.online
               </span>
             </div>
           </div>

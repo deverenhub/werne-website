@@ -1,88 +1,88 @@
 import React from 'react'
 import Link from 'next/link'
 import { Metadata } from 'next'
-import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge } from '@/components/ui'
+import { Button, Container, Card, CardHeader, CardTitle, CardContent, CardFooter, Badge } from '@/components/ui'
 
 export const metadata: Metadata = {
-  title: 'AI Innovation Services - RAG, MCP & Custom AI Solutions | Werne Enterprises',
-  description: 'Advanced AI innovation services including RAG implementation, MCP protocols, and custom AI development for Manufacturing, Healthcare, and Commercial Business.',
+  title: 'Custom AI Development - SmartHive & AI Solutions | Werne Enterprises',
+  description: 'Custom AI development including SmartHive.online for tribal knowledge capture. Build AI personas that preserve your team\'s expertise. Contact for pricing.',
 }
 
 const AIInnovationPage = () => {
   const aiServices = [
     {
-      title: 'RAG Implementation',
-      description: 'Retrieval-Augmented Generation systems that enhance AI capabilities with your proprietary data.',
-      icon: '🔍',
+      title: 'SmartHive.online',
+      description: 'Our flagship platform that captures employee tribal knowledge and transforms it into AI personas.',
+      icon: '🧠',
       features: [
-        'Custom knowledge base integration',
-        'Real-time data retrieval',
-        'Enhanced AI accuracy',
-        'Domain-specific responses',
-        'Secure data handling',
-        'Scalable architecture'
+        'Tribal knowledge capture',
+        'AI persona creation',
+        'Employee expertise preservation',
+        'Always-available AI assistants',
+        'Custom business knowledge AI',
+        'Secure knowledge management'
       ],
       benefits: [
-        'Improved AI response accuracy',
-        'Reduced hallucinations',
-        'Context-aware answers',
-        'Proprietary knowledge utilization'
+        'Preserve institutional knowledge',
+        'Reduce knowledge loss from turnover',
+        'Create AI that knows your business',
+        'Train new employees faster'
       ],
       use_cases: [
-        'Technical documentation systems',
-        'Customer support automation',
-        'Regulatory compliance queries',
-        'Product information systems'
-      ]
-    },
-    {
-      title: 'MCP Implementation',
-      description: 'Model Context Protocol integration for seamless AI model communication and data exchange.',
-      icon: '🔗',
-      features: [
-        'Protocol standardization',
-        'Multi-model integration',
-        'Real-time communication',
-        'Secure data exchange',
-        'Performance optimization',
-        'Error handling systems'
-      ],
-      benefits: [
-        'Improved model interoperability',
-        'Reduced integration complexity',
-        'Enhanced data security',
-        'Standardized communication'
-      ],
-      use_cases: [
-        'Multi-AI system coordination',
-        'Enterprise AI orchestration',
-        'Cross-platform integration',
-        'Workflow automation'
+        'Manufacturing process expertise',
+        'Customer service knowledge',
+        'Technical support automation',
+        'Onboarding acceleration'
       ]
     },
     {
       title: 'Custom AI Development',
-      description: 'Tailored artificial intelligence solutions designed for your specific industry and use case.',
+      description: 'Tailored AI applications designed for your specific business needs and workflows.',
       icon: '⚙️',
       features: [
-        'Industry-specific models',
-        'Custom algorithm development',
-        'Performance optimization',
-        'Scalable deployment',
-        'Continuous learning',
-        'Model monitoring'
+        'Custom AI applications',
+        'Business process automation',
+        'Integration with existing systems',
+        'Scalable architecture',
+        'Ongoing optimization',
+        'Full ownership of solution'
       ],
       benefits: [
-        'Purpose-built solutions',
-        'Optimal performance',
+        'Purpose-built for your needs',
         'Competitive advantage',
-        'Full control and ownership'
+        'Full control and ownership',
+        'Tailored to your industry'
       ],
       use_cases: [
-        'Predictive maintenance',
-        'Quality control systems',
-        'Process optimization',
-        'Anomaly detection'
+        'Process automation',
+        'Decision support systems',
+        'Customer interaction AI',
+        'Operational intelligence'
+      ]
+    },
+    {
+      title: 'AI Integration Services',
+      description: 'Connect AI capabilities with your existing business systems and workflows.',
+      icon: '🔗',
+      features: [
+        'System integration',
+        'API development',
+        'Data pipeline setup',
+        'Workflow automation',
+        'Performance optimization',
+        'Security implementation'
+      ],
+      benefits: [
+        'Seamless connectivity',
+        'Leverages existing investments',
+        'Unified data access',
+        'Streamlined operations'
+      ],
+      use_cases: [
+        'ERP integration',
+        'CRM enhancement',
+        'Document processing',
+        'Communication automation'
       ]
     }
   ]
@@ -92,80 +92,33 @@ const AIInnovationPage = () => {
       name: 'Manufacturing',
       icon: '🏭',
       applications: [
-        'Predictive maintenance AI',
-        'Quality control vision systems',
-        'Production optimization',
-        'Supply chain intelligence',
-        'Safety monitoring systems'
+        'Tribal knowledge preservation from retiring workers',
+        'Process optimization AI',
+        'Quality control automation',
+        'Equipment expertise capture',
+        'Safety procedure documentation'
       ]
     },
     {
       name: 'Healthcare',
       icon: '🏥',
       applications: [
-        'Clinical decision support',
-        'Medical image analysis',
+        'Clinical expertise preservation',
+        'Compliance documentation AI',
         'Patient workflow optimization',
-        'Regulatory compliance AI',
-        'Research data analysis'
+        'Administrative automation',
+        'Training content generation'
       ]
     },
     {
       name: 'Commercial Business',
       icon: '🏢',
       applications: [
-        'Customer behavior analysis',
-        'Sales forecasting',
-        'Process automation',
-        'Risk assessment',
-        'Market intelligence'
-      ]
-    }
-  ]
-
-  const process = [
-    {
-      phase: 'Discovery',
-      duration: '1-2 weeks',
-      activities: [
-        'Business requirement analysis',
-        'Technical infrastructure assessment',
-        'Data audit and evaluation',
-        'Use case identification',
-        'ROI projection'
-      ]
-    },
-    {
-      phase: 'Design',
-      duration: '2-3 weeks',
-      activities: [
-        'Solution architecture design',
-        'AI model selection',
-        'Data pipeline planning',
-        'Integration strategy',
-        'Security framework'
-      ]
-    },
-    {
-      phase: 'Development',
-      duration: '6-12 weeks',
-      activities: [
-        'AI model development',
-        'System integration',
-        'Testing and validation',
-        'Performance optimization',
-        'Security implementation'
-      ]
-    },
-    {
-      phase: 'Deployment',
-      duration: '2-4 weeks',
-      activities: [
-        'Production deployment',
-        'Performance monitoring',
-        'User training',
-        'Documentation delivery',
-        'Support setup'
+        'Sales expertise capture',
+        'Customer service AI',
+        'Operations knowledge base',
+        'Training automation',
+        'Process documentation'
       ]
     }
   ]
@@ -177,40 +130,42 @@ const AIInnovationPage = () => {
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="accent" size="lg" className="mb-6">
-              Advanced AI Innovation
+              Custom AI Development
             </Badge>
-            
+
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              AI Innovation{' '}
-              <span className="text-primary">Services</span>
+              Custom AI{' '}
+              <span className="text-primary">Development</span>
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Transform your business with cutting-edge AI technologies including RAG systems, 
-              MCP protocols, and custom AI development tailored to your industry.
+              Build AI solutions that capture your team&apos;s knowledge and automate your business processes.
+              Creator of SmartHive.online - the tribal knowledge AI platform.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="xl" asChild>
-                <Link href="/contact">Start AI Project</Link>
+                <Link href="/book-time">Discuss Your AI Project</Link>
               </Button>
               <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-secondary" asChild>
-                <Link href="#services">Explore AI Services</Link>
+                <a href="https://smarthive.online" target="_blank" rel="noopener noreferrer">
+                  Visit SmartHive.online
+                </a>
               </Button>
             </div>
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
-                <div className="text-3xl font-bold text-primary mb-2">50+</div>
-                <div className="text-gray-300">AI Projects Delivered</div>
+                <div className="text-3xl font-bold text-primary mb-2">SmartHive</div>
+                <div className="text-gray-300">Tribal Knowledge AI Platform</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-accent mb-2">95%</div>
-                <div className="text-gray-300">Accuracy Improvement</div>
+                <div className="text-3xl font-bold text-accent mb-2">30+</div>
+                <div className="text-gray-300">Successful Implementations</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-warning mb-2">60%</div>
-                <div className="text-gray-300">Cost Reduction</div>
+                <div className="text-3xl font-bold text-warning mb-2">45+</div>
+                <div className="text-gray-300">Developer Team Access</div>
               </div>
             </div>
           </div>
@@ -222,11 +177,11 @@ const AIInnovationPage = () => {
         <Container>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
-              Advanced AI Technologies
+              AI Development Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Leverage the latest AI innovations to create competitive advantages 
-              and drive business transformation.
+              From SmartHive.online to custom AI applications, we build AI solutions
+              that solve real business problems.
             </p>
           </div>
 
@@ -242,7 +197,7 @@ const AIInnovationPage = () => {
                         <p className="text-lg text-gray-600 mt-2">{service.description}</p>
                       </div>
                     </div>
-                    
+
                     <div className="space-y-6">
                       <div>
                         <h4 className="text-lg font-semibold text-secondary mb-3">Key Features</h4>
@@ -257,7 +212,7 @@ const AIInnovationPage = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="bg-gray-100 p-8">
                     <div className="space-y-6">
                       <div>
@@ -271,7 +226,7 @@ const AIInnovationPage = () => {
                           ))}
                         </ul>
                       </div>
-                      
+
                       <div>
                         <h4 className="text-lg font-semibold text-secondary mb-3">Use Cases</h4>
                         <ul className="space-y-2">
@@ -297,11 +252,10 @@ const AIInnovationPage = () => {
         <Container>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
-              Industry-Specific Applications
+              Industry Applications
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our AI solutions are tailored to address unique challenges and opportunities 
-              in your specific industry.
+              Custom AI solutions tailored for your industry&apos;s unique challenges.
             </p>
           </div>
 
@@ -312,7 +266,7 @@ const AIInnovationPage = () => {
                   <div className="text-5xl mb-4">{industry.icon}</div>
                   <CardTitle className="text-2xl">{industry.name}</CardTitle>
                 </CardHeader>
-                
+
                 <CardContent>
                   <ul className="space-y-3 text-left">
                     {industry.applications.map((application, appIndex) => (
@@ -323,7 +277,7 @@ const AIInnovationPage = () => {
                     ))}
                   </ul>
                 </CardContent>
-                
+
                 <CardFooter>
                   <Button asChild className="w-full" variant="outline">
                     <Link href={`/${industry.name.toLowerCase()}`}>
@@ -337,41 +291,55 @@ const AIInnovationPage = () => {
         </Container>
       </section>
 
-      {/* Process Section */}
+      {/* SmartHive Featured */}
       <section className="py-20 bg-gray-50">
         <Container>
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
-              AI Development Process
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our proven methodology ensures successful AI implementation with measurable results.
-            </p>
-          </div>
+          <div className="max-w-4xl mx-auto text-center">
+            <Badge variant="primary" size="lg" className="mb-6">
+              Featured Product
+            </Badge>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {process.map((phase, index) => (
-              <Card key={index} className="text-center">
-                <CardHeader>
-                  <div className="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                    {index + 1}
-                  </div>
-                  <CardTitle className="text-xl">{phase.phase}</CardTitle>
-                  <div className="text-sm text-gray-500">{phase.duration}</div>
-                </CardHeader>
-                
-                <CardContent>
-                  <ul className="space-y-2 text-left text-sm">
-                    {phase.activities.map((activity, activityIndex) => (
-                      <li key={activityIndex} className="flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        <span className="text-gray-700">{activity}</span>
-                      </li>
-                    ))}
-                  </ul>
+            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
+              SmartHive.online
+            </h2>
+
+            <p className="text-xl text-gray-600 mb-8">
+              Capture your team&apos;s tribal knowledge before it walks out the door.
+              SmartHive transforms employee expertise into AI personas that are always available
+              to answer questions, train new hires, and preserve institutional knowledge.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <Card>
+                <CardContent className="p-6 text-center">
+                  <div className="text-4xl mb-3">📚</div>
+                  <h3 className="font-semibold text-secondary mb-2">Capture Knowledge</h3>
+                  <p className="text-gray-600 text-sm">Interview experts and document their institutional knowledge</p>
                 </CardContent>
               </Card>
-            ))}
+
+              <Card>
+                <CardContent className="p-6 text-center">
+                  <div className="text-4xl mb-3">🤖</div>
+                  <h3 className="font-semibold text-secondary mb-2">Create AI Personas</h3>
+                  <p className="text-gray-600 text-sm">Transform knowledge into AI assistants that think like your experts</p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardContent className="p-6 text-center">
+                  <div className="text-4xl mb-3">🎯</div>
+                  <h3 className="font-semibold text-secondary mb-2">Deploy & Use</h3>
+                  <p className="text-gray-600 text-sm">24/7 access to your organization&apos;s collective expertise</p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <Button size="xl" asChild>
+              <a href="https://smarthive.online" target="_blank" rel="noopener noreferrer">
+                Learn More About SmartHive
+              </a>
+            </Button>
           </div>
         </Container>
       </section>
@@ -381,18 +349,18 @@ const AIInnovationPage = () => {
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Lead with AI Innovation?
+              Ready to Build Custom AI?
             </h2>
             <p className="text-xl text-gray-100 mb-8">
-              Transform your business with cutting-edge AI technologies. Our experts are ready 
-              to help you implement solutions that drive real results.
+              Start with 2 hours free consulting to discuss your AI development needs.
+              All pricing provided after understanding your specific requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="xl" variant="secondary" asChild>
-                <Link href="/contact">Start Your AI Journey</Link>
+                <Link href="/book-time">Book Free Consultation</Link>
               </Button>
               <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-primary" asChild>
-                <Link href="/case-studies">View AI Case Studies</Link>
+                <Link href="/services">View All Services</Link>
               </Button>
             </div>
           </div>

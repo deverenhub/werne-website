@@ -19,9 +19,9 @@ const InnovationPortfolioSection = () => {
   const platforms = [
     {
       title: 'SmartHive.online',
-      subtitle: 'Industry-Specific AI Platform',
-      description: 'Our flagship AI platform delivers industry-specific analytics and insights for Manufacturing, Healthcare, and Commercial Business. RAG implementation, predictive analytics, and custom AI models tailored to your industry.',
-      features: ['RAG Implementation', 'Predictive Analytics', 'Custom AI Models', 'Industry-Specific Insights'],
+      subtitle: 'Tribal Knowledge AI Platform',
+      description: 'Captures employee tribal knowledge and transforms it into AI personas. Your team\'s expertise becomes an always-available AI assistant that knows your business.',
+      features: ['Tribal Knowledge Capture', 'AI Persona Creation', 'Employee Expertise Preservation', 'Custom Business AI'],
       cta: 'Explore SmartHive',
       href: 'https://smarthive.online',
       external: true,
@@ -29,23 +29,23 @@ const InnovationPortfolioSection = () => {
       color: 'primary'
     },
     {
-      title: 'Manufacturing Excellence',
-      subtitle: 'Proven Track Record in Manufacturing',
-      description: 'Our TSVMap methodology has transformed manufacturers nationwide, with MEP partnerships and measurable impacts on efficiency, quality, and competitiveness.',
-      features: ['TSVMap Methodology', 'MEP Partnerships', 'Efficiency Improvements', 'Quality Enhancement'],
-      cta: 'View Manufacturing Success Stories',
-      href: '/case-studies?industry=manufacturing',
-      icon: faIndustry,
+      title: 'AI Training Programs',
+      subtitle: 'Proven AI Education Curriculum',
+      description: 'Comprehensive AI training developed and delivered through MEP partnerships. From spreadsheet automation to full AI implementation.',
+      features: ['Purdue MEP AI Series', 'AI the Spreadsheet Killer', '12 Week AI Bootcamp', 'Custom Corporate Training'],
+      cta: 'View Training Programs',
+      href: '/services/education',
+      icon: faGraduationCap,
       color: 'accent'
     },
     {
-      title: 'Industry Training Programs',
-      subtitle: 'Building Tomorrow&apos;s Workforce',
-      description: 'We&apos;ve developed and delivered industry-specific AI curriculum, training teams across Manufacturing, Healthcare, and Commercial Business sectors.',
-      features: ['AI Curriculum', 'Industry-Specific Training', 'Workforce Development', 'Skills Enhancement'],
-      cta: 'Access Industry Resources',
-      href: '/resources',
-      icon: faGraduationCap,
+      title: 'AI Consulting Services',
+      subtitle: 'Strategic AI Implementation',
+      description: 'AI Readiness Assessments and strategic consulting to help businesses navigate their AI journey with confidence.',
+      features: ['AI Readiness Assessment', 'Implementation Strategy', '9 Years Consulting Experience', '30+ Successful Projects'],
+      cta: 'Start With Free Consultation',
+      href: '/book-time',
+      icon: faIndustry,
       color: 'warning'
     }
   ]

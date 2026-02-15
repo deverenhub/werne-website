@@ -2,88 +2,105 @@ import React from 'react'
 import Link from 'next/link'
 import { Metadata } from 'next'
 import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Icon } from '@/components/ui'
-import { faBrain, faWrench, faGraduationCap, faCheck } from '@fortawesome/free-solid-svg-icons'
+import { faBrain, faWrench, faGraduationCap, faCheck, faClipboardCheck } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
-  title: 'Services - AI Innovation & Technology Solutions | Werne Enterprises',
-  description: 'Comprehensive AI innovation, consulting, and education services for Manufacturing, Healthcare, and Commercial Business. 42+ years of proven technology leadership.',
+  title: 'Services - AI Education, Consulting & Custom Development | Werne Enterprises',
+  description: 'AI Education, Custom AI Development, AI Consulting, and AI Training Programs for Manufacturing, Healthcare, and Commercial Business. 2 hours free consulting.',
 }
 
 const ServicesPage = () => {
   const services = [
     {
-      title: 'AI Innovation Services',
-      description: 'Cutting-edge artificial intelligence solutions including RAG implementation, MCP protocols, and custom AI development.',
-      icon: faBrain,
+      title: 'AI Education & Training',
+      description: 'Comprehensive AI training programs including the Purdue MEP AI Series, AI the Spreadsheet Killer, and 12 Week AI Bootcamp.',
+      icon: faGraduationCap,
       color: 'primary',
       features: [
-        'RAG (Retrieval-Augmented Generation) Systems',
-        'MCP (Model Context Protocol) Implementation',
-        'Custom AI Model Development',
-        'AI Strategy & Architecture',
-        'Machine Learning Solutions',
-        'Computer Vision Systems'
+        'Purdue MEP AI Series',
+        'AI the Spreadsheet Killer Training',
+        '12 Week AI Bootcamp',
+        'Custom Corporate AI Training',
+        'Executive AI Briefings',
+        'Hands-on Workshops'
       ],
-      pricing: 'Starting at $25,000',
-      href: '/services/ai-innovation',
+      pricing: 'Contact for pricing',
+      href: '/services/education',
       highlight: true
     },
     {
-      title: 'Technology Consulting',
-      description: 'Strategic technology consulting to optimize operations, improve efficiency, and drive digital transformation.',
+      title: 'Custom AI Development',
+      description: 'Build custom AI solutions like SmartHive.online that capture tribal knowledge and create AI personas for your business.',
+      icon: faBrain,
+      color: 'accent',
+      features: [
+        'SmartHive.online Platform',
+        'Tribal Knowledge Capture',
+        'AI Persona Development',
+        'Custom AI Applications',
+        'RAG Implementation',
+        'AI Integration Services'
+      ],
+      pricing: 'Contact for pricing',
+      href: '/services/ai-innovation',
+      highlight: false
+    },
+    {
+      title: 'AI Consulting',
+      description: 'Strategic AI consulting with 9 years of experience and 30+ successful implementations. Zero failures.',
       icon: faWrench,
       color: 'secondary',
       features: [
-        'Technology Assessment & Audit',
-        'Digital Transformation Strategy',
-        'Process Optimization',
-        'System Integration',
+        'AI Readiness Assessments',
+        'AI Strategy Development',
+        'Implementation Planning',
+        'Vendor Evaluation',
         'Technology Roadmapping',
         'Change Management'
       ],
-      pricing: 'Starting at $5,000',
+      pricing: 'Contact for pricing',
       href: '/services/consulting',
       highlight: false
     },
     {
-      title: 'Education & Workshops',
-      description: 'Comprehensive training programs and workshops to build internal AI and technology capabilities.',
-      icon: faGraduationCap,
-      color: 'accent',
+      title: 'AI Readiness Assessments',
+      description: 'Evaluate your organization\'s preparedness for AI adoption with our proven assessment methodology.',
+      icon: faClipboardCheck,
+      color: 'warning',
       features: [
-        'AI Literacy Training',
-        'Technology Leadership Workshops',
-        'Custom Training Programs',
-        'Certification Courses',
-        'Executive Briefings',
-        'Hands-on Labs'
+        'Current State Analysis',
+        'Data Readiness Review',
+        'Infrastructure Assessment',
+        'Skills Gap Analysis',
+        'Prioritized Roadmap',
+        'ROI Projections'
       ],
-      pricing: 'Starting at $2,500',
-      href: '/services/education',
-      highlight: false
+      pricing: '2 Hours Free',
+      href: '/book-time',
+      highlight: true
     }
   ]
 
   const processSteps = [
     {
       step: '01',
-      title: 'Discovery & Assessment',
-      description: 'We analyze your current technology landscape, business processes, and identify opportunities for AI integration and optimization.'
+      title: '2 Hours Free Consulting',
+      description: 'Start with a no-commitment consultation to understand your AI goals and assess your readiness.'
     },
     {
       step: '02',
-      title: 'Strategy Development',
-      description: 'Our experts create a customized technology roadmap aligned with your business objectives and industry requirements.'
+      title: 'AI Readiness Assessment',
+      description: 'Comprehensive evaluation of your data, infrastructure, and team readiness for AI adoption.'
     },
     {
       step: '03',
-      title: 'Implementation',
-      description: 'We execute the solution with agile methodologies, ensuring minimal disruption to your operations while maximizing value.'
+      title: 'Strategy & Roadmap',
+      description: 'Develop a practical AI implementation roadmap aligned with your business objectives.'
     },
     {
       step: '04',
-      title: 'Optimization & Support',
-      description: 'Continuous monitoring, optimization, and support to ensure your solutions deliver lasting business value.'
+      title: 'Implementation & Training',
+      description: 'Execute the plan with hands-on support and comprehensive team training.'
     }
   ]
 
@@ -94,22 +111,22 @@ const ServicesPage = () => {
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="accent" size="lg" className="mb-6">
-              Comprehensive Technology Services
+              AI Education | Consulting | Custom Development
             </Badge>
-            
+
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              AI Innovation & Technology{' '}
+              AI Innovation &{' '}
               <span className="text-primary">Services</span>
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              From AI strategy to implementation, we provide end-to-end technology services 
-              that transform your business operations and drive measurable results.
+              From AI training programs to custom development, we help businesses
+              harness the power of artificial intelligence. Start with 2 hours free consulting.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="xl" asChild>
-                <Link href="/contact">Schedule Consultation</Link>
+                <Link href="/book-time">Get 2 Hours Free Consulting</Link>
               </Button>
               <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-secondary" asChild>
                 <Link href="#services">Explore Services</Link>
@@ -127,26 +144,26 @@ const ServicesPage = () => {
               Our Service Offerings
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive technology services designed to meet your specific industry needs 
-              and business objectives.
+              Comprehensive AI services designed for businesses with 10-600 employees
+              and $10M-$500M in revenue.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <Card key={index} className={`h-full ${service.highlight ? 'ring-2 ring-primary border-primary' : ''}`}>
                 {service.highlight && (
                   <div className="bg-primary text-white text-center py-2 text-sm font-medium rounded-t-xl">
-                    Most Popular
+                    {service.pricing === '2 Hours Free' ? 'Start Here' : 'Popular'}
                   </div>
                 )}
-                
+
                 <CardHeader>
                   <div className="mb-4">
-                    <Icon 
-                      icon={service.icon} 
-                      size="4xl" 
-                      color={service.color as 'primary' | 'secondary' | 'accent'} 
+                    <Icon
+                      icon={service.icon}
+                      size="4xl"
+                      color={service.color as 'primary' | 'secondary' | 'accent' | 'warning'}
                     />
                   </div>
                   <CardTitle className="text-2xl">{service.title}</CardTitle>
@@ -157,7 +174,7 @@ const ServicesPage = () => {
                     {service.pricing}
                   </div>
                 </CardHeader>
-                
+
                 <CardContent className="flex-1">
                   <ul className="space-y-3">
                     {service.features.map((feature, featureIndex) => (
@@ -170,14 +187,16 @@ const ServicesPage = () => {
                     ))}
                   </ul>
                 </CardContent>
-                
+
                 <CardFooter>
-                  <Button 
-                    asChild 
-                    className="w-full" 
+                  <Button
+                    asChild
+                    className="w-full"
                     variant={service.highlight ? 'primary' : 'outline'}
                   >
-                    <Link href={service.href}>Learn More</Link>
+                    <Link href={service.href}>
+                      {service.pricing === '2 Hours Free' ? 'Book Free Consultation' : 'Learn More'}
+                    </Link>
                   </Button>
                 </CardFooter>
               </Card>
@@ -194,8 +213,8 @@ const ServicesPage = () => {
               Our Proven Process
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A structured approach that has delivered results for 500+ businesses 
-              across manufacturing, healthcare, and commercial sectors.
+              A practical approach that has delivered 30+ successful implementations
+              with zero failures.
             </p>
           </div>
 
@@ -221,26 +240,26 @@ const ServicesPage = () => {
               Proven Results
             </h2>
             <p className="text-xl text-gray-100 max-w-3xl mx-auto">
-              42+ years of technology leadership delivering measurable business outcomes.
+              27+ years in technology. 30+ successful implementations. Zero failures.
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">500+</div>
-              <div className="text-gray-100">Businesses Transformed</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">30+</div>
+              <div className="text-gray-100">Successful Implementations</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">15</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">8+</div>
               <div className="text-gray-100">MEP Partnerships</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">$10M+</div>
-              <div className="text-gray-100">Funding Facilitated</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">$50K-$1M</div>
+              <div className="text-gray-100">Saved Per Client</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">98%</div>
-              <div className="text-gray-100">Client Satisfaction</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">0</div>
+              <div className="text-gray-100">Implementation Failures</div>
             </div>
           </div>
         </Container>
@@ -251,18 +270,17 @@ const ServicesPage = () => {
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Transform Your Business?
+              Start With 2 Hours Free
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let&apos;s discuss how our AI innovation and technology services can drive 
-              measurable results for your organization.
+              No commitment required. Let&apos;s discuss your AI goals and see if we&apos;re a good fit.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="xl" variant="accent" asChild>
-                <Link href="/contact">Book Free Consultation</Link>
+                <Link href="/book-time">Book Free Consultation</Link>
               </Button>
               <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-secondary" asChild>
-                <Link href="/case-studies">View Case Studies</Link>
+                <Link href="/about">Learn About Us</Link>
               </Button>
             </div>
           </div>
