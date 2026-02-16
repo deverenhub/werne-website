@@ -37,7 +37,7 @@ const HeroSection = () => {
             <span className="text-warning hover:animate-pulse-glow transition-all duration-300 cursor-default">Commercial Business</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed animate-slide-up-delayed">
+          <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed animate-slide-up-delayed">
             Transform your business through AI education, custom AI development, and strategic consulting.
             We help companies with 10-600 employees unlock the power of AI with practical, measurable results.
           </p>

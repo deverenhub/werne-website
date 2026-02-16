@@ -18,7 +18,7 @@ const CTASection = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-slide-up">
             Start With 2 Hours Free AI Consulting
           </h2>
-          <p className="text-xl md:text-2xl mb-8 text-white/90 animate-slide-up-delayed">
+          <p className="text-xl md:text-2xl mb-8 text-white animate-slide-up-delayed">
             Discover how AI can transform your business. No commitment required.
             Let&apos;s explore what&apos;s possible together.
           </p>
@@ -61,10 +61,10 @@ const CTASection = () => {
           </div>
           
           <div className="border-t border-white/20 pt-8">
-            <p className="text-lg text-white/80 mb-4">
+            <p className="text-lg text-white mb-4">
               27+ years in technology. 30+ successful implementations. Zero failures.
             </p>
-            <div className="flex flex-wrap justify-center gap-6 text-sm text-white/70">
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-white">
               <span className="flex items-center gap-2 hover:text-white transition-colors duration-300 animate-slide-up" style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
                 <Icon icon={faCheck} size="lg" className="text-white animate-bounce-gentle" />
                 8+ MEP Partnerships

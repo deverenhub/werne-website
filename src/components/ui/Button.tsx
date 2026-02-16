@@ -14,16 +14,16 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = 'primary', size = 'md', asChild = false, loading = false, shimmer = false, magnetic = false, children, ...props }, ref) => {
-    const baseClasses = 'inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group active:scale-[0.98]'
+    const baseClasses = 'inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-secondary disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group active:scale-[0.98]'
     
     const variants = {
-      primary: 'bg-primary text-white hover:bg-primary-dark focus:ring-primary hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5',
-      secondary: 'bg-secondary text-white hover:bg-secondary-dark focus:ring-secondary hover:shadow-lg hover:shadow-secondary/25 hover:-translate-y-0.5',
-      accent: 'bg-accent text-white hover:bg-accent-dark focus:ring-accent hover:shadow-lg hover:shadow-accent/25 hover:-translate-y-0.5',
-      outline: 'border-2 border-primary text-primary hover:bg-primary hover:text-white focus:ring-primary hover:shadow-lg hover:-translate-y-0.5',
-      ghost: 'text-primary hover:bg-primary/10 focus:ring-primary',
-      gradient: 'bg-gradient-to-r from-primary via-accent to-primary bg-size-200 bg-pos-0 hover:bg-pos-100 text-white hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5 transition-all duration-500',
-      warning: 'bg-warning text-white hover:bg-warning/90 focus:ring-warning hover:shadow-lg hover:shadow-warning/25 hover:-translate-y-0.5'
+      primary: 'bg-primary text-white hover:bg-primary-dark focus-visible:ring-primary hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5',
+      secondary: 'bg-secondary text-white hover:bg-secondary-dark focus-visible:ring-secondary hover:shadow-lg hover:shadow-secondary/25 hover:-translate-y-0.5',
+      accent: 'bg-accent text-white hover:bg-accent-dark focus-visible:ring-accent hover:shadow-lg hover:shadow-accent/25 hover:-translate-y-0.5',
+      outline: 'border-2 border-primary text-primary hover:bg-primary hover:text-white focus-visible:ring-primary hover:shadow-lg hover:-translate-y-0.5',
+      ghost: 'text-primary hover:bg-primary/10 focus-visible:ring-primary',
+      gradient: 'bg-gradient-to-r from-primary via-accent to-primary bg-size-200 bg-pos-0 hover:bg-pos-100 text-white hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5 transition-all duration-500 focus-visible:ring-white',
+      warning: 'bg-warning text-white hover:bg-warning/90 focus-visible:ring-warning hover:shadow-lg hover:shadow-warning/25 hover:-translate-y-0.5'
     }
     
     const sizes = {
