@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Metadata } from 'next'
 import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, Badge, Icon } from '@/components/ui'
 import {
@@ -292,8 +293,17 @@ const AboutPage = () => {
             <Card key={index} className="overflow-hidden mb-8">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div className="p-8">
-                  <h3 className="text-3xl font-bold text-secondary mb-2">{leader.name}</h3>
-                  <div className="text-xl text-primary font-semibold mb-4">{leader.role}</div>
+                  <div className="relative w-40 h-40 mx-auto mb-6">
+                    <Image
+                      src="/images/team/founder-placeholder.jpg"
+                      alt="Deveren Werne"
+                      fill
+                      className="object-cover rounded-full border-4 border-white shadow-lg"
+                      sizes="160px"
+                    />
+                  </div>
+                  <h3 className="text-3xl font-bold text-secondary mb-2 text-center">{leader.name}</h3>
+                  <div className="text-xl text-primary font-semibold mb-4 text-center">{leader.role}</div>
                   <p className="text-gray-600 leading-relaxed">{leader.bio}</p>
                 </div>
 

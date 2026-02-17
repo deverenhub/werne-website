@@ -464,7 +464,7 @@ const BookTimePage = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-r from-primary to-accent text-white">
+      <section className="py-20 bg-secondary text-white">
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -475,7 +475,7 @@ const BookTimePage = () => {
               and discover how AI can help your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="xl" variant="secondary" asChild>
+              <Button size="xl" variant="primary" asChild>
                 <Link href="/contact">
                   <Icon icon={faCalendarCheck} className="mr-2" />
                   Schedule Free Consultation

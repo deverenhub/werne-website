@@ -2,13 +2,12 @@
 
 import React, { useEffect } from 'react'
 import { Controller } from 'react-hook-form'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { 
-  faUser, 
-  faEnvelope, 
-  faPhone, 
-  faBuilding, 
-  faCogs, 
+import {
+  faUser,
+  faEnvelope,
+  faPhone,
+  faBuilding,
+  faCogs,
   faComment,
   faSpinner,
   faCheckCircle,
@@ -19,6 +18,7 @@ import { Input } from '@/components/ui/Input'
 import { Textarea } from '@/components/ui/Textarea'
 import { Select } from '@/components/ui/Select'
 import { Button } from '@/components/ui/Button'
+import { Icon } from '@/components/ui'
 import { useContactForm, useFieldFocus, useFormAnalytics } from '@/hooks/useContactForm'
 import { serviceTypeOptions, getFieldError, hasFieldError } from '@/lib/validation'
 import { cn } from '@/lib/utils'
@@ -40,27 +40,27 @@ export const ContactForm: React.FC<ContactFormProps> = ({
   onSubmitSuccess,
   onSubmitError
 }) => {
-  const { 
-    form, 
-    formState, 
-    handleSubmit, 
-    resetForm, 
-    clearMessages, 
-    canSubmit, 
-    hasErrors 
+  const {
+    form,
+    formState,
+    handleSubmit,
+    resetForm,
+    clearMessages,
+    canSubmit,
+    hasErrors
   } = useContactForm()
-  
+
   const { handleFocus, handleBlur, isFieldFocused } = useFieldFocus()
   const { trackFormStart, trackFormSubmit, trackFormError } = useFormAnalytics()
-  
-  const { 
-    register, 
-    control, 
-    handleSubmit: hookFormHandleSubmit, 
+
+  const {
+    register,
+    control,
+    handleSubmit: hookFormHandleSubmit,
     formState: { errors, touchedFields },
     watch
   } = form
-  
+
   // Track form start when user first interacts
   useEffect(() => {
     const subscription = watch((value, { name }) => {
@@ -70,7 +70,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
     })
     return () => subscription.unsubscribe()
   }, [watch, touchedFields, trackFormStart])
-  
+
   // Handle submission
   const onSubmit = async (data: Parameters<typeof handleSubmit>[0]) => {
     try {
@@ -83,14 +83,14 @@ export const ContactForm: React.FC<ContactFormProps> = ({
       onSubmitError?.(errorMessage)
     }
   }
-  
+
   // Handle form errors
   useEffect(() => {
     if (formState.isError && formState.errorMessage) {
       trackFormError(formState.errorMessage)
     }
   }, [formState.isError, formState.errorMessage, trackFormError])
-  
+
   return (
     <div className={cn("w-full max-w-2xl mx-auto", className)}>
       {showTitle && (
@@ -105,8 +105,8 @@ export const ContactForm: React.FC<ContactFormProps> = ({
           )}
         </div>
       )}
-      
-      <form 
+
+      <form
         onSubmit={hookFormHandleSubmit(onSubmit)}
         className="space-y-6 bg-white p-8 rounded-lg shadow-lg border border-gray-200"
         noValidate
@@ -115,9 +115,11 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         {formState.isSuccess && formState.successMessage && (
           <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
             <div className="flex items-center">
-              <FontAwesomeIcon 
-                icon={faCheckCircle} 
-                className="text-green-500 text-lg mr-3" 
+              <Icon
+                icon={faCheckCircle}
+                size="lg"
+                color="success"
+                className="mr-3"
               />
               <div className="flex-1">
                 <h4 className="text-green-800 font-medium">Message Sent Successfully!</h4>
@@ -129,19 +131,21 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                 className="text-green-500 hover:text-green-700 transition-colors"
                 aria-label="Dismiss success message"
               >
-                <FontAwesomeIcon icon={faTimes} />
+                <Icon icon={faTimes} size="sm" color="success" />
               </button>
             </div>
           </div>
         )}
-        
+
         {/* Error Message */}
         {formState.isError && formState.errorMessage && (
           <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
             <div className="flex items-center">
-              <FontAwesomeIcon 
-                icon={faExclamationTriangle} 
-                className="text-red-500 text-lg mr-3" 
+              <Icon
+                icon={faExclamationTriangle}
+                size="lg"
+                color="error"
+                className="mr-3"
               />
               <div className="flex-1">
                 <h4 className="text-red-800 font-medium">Error Sending Message</h4>
@@ -153,12 +157,12 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                 className="text-red-500 hover:text-red-700 transition-colors"
                 aria-label="Dismiss error message"
               >
-                <FontAwesomeIcon icon={faTimes} />
+                <Icon icon={faTimes} size="sm" color="error" />
               </button>
             </div>
           </div>
         )}
-        
+
         {/* Name Fields */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="relative">
@@ -175,16 +179,18 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                 isFieldFocused('firstName') && "ring-2 ring-primary ring-opacity-20"
               )}
             />
-            <FontAwesomeIcon 
-              icon={faUser} 
+            <Icon
+              icon={faUser}
+              size="sm"
+              color="neutral"
               className={cn(
-                "absolute right-3 top-9 text-gray-400 transition-colors",
-                isFieldFocused('firstName') && "text-primary",
-                hasFieldError('firstName', errors) && "text-red-500"
+                "absolute right-3 top-9 transition-colors",
+                isFieldFocused('firstName') && "!text-primary",
+                hasFieldError('firstName', errors) && "!text-red-500"
               )}
             />
           </div>
-          
+
           <div className="relative">
             <Input
               {...register('lastName')}
@@ -199,17 +205,19 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                 isFieldFocused('lastName') && "ring-2 ring-primary ring-opacity-20"
               )}
             />
-            <FontAwesomeIcon 
-              icon={faUser} 
+            <Icon
+              icon={faUser}
+              size="sm"
+              color="neutral"
               className={cn(
-                "absolute right-3 top-9 text-gray-400 transition-colors",
-                isFieldFocused('lastName') && "text-primary",
-                hasFieldError('lastName', errors) && "text-red-500"
+                "absolute right-3 top-9 transition-colors",
+                isFieldFocused('lastName') && "!text-primary",
+                hasFieldError('lastName', errors) && "!text-red-500"
               )}
             />
           </div>
         </div>
-        
+
         {/* Contact Information */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="relative">
@@ -227,16 +235,18 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                 isFieldFocused('email') && "ring-2 ring-primary ring-opacity-20"
               )}
             />
-            <FontAwesomeIcon 
-              icon={faEnvelope} 
+            <Icon
+              icon={faEnvelope}
+              size="sm"
+              color="neutral"
               className={cn(
-                "absolute right-3 top-9 text-gray-400 transition-colors",
-                isFieldFocused('email') && "text-primary",
-                hasFieldError('email', errors) && "text-red-500"
+                "absolute right-3 top-9 transition-colors",
+                isFieldFocused('email') && "!text-primary",
+                hasFieldError('email', errors) && "!text-red-500"
               )}
             />
           </div>
-          
+
           <div className="relative">
             <Input
               {...register('phone')}
@@ -252,17 +262,19 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                 isFieldFocused('phone') && "ring-2 ring-primary ring-opacity-20"
               )}
             />
-            <FontAwesomeIcon 
-              icon={faPhone} 
+            <Icon
+              icon={faPhone}
+              size="sm"
+              color="neutral"
               className={cn(
-                "absolute right-3 top-9 text-gray-400 transition-colors",
-                isFieldFocused('phone') && "text-primary",
-                hasFieldError('phone', errors) && "text-red-500"
+                "absolute right-3 top-9 transition-colors",
+                isFieldFocused('phone') && "!text-primary",
+                hasFieldError('phone', errors) && "!text-red-500"
               )}
             />
           </div>
         </div>
-        
+
         {/* Company and Service Type */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="relative">
@@ -279,16 +291,18 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                 isFieldFocused('company') && "ring-2 ring-primary ring-opacity-20"
               )}
             />
-            <FontAwesomeIcon 
-              icon={faBuilding} 
+            <Icon
+              icon={faBuilding}
+              size="sm"
+              color="neutral"
               className={cn(
-                "absolute right-3 top-9 text-gray-400 transition-colors",
-                isFieldFocused('company') && "text-primary",
-                hasFieldError('company', errors) && "text-red-500"
+                "absolute right-3 top-9 transition-colors",
+                isFieldFocused('company') && "!text-primary",
+                hasFieldError('company', errors) && "!text-red-500"
               )}
             />
           </div>
-          
+
           <div className="relative">
             <Controller
               name="serviceType"
@@ -310,17 +324,19 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                 />
               )}
             />
-            <FontAwesomeIcon 
-              icon={faCogs} 
+            <Icon
+              icon={faCogs}
+              size="sm"
+              color="neutral"
               className={cn(
-                "absolute right-10 top-9 text-gray-400 transition-colors pointer-events-none",
-                isFieldFocused('serviceType') && "text-primary",
-                hasFieldError('serviceType', errors) && "text-red-500"
+                "absolute right-10 top-9 transition-colors pointer-events-none",
+                isFieldFocused('serviceType') && "!text-primary",
+                hasFieldError('serviceType', errors) && "!text-red-500"
               )}
             />
           </div>
         </div>
-        
+
         {/* Message */}
         <div className="relative">
           <Textarea
@@ -340,16 +356,18 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             )}
             helperText="Please provide as much detail as possible to help us understand your needs."
           />
-          <FontAwesomeIcon 
-            icon={faComment} 
+          <Icon
+            icon={faComment}
+            size="sm"
+            color="neutral"
             className={cn(
-              "absolute right-3 top-9 text-gray-400 transition-colors",
-              isFieldFocused('message') && "text-primary",
-              hasFieldError('message', errors) && "text-red-500"
+              "absolute right-3 top-9 transition-colors",
+              isFieldFocused('message') && "!text-primary",
+              hasFieldError('message', errors) && "!text-red-500"
             )}
           />
         </div>
-        
+
         {/* Submit Button */}
         <div className="pt-4">
           <Button
@@ -357,40 +375,42 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             disabled={!canSubmit}
             className={cn(
               "w-full py-3 text-lg font-medium transition-all duration-200",
-              canSubmit 
-                ? "bg-primary hover:bg-primary-dark text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5" 
+              canSubmit
+                ? "bg-primary hover:bg-primary-dark text-white shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                 : "bg-gray-300 text-gray-500 cursor-not-allowed"
             )}
           >
             {formState.isSubmitting ? (
               <span className="flex items-center justify-center">
-                <FontAwesomeIcon 
-                  icon={faSpinner} 
-                  className="animate-spin mr-2" 
+                <Icon
+                  icon={faSpinner}
+                  size="sm"
+                  color="neutral"
+                  className="animate-spin mr-2 !text-current"
                 />
                 Sending Message...
               </span>
             ) : (
               <span className="flex items-center justify-center">
-                <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
+                <Icon icon={faEnvelope} size="sm" color="neutral" className="mr-2 !text-current" />
                 Send Message
               </span>
             )}
           </Button>
-          
+
           {hasErrors && (
             <p className="text-sm text-red-600 mt-2 text-center">
               Please fix the errors above before submitting.
             </p>
           )}
-          
+
           {!canSubmit && !hasErrors && !formState.isSubmitting && (
             <p className="text-sm text-gray-500 mt-2 text-center">
               Please fill out all required fields to submit.
             </p>
           )}
         </div>
-        
+
         {/* Reset Button (only show when form has data) */}
         {(Object.keys(touchedFields).length > 0 || formState.isError) && (
           <div className="pt-2">
@@ -406,13 +426,13 @@ export const ContactForm: React.FC<ContactFormProps> = ({
           </div>
         )}
       </form>
-      
+
       {/* Privacy Notice */}
       <div className="mt-6 text-center">
         <p className="text-sm text-gray-500">
           By submitting this form, you agree to our{' '}
-          <a 
-            href="/privacy" 
+          <a
+            href="/privacy"
             className="text-primary hover:text-primary-dark underline"
             target="_blank"
             rel="noopener noreferrer"
@@ -420,8 +440,8 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             Privacy Policy
           </a>
           {' '}and{' '}
-          <a 
-            href="/terms" 
+          <a
+            href="/terms"
             className="text-primary hover:text-primary-dark underline"
             target="_blank"
             rel="noopener noreferrer"

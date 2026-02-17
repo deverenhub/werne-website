@@ -1,7 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 import { Metadata } from 'next'
-import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge } from '@/components/ui'
+import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Icon } from '@/components/ui'
+import { faGraduationCap, faChartBar, faRocket, faBuilding, faIndustry, faHospital, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
   title: 'AI Training Programs - Purdue MEP AI Series & Bootcamps | Werne Enterprises',
@@ -13,7 +14,7 @@ const EducationPage = () => {
     {
       title: 'Purdue MEP AI Series',
       description: 'Comprehensive AI training program developed in partnership with Purdue MEP for manufacturing professionals.',
-      icon: '🎓',
+      icon: faGraduationCap,
       audience: 'Manufacturing Teams',
       duration: 'Multi-session series',
       format: 'In-person or virtual',
@@ -31,7 +32,7 @@ const EducationPage = () => {
     {
       title: 'AI the Spreadsheet Killer',
       description: 'Learn how AI transforms data management and eliminates spreadsheet dependency.',
-      icon: '📊',
+      icon: faChartBar,
       audience: 'Business Professionals',
       duration: 'Contact for details',
       format: 'Workshop format',
@@ -49,7 +50,7 @@ const EducationPage = () => {
     {
       title: '12 Week AI Bootcamp',
       description: 'Intensive AI implementation program for teams ready to deploy AI in their organizations.',
-      icon: '🚀',
+      icon: faRocket,
       audience: 'Implementation Teams',
       duration: '12 weeks',
       format: 'Blended learning',
@@ -67,7 +68,7 @@ const EducationPage = () => {
     {
       title: 'Custom Corporate Training',
       description: 'Tailored AI training programs designed for your organization\'s specific needs and goals.',
-      icon: '🏢',
+      icon: faBuilding,
       audience: 'Your Teams',
       duration: 'Flexible',
       format: 'Customized to requirements',
@@ -98,7 +99,7 @@ const EducationPage = () => {
   const industries = [
     {
       name: 'Manufacturing',
-      icon: '🏭',
+      icon: faIndustry,
       focus_areas: [
         'AI for process optimization',
         'Predictive maintenance concepts',
@@ -110,7 +111,7 @@ const EducationPage = () => {
     },
     {
       name: 'Healthcare',
-      icon: '🏥',
+      icon: faHospital,
       focus_areas: [
         'AI applications in healthcare',
         'Compliance considerations',
@@ -122,7 +123,7 @@ const EducationPage = () => {
     },
     {
       name: 'Commercial Business',
-      icon: '🏢',
+      icon: faBuilding,
       focus_areas: [
         'AI for business operations',
         'Customer experience AI',
@@ -204,7 +205,7 @@ const EducationPage = () => {
                 )}
 
                 <CardHeader>
-                  <div className="text-4xl mb-4 text-center">{program.icon}</div>
+                  <Icon icon={program.icon} size="4xl" color="primary" className="mb-4 text-center" />
                   <CardTitle className="text-2xl text-center">{program.title}</CardTitle>
                   <CardDescription className="text-lg text-center">
                     {program.description}
@@ -233,7 +234,7 @@ const EducationPage = () => {
                       <ul className="space-y-1">
                         {program.topics.map((topic, topicIndex) => (
                           <li key={topicIndex} className="flex items-start">
-                            <span className="text-primary mr-2 text-sm">•</span>
+                            <Icon icon={faCheckCircle} size="sm" color="primary" className="mr-2" />
                             <span className="text-gray-700 text-sm">{topic}</span>
                           </li>
                         ))}
@@ -278,6 +279,39 @@ const EducationPage = () => {
         </Container>
       </section>
 
+      {/* Stats Section */}
+      <section className="bg-gradient-to-r from-primary to-accent text-white py-16">
+        <Container>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Training Program Results
+            </h2>
+            <p className="text-xl text-gray-100 max-w-3xl mx-auto">
+              Delivering AI education through MEP partnerships nationwide.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">50+</div>
+              <div className="text-gray-100">Companies Trained</div>
+            </div>
+            <div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">8+</div>
+              <div className="text-gray-100">MEP Partnerships</div>
+            </div>
+            <div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">100+</div>
+              <div className="text-gray-100">Programs Delivered</div>
+            </div>
+            <div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">4</div>
+              <div className="text-gray-100">Training Formats</div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       {/* Industry-Specific Training */}
       <section className="py-20 bg-gray-50">
         <Container>
@@ -295,7 +329,7 @@ const EducationPage = () => {
             {industries.map((industry, index) => (
               <Card key={index} className="h-full">
                 <CardHeader>
-                  <div className="text-4xl mb-4 text-center">{industry.icon}</div>
+                  <Icon icon={industry.icon} size="4xl" color="primary" className="mb-4 text-center" />
                   <CardTitle className="text-2xl text-center">{industry.name}</CardTitle>
                 </CardHeader>
 
@@ -306,7 +340,7 @@ const EducationPage = () => {
                       <ul className="space-y-2">
                         {industry.focus_areas.map((area, areaIndex) => (
                           <li key={areaIndex} className="flex items-start">
-                            <span className="text-primary mr-2">•</span>
+                            <Icon icon={faCheckCircle} size="sm" color="primary" className="mr-2" />
                             <span className="text-gray-700 text-sm">{area}</span>
                           </li>
                         ))}
@@ -340,7 +374,7 @@ const EducationPage = () => {
               All pricing provided after understanding your specific requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="xl" variant="accent" asChild>
+              <Button size="xl" variant="primary" asChild>
                 <Link href="/book-time">Discuss Training Needs</Link>
               </Button>
               <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-secondary" asChild>

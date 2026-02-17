@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Metadata } from 'next'
 import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Icon } from '@/components/ui'
 import {
@@ -9,7 +10,10 @@ import {
   faCircle,
   faGraduationCap,
   faBrain,
-  faHandshake
+  faHandshake,
+  faHardHat,
+  faRobot,
+  faBook
 } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
@@ -168,8 +172,19 @@ const ManufacturingPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-secondary via-secondary-dark to-secondary py-20 lg:py-32 text-white">
-        <Container>
+      <section className="relative bg-gradient-to-br from-secondary via-secondary-dark to-secondary py-20 lg:py-32 text-white overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/industries/manufacturing.jpg"
+            alt="Manufacturing facility"
+            fill
+            className="object-cover opacity-20"
+            priority
+            sizes="100vw"
+          />
+        </div>
+        <Container className="relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="primary" size="lg" className="mb-6">
               8+ MEP Partnerships | TSVMap Methodology
@@ -363,7 +378,7 @@ const ManufacturingPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <Card>
                 <CardContent className="p-6 text-center">
-                  <div className="text-4xl mb-3">👨‍🔧</div>
+                  <Icon icon={faHardHat} size="4xl" color="primary" className="mb-3" />
                   <h3 className="font-semibold text-secondary mb-2">Interview Experts</h3>
                   <p className="text-gray-600 text-sm">Capture knowledge from your most experienced workers</p>
                 </CardContent>
@@ -371,7 +386,7 @@ const ManufacturingPage = () => {
 
               <Card>
                 <CardContent className="p-6 text-center">
-                  <div className="text-4xl mb-3">🤖</div>
+                  <Icon icon={faRobot} size="4xl" color="accent" className="mb-3" />
                   <h3 className="font-semibold text-secondary mb-2">Create AI Personas</h3>
                   <p className="text-gray-600 text-sm">Transform expertise into always-available AI assistants</p>
                 </CardContent>
@@ -379,7 +394,7 @@ const ManufacturingPage = () => {
 
               <Card>
                 <CardContent className="p-6 text-center">
-                  <div className="text-4xl mb-3">📚</div>
+                  <Icon icon={faBook} size="4xl" color="warning" className="mb-3" />
                   <h3 className="font-semibold text-secondary mb-2">Preserve Knowledge</h3>
                   <p className="text-gray-600 text-sm">Institutional knowledge that never retires</p>
                 </CardContent>

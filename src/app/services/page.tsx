@@ -276,7 +276,7 @@ const ServicesPage = () => {
               No commitment required. Let&apos;s discuss your AI goals and see if we&apos;re a good fit.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="xl" variant="accent" asChild>
+              <Button size="xl" variant="primary" asChild>
                 <Link href="/book-time">Book Free Consultation</Link>
               </Button>
               <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-secondary" asChild>

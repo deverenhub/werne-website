@@ -3,10 +3,10 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Icon } from '@/components/ui'
 import ContactForm from '@/components/forms/ContactForm'
-import { 
-  faCalendarCheck, 
-  faEnvelope, 
-  faPhone, 
+import {
+  faCalendarCheck,
+  faEnvelope,
+  faPhone,
   faBrain,
   faChartLine,
   faIndustry,
@@ -159,18 +159,18 @@ const ContactPage = () => {
             <Badge variant="primary" size="lg" className="mb-6">
               Get Started Today
             </Badge>
-            
+
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
               Contact{' '}
               <span className="text-primary">Werne</span>{' '}
               Enterprises
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Ready to transform your business with AI innovation and technology solutions?
               Start with 2 hours of FREE AI consulting and discover what&apos;s possible.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="xl" asChild>
                 <Link href="/book-time">
@@ -201,7 +201,7 @@ const ContactPage = () => {
               Get In Touch
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the contact method that works best for you. We&apos;re here to help you 
+              Choose the contact method that works best for you. We&apos;re here to help you
               explore how technology can transform your business.
             </p>
           </div>
@@ -214,13 +214,13 @@ const ContactPage = () => {
                     Recommended
                   </div>
                 )}
-                
+
                 <CardHeader>
                   <div className="mb-4">
-                    <Icon 
-                      icon={method.icon} 
-                      size="2xl" 
-                      color={method.primary ? 'primary' : 'secondary'} 
+                    <Icon
+                      icon={method.icon}
+                      size="2xl"
+                      color={method.primary ? 'primary' : 'secondary'}
                     />
                   </div>
                   <CardTitle className="text-xl">{method.method}</CardTitle>
@@ -228,11 +228,11 @@ const ContactPage = () => {
                     {method.description}
                   </CardDescription>
                 </CardHeader>
-                
+
                 <CardFooter>
-                  <Button 
-                    asChild 
-                    className="w-full" 
+                  <Button
+                    asChild
+                    className="w-full"
                     variant={method.primary ? 'primary' : 'outline'}
                   >
                     <Link href={method.href}>{method.action}</Link>
@@ -268,7 +268,7 @@ const ContactPage = () => {
                     {service.description}
                   </CardDescription>
                 </CardHeader>
-                
+
                 <CardContent>
                   <div className="space-y-3">
                     <div className="flex justify-between items-center">
@@ -278,7 +278,7 @@ const ContactPage = () => {
                       </span>
                       <span className="text-gray-700">{service.duration}</span>
                     </div>
-                    
+
                     <div>
                       <span className="font-medium text-secondary flex items-center">
                         <Icon icon={faUsers} size="xs" className="mr-2" />
@@ -288,7 +288,7 @@ const ContactPage = () => {
                     </div>
                   </div>
                 </CardContent>
-                
+
                 <CardFooter>
                   <Button asChild className="w-full">
                     <Link href="/book-time">
@@ -327,7 +327,7 @@ const ContactPage = () => {
                   <CardTitle className="text-xl">{item.method}</CardTitle>
                   <div className="text-2xl font-bold text-primary">{item.time}</div>
                 </CardHeader>
-                
+
                 <CardContent>
                   <p className="text-gray-600">{item.description}</p>
                 </CardContent>
@@ -356,7 +356,7 @@ const ContactPage = () => {
                   <CardHeader>
                     <CardTitle className="text-2xl">{office.location}</CardTitle>
                   </CardHeader>
-                  
+
                   <CardContent className="space-y-4">
                     <div>
                       <h4 className="font-semibold text-secondary mb-1 flex items-center">
@@ -365,7 +365,7 @@ const ContactPage = () => {
                       </h4>
                       <p className="text-gray-700 whitespace-pre-line">{office.address}</p>
                     </div>
-                    
+
                     <div>
                       <h4 className="font-semibold text-secondary mb-1 flex items-center">
                         <Icon icon={faPhone} size="xs" className="mr-2" />
@@ -373,7 +373,7 @@ const ContactPage = () => {
                       </h4>
                       <p className="text-gray-700">{office.phone}</p>
                     </div>
-                    
+
                     <div>
                       <h4 className="font-semibold text-secondary mb-1 flex items-center">
                         <Icon icon={faEnvelope} size="xs" className="mr-2" />
@@ -381,7 +381,7 @@ const ContactPage = () => {
                       </h4>
                       <p className="text-gray-700">{office.email}</p>
                     </div>
-                    
+
                     <div>
                       <h4 className="font-semibold text-secondary mb-1 flex items-center">
                         <Icon icon={faBusinessTime} size="xs" className="mr-2" />
@@ -393,7 +393,7 @@ const ContactPage = () => {
                 </Card>
               ))}
             </div>
-            
+
             <div className="bg-gray-100 p-8 rounded-xl">
               <h3 className="text-2xl font-bold text-secondary mb-4 flex items-center">
                 <Icon icon={faGlobeAmericas} size="lg" color="primary" className="mr-3" />
@@ -404,7 +404,7 @@ const ContactPage = () => {
                 United States through on-site visits, remote consultations, and virtual
                 implementation support.
               </p>
-              
+
               <div className="space-y-3">
                 <div className="flex items-center">
                   <Icon icon={faCheckCircle} size="xs" color="primary" className="mr-3" />
@@ -429,7 +429,7 @@ const ContactPage = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <Container>
           <div className="max-w-4xl mx-auto">
             <ContactForm
@@ -441,7 +441,7 @@ const ContactPage = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <Container>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6 flex items-center justify-center">
@@ -459,14 +459,14 @@ const ContactPage = () => {
                 <CardHeader>
                   <CardTitle className="text-xl text-left">{item.question}</CardTitle>
                 </CardHeader>
-                
+
                 <CardContent>
                   <p className="text-gray-600 leading-relaxed">{item.answer}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
-          
+
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-4">Have a different question?</p>
             <Button asChild variant="outline">
@@ -482,7 +482,7 @@ const ContactPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-accent text-white">
+      <section className="py-20 bg-secondary text-white">
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 flex items-center justify-center">
@@ -490,11 +490,11 @@ const ContactPage = () => {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-100 mb-8">
-              Take the first step toward transforming your business with AI and technology solutions. 
+              Take the first step toward transforming your business with AI and technology solutions.
               Schedule your free consultation today and discover what&apos;s possible.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="xl" variant="secondary" asChild>
+              <Button size="xl" variant="primary" asChild>
                 <Link href="/book-time">
                   <span className="flex items-center">
                     <Icon icon={faCalendarCheck} size="sm" className="mr-2" />

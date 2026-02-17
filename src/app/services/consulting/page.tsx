@@ -1,7 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 import { Metadata } from 'next'
-import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge } from '@/components/ui'
+import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Icon } from '@/components/ui'
+import { faClipboardList, faBullseye, faMap, faWrench, faIndustry, faHospital, faBuilding, faCheck, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
   title: 'AI Consulting Services - Strategy & Implementation | Werne Enterprises',
@@ -13,7 +14,7 @@ const ConsultingPage = () => {
     {
       title: 'AI Readiness Assessment',
       description: 'Comprehensive evaluation of your organization\'s preparedness for AI adoption.',
-      icon: '📋',
+      icon: faClipboardList,
       deliverables: [
         'Current state analysis',
         'Data readiness evaluation',
@@ -28,7 +29,7 @@ const ConsultingPage = () => {
     {
       title: 'AI Strategy Development',
       description: 'Create a practical AI strategy aligned with your business objectives.',
-      icon: '🎯',
+      icon: faBullseye,
       deliverables: [
         'AI opportunity mapping',
         'Technology recommendations',
@@ -43,7 +44,7 @@ const ConsultingPage = () => {
     {
       title: 'TSVMap Methodology',
       description: 'Our proven technology strategy and vendor mapping approach developed for manufacturers.',
-      icon: '🗺️',
+      icon: faMap,
       deliverables: [
         'Technology landscape mapping',
         'Vendor evaluation',
@@ -58,7 +59,7 @@ const ConsultingPage = () => {
     {
       title: 'Implementation Support',
       description: 'Hands-on guidance during AI implementation and organizational change.',
-      icon: '🔧',
+      icon: faWrench,
       deliverables: [
         'Project management support',
         'Technical guidance',
@@ -86,7 +87,7 @@ const ConsultingPage = () => {
   const expertise = [
     {
       area: 'Manufacturing',
-      icon: '🏭',
+      icon: faIndustry,
       focus: [
         'Process optimization',
         'ERP system evaluation',
@@ -98,7 +99,7 @@ const ConsultingPage = () => {
     },
     {
       area: 'Healthcare',
-      icon: '🏥',
+      icon: faHospital,
       focus: [
         'HIPAA compliance',
         'EHR optimization',
@@ -110,7 +111,7 @@ const ConsultingPage = () => {
     },
     {
       area: 'Commercial Business',
-      icon: '🏢',
+      icon: faBuilding,
       focus: [
         'CRM optimization',
         'Business intelligence',
@@ -188,7 +189,7 @@ const ConsultingPage = () => {
               <Card key={index} className="h-full">
                 <CardHeader>
                   <div className="flex items-center mb-4">
-                    <div className="text-4xl mr-4">{service.icon}</div>
+                    <Icon icon={service.icon} size="4xl" color="primary" className="mr-4" />
                     <div>
                       <CardTitle className="text-2xl">{service.title}</CardTitle>
                       <div className="text-primary font-semibold">{service.pricing}</div>
@@ -206,7 +207,7 @@ const ConsultingPage = () => {
                       <ul className="space-y-2">
                         {service.deliverables.map((deliverable, deliverableIndex) => (
                           <li key={deliverableIndex} className="flex items-start">
-                            <span className="text-primary mr-2">✓</span>
+                            <Icon icon={faCheck} size="lg" color="success" className="mr-2" />
                             <span className="text-gray-700 text-sm">{deliverable}</span>
                           </li>
                         ))}
@@ -268,7 +269,7 @@ const ConsultingPage = () => {
             {expertise.map((industry, index) => (
               <Card key={index} className="h-full">
                 <CardHeader>
-                  <div className="text-4xl mb-4 text-center">{industry.icon}</div>
+                  <Icon icon={industry.icon} size="4xl" color="primary" className="mb-4 text-center" />
                   <CardTitle className="text-2xl text-center">{industry.area}</CardTitle>
                 </CardHeader>
 
@@ -276,7 +277,7 @@ const ConsultingPage = () => {
                   <ul className="space-y-2">
                     {industry.focus.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-start">
-                        <span className="text-primary mr-2">•</span>
+                        <Icon icon={faCheckCircle} size="sm" color="primary" className="mr-2" />
                         <span className="text-gray-700 text-sm">{item}</span>
                       </li>
                     ))}
@@ -341,7 +342,7 @@ const ConsultingPage = () => {
               our consulting services can help you achieve measurable results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="xl" variant="accent" asChild>
+              <Button size="xl" variant="primary" asChild>
                 <Link href="/book-time">Book Free Consultation</Link>
               </Button>
               <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-secondary" asChild>

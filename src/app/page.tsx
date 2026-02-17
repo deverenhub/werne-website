@@ -1,15 +1,17 @@
-import { 
-  HeroSection, 
-  IndustrySolutionsSection, 
-  WhyPartnerSection, 
-  InnovationPortfolioSection, 
-  CTASection 
+import {
+  HeroSection,
+  PartnerLogosSection,
+  WhyPartnerSection,
+  IndustrySolutionsSection,
+  InnovationPortfolioSection,
+  CTASection
 } from '@/components/sections'
 
 export default function Home() {
   return (
     <>
       <HeroSection />
+      <PartnerLogosSection />
       <WhyPartnerSection />
       <IndustrySolutionsSection />
       <InnovationPortfolioSection />

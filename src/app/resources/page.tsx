@@ -414,7 +414,7 @@ const ResourcesPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-accent text-white">
+      <section className="py-20 bg-secondary text-white">
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -425,7 +425,7 @@ const ResourcesPage = () => {
               All pricing provided after understanding your specific requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="xl" variant="secondary" asChild>
+              <Button size="xl" variant="primary" asChild>
                 <Link href="/book-time">
                   <Icon icon={faCalendarAlt} className="mr-2" />
                   Discuss Training Needs

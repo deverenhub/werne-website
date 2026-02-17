@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { Button, Container, Icon } from '@/components/ui'
-import { faCheck, faCalendarAlt, faDownload, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faCheck, faCalendarAlt, faPhone } from '@fortawesome/free-solid-svg-icons'
 
 const CTASection = () => {
   return (
@@ -12,7 +12,7 @@ const CTASection = () => {
         <div className="absolute top-10 right-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-float" />
         <div className="absolute bottom-10 left-10 w-24 h-24 bg-white/15 rounded-full blur-lg animate-float" style={{ animationDelay: '-2s' }} />
       </div>
-      
+
       <Container className="relative z-10">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-slide-up">
@@ -22,7 +22,7 @@ const CTASection = () => {
             Discover how AI can transform your business. No commitment required.
             Let&apos;s explore what&apos;s possible together.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-scale-in" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
             <Button
               size="xl"
@@ -36,21 +36,10 @@ const CTASection = () => {
                 Get Your Free 2 Hours
               </Link>
             </Button>
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               size="xl"
               className="border-white text-white hover:bg-white hover:text-primary hover:scale-105 hover:shadow-2xl"
-              asChild
-            >
-              <Link href="/resources">
-                <Icon icon={faDownload} className="mr-2" />
-                Download Capabilities
-              </Link>
-            </Button>
-            <Button 
-              variant="ghost" 
-              size="xl"
-              className="text-white hover:bg-white/10 hover:scale-105"
               asChild
             >
               <a href="tel:8649915656">
@@ -59,7 +48,7 @@ const CTASection = () => {
               </a>
             </Button>
           </div>
-          
+
           <div className="border-t border-white/20 pt-8">
             <p className="text-lg text-white mb-4">
               27+ years in technology. 30+ successful implementations. Zero failures.

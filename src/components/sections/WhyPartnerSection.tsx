@@ -1,12 +1,13 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Button, Container, Badge, Icon } from '@/components/ui'
-import { 
-  faBullseye, 
-  faRocket, 
-  faCheck, 
-  faLightbulb, 
-  faChartBar 
+import {
+  faBullseye,
+  faRocket,
+  faCheck,
+  faLightbulb,
+  faChartBar
 } from '@fortawesome/free-solid-svg-icons'
 
 const WhyPartnerSection = () => {
@@ -51,8 +52,8 @@ const WhyPartnerSection = () => {
             Why Partner With Werne Enterprises
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            We bring a unique combination of deep technical expertise, industry-specific knowledge, 
-            and a proven track record of business impact. Our specialization in Manufacturing, Healthcare, 
+            We bring a unique combination of deep technical expertise, industry-specific knowledge,
+            and a proven track record of business impact. Our specialization in Manufacturing, Healthcare,
             and Commercial Business positions us as your ideal technology partner.
           </p>
           <Badge variant="primary" size="lg">
@@ -64,10 +65,10 @@ const WhyPartnerSection = () => {
           {advantages.map((advantage, index) => (
             <div key={index} className="text-center">
               <div className="mb-4">
-                <Icon 
-                  icon={advantage.icon} 
-                  size="4xl" 
-                  color={advantage.color as 'primary' | 'secondary' | 'accent' | 'warning' | 'success'} 
+                <Icon
+                  icon={advantage.icon}
+                  size="4xl"
+                  color={advantage.color as 'primary' | 'secondary' | 'accent' | 'warning' | 'success'}
                 />
               </div>
               <h3 className="text-lg font-semibold text-secondary mb-3">{advantage.title}</h3>
@@ -76,21 +77,29 @@ const WhyPartnerSection = () => {
           ))}
         </div>
 
-        <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 text-center">
-          <h3 className="text-2xl font-bold text-secondary mb-4">
-            Start With 2 Hours Free AI Consulting
-          </h3>
-          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Whether you&apos;re in Manufacturing, Healthcare, or Commercial Business,
-            discover how AI can transform your operations with no upfront commitment.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild>
-              <Link href="/book-time">Get Your Free Consultation</Link>
-            </Button>
-            <Button variant="outline" size="lg" asChild>
-              <Link href="/services">View Our Services</Link>
-            </Button>
+        <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8">
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            <div className="relative w-32 h-32 md:w-40 md:h-40 flex-shrink-0">
+              <Image
+                src="/images/team/founder-placeholder.jpg"
+                alt="Founder"
+                fill
+                className="object-cover rounded-full border-4 border-white shadow-lg"
+                sizes="160px"
+              />
+            </div>
+            <div className="text-center md:text-left flex-1">
+              <h3 className="text-2xl font-bold text-secondary mb-4">
+                Start With 2 Hours Free AI Consulting
+              </h3>
+              <p className="text-gray-600 mb-6 max-w-2xl">
+                Whether you&apos;re in Manufacturing, Healthcare, or Commercial Business,
+                discover how AI can transform your operations with no upfront commitment.
+              </p>
+              <Button size="lg" asChild>
+                <Link href="/book-time">Get Your Free Consultation</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </Container>

@@ -1,7 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Metadata } from 'next'
-import { Button, Container, Card, CardHeader, CardTitle, CardContent, CardFooter, Badge } from '@/components/ui'
+import { Button, Container, Card, CardHeader, CardTitle, CardContent, CardFooter, Badge, Icon } from '@/components/ui'
+import { faBrain, faCogs, faLink, faIndustry, faHospital, faBuilding, faBook, faRobot, faBullseye, faCheck, faCheckCircle, faStar, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
   title: 'Custom AI Development - SmartHive & AI Solutions | Werne Enterprises',
@@ -13,7 +15,7 @@ const AIInnovationPage = () => {
     {
       title: 'SmartHive.online',
       description: 'Our flagship platform that captures employee tribal knowledge and transforms it into AI personas.',
-      icon: '🧠',
+      icon: faBrain,
       features: [
         'Tribal knowledge capture',
         'AI persona creation',
@@ -38,7 +40,7 @@ const AIInnovationPage = () => {
     {
       title: 'Custom AI Development',
       description: 'Tailored AI applications designed for your specific business needs and workflows.',
-      icon: '⚙️',
+      icon: faCogs,
       features: [
         'Custom AI applications',
         'Business process automation',
@@ -63,7 +65,7 @@ const AIInnovationPage = () => {
     {
       title: 'AI Integration Services',
       description: 'Connect AI capabilities with your existing business systems and workflows.',
-      icon: '🔗',
+      icon: faLink,
       features: [
         'System integration',
         'API development',
@@ -90,7 +92,7 @@ const AIInnovationPage = () => {
   const industries = [
     {
       name: 'Manufacturing',
-      icon: '🏭',
+      icon: faIndustry,
       applications: [
         'Tribal knowledge preservation from retiring workers',
         'Process optimization AI',
@@ -101,7 +103,7 @@ const AIInnovationPage = () => {
     },
     {
       name: 'Healthcare',
-      icon: '🏥',
+      icon: faHospital,
       applications: [
         'Clinical expertise preservation',
         'Compliance documentation AI',
@@ -112,7 +114,7 @@ const AIInnovationPage = () => {
     },
     {
       name: 'Commercial Business',
-      icon: '🏢',
+      icon: faBuilding,
       applications: [
         'Sales expertise capture',
         'Customer service AI',
@@ -191,7 +193,7 @@ const AIInnovationPage = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div className="p-8">
                     <div className="flex items-center mb-6">
-                      <div className="text-4xl mr-4">{service.icon}</div>
+                      <Icon icon={service.icon} size="4xl" color="primary" className="mr-4" />
                       <div>
                         <h3 className="text-3xl font-bold text-secondary">{service.title}</h3>
                         <p className="text-lg text-gray-600 mt-2">{service.description}</p>
@@ -204,7 +206,7 @@ const AIInnovationPage = () => {
                         <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
                           {service.features.map((feature, featureIndex) => (
                             <li key={featureIndex} className="flex items-start">
-                              <span className="text-primary mr-2">✓</span>
+                              <Icon icon={faCheck} size="lg" color="success" className="mr-2" />
                               <span className="text-gray-700 text-sm">{feature}</span>
                             </li>
                           ))}
@@ -220,7 +222,7 @@ const AIInnovationPage = () => {
                         <ul className="space-y-2">
                           {service.benefits.map((benefit, benefitIndex) => (
                             <li key={benefitIndex} className="flex items-start">
-                              <span className="text-accent mr-2">★</span>
+                              <Icon icon={faStar} size="sm" color="accent" className="mr-2" />
                               <span className="text-gray-700 text-sm">{benefit}</span>
                             </li>
                           ))}
@@ -232,7 +234,7 @@ const AIInnovationPage = () => {
                         <ul className="space-y-2">
                           {service.use_cases.map((useCase, useCaseIndex) => (
                             <li key={useCaseIndex} className="flex items-start">
-                              <span className="text-warning mr-2">→</span>
+                              <Icon icon={faArrowRight} size="sm" color="primary" className="mr-2" />
                               <span className="text-gray-700 text-sm">{useCase}</span>
                             </li>
                           ))}
@@ -263,7 +265,7 @@ const AIInnovationPage = () => {
             {industries.map((industry, index) => (
               <Card key={index} className="text-center">
                 <CardHeader>
-                  <div className="text-5xl mb-4">{industry.icon}</div>
+                  <Icon icon={industry.icon} size="4xl" color="primary" className="mb-4" />
                   <CardTitle className="text-2xl">{industry.name}</CardTitle>
                 </CardHeader>
 
@@ -271,7 +273,7 @@ const AIInnovationPage = () => {
                   <ul className="space-y-3 text-left">
                     {industry.applications.map((application, appIndex) => (
                       <li key={appIndex} className="flex items-start">
-                        <span className="text-primary mr-2">•</span>
+                        <Icon icon={faCheckCircle} size="sm" color="primary" className="mr-2" />
                         <span className="text-gray-700">{application}</span>
                       </li>
                     ))}
@@ -309,10 +311,21 @@ const AIInnovationPage = () => {
               to answer questions, train new hires, and preserve institutional knowledge.
             </p>
 
+            {/* SmartHive Dashboard Image */}
+            <div className="relative h-64 md:h-80 w-full mb-8 rounded-lg overflow-hidden shadow-lg">
+              <Image
+                src="/images/products/smarthive-dashboard.jpg"
+                alt="SmartHive Dashboard"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 896px"
+              />
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <Card>
                 <CardContent className="p-6 text-center">
-                  <div className="text-4xl mb-3">📚</div>
+                  <Icon icon={faBook} size="4xl" color="primary" className="mb-3" />
                   <h3 className="font-semibold text-secondary mb-2">Capture Knowledge</h3>
                   <p className="text-gray-600 text-sm">Interview experts and document their institutional knowledge</p>
                 </CardContent>
@@ -320,7 +333,7 @@ const AIInnovationPage = () => {
 
               <Card>
                 <CardContent className="p-6 text-center">
-                  <div className="text-4xl mb-3">🤖</div>
+                  <Icon icon={faRobot} size="4xl" color="primary" className="mb-3" />
                   <h3 className="font-semibold text-secondary mb-2">Create AI Personas</h3>
                   <p className="text-gray-600 text-sm">Transform knowledge into AI assistants that think like your experts</p>
                 </CardContent>
@@ -328,7 +341,7 @@ const AIInnovationPage = () => {
 
               <Card>
                 <CardContent className="p-6 text-center">
-                  <div className="text-4xl mb-3">🎯</div>
+                  <Icon icon={faBullseye} size="4xl" color="primary" className="mb-3" />
                   <h3 className="font-semibold text-secondary mb-2">Deploy & Use</h3>
                   <p className="text-gray-600 text-sm">24/7 access to your organization&apos;s collective expertise</p>
                 </CardContent>
@@ -345,7 +358,7 @@ const AIInnovationPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-accent text-white">
+      <section className="py-20 bg-secondary text-white">
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -356,7 +369,7 @@ const AIInnovationPage = () => {
               All pricing provided after understanding your specific requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="xl" variant="secondary" asChild>
+              <Button size="xl" variant="primary" asChild>
                 <Link href="/book-time">Book Free Consultation</Link>
               </Button>
               <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-primary" asChild>

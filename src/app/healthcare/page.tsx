@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Metadata } from 'next'
 import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Icon } from '@/components/ui'
 import {
@@ -179,8 +180,19 @@ const HealthcarePage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-secondary via-secondary-dark to-secondary py-20 lg:py-32 text-white">
-        <Container>
+      <section className="relative bg-gradient-to-br from-secondary via-secondary-dark to-secondary py-20 lg:py-32 text-white overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/industries/healthcare.jpg"
+            alt="Healthcare facility"
+            fill
+            className="object-cover opacity-20"
+            priority
+            sizes="100vw"
+          />
+        </div>
+        <Container className="relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="accent" size="lg" className="mb-6">
               Healthcare AI Solutions | Compliance-Aware
@@ -361,6 +373,39 @@ const HealthcarePage = () => {
         </Container>
       </section>
 
+      {/* Stats Section */}
+      <section className="bg-gradient-to-r from-primary to-accent text-white py-16">
+        <Container>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Healthcare AI Results
+            </h2>
+            <p className="text-xl text-gray-100 max-w-3xl mx-auto">
+              Delivering compliance-aware AI solutions for healthcare organizations.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">30+</div>
+              <div className="text-gray-100">Custom Solutions</div>
+            </div>
+            <div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">100%</div>
+              <div className="text-gray-100">Compliance-First</div>
+            </div>
+            <div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">15+</div>
+              <div className="text-gray-100">AI Applications</div>
+            </div>
+            <div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">2 Hours</div>
+              <div className="text-gray-100">Free Consulting</div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-secondary text-white">
         <Container>
@@ -373,7 +418,7 @@ const HealthcarePage = () => {
               and explore compliance-aware solutions together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="xl" variant="accent" asChild>
+              <Button size="xl" variant="primary" asChild>
                 <Link href="/book-time">Book Free Consultation</Link>
               </Button>
               <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-secondary" asChild>

@@ -1,4 +1,5 @@
 export { HeroSection } from './HeroSection'
+export { PartnerLogosSection } from './PartnerLogosSection'
 export { IndustrySolutionsSection } from './IndustrySolutionsSection'
 export { WhyPartnerSection } from './WhyPartnerSection'
 export { InnovationPortfolioSection } from './InnovationPortfolioSection'
