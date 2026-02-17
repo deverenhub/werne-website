@@ -33,7 +33,7 @@ const CTASection = () => {
             >
               <Link href="/book-time">
                 <Icon icon={faCalendarAlt} className="mr-2" />
-                Get Your Free 2 Hours
+                Get 2 Hours Free
               </Link>
             </Button>
             <Button

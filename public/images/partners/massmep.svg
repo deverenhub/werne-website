@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 60" fill="none">
+  <rect width="160" height="60" rx="4" fill="#f8fafc"/>
+  <text x="80" y="32" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1e3a5f">MassMEP</text>
+  <text x="80" y="48" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#64748b">Massachusetts</text>
+</svg>

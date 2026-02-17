@@ -51,7 +51,7 @@ const HeroSection = () => {
             <Button size="xl" shimmer magnetic variant="gradient" className="text-lg px-10 py-5 shadow-2xl hover:shadow-primary/30" asChild>
               <Link href="/book-time">
                 <Icon icon={faRocket} className="mr-2" />
-                Get 2 Hours Free AI Consulting
+                Get 2 Hours Free
               </Link>
             </Button>
             <Link

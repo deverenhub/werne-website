@@ -327,7 +327,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <Button asChild shimmer magnetic>
-              <Link href="/book-time">2 Hours Free</Link>
+              <Link href="/book-time">Get 2 Hours Free</Link>
             </Button>
           </div>
 
@@ -410,7 +410,7 @@ const Header = () => {
               ))}
               <div className="pt-4">
                 <Button asChild className="w-full">
-                  <Link href="/book-time">2 Hours Free Consulting</Link>
+                  <Link href="/book-time">Get 2 Hours Free</Link>
                 </Button>
               </div>
             </div>

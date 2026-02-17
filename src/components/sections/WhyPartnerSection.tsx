@@ -97,7 +97,7 @@ const WhyPartnerSection = () => {
                 discover how AI can transform your operations with no upfront commitment.
               </p>
               <Button size="lg" asChild>
-                <Link href="/book-time">Get Your Free Consultation</Link>
+                <Link href="/book-time">Book Free Consultation</Link>
               </Button>
             </div>
           </div>

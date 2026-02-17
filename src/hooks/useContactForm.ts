@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { contactFormSchema, type ContactFormData, formatPhoneNumber } from '@/lib/validation'
+import { contactFormSchema, type ContactFormData } from '@/lib/validation'
 
 export interface ContactFormState {
   isSubmitting: boolean
@@ -15,12 +15,12 @@ export interface UseContactFormReturn {
   // Form state
   form: ReturnType<typeof useForm<ContactFormData>>
   formState: ContactFormState
-  
+
   // Actions
   handleSubmit: (data: ContactFormData) => Promise<void>
   resetForm: () => void
   clearMessages: () => void
-  
+
   // Computed values
   canSubmit: boolean
   hasErrors: boolean
@@ -35,27 +35,24 @@ const DEFAULT_FORM_STATE: ContactFormState = {
 }
 
 const DEFAULT_FORM_VALUES: Partial<ContactFormData> = {
-  firstName: '',
-  lastName: '',
+  name: '',
   email: '',
-  phone: '',
   company: '',
-  serviceType: '',
   message: ''
 }
 
 export const useContactForm = (): UseContactFormReturn => {
   const [formState, setFormState] = useState<ContactFormState>(DEFAULT_FORM_STATE)
-  
+
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: DEFAULT_FORM_VALUES,
     mode: 'onBlur', // Validate on blur for better UX
     reValidateMode: 'onChange' // Re-validate on change after first validation
   })
-  
+
   const { formState: { errors, isValid, isDirty }, reset } = form
-  
+
   const clearMessages = useCallback(() => {
     setFormState(prev => ({
       ...prev,
@@ -65,16 +62,16 @@ export const useContactForm = (): UseContactFormReturn => {
       successMessage: null
     }))
   }, [])
-  
+
   const resetForm = useCallback(() => {
     reset(DEFAULT_FORM_VALUES)
     setFormState(DEFAULT_FORM_STATE)
   }, [reset])
-  
+
   const handleSubmit = useCallback(async (data: ContactFormData) => {
     // Clear any previous messages
     clearMessages()
-    
+
     // Set loading state
     setFormState(prev => ({
       ...prev,
@@ -82,19 +79,16 @@ export const useContactForm = (): UseContactFormReturn => {
       isError: false,
       errorMessage: null
     }))
-    
+
     try {
-      // Format phone number before submission
+      // Trim whitespace from text fields
       const formattedData = {
         ...data,
-        phone: formatPhoneNumber(data.phone),
-        // Trim whitespace from text fields
-        firstName: data.firstName.trim(),
-        lastName: data.lastName.trim(),
-        company: data.company.trim(),
+        name: data.name.trim(),
+        company: data.company?.trim() || '',
         message: data.message.trim()
       }
-      
+
       // Submit to API
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -103,17 +97,17 @@ export const useContactForm = (): UseContactFormReturn => {
         },
         body: JSON.stringify(formattedData)
       })
-      
+
       const responseData = await response.json()
-      
+
       if (!response.ok) {
         throw new Error(
-          responseData.message || 
-          responseData.error || 
+          responseData.message ||
+          responseData.error ||
           `HTTP error! status: ${response.status}`
         )
       }
-      
+
       // Success
       setFormState(prev => ({
         ...prev,
@@ -121,17 +115,17 @@ export const useContactForm = (): UseContactFormReturn => {
         isSuccess: true,
         successMessage: responseData.message || 'Thank you for your message! We\'ll get back to you soon.'
       }))
-      
+
       // Reset form after successful submission
       setTimeout(() => {
         resetForm()
       }, 3000) // Reset after 3 seconds to let user see success message
-      
+
     } catch (error) {
       console.error('Contact form submission error:', error)
-      
+
       let errorMessage = 'An unexpected error occurred. Please try again.'
-      
+
       if (error instanceof Error) {
         // Handle specific error types
         if (error.message.includes('fetch')) {
@@ -146,7 +140,7 @@ export const useContactForm = (): UseContactFormReturn => {
           errorMessage = error.message
         }
       }
-      
+
       setFormState(prev => ({
         ...prev,
         isSubmitting: false,
@@ -155,11 +149,11 @@ export const useContactForm = (): UseContactFormReturn => {
       }))
     }
   }, [clearMessages, resetForm])
-  
+
   // Computed values
   const canSubmit = isValid && isDirty && !formState.isSubmitting
   const hasErrors = Object.keys(errors).length > 0
-  
+
   return {
     form,
     formState,
@@ -174,19 +168,19 @@ export const useContactForm = (): UseContactFormReturn => {
 // Hook for handling form field focus and blur events
 export const useFieldFocus = () => {
   const [focusedField, setFocusedField] = useState<string | null>(null)
-  
+
   const handleFocus = useCallback((fieldName: string) => {
     setFocusedField(fieldName)
   }, [])
-  
+
   const handleBlur = useCallback(() => {
     setFocusedField(null)
   }, [])
-  
+
   const isFieldFocused = useCallback((fieldName: string) => {
     return focusedField === fieldName
   }, [focusedField])
-  
+
   return {
     handleFocus,
     handleBlur,
@@ -206,7 +200,7 @@ export const useFormAnalytics = () => {
       })
     }
   }, [])
-  
+
   const trackFormSubmit = useCallback(() => {
     // Track when form is submitted
     if (typeof window !== 'undefined' && window.gtag) {
@@ -216,7 +210,7 @@ export const useFormAnalytics = () => {
       })
     }
   }, [])
-  
+
   const trackFormError = useCallback((error: string) => {
     // Track form errors
     if (typeof window !== 'undefined' && window.gtag) {
@@ -227,7 +221,7 @@ export const useFormAnalytics = () => {
       })
     }
   }, [])
-  
+
   return {
     trackFormStart,
     trackFormSubmit,

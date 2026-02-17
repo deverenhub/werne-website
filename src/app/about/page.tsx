@@ -219,7 +219,7 @@ const AboutPage = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="xl" asChild>
-                <Link href="/book-time">Get 2 Hours Free Consulting</Link>
+                <Link href="/book-time">Get 2 Hours Free</Link>
               </Button>
               <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-secondary" asChild>
                 <Link href="#leadership">Meet Deveren</Link>
@@ -512,7 +512,7 @@ const AboutPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="xl" variant="primary" asChild>
-                <Link href="/book-time">Book Your Free Consultation</Link>
+                <Link href="/book-time">Book Free Consultation</Link>
               </Button>
               <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-secondary" asChild>
                 <Link href="/services">View Our Services</Link>

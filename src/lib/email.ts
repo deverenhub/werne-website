@@ -17,7 +17,6 @@ function escapeHtml(str: string): string {
 }
 
 // Email configuration - checked at runtime when sending
-const isDevelopment = process.env.NODE_ENV === 'development'
 const hasEmailConfig = !!process.env.RESEND_API_KEY
 
 // Note: RESEND_API_KEY is validated at runtime when attempting to send emails,
@@ -190,35 +189,17 @@ const createEmailTemplate = (content: string) => `
 `
 
 /**
- * Service type display names
- */
-const getServiceTypeDisplay = (serviceType: string): string => {
-  const serviceTypes: Record<string, string> = {
-    'web-development': 'Web Development',
-    'ai-innovation': 'AI Innovation',
-    'consulting': 'Technology Consulting',
-    'training-workshops': 'Training & Workshops',
-    'general-inquiry': 'General Inquiry'
-  }
-  return serviceTypes[serviceType] || serviceType
-}
-
-/**
  * Generate notification email content for business
  * All user-provided data is HTML-escaped to prevent XSS attacks
  */
 const createNotificationContent = (data: ContactFormData): string => {
-  const serviceDisplay = getServiceTypeDisplay(data.serviceType)
-  const isUrgent = data.serviceType === 'ai-innovation' || data.message.toLowerCase().includes('urgent')
+  const isUrgent = data.message.toLowerCase().includes('urgent')
 
   // Escape all user-provided data to prevent XSS
-  const safeFirstName = escapeHtml(data.firstName)
-  const safeLastName = escapeHtml(data.lastName)
+  const safeName = escapeHtml(data.name)
   const safeEmail = escapeHtml(data.email)
-  const safePhone = escapeHtml(data.phone)
-  const safeCompany = escapeHtml(data.company)
+  const safeCompany = escapeHtml(data.company || 'Not provided')
   const safeMessage = escapeHtml(data.message)
-  const safeServiceDisplay = escapeHtml(serviceDisplay)
 
   return `
     <h2>${isUrgent ? '🚨 ' : ''}New Contact Form Submission</h2>
@@ -230,23 +211,15 @@ const createNotificationContent = (data: ContactFormData): string => {
         <h3>Contact Information</h3>
         <div class="info-item">
             <span class="info-label">Name:</span>
-            <span class="info-value">${safeFirstName} ${safeLastName}</span>
+            <span class="info-value">${safeName}</span>
         </div>
         <div class="info-item">
             <span class="info-label">Email:</span>
             <span class="info-value">${safeEmail}</span>
         </div>
         <div class="info-item">
-            <span class="info-label">Phone:</span>
-            <span class="info-value">${safePhone}</span>
-        </div>
-        <div class="info-item">
             <span class="info-label">Company:</span>
             <span class="info-value">${safeCompany}</span>
-        </div>
-        <div class="info-item">
-            <span class="info-label">Service:</span>
-            <span class="info-value highlight">${safeServiceDisplay}</span>
         </div>
     </div>
 
@@ -257,8 +230,8 @@ const createNotificationContent = (data: ContactFormData): string => {
 
     <p>Please respond to this inquiry within <strong>24 hours</strong> to maintain our high service standards.</p>
 
-    <a href="mailto:${safeEmail}?subject=Re: Your inquiry about ${safeServiceDisplay}" class="btn">
-        Reply to ${safeFirstName}
+    <a href="mailto:${safeEmail}?subject=Re: Your inquiry to Werne Enterprises" class="btn">
+        Reply to ${safeName}
     </a>
   `
 }
@@ -268,59 +241,54 @@ const createNotificationContent = (data: ContactFormData): string => {
  * All user-provided data is HTML-escaped to prevent XSS attacks
  */
 const createConfirmationContent = (data: ContactFormData): string => {
-  const serviceDisplay = getServiceTypeDisplay(data.serviceType)
+  // Get first name from full name
+  const firstName = data.name.split(' ')[0]
 
   // Escape all user-provided data to prevent XSS
-  const safeFirstName = escapeHtml(data.firstName)
+  const safeFirstName = escapeHtml(firstName)
   const safeEmail = escapeHtml(data.email)
-  const safePhone = escapeHtml(data.phone)
-  const safeCompany = escapeHtml(data.company)
-  const safeServiceDisplay = escapeHtml(serviceDisplay)
+  const safeCompany = escapeHtml(data.company || 'Not provided')
 
   return `
     <h2>Thank You for Contacting Werne Enterprises</h2>
     <p>Dear ${safeFirstName},</p>
 
-    <p>Thank you for reaching out to Werne Enterprises regarding our <strong>${safeServiceDisplay}</strong> services. We have received your inquiry and appreciate your interest in working with us.</p>
+    <p>Thank you for reaching out to Werne Enterprises. We have received your inquiry and appreciate your interest in working with us.</p>
 
     <div class="info-box">
         <h3>Your Inquiry Details</h3>
-        <div class="info-item">
-            <span class="info-label">Service:</span>
-            <span class="info-value">${safeServiceDisplay}</span>
-        </div>
         <div class="info-item">
             <span class="info-label">Company:</span>
             <span class="info-value">${safeCompany}</span>
         </div>
         <div class="info-item">
-            <span class="info-label">Contact:</span>
-            <span class="info-value">${safeEmail} | ${safePhone}</span>
+            <span class="info-label">Email:</span>
+            <span class="info-value">${safeEmail}</span>
         </div>
     </div>
 
     <div class="info-box">
         <h3>What Happens Next?</h3>
-        <p><strong>Response Time:</strong> You can expect a personal response from our team within <strong>24 hours</strong> during business hours (Monday-Friday, 8 AM - 6 PM PST).</p>
+        <p><strong>Response Time:</strong> You can expect a personal response within <strong>24 hours</strong> during business hours (Monday-Friday, 8 AM - 6 PM EST).</p>
 
         <p><strong>Next Steps:</strong></p>
         <ul style="margin: 8px 0; padding-left: 20px; color: #4b5563;">
-            <li>Our team will review your specific requirements</li>
-            <li>We'll schedule a consultation call to discuss your needs in detail</li>
-            <li>You'll receive a customized proposal with solutions and timeline</li>
+            <li>Deveren will personally review your inquiry</li>
+            <li>We'll schedule your free 2-hour consultation</li>
+            <li>You'll receive tailored recommendations for your AI journey</li>
         </ul>
     </div>
 
-    <p>If you have any urgent questions in the meantime, please don't hesitate to call us directly at <strong>+1 (555) 123-4567</strong>.</p>
+    <p>If you have any urgent questions in the meantime, please don't hesitate to call us directly at <strong>864-991-5656</strong>.</p>
 
-    <p>We look forward to discussing how Werne Enterprises can help transform your business through innovative technology solutions.</p>
+    <p>We look forward to discussing how Werne Enterprises can help transform your business through AI.</p>
 
     <p>Best regards,<br>
-    <strong>The Werne Enterprises Team</strong><br>
-    Technology Innovation & Consulting</p>
+    <strong>Deveren Werne</strong><br>
+    Werne Enterprises</p>
 
     <a href="https://werneenterprises.com/book-time" class="btn">
-        Schedule a Consultation
+        Schedule Your Free Consultation
     </a>
   `
 }
@@ -333,18 +301,18 @@ export async function sendNotificationEmail(data: ContactFormData) {
     // Skip email sending in development if no API key is configured
     if (!resend) {
       console.warn('Email sending skipped: RESEND_API_KEY not configured')
-      return { 
-        success: false, 
-        error: 'Email service not configured (development mode)' 
+      return {
+        success: false,
+        error: 'Email service not configured (development mode)'
       }
     }
 
-    const serviceDisplay = getServiceTypeDisplay(data.serviceType)
-    const isUrgent = data.serviceType === 'ai-innovation' || data.message.toLowerCase().includes('urgent')
-    
-    const subject = `${isUrgent ? '🚨 URGENT: ' : ''}New Contact Inquiry - ${serviceDisplay} | ${data.company}`
+    const isUrgent = data.message.toLowerCase().includes('urgent')
+    const companyDisplay = data.company || 'Individual'
+
+    const subject = `${isUrgent ? '🚨 URGENT: ' : ''}New Contact Inquiry from ${data.name} | ${companyDisplay}`
     const htmlContent = createEmailTemplate(createNotificationContent(data))
-    
+
     const result = await resend.emails.send({
       from: FROM_EMAIL,
       to: [CONTACT_EMAIL],
@@ -353,17 +321,16 @@ export async function sendNotificationEmail(data: ContactFormData) {
       replyTo: data.email,
       headers: {
         'X-Priority': isUrgent ? '1' : '3',
-        'X-Contact-Type': data.serviceType,
-        'X-Contact-Company': data.company,
+        'X-Contact-Company': data.company || 'Not provided',
       },
     })
 
     return { success: true, id: result.data?.id }
   } catch (error) {
     console.error('Failed to send notification email:', error)
-    return { 
-      success: false, 
-      error: error instanceof Error ? error.message : 'Unknown error' 
+    return {
+      success: false,
+      error: error instanceof Error ? error.message : 'Unknown error'
     }
   }
 }
@@ -376,16 +343,15 @@ export async function sendConfirmationEmail(data: ContactFormData) {
     // Skip email sending in development if no API key is configured
     if (!resend) {
       console.warn('Email sending skipped: RESEND_API_KEY not configured')
-      return { 
-        success: false, 
-        error: 'Email service not configured (development mode)' 
+      return {
+        success: false,
+        error: 'Email service not configured (development mode)'
       }
     }
 
-    const serviceDisplay = getServiceTypeDisplay(data.serviceType)
-    const subject = `Thank you for contacting Werne Enterprises - ${serviceDisplay}`
+    const subject = `Thank you for contacting Werne Enterprises`
     const htmlContent = createEmailTemplate(createConfirmationContent(data))
-    
+
     const result = await resend.emails.send({
       from: FROM_EMAIL,
       to: [data.email],
@@ -393,7 +359,6 @@ export async function sendConfirmationEmail(data: ContactFormData) {
       html: htmlContent,
       replyTo: CONTACT_EMAIL,
       headers: {
-        'X-Service-Type': data.serviceType,
         'X-Auto-Response': 'true',
       },
     })
@@ -401,9 +366,9 @@ export async function sendConfirmationEmail(data: ContactFormData) {
     return { success: true, id: result.data?.id }
   } catch (error) {
     console.error('Failed to send confirmation email:', error)
-    return { 
-      success: false, 
-      error: error instanceof Error ? error.message : 'Unknown error' 
+    return {
+      success: false,
+      error: error instanceof Error ? error.message : 'Unknown error'
     }
   }
 }
@@ -418,17 +383,17 @@ export async function sendContactEmails(data: ContactFormData) {
       sendConfirmationEmail(data)
     ])
 
-    const notification = notificationResult.status === 'fulfilled' 
-      ? notificationResult.value 
+    const notification = notificationResult.status === 'fulfilled'
+      ? notificationResult.value
       : { success: false, error: 'Failed to send notification' }
-    
-    const confirmation = confirmationResult.status === 'fulfilled' 
-      ? confirmationResult.value 
+
+    const confirmation = confirmationResult.status === 'fulfilled'
+      ? confirmationResult.value
       : { success: false, error: 'Failed to send confirmation' }
 
     // Consider success if at least the notification email was sent
     const success = notification.success
-    
+
     return {
       success,
       notification,

@@ -1,13 +1,10 @@
 'use client'
 
 import React, { useEffect } from 'react'
-import { Controller } from 'react-hook-form'
 import {
   faUser,
   faEnvelope,
-  faPhone,
   faBuilding,
-  faCogs,
   faComment,
   faSpinner,
   faCheckCircle,
@@ -16,11 +13,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import { Input } from '@/components/ui/Input'
 import { Textarea } from '@/components/ui/Textarea'
-import { Select } from '@/components/ui/Select'
 import { Button } from '@/components/ui/Button'
 import { Icon } from '@/components/ui'
 import { useContactForm, useFieldFocus, useFormAnalytics } from '@/hooks/useContactForm'
-import { serviceTypeOptions, getFieldError, hasFieldError } from '@/lib/validation'
+import { getFieldError, hasFieldError } from '@/lib/validation'
 import { cn } from '@/lib/utils'
 
 interface ContactFormProps {
@@ -55,7 +51,6 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 
   const {
     register,
-    control,
     handleSubmit: hookFormHandleSubmit,
     formState: { errors, touchedFields },
     watch
@@ -163,178 +158,85 @@ export const ContactForm: React.FC<ContactFormProps> = ({
           </div>
         )}
 
-        {/* Name Fields */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="relative">
-            <Input
-              {...register('firstName')}
-              label="First Name"
-              placeholder="Enter your first name"
-              error={getFieldError('firstName', errors)}
-              required
-              disabled={formState.isSubmitting}
-              onFocus={() => handleFocus('firstName')}
-              onBlur={handleBlur}
-              className={cn(
-                isFieldFocused('firstName') && "ring-2 ring-primary ring-opacity-20"
-              )}
-            />
-            <Icon
-              icon={faUser}
-              size="sm"
-              color="neutral"
-              className={cn(
-                "absolute right-3 top-9 transition-colors",
-                isFieldFocused('firstName') && "!text-primary",
-                hasFieldError('firstName', errors) && "!text-red-500"
-              )}
-            />
-          </div>
-
-          <div className="relative">
-            <Input
-              {...register('lastName')}
-              label="Last Name"
-              placeholder="Enter your last name"
-              error={getFieldError('lastName', errors)}
-              required
-              disabled={formState.isSubmitting}
-              onFocus={() => handleFocus('lastName')}
-              onBlur={handleBlur}
-              className={cn(
-                isFieldFocused('lastName') && "ring-2 ring-primary ring-opacity-20"
-              )}
-            />
-            <Icon
-              icon={faUser}
-              size="sm"
-              color="neutral"
-              className={cn(
-                "absolute right-3 top-9 transition-colors",
-                isFieldFocused('lastName') && "!text-primary",
-                hasFieldError('lastName', errors) && "!text-red-500"
-              )}
-            />
-          </div>
+        {/* Name Field */}
+        <div className="relative">
+          <Input
+            {...register('name')}
+            label="Name"
+            placeholder="Enter your full name"
+            error={getFieldError('name', errors)}
+            required
+            disabled={formState.isSubmitting}
+            onFocus={() => handleFocus('name')}
+            onBlur={handleBlur}
+            className={cn(
+              isFieldFocused('name') && "ring-2 ring-primary ring-opacity-20"
+            )}
+          />
+          <Icon
+            icon={faUser}
+            size="sm"
+            color="neutral"
+            className={cn(
+              "absolute right-3 top-9 transition-colors",
+              isFieldFocused('name') && "!text-primary",
+              hasFieldError('name', errors) && "!text-red-500"
+            )}
+          />
         </div>
 
-        {/* Contact Information */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="relative">
-            <Input
-              {...register('email')}
-              type="email"
-              label="Email Address"
-              placeholder="Enter your email address"
-              error={getFieldError('email', errors)}
-              required
-              disabled={formState.isSubmitting}
-              onFocus={() => handleFocus('email')}
-              onBlur={handleBlur}
-              className={cn(
-                isFieldFocused('email') && "ring-2 ring-primary ring-opacity-20"
-              )}
-            />
-            <Icon
-              icon={faEnvelope}
-              size="sm"
-              color="neutral"
-              className={cn(
-                "absolute right-3 top-9 transition-colors",
-                isFieldFocused('email') && "!text-primary",
-                hasFieldError('email', errors) && "!text-red-500"
-              )}
-            />
-          </div>
-
-          <div className="relative">
-            <Input
-              {...register('phone')}
-              type="tel"
-              label="Phone Number"
-              placeholder="Enter your phone number"
-              error={getFieldError('phone', errors)}
-              required
-              disabled={formState.isSubmitting}
-              onFocus={() => handleFocus('phone')}
-              onBlur={handleBlur}
-              className={cn(
-                isFieldFocused('phone') && "ring-2 ring-primary ring-opacity-20"
-              )}
-            />
-            <Icon
-              icon={faPhone}
-              size="sm"
-              color="neutral"
-              className={cn(
-                "absolute right-3 top-9 transition-colors",
-                isFieldFocused('phone') && "!text-primary",
-                hasFieldError('phone', errors) && "!text-red-500"
-              )}
-            />
-          </div>
+        {/* Email Field */}
+        <div className="relative">
+          <Input
+            {...register('email')}
+            type="email"
+            label="Email Address"
+            placeholder="Enter your email address"
+            error={getFieldError('email', errors)}
+            required
+            disabled={formState.isSubmitting}
+            onFocus={() => handleFocus('email')}
+            onBlur={handleBlur}
+            className={cn(
+              isFieldFocused('email') && "ring-2 ring-primary ring-opacity-20"
+            )}
+          />
+          <Icon
+            icon={faEnvelope}
+            size="sm"
+            color="neutral"
+            className={cn(
+              "absolute right-3 top-9 transition-colors",
+              isFieldFocused('email') && "!text-primary",
+              hasFieldError('email', errors) && "!text-red-500"
+            )}
+          />
         </div>
 
-        {/* Company and Service Type */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="relative">
-            <Input
-              {...register('company')}
-              label="Company Name"
-              placeholder="Enter your company name"
-              error={getFieldError('company', errors)}
-              required
-              disabled={formState.isSubmitting}
-              onFocus={() => handleFocus('company')}
-              onBlur={handleBlur}
-              className={cn(
-                isFieldFocused('company') && "ring-2 ring-primary ring-opacity-20"
-              )}
-            />
-            <Icon
-              icon={faBuilding}
-              size="sm"
-              color="neutral"
-              className={cn(
-                "absolute right-3 top-9 transition-colors",
-                isFieldFocused('company') && "!text-primary",
-                hasFieldError('company', errors) && "!text-red-500"
-              )}
-            />
-          </div>
-
-          <div className="relative">
-            <Controller
-              name="serviceType"
-              control={control}
-              render={({ field }) => (
-                <Select
-                  {...field}
-                  label="Service Type"
-                  placeholder="Select a service type"
-                  options={serviceTypeOptions}
-                  error={getFieldError('serviceType', errors)}
-                  required
-                  disabled={formState.isSubmitting}
-                  onFocus={() => handleFocus('serviceType')}
-                  onBlur={handleBlur}
-                  className={cn(
-                    isFieldFocused('serviceType') && "ring-2 ring-primary ring-opacity-20"
-                  )}
-                />
-              )}
-            />
-            <Icon
-              icon={faCogs}
-              size="sm"
-              color="neutral"
-              className={cn(
-                "absolute right-10 top-9 transition-colors pointer-events-none",
-                isFieldFocused('serviceType') && "!text-primary",
-                hasFieldError('serviceType', errors) && "!text-red-500"
-              )}
-            />
-          </div>
+        {/* Company Field (Optional) */}
+        <div className="relative">
+          <Input
+            {...register('company')}
+            label="Company"
+            placeholder="Enter your company name (optional)"
+            error={getFieldError('company', errors)}
+            disabled={formState.isSubmitting}
+            onFocus={() => handleFocus('company')}
+            onBlur={handleBlur}
+            className={cn(
+              isFieldFocused('company') && "ring-2 ring-primary ring-opacity-20"
+            )}
+          />
+          <Icon
+            icon={faBuilding}
+            size="sm"
+            color="neutral"
+            className={cn(
+              "absolute right-3 top-9 transition-colors",
+              isFieldFocused('company') && "!text-primary",
+              hasFieldError('company', errors) && "!text-red-500"
+            )}
+          />
         </div>
 
         {/* Message */}

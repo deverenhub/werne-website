@@ -210,7 +210,7 @@ const HealthcarePage = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="xl" asChild>
-                <Link href="/book-time">Get 2 Hours Free Consulting</Link>
+                <Link href="/book-time">Get 2 Hours Free</Link>
               </Button>
               <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-secondary" asChild>
                 <Link href="#solutions">Explore Solutions</Link>

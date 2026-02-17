@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { ZodError } from 'zod'
-import { contactFormSchema, formatPhoneNumber } from '@/lib/validation'
+import { contactFormSchema } from '@/lib/validation'
 import { sendContactEmails } from '@/lib/email'
 import { 
   withRateLimit, 
@@ -39,10 +39,6 @@ export async function POST(request: NextRequest) {
       let validatedData
       try {
         validatedData = contactFormSchema.parse(body)
-        
-        // Format phone number
-        validatedData.phone = formatPhoneNumber(validatedData.phone)
-        
       } catch (error) {
         console.error('[Contact API] Validation error:', error)
         
@@ -78,8 +74,7 @@ export async function POST(request: NextRequest) {
         console.warn('[Contact API] Suspicious submission detected:', {
           ip: clientIP,
           data: {
-            firstName: validatedData.firstName,
-            lastName: validatedData.lastName,
+            name: validatedData.name,
             company: validatedData.company,
             messageLength: validatedData.message.length
           }
@@ -112,9 +107,8 @@ export async function POST(request: NextRequest) {
 
       // Send emails
       console.log('[Contact API] Sending emails for:', {
-        name: `${validatedData.firstName} ${validatedData.lastName}`,
+        name: validatedData.name,
         company: validatedData.company,
-        serviceType: validatedData.serviceType,
         ip: clientIP
       })
 
@@ -127,7 +121,7 @@ export async function POST(request: NextRequest) {
           notification: emailResult.notification,
           confirmation: emailResult.confirmation,
           data: {
-            name: `${validatedData.firstName} ${validatedData.lastName}`,
+            name: validatedData.name,
             email: validatedData.email,
             company: validatedData.company
           }
@@ -165,9 +159,8 @@ export async function POST(request: NextRequest) {
       // Success response
       const processingTime = Date.now() - startTime
       console.log('[Contact API] Success:', {
-        name: `${validatedData.firstName} ${validatedData.lastName}`,
+        name: validatedData.name,
         company: validatedData.company,
-        serviceType: validatedData.serviceType,
         processingTime: `${processingTime}ms`,
         notification: emailResult.notification.success,
         confirmation: emailResult.confirmation.success,
@@ -226,20 +219,10 @@ export async function GET(request: NextRequest) {
         maxSubmissions: rateLimitStatus.limit,
         windowMs: 60 * 60 * 1000, // 1 hour
         fields: [
-          'firstName',
-          'lastName', 
+          'name',
           'email',
-          'phone',
           'company',
-          'serviceType',
           'message'
-        ],
-        serviceTypes: [
-          'web-development',
-          'ai-innovation',
-          'consulting',
-          'training-workshops',
-          'general-inquiry'
         ]
       },
       rateLimit: {
