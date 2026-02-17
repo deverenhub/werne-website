@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { Container, Button, Input } from '@/components/ui'
+import { Container, Button, Input, ExternalLink } from '@/components/ui'
 
 const Footer = () => {
   const [email, setEmail] = useState('')
@@ -142,9 +142,12 @@ const Footer = () => {
                   </a>
                 </p>
                 <p className="pt-2">
-                  <a href="https://linkedin.com/in/deverenwerne" className="hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">
+                  <ExternalLink
+                    href="https://linkedin.com/in/deverenwerne"
+                    className="hover:text-primary transition-colors"
+                  >
                     LinkedIn
-                  </a>
+                  </ExternalLink>
                 </p>
               </div>
             </div>

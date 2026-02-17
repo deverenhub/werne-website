@@ -13,7 +13,8 @@ import {
   faHandshake,
   faHardHat,
   faRobot,
-  faBook
+  faBook,
+  faArrowUpRightFromSquare
 } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
@@ -177,7 +178,7 @@ const ManufacturingPage = () => {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/industries/manufacturing.jpg"
-            alt="Manufacturing facility"
+            alt="Manufacturing facility with industrial automation and robotics systems"
             fill
             className="object-cover opacity-20"
             priority
@@ -403,7 +404,9 @@ const ManufacturingPage = () => {
 
             <Button size="xl" asChild>
               <a href="https://smarthive.online" target="_blank" rel="noopener noreferrer">
+                <Icon icon={faArrowUpRightFromSquare} className="mr-2" size="xs" />
                 Learn More About SmartHive
+                <span className="sr-only">(opens in new tab)</span>
               </a>
             </Button>
           </div>

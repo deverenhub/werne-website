@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Metadata } from 'next'
+import Script from 'next/script'
 import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Icon } from '@/components/ui'
 import {
   faCalendarCheck,
@@ -20,6 +21,46 @@ import {
 export const metadata: Metadata = {
   title: 'Book 2 Hours Free AI Consulting | Werne Enterprises',
   description: 'Schedule your FREE 2-hour AI consulting session. Discuss AI training, custom development, or consulting needs with 9 years of experience.',
+}
+
+const faqData = [
+  {
+    question: 'Is the 2 hours really free?',
+    answer: 'Yes, absolutely. We believe in providing value upfront and building relationships based on trust. The 2 hours are completely free with no hidden fees or obligations.'
+  },
+  {
+    question: 'What if I\'m not sure which consultation type is right for me?',
+    answer: 'No problem! Just pick the one that seems closest to your needs. We\'ll adjust our discussion based on what you actually need help with.'
+  },
+  {
+    question: 'Can I bring other team members to the consultation?',
+    answer: 'Absolutely! We encourage having relevant stakeholders participate. Please let us know when scheduling so we can plan accordingly.'
+  },
+  {
+    question: 'What happens after the consultation?',
+    answer: 'We\'ll provide a summary of our discussion, relevant resources, and clear next steps if you choose to move forward. There\'s no pressure to commit to anything.'
+  },
+  {
+    question: 'Do you work with companies outside manufacturing, healthcare, and commercial?',
+    answer: 'While we specialize in these three industries, our AI expertise applies broadly. Contact us to discuss your specific industry.'
+  },
+  {
+    question: 'How quickly can I get on your calendar?',
+    answer: 'We typically can schedule consultations within 1-2 weeks. Contact us to find a time that works for you.'
+  }
+]
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqData.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer
+    }
+  }))
 }
 
 const BookTimePage = () => {
@@ -151,35 +192,15 @@ const BookTimePage = () => {
     }
   ]
 
-  const faq = [
-    {
-      question: 'Is the 2 hours really free?',
-      answer: 'Yes, absolutely. We believe in providing value upfront and building relationships based on trust. The 2 hours are completely free with no hidden fees or obligations.'
-    },
-    {
-      question: 'What if I\'m not sure which consultation type is right for me?',
-      answer: 'No problem! Just pick the one that seems closest to your needs. We\'ll adjust our discussion based on what you actually need help with.'
-    },
-    {
-      question: 'Can I bring other team members to the consultation?',
-      answer: 'Absolutely! We encourage having relevant stakeholders participate. Please let us know when scheduling so we can plan accordingly.'
-    },
-    {
-      question: 'What happens after the consultation?',
-      answer: 'We\'ll provide a summary of our discussion, relevant resources, and clear next steps if you choose to move forward. There\'s no pressure to commit to anything.'
-    },
-    {
-      question: 'Do you work with companies outside manufacturing, healthcare, and commercial?',
-      answer: 'While we specialize in these three industries, our AI expertise applies broadly. Contact us to discuss your specific industry.'
-    },
-    {
-      question: 'How quickly can I get on your calendar?',
-      answer: 'We typically can schedule consultations within 1-2 weeks. Contact us to find a time that works for you.'
-    }
-  ]
-
   return (
     <>
+      {/* FAQ Structured Data for SEO */}
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-secondary via-secondary-dark to-secondary py-20 lg:py-32 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -453,7 +474,7 @@ const BookTimePage = () => {
           </div>
 
           <div className="max-w-4xl mx-auto space-y-6">
-            {faq.map((item, index) => (
+            {faqData.map((item, index) => (
               <Card key={index}>
                 <CardHeader>
                   <CardTitle className="text-xl text-left">{item.question}</CardTitle>

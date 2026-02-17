@@ -13,7 +13,8 @@ import {
   faHandshake,
   faCheckCircle,
   faBrain,
-  faLightbulb
+  faLightbulb,
+  faArrowUpRightFromSquare
 } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
@@ -131,7 +132,8 @@ const ResourcesPage = () => {
         '24/7 knowledge access',
         'Training acceleration'
       ],
-      link: 'https://smarthive.online'
+      link: 'https://smarthive.online',
+      external: true
     },
     {
       name: 'TSVMap Methodology',
@@ -142,7 +144,8 @@ const ResourcesPage = () => {
         'System integration planning',
         'Cost optimization analysis'
       ],
-      link: '/services/consulting'
+      link: '/services/consulting',
+      external: false
     },
     {
       name: 'AI Readiness Assessment',
@@ -153,7 +156,8 @@ const ResourcesPage = () => {
         'Infrastructure assessment',
         'Implementation roadmap'
       ],
-      link: '/book-time'
+      link: '/book-time',
+      external: false
     }
   ]
 
@@ -351,9 +355,11 @@ const ResourcesPage = () => {
 
                 <CardFooter>
                   <Button asChild className="w-full" variant="outline">
-                    {product.link.startsWith('http') ? (
+                    {product.external ? (
                       <a href={product.link} target="_blank" rel="noopener noreferrer">
+                        <Icon icon={faArrowUpRightFromSquare} className="mr-2" size="xs" />
                         Learn More
+                        <span className="sr-only">(opens in new tab)</span>
                       </a>
                     ) : (
                       <Link href={product.link}>Learn More</Link>

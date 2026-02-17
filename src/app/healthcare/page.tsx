@@ -185,7 +185,7 @@ const HealthcarePage = () => {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/industries/healthcare.jpg"
-            alt="Healthcare facility"
+            alt="Healthcare professional using AI-powered medical technology for patient care"
             fill
             className="object-cover opacity-20"
             priority

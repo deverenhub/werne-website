@@ -14,7 +14,8 @@ import {
   faLightbulb,
   faUserTie,
   faRobot,
-  faBook
+  faBook,
+  faArrowUpRightFromSquare
 } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
@@ -163,7 +164,7 @@ const CommercialPage = () => {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/industries/commercial.jpg"
-            alt="Commercial business office"
+            alt="Modern commercial office with business professionals collaborating on AI strategy"
             fill
             className="object-cover opacity-20"
             priority
@@ -359,7 +360,9 @@ const CommercialPage = () => {
 
             <Button size="xl" asChild>
               <a href="https://smarthive.online" target="_blank" rel="noopener noreferrer">
+                <Icon icon={faArrowUpRightFromSquare} className="mr-2" size="xs" />
                 Learn More About SmartHive
+                <span className="sr-only">(opens in new tab)</span>
               </a>
             </Button>
           </div>

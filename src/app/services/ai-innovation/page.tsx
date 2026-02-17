@@ -2,8 +2,8 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Metadata } from 'next'
-import { Button, Container, Card, CardHeader, CardTitle, CardContent, CardFooter, Badge, Icon } from '@/components/ui'
-import { faBrain, faCogs, faLink, faIndustry, faHospital, faBuilding, faBook, faRobot, faBullseye, faCheck, faCheckCircle, faStar, faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { Button, Container, Card, CardHeader, CardTitle, CardContent, CardFooter, Badge, Icon, Breadcrumb } from '@/components/ui'
+import { faBrain, faCogs, faLink, faIndustry, faHospital, faBuilding, faBook, faRobot, faBullseye, faCheck, faCheckCircle, faStar, faArrowRight, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
   title: 'Custom AI Development - SmartHive & AI Solutions | Werne Enterprises',
@@ -125,6 +125,12 @@ const AIInnovationPage = () => {
     }
   ]
 
+  const breadcrumbItems = [
+    { label: 'Home', href: '/' },
+    { label: 'Services', href: '/services' },
+    { label: 'AI Innovation', href: '/services/ai-innovation' }
+  ]
+
   return (
     <>
       {/* Hero Section */}
@@ -161,7 +167,9 @@ const AIInnovationPage = () => {
               </Button>
               <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-secondary" asChild>
                 <a href="https://smarthive.online" target="_blank" rel="noopener noreferrer">
+                  <Icon icon={faArrowUpRightFromSquare} className="mr-2" size="xs" />
                   Visit SmartHive.online
+                  <span className="sr-only">(opens in new tab)</span>
                 </a>
               </Button>
             </div>
@@ -181,6 +189,13 @@ const AIInnovationPage = () => {
               </div>
             </div>
           </div>
+        </Container>
+      </section>
+
+      {/* Breadcrumb Navigation */}
+      <section className="bg-gray-100 border-b border-gray-200">
+        <Container>
+          <Breadcrumb items={breadcrumbItems} />
         </Container>
       </section>
 
@@ -361,7 +376,9 @@ const AIInnovationPage = () => {
 
             <Button size="xl" asChild>
               <a href="https://smarthive.online" target="_blank" rel="noopener noreferrer">
+                <Icon icon={faArrowUpRightFromSquare} className="mr-2" size="xs" />
                 Learn More About SmartHive
+                <span className="sr-only">(opens in new tab)</span>
               </a>
             </Button>
           </div>

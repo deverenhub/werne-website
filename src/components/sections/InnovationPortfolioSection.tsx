@@ -5,7 +5,7 @@ import {
   faBrain,
   faIndustry,
   faGraduationCap,
-  faExternalLinkAlt,
+  faArrowUpRightFromSquare,
   faCheckCircle,
   faRocket
 } from '@fortawesome/free-solid-svg-icons'
@@ -22,7 +22,8 @@ const InnovationPortfolioSection = () => {
       external: true,
       icon: faBrain,
       color: 'primary',
-      image: '/images/products/smarthive-dashboard.jpg'
+      image: '/images/products/smarthive-dashboard.jpg',
+      imageAlt: 'SmartHive AI platform dashboard for capturing tribal knowledge'
     },
     {
       title: 'AI Training Programs',
@@ -32,7 +33,8 @@ const InnovationPortfolioSection = () => {
       href: '/services/education',
       icon: faGraduationCap,
       color: 'accent',
-      image: '/images/products/ai-training.jpg'
+      image: '/images/products/ai-training.jpg',
+      imageAlt: 'AI training workshop with professionals learning AI implementation'
     },
     {
       title: 'AI Consulting Services',
@@ -42,7 +44,8 @@ const InnovationPortfolioSection = () => {
       href: '/book-time',
       icon: faIndustry,
       color: 'warning',
-      image: '/images/products/ai-consulting.jpg'
+      image: '/images/products/ai-consulting.jpg',
+      imageAlt: 'AI consulting session with business strategy planning'
     }
   ]
 
@@ -67,7 +70,7 @@ const InnovationPortfolioSection = () => {
                 <div className="relative h-48 w-full overflow-hidden">
                   <Image
                     src={platform.image}
-                    alt={platform.title}
+                    alt={platform.imageAlt}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 1024px) 100vw, 33vw"
@@ -101,8 +104,9 @@ const InnovationPortfolioSection = () => {
                 <CardFooter>
                   <Button asChild className="w-full">
                     <a href={platform.href} target="_blank" rel="noopener noreferrer">
-                      <Icon icon={faExternalLinkAlt} className="mr-2" />
+                      <Icon icon={faArrowUpRightFromSquare} className="mr-2" size="xs" />
                       {platform.cta}
+                      <span className="sr-only">(opens in new tab)</span>
                     </a>
                   </Button>
                 </CardFooter>

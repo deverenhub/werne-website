@@ -192,7 +192,7 @@ const AboutPage = () => {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/team/deveren-werne.jpg"
-            alt="About background"
+            alt="Deveren Werne speaking at AI technology conference"
             fill
             className="object-cover opacity-20"
             priority
@@ -306,7 +306,7 @@ const AboutPage = () => {
                   <div className="relative w-40 h-40 mx-auto mb-6">
                     <Image
                       src="/images/team/deveren-werne.jpg"
-                      alt="Deveren Werne"
+                      alt="Deveren Werne, AI consultant and founder of Werne Enterprises"
                       fill
                       className="object-cover rounded-full border-4 border-white shadow-lg"
                       sizes="160px"

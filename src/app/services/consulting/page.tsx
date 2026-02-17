@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Metadata } from 'next'
-import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Icon } from '@/components/ui'
+import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Icon, Breadcrumb } from '@/components/ui'
 import { faClipboardList, faBullseye, faMap, faWrench, faIndustry, faHospital, faBuilding, faCheck, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
@@ -124,6 +124,12 @@ const ConsultingPage = () => {
     }
   ]
 
+  const breadcrumbItems = [
+    { label: 'Home', href: '/' },
+    { label: 'Services', href: '/services' },
+    { label: 'Consulting', href: '/services/consulting' }
+  ]
+
   return (
     <>
       {/* Hero Section */}
@@ -179,6 +185,13 @@ const ConsultingPage = () => {
               </div>
             </div>
           </div>
+        </Container>
+      </section>
+
+      {/* Breadcrumb Navigation */}
+      <section className="bg-gray-100 border-b border-gray-200">
+        <Container>
+          <Breadcrumb items={breadcrumbItems} />
         </Container>
       </section>
 

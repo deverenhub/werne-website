@@ -12,6 +12,7 @@ const IndustrySolutionsSection = () => {
       icon: faIndustry,
       color: 'primary',
       image: '/images/industries/manufacturing.jpg',
+      imageAlt: 'Manufacturing facility with industrial automation and AI-powered systems',
       features: [
         'AI Readiness Assessments',
         'Tribal knowledge capture (SmartHive)',
@@ -27,6 +28,7 @@ const IndustrySolutionsSection = () => {
       icon: faHospital,
       color: 'accent',
       image: '/images/industries/healthcare.jpg',
+      imageAlt: 'Healthcare professional using AI-powered medical technology for patient care',
       features: [
         'Operational efficiency AI',
         'Compliance-aware solutions',
@@ -42,6 +44,7 @@ const IndustrySolutionsSection = () => {
       icon: faBuilding,
       color: 'warning',
       image: '/images/industries/commercial.jpg',
+      imageAlt: 'Modern commercial office with business professionals using AI technology',
       features: [
         'AI education & training',
         'Custom AI development',
@@ -82,7 +85,7 @@ const IndustrySolutionsSection = () => {
                 <div className="relative h-48 w-full overflow-hidden">
                   <Image
                     src={industry.image}
-                    alt={industry.title}
+                    alt={industry.imageAlt}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 1024px) 100vw, 33vw"
