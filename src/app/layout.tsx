@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "@/lib/fontawesome";
 import { Header, Footer } from "@/components/layout";
+import { StickyMobileCTA } from "@/components/ui";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     "AI innovation services",
     "artificial intelligence consulting",
     "RAG implementation",
-    "MCP integration", 
+    "MCP integration",
     "manufacturing AI",
     "healthcare AI",
     "commercial AI solutions",
@@ -179,20 +180,20 @@ export default function RootLayout({
             __html: JSON.stringify(localBusinessSchema)
           }}
         />
-        
+
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
+
         {/* DNS prefetch for performance */}
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        
+
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        
+
         {/* Manifest */}
         <link rel="manifest" href="/manifest.json" />
       </head>
@@ -209,6 +210,7 @@ export default function RootLayout({
         <Header />
         <main id="main-content" tabIndex={-1}>{children}</main>
         <Footer />
+        <StickyMobileCTA />
       </body>
     </html>
   );

@@ -2,6 +2,7 @@ import {
   HeroSection,
   PartnerLogosSection,
   WhyPartnerSection,
+  TestimonialsSection,
   IndustrySolutionsSection,
   InnovationPortfolioSection,
   CTASection
@@ -13,6 +14,7 @@ export default function Home() {
       <HeroSection />
       <PartnerLogosSection />
       <WhyPartnerSection />
+      <TestimonialsSection />
       <IndustrySolutionsSection />
       <InnovationPortfolioSection />
       <CTASection />

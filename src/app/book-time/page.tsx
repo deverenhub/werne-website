@@ -252,45 +252,39 @@ const BookTimePage = () => {
             </p>
           </div>
 
-          <div className="max-w-2xl mx-auto">
-            <Card className="ring-2 ring-primary border-primary">
-              <div className="bg-primary text-white text-center py-3 text-lg font-medium rounded-t-xl">
+          <div className="max-w-4xl mx-auto">
+            <Card className="ring-2 ring-primary border-primary overflow-hidden">
+              <div className="bg-primary text-white text-center py-3 text-lg font-medium">
                 <Icon icon={faGift} className="mr-2" />
-                2 Hours FREE AI Consulting
+                2 Hours FREE AI Consulting - Book Now
               </div>
 
-              <CardContent className="p-8">
-                <div className="text-center mb-8">
-                  <p className="text-lg text-gray-600">
-                    Contact us to schedule your free consultation. We&apos;ll find a time
-                    that works for you and discuss your AI goals.
-                  </p>
-                </div>
-
-                <div className="space-y-6">
-                  <div className="bg-gray-100 p-6 rounded-lg">
-                    <h3 className="font-semibold text-secondary mb-3">Contact Options</h3>
-                    <div className="space-y-3">
-                      <p className="flex items-center">
-                        <span className="font-medium w-24">Email:</span>
-                        <a href="mailto:deveren@werneenterprises.com" className="text-primary hover:underline">
-                          deveren@werneenterprises.com
-                        </a>
-                      </p>
-                      <p className="flex items-center">
-                        <span className="font-medium w-24">Phone:</span>
-                        <a href="tel:864-991-5656" className="text-primary hover:underline">
-                          864-991-5656
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-
-                  <Button asChild className="w-full" size="lg">
-                    <Link href="/contact">Contact Us to Schedule</Link>
-                  </Button>
-                </div>
+              <CardContent className="p-0">
+                {/* Microsoft Bookings Embed */}
+                <iframe
+                  src="https://outlook.office.com/bookwithme/user/0b8d296244754190a897efffe17c3f06@tsvmap.com?anonymous&ep=plink"
+                  width="100%"
+                  height="600"
+                  frameBorder="0"
+                  scrolling="yes"
+                  title="Schedule a consultation with Werne Enterprises"
+                  className="w-full min-h-[600px]"
+                  allow="geolocation"
+                />
               </CardContent>
+
+              <div className="bg-gray-50 p-4 text-center border-t">
+                <p className="text-sm text-gray-600">
+                  Prefer to call? Reach us at{' '}
+                  <a href="tel:864-991-5656" className="text-primary font-medium hover:underline">
+                    864-991-5656
+                  </a>
+                  {' '}or email{' '}
+                  <a href="mailto:deveren@werneenterprises.com" className="text-primary font-medium hover:underline">
+                    deveren@werneenterprises.com
+                  </a>
+                </p>
+              </div>
             </Card>
           </div>
         </Container>
