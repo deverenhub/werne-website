@@ -128,8 +128,18 @@ const AIInnovationPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-secondary via-secondary-dark to-secondary py-20 lg:py-32 text-white">
-        <Container>
+      <section className="relative bg-gradient-to-br from-secondary via-secondary-dark to-secondary py-20 lg:py-32 text-white overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/products/smarthive-dashboard.jpg"
+            alt="AI Innovation background"
+            fill
+            className="object-cover opacity-20"
+            priority
+            sizes="100vw"
+          />
+        </div>
+        <Container className="relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="accent" size="lg" className="mb-6">
               Custom AI Development
@@ -312,14 +322,15 @@ const AIInnovationPage = () => {
             </p>
 
             {/* SmartHive Dashboard Image */}
-            <div className="relative h-64 md:h-80 w-full mb-8 rounded-lg overflow-hidden shadow-lg">
+            <div className="relative h-64 md:h-80 w-full mb-8 rounded-lg overflow-hidden shadow-lg group">
               <Image
                 src="/images/products/smarthive-dashboard.jpg"
                 alt="SmartHive Dashboard"
                 fill
-                className="object-cover"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
                 sizes="(max-width: 1024px) 100vw, 896px"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">

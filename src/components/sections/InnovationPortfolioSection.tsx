@@ -60,17 +60,17 @@ const InnovationPortfolioSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {platforms.map((platform, index) => (
-            <Card key={index} className="h-full overflow-hidden">
+            <Card key={index} className="h-full overflow-hidden group">
               {platform.image && (
-                <div className="relative h-48 w-full">
+                <div className="relative h-48 w-full overflow-hidden">
                   <Image
                     src={platform.image}
                     alt={platform.title}
                     fill
-                    className="object-cover"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 1024px) 100vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 </div>
               )}
               <CardHeader>

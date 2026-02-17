@@ -79,7 +79,7 @@ const WhyPartnerSection = () => {
 
         <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8">
           <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="relative w-32 h-32 md:w-40 md:h-40 flex-shrink-0">
+            <div className="relative w-40 h-40 flex-shrink-0">
               <Image
                 src="/images/team/founder-placeholder.jpg"
                 alt="Founder"

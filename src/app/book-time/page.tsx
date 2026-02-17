@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Metadata } from 'next'
 import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Icon } from '@/components/ui'
 import {
@@ -180,8 +181,18 @@ const BookTimePage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-secondary via-secondary-dark to-secondary py-20 lg:py-32 text-white">
-        <Container>
+      <section className="relative bg-gradient-to-br from-secondary via-secondary-dark to-secondary py-20 lg:py-32 text-white overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/team/founder-placeholder.jpg"
+            alt="Book consultation background"
+            fill
+            className="object-cover opacity-20"
+            priority
+            sizes="100vw"
+          />
+        </div>
+        <Container className="relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="accent" size="lg" className="mb-6">
               <Icon icon={faGift} className="mr-2" />
