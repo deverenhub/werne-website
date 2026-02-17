@@ -81,7 +81,7 @@ const WhyPartnerSection = () => {
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="relative w-40 h-40 flex-shrink-0">
               <Image
-                src="/images/team/founder-placeholder.jpg"
+                src="/images/team/deveren-werne.jpg"
                 alt="Founder"
                 fill
                 className="object-cover rounded-full border-4 border-white shadow-lg"

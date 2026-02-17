@@ -157,7 +157,7 @@ const ContactPage = () => {
       <section className="relative bg-gradient-to-br from-secondary via-secondary-dark to-secondary py-20 lg:py-32 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/team/founder-placeholder.jpg"
+            src="/images/team/deveren-werne.jpg"
             alt="Contact background"
             fill
             className="object-cover opacity-20"
