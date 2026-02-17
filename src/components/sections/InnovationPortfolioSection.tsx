@@ -31,7 +31,8 @@ const InnovationPortfolioSection = () => {
       features: ['Purdue MEP AI Series', 'AI the Spreadsheet Killer', '12 Week AI Bootcamp', 'Custom Corporate Training'],
       href: '/services/education',
       icon: faGraduationCap,
-      color: 'accent'
+      color: 'accent',
+      image: '/images/products/ai-training.jpg'
     },
     {
       title: 'AI Consulting Services',
@@ -40,7 +41,8 @@ const InnovationPortfolioSection = () => {
       features: ['AI Readiness Assessment', 'Implementation Strategy', '9 Years Consulting Experience', '30+ Successful Projects'],
       href: '/book-time',
       icon: faIndustry,
-      color: 'warning'
+      color: 'warning',
+      image: '/images/products/ai-consulting.jpg'
     }
   ]
 
