@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { Button, Container, Icon } from '@/components/ui'
+import { Button, Icon } from '@/components/ui'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 /**
@@ -111,7 +111,7 @@ const HeroSection = () => {
         }}
       />
 
-      <Container className="relative z-10">
+      <div className="relative z-10 w-full px-6 sm:px-10 lg:px-16 xl:px-24">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center py-16 lg:py-28">
           {/* Left: content */}
           <div className="hero-enter">
@@ -164,7 +164,7 @@ const HeroSection = () => {
             <NetworkVisual />
           </div>
         </div>
-      </Container>
+      </div>
     </section>
   )
 }
