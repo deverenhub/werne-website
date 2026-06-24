@@ -30,7 +30,10 @@ export const contactFormSchema = z.object({
     .refine(
       (value) => value.trim().length >= 10,
       'Message must contain at least 10 non-whitespace characters'
-    )
+    ),
+
+  // Honeypot — must remain empty. Hidden from humans; bots that fill it are rejected.
+  website: z.string().max(0).optional().or(z.literal(''))
 })
 
 export type ContactFormData = z.infer<typeof contactFormSchema>

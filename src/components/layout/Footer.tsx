@@ -43,7 +43,7 @@ const Footer = () => {
               </div>
               <Link
                 href="/book-time"
-                className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 font-semibold text-white hover:opacity-90 transition-opacity whitespace-nowrap"
+                className="inline-flex items-center justify-center rounded-lg bg-[#2E7D32] px-6 py-3 font-semibold text-white hover:bg-[#1B5E20] transition-colors whitespace-nowrap"
               >
                 Book 2 Free Hours
               </Link>

@@ -26,7 +26,7 @@ export default function Error({
         <div className="flex flex-wrap gap-4 justify-center">
           <button
             onClick={reset}
-            className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 font-semibold text-white hover:opacity-90 transition-opacity"
+            className="inline-flex items-center justify-center rounded-lg bg-[#2E7D32] px-6 py-3 font-semibold text-white hover:bg-[#1B5E20] transition-colors"
           >
             Try again
           </button>

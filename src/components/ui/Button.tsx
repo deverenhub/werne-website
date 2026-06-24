@@ -16,14 +16,17 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = 'primary', size = 'md', asChild = false, loading = false, shimmer = false, magnetic = false, children, ...props }, ref) => {
     const baseClasses = 'inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-secondary disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group active:scale-[0.98]'
     
+    // WCAG 2.1 AA-verified button colors: white text on each background meets >=4.5:1
+    // (green #2E7D32 5.13:1, teal #00838F 4.52:1, orange #C2410C 5.18:1). The bright
+    // brand tokens stay reserved for highlights on dark backgrounds (hero text).
     const variants = {
-      primary: 'bg-primary text-white hover:bg-primary-dark focus-visible:ring-primary hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5',
+      primary: 'bg-[#2E7D32] text-white hover:bg-[#1B5E20] focus-visible:ring-[#2E7D32] hover:shadow-lg hover:shadow-black/20 hover:-translate-y-0.5',
       secondary: 'bg-secondary text-white hover:bg-secondary-dark focus-visible:ring-secondary hover:shadow-lg hover:shadow-secondary/25 hover:-translate-y-0.5',
-      accent: 'bg-accent text-white hover:bg-accent-dark focus-visible:ring-accent hover:shadow-lg hover:shadow-accent/25 hover:-translate-y-0.5',
-      outline: 'border-2 border-primary text-primary hover:bg-primary hover:text-white focus-visible:ring-primary hover:shadow-lg hover:-translate-y-0.5',
-      ghost: 'text-primary hover:bg-primary/10 focus-visible:ring-primary',
-      gradient: 'bg-gradient-to-r from-primary via-accent to-primary bg-size-200 bg-pos-0 hover:bg-pos-100 text-white hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5 transition-all duration-500 focus-visible:ring-white',
-      warning: 'bg-warning text-white hover:bg-warning/90 focus-visible:ring-warning hover:shadow-lg hover:shadow-warning/25 hover:-translate-y-0.5'
+      accent: 'bg-[#00838F] text-white hover:bg-[#006064] focus-visible:ring-[#00838F] hover:shadow-lg hover:shadow-black/20 hover:-translate-y-0.5',
+      outline: 'border-2 border-[#2E7D32] text-[#2E7D32] hover:bg-[#2E7D32] hover:text-white focus-visible:ring-[#2E7D32] hover:shadow-lg hover:-translate-y-0.5',
+      ghost: 'text-[#2E7D32] hover:bg-[#2E7D32]/10 focus-visible:ring-[#2E7D32]',
+      gradient: 'bg-gradient-to-r from-[#2E7D32] via-[#00838F] to-[#2E7D32] bg-size-200 bg-pos-0 hover:bg-pos-100 text-white hover:shadow-lg hover:shadow-black/20 hover:-translate-y-0.5 transition-all duration-500 focus-visible:ring-white',
+      warning: 'bg-[#C2410C] text-white hover:bg-[#9A3412] focus-visible:ring-[#C2410C] hover:shadow-lg hover:shadow-black/20 hover:-translate-y-0.5'
     }
     
     const sizes = {

@@ -106,9 +106,9 @@ body {
 }
 
 *:focus-visible {
-  outline: 2px solid var(--primary-green);
+  outline: 2px solid #2E7D32;
   outline-offset: 2px;
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.9), 0 0 0 6px var(--primary-green);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.9), 0 0 0 6px #2E7D32;
 }
 
 /* High-contrast focus for dark backgrounds */
@@ -116,7 +116,7 @@ body {
 .bg-secondary-dark *:focus-visible,
 [class*="from-secondary"] *:focus-visible,
 [class*="bg-gradient"] *:focus-visible {
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, 1), 0 0 0 6px var(--primary-green);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 1), 0 0 0 6px #2E7D32;
 }
 
 /* Skip link for keyboard navigation */
@@ -124,7 +124,7 @@ body {
   position: absolute;
   top: -40px;
   left: 0;
-  background: var(--primary-green);
+  background: #2E7D32;
   color: white;
   padding: 8px 16px;
   z-index: 100;
