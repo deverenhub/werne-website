@@ -13,7 +13,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
-  title: 'Healthcare Solutions - AI Training & Consulting | Werne Enterprises',
+  title: 'Healthcare Solutions - AI Training & Consulting',
   description: 'AI education, consulting, and custom development for healthcare organizations. Compliance-aware solutions. 2 hours free AI consulting.',
 }
 

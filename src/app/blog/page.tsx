@@ -12,7 +12,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
-  title: 'AI Insights & Education | Werne Enterprises',
+  title: 'AI Insights & Education',
   description: 'Practical AI education content and implementation guides from Werne Enterprises, drawn from 27+ years of hands-on systems and IT experience.',
   // Thin page until articles are published — keep it out of the index for now.
   robots: { index: false },

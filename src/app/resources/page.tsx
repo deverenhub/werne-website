@@ -18,7 +18,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
-  title: 'Resources - AI Education & Training Programs | Werne Enterprises',
+  title: 'Resources - AI Education & Training Programs',
   description: 'AI training programs, educational resources, and consulting services. Purdue MEP AI Series, AI the Spreadsheet Killer, 12 Week AI Bootcamp.',
 }
 

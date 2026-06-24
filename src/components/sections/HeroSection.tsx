@@ -1,97 +1,114 @@
 import React from 'react'
 import Link from 'next/link'
-import { Button, Container, Badge, AnimatedCounter, Icon } from '@/components/ui'
-import {
-  faAward,
-  faRocket,
-  faArrowRight,
-  faBuilding,
-  faHandshake
-} from '@fortawesome/free-solid-svg-icons'
+import { Button, Container, Icon } from '@/components/ui'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+
+/**
+ * Abstract, on-brand "knowledge network" visual rendered as SVG — crisp at any size,
+ * lightweight, and disciplined to the brand palette.
+ * NOTE: swap this panel for a real annotated SmartHive screenshot when one is available.
+ */
+const NetworkVisual = () => (
+  <div className="relative rounded-2xl border border-white/10 bg-[#0A1E2E] shadow-2xl overflow-hidden aspect-[4/3]">
+    <svg
+      viewBox="0 0 400 300"
+      className="w-full h-full"
+      role="img"
+      aria-label="Abstract visualization of team expertise becoming an AI knowledge network"
+    >
+      <defs>
+        <radialGradient id="heroGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#4CAF50" stopOpacity="0.85" />
+          <stop offset="100%" stopColor="#4CAF50" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+      <g stroke="#2E7D32" strokeWidth="1" opacity="0.55">
+        <line x1="60" y1="80" x2="165" y2="135" />
+        <line x1="165" y1="135" x2="285" y2="70" />
+        <line x1="165" y1="135" x2="250" y2="215" />
+        <line x1="250" y1="215" x2="345" y2="160" />
+        <line x1="60" y1="80" x2="110" y2="225" />
+        <line x1="110" y1="225" x2="250" y2="215" />
+        <line x1="285" y1="70" x2="345" y2="160" />
+        <line x1="60" y1="80" x2="165" y2="135" />
+      </g>
+      <g>
+        <circle cx="165" cy="135" r="38" fill="url(#heroGlow)" />
+        <circle cx="165" cy="135" r="9" fill="#4CAF50" />
+        <circle cx="60" cy="80" r="6" fill="#81C784" />
+        <circle cx="285" cy="70" r="7" fill="#4CAF50" />
+        <circle cx="250" cy="215" r="8" fill="#4CAF50" />
+        <circle cx="110" cy="225" r="5" fill="#81C784" />
+        <circle cx="345" cy="160" r="6" fill="#81C784" />
+      </g>
+    </svg>
+  </div>
+)
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-gradient-to-br from-secondary via-secondary-dark to-secondary py-20 lg:py-32 text-white overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-primary rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-accent rounded-full blur-3xl animate-float" style={{ animationDelay: '-1s' }} />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-warning rounded-full blur-3xl animate-pulse-slow" />
-      </div>
-
-      {/* Gradient mesh overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-black/5 to-transparent" />
+    <section className="relative bg-secondary text-white overflow-hidden">
+      {/* Faint dot grid (replaces the blurred color blobs) */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 opacity-[0.06]"
+        style={{
+          backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)',
+          backgroundSize: '22px 22px',
+        }}
+      />
 
       <Container className="relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <Badge variant="accent" size="lg" className="mb-6 animate-fade-in hover:animate-bounce-gentle">
-            <Icon icon={faAward} className="mr-2" />
-            AI Solution Architect | 27+ Years | 2 Hours Free AI Consulting
-          </Badge>
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center py-20 lg:py-28">
+          {/* Left: content */}
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-5">
+              AI Solution Architect · 27+ Years
+            </p>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight animate-slide-up">
-            Turn Your Team&apos;s Knowledge Into{' '}
-            <span className="text-primary hover:animate-pulse-glow transition-all duration-300 cursor-default">Practical AI That Ships</span>
-          </h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.08] mb-6">
+              Turn your team&apos;s knowledge into{' '}
+              <span className="text-primary">practical AI that ships</span>
+            </h1>
 
-          <p className="text-lg md:text-xl text-primary font-semibold mb-6 animate-slide-up" style={{ animationDelay: '0.1s' }}>
-            AI Education, Training & Deployment for{' '}
-            <span className="text-accent">Manufacturing</span>,{' '}
-            <span className="text-warning">Healthcare</span> &{' '}
-            <span className="text-primary">Commercial Business</span>
-          </p>
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 max-w-xl">
+              I work directly with your team to capture tribal knowledge, learn AI, and deploy
+              what actually ships — drawing on 27+ years building real systems across AI, ERP,
+              MRP, and custom development. No hype, no failed pilots.
+            </p>
 
-          <p className="text-lg md:text-xl text-gray-200 mb-10 leading-relaxed animate-slide-up-delayed max-w-3xl mx-auto">
-            I&apos;m an AI Solution Architect with 27+ years building real systems &mdash; AI, ERP, MRP, and custom
-            development. I&apos;ve architected hundreds of solutions and deployed production AI in the field, and I work
-            directly with your team to capture tribal knowledge, learn AI, and deploy what actually ships &mdash; no hype,
-            no failed pilots.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-scale-in" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
-            <Button size="xl" shimmer magnetic variant="gradient" className="text-lg px-10 py-5 shadow-2xl hover:shadow-primary/30" asChild>
-              <Link href="/book-time">
-                <Icon icon={faRocket} className="mr-2" />
-                Get 2 Hours Free
+            <div className="flex flex-col sm:flex-row gap-4 sm:items-center mb-10">
+              <Button size="lg" variant="primary" asChild>
+                <Link href="/book-time">Get 2 Hours Free</Link>
+              </Button>
+              <Link
+                href="#industry-solutions"
+                className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors font-medium group"
+              >
+                View industry solutions
+                <Icon icon={faArrowRight} className="transition-transform group-hover:translate-x-1" />
               </Link>
-            </Button>
-            <Link
-              href="#industry-solutions"
-              className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center gap-2 text-lg font-medium group"
-            >
-              View Industry Solutions
-              <Icon icon={faArrowRight} className="transition-transform duration-200 group-hover:translate-x-1" />
-            </Link>
+            </div>
+
+            {/* Credibility strip — plain text, no icons */}
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-gray-400 border-t border-white/10 pt-6">
+              <span>
+                <span className="text-white font-semibold">27+ years</span> building real systems
+              </span>
+              <span className="hidden sm:inline text-white/20">|</span>
+              <span>
+                <span className="text-white font-semibold">Hundreds</span> of solutions architected
+              </span>
+              <span className="hidden sm:inline text-white/20">|</span>
+              <span>
+                <span className="text-white font-semibold">Purdue MEP</span> instructor
+              </span>
+            </div>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="animate-slide-right">
-              <Icon icon={faBuilding} size="2xl" color="primary" className="mb-2" />
-              <AnimatedCounter
-                value="27+"
-                label="Years Building Real Systems"
-                color="primary"
-                duration={2500}
-              />
-            </div>
-            <div className="animate-slide-up">
-              <Icon icon={faRocket} size="2xl" color="accent" className="mb-2" />
-              <AnimatedCounter
-                value="Hundreds"
-                label="of Solutions Architected"
-                color="accent"
-                duration={1500}
-              />
-            </div>
-            <div className="animate-slide-left">
-              <Icon icon={faHandshake} size="2xl" color="warning" className="mb-2" />
-              <AnimatedCounter
-                value="MEP"
-                label="Partner & Purdue MEP Instructor"
-                color="warning"
-                duration={3000}
-              />
-            </div>
+          {/* Right: visual */}
+          <div className="relative">
+            <NetworkVisual />
           </div>
         </div>
       </Container>

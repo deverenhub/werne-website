@@ -25,7 +25,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       accent: 'bg-[#00838F] text-white hover:bg-[#006064] focus-visible:ring-[#00838F] hover:shadow-lg hover:shadow-black/20 hover:-translate-y-0.5',
       outline: 'border-2 border-[#2E7D32] text-[#2E7D32] hover:bg-[#2E7D32] hover:text-white focus-visible:ring-[#2E7D32] hover:shadow-lg hover:-translate-y-0.5',
       ghost: 'text-[#2E7D32] hover:bg-[#2E7D32]/10 focus-visible:ring-[#2E7D32]',
-      gradient: 'bg-gradient-to-r from-[#2E7D32] via-[#00838F] to-[#2E7D32] bg-size-200 bg-pos-0 hover:bg-pos-100 text-white hover:shadow-lg hover:shadow-black/20 hover:-translate-y-0.5 transition-all duration-500 focus-visible:ring-white',
+      gradient: 'bg-[#2E7D32] text-white hover:bg-[#1B5E20] focus-visible:ring-[#2E7D32] hover:shadow-lg hover:shadow-black/20 hover:-translate-y-0.5',
       warning: 'bg-[#C2410C] text-white hover:bg-[#9A3412] focus-visible:ring-[#C2410C] hover:shadow-lg hover:shadow-black/20 hover:-translate-y-0.5'
     }
     

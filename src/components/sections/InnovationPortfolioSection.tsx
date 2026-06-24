@@ -2,14 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Icon, Badge } from '@/components/ui'
-import {
-  faBrain,
-  faIndustry,
-  faGraduationCap,
-  faArrowUpRightFromSquare,
-  faCheckCircle,
-  faRocket
-} from '@fortawesome/free-solid-svg-icons'
+import { faArrowUpRightFromSquare, faCheck } from '@fortawesome/free-solid-svg-icons'
 
 const InnovationPortfolioSection = () => {
   const platforms = [
@@ -21,8 +14,6 @@ const InnovationPortfolioSection = () => {
       cta: 'Explore SmartHive',
       href: 'https://smarthive.online',
       external: true,
-      icon: faBrain,
-      color: 'primary',
       image: '/images/products/smarthive-dashboard.jpg',
       imageAlt: 'SmartHive AI platform dashboard for capturing tribal knowledge'
     },
@@ -33,8 +24,6 @@ const InnovationPortfolioSection = () => {
       features: ['Wrote & delivered Purdue MEP classes', 'Five courses for businesses & MEPs', 'AI the Spreadsheet Killer', 'Custom corporate training'],
       cta: 'Explore Training',
       href: '/services/education',
-      icon: faGraduationCap,
-      color: 'accent',
       image: '/images/products/ai-training.jpg',
       imageAlt: 'AI training workshop with professionals learning AI implementation'
     },
@@ -45,8 +34,6 @@ const InnovationPortfolioSection = () => {
       features: ['AI Readiness Assessment', 'Implementation strategy', '27+ years of systems experience', 'Production AI we\'ve built & deployed'],
       cta: 'Book a Consultation',
       href: '/book-time',
-      icon: faIndustry,
-      color: 'warning',
       image: '/images/products/ai-consulting.jpg',
       imageAlt: 'AI consulting session with business strategy planning'
     }
@@ -55,12 +42,14 @@ const InnovationPortfolioSection = () => {
   return (
     <section className="py-20 bg-gray-50">
       <Container>
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6 flex items-center justify-center">
-            <Icon icon={faRocket} size="lg" className="mr-3" color="primary" />
+        <div className="max-w-3xl mb-16">
+          <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
             Innovation Portfolio
+          </p>
+          <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
+            Proven platforms and methodologies
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600">
             Proven technology platforms and methodologies that deliver real-world results
             across Manufacturing, Healthcare, and Commercial Business sectors.
           </p>
@@ -68,23 +57,19 @@ const InnovationPortfolioSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {platforms.map((platform, index) => (
-            <Card key={index} className="h-full overflow-hidden group">
+            <Card key={index} className="h-full flex flex-col overflow-hidden">
               {platform.image && (
                 <div className="relative h-48 w-full overflow-hidden">
                   <Image
                     src={platform.image}
                     alt={platform.imageAlt}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 </div>
               )}
               <CardHeader>
-                <div className="mb-4">
-                  <Icon icon={platform.icon} size="2xl" color={platform.color as 'primary' | 'accent' | 'warning'} />
-                </div>
                 <CardTitle className="text-xl">{platform.title}</CardTitle>
                 <Badge variant="outline" className="mb-3 w-fit">{platform.subtitle}</Badge>
                 <CardDescription className="text-base">
@@ -93,14 +78,18 @@ const InnovationPortfolioSection = () => {
               </CardHeader>
 
               <CardContent className="flex-1">
-                <div className="space-y-2">
+                <ul className="space-y-2">
                   {platform.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center">
-                      <Icon icon={faCheckCircle} color="primary" className="mr-3" size="sm" />
+                    <li key={featureIndex} className="flex items-start gap-3">
+                      <Icon
+                        icon={faCheck}
+                        size="xs"
+                        className="mt-1 !text-[#2E7D32] shrink-0"
+                      />
                       <span className="text-gray-700 text-sm">{feature}</span>
-                    </div>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </CardContent>
 
               <CardFooter>

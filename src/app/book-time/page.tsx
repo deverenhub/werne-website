@@ -19,7 +19,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
-  title: 'Book 2 Hours Free AI Consulting | Werne Enterprises',
+  title: 'Book 2 Hours Free AI Consulting',
   description: 'Schedule your free 2-hour AI consulting session. Discuss AI training, custom development, or consulting needs directly with Deveren Werne, drawing on 27+ years of real systems experience.',
 }
 

@@ -19,7 +19,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
-  title: 'Commercial Business Solutions - AI Training & Consulting | Werne Enterprises',
+  title: 'Commercial Business Solutions - AI Training & Consulting',
   description: 'Practical AI education, training, and deployment for commercial businesses. 27+ years building real systems. 2 hours of free AI consulting.',
 }
 

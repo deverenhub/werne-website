@@ -6,7 +6,7 @@ import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardCo
 import { faGraduationCap, faChartBar, faRocket, faBuilding, faIndustry, faHospital, faCheckCircle, faClipboardList } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
-  title: 'AI Training Programs - Purdue MEP AI Series & Bootcamps | Werne Enterprises',
+  title: 'AI Training Programs - Purdue MEP AI Series & Bootcamps',
   description: 'AI education and training for manufacturers and businesses — five courses, classes written and delivered for Purdue MEP, and the AI Readiness Assessment. Contact for pricing.',
 }
 

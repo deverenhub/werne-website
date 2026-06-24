@@ -6,7 +6,7 @@ import { Button, Container, Card, CardHeader, CardTitle, CardContent, CardFooter
 import { faBrain, faCogs, faLink, faIndustry, faHospital, faBuilding, faBook, faRobot, faBullseye, faCheck, faCheckCircle, faStar, faArrowRight, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
-  title: 'Custom AI Development - SmartHive & AI Solutions | Werne Enterprises',
+  title: 'Custom AI Development - SmartHive & AI Solutions',
   description: 'Custom AI development including SmartHive.online for tribal knowledge capture. Build AI personas that preserve your team\'s expertise. Contact for pricing.',
 }
 

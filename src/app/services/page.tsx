@@ -6,7 +6,7 @@ import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardCo
 import { faBrain, faWrench, faGraduationCap, faCheck, faClipboardCheck } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
-  title: 'Services - AI Education, Consulting & Custom Development | Werne Enterprises',
+  title: 'Services - AI Education, Consulting & Custom Development',
   description: 'AI Education, Custom AI Development, AI Consulting, and AI Training Programs for Manufacturing, Healthcare, and Commercial Business. 2 hours free consulting.',
 }
 

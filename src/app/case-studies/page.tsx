@@ -17,7 +17,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
-  title: 'Our Work - AI Track Record | Werne Enterprises',
+  title: 'Our Work - AI Track Record',
   description: 'Our track record across manufacturing, healthcare, and commercial businesses — AI training, tribal-knowledge capture, and custom AI solutions architected and deployed. 27+ years of hands-on systems experience.',
 }
 

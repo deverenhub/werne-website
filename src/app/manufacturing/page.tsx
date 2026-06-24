@@ -18,7 +18,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
-  title: 'Manufacturing Solutions - AI Training & Consulting | Werne Enterprises',
+  title: 'Manufacturing Solutions - AI Training & Consulting',
   description: 'AI education, training, and practical AI deployment for manufacturers. Wrote and delivered classes for Purdue MEP. Creator of the TSVMap methodology. 2 hours of free AI consulting.',
 }
 

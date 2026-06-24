@@ -15,18 +15,15 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
       <div
         ref={ref}
         className={cn(
-          'rounded-xl bg-white border border-gray-200 shadow-sm transition-all duration-300 relative overflow-hidden',
-          hover && 'hover:shadow-xl hover:border-primary/30 hover:-translate-y-1 hover:scale-[1.02]',
-          glow && 'hover:shadow-2xl hover:shadow-primary/20',
+          'rounded-2xl bg-white border border-gray-200 shadow-sm transition-[box-shadow,transform,border-color] duration-200 relative overflow-hidden',
+          hover && 'hover:shadow-md hover:border-gray-300 hover:-translate-y-0.5',
+          glow && 'hover:shadow-md',
           glass && 'glass backdrop-blur-md',
           animate && 'animate-fade-in',
           className
         )}
         {...props}
       >
-        {glow && (
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 opacity-0 hover:opacity-100 transition-opacity duration-300" />
-        )}
         <div className="relative z-10">
           {children}
         </div>

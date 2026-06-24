@@ -6,7 +6,7 @@ import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardCo
 import { faClipboardList, faBullseye, faMap, faWrench, faIndustry, faHospital, faBuilding, faCheck, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
-  title: 'AI Consulting Services - Strategy & Implementation | Werne Enterprises',
+  title: 'AI Consulting Services - Strategy & Implementation',
   description: 'Practical AI consulting grounded in 27+ years of real systems, ERP, MRP, and AI experience. Start with an AI Readiness Assessment and a clear roadmap. 2 hours free.',
 }
 
