@@ -7,14 +7,14 @@ import { faClipboardList, faBullseye, faMap, faWrench, faIndustry, faHospital, f
 
 export const metadata: Metadata = {
   title: 'AI Consulting Services - Strategy & Implementation | Werne Enterprises',
-  description: 'Strategic AI consulting with 9 years experience and 30+ successful implementations. AI Readiness Assessments and implementation planning. 2 hours free.',
+  description: 'Practical AI consulting grounded in 27+ years of real systems, ERP, MRP, and AI experience. Start with an AI Readiness Assessment and a clear roadmap. 2 hours free.',
 }
 
 const ConsultingPage = () => {
   const consultingServices = [
     {
       title: 'AI Readiness Assessment',
-      description: 'Comprehensive evaluation of your organization\'s preparedness for AI adoption.',
+      description: 'Deveren\'s own methodology for evaluating your organization\'s readiness to adopt AI — developed and delivered firsthand.',
       icon: faClipboardList,
       deliverables: [
         'Current state analysis',
@@ -102,12 +102,12 @@ const ConsultingPage = () => {
       area: 'Healthcare',
       icon: faHospital,
       focus: [
-        'HIPAA compliance',
-        'EHR optimization',
+        'Compliance-aware AI adoption',
+        'Title 21 CFR Part 11 experience',
+        'Medical-device DHR systems',
         'Workflow automation',
-        'Patient experience technology',
-        'Data analytics strategy',
-        'Security requirements'
+        'Data privacy requirements',
+        'Data analytics strategy'
       ]
     },
     {
@@ -157,8 +157,8 @@ const ConsultingPage = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Strategic AI consulting with 9 years of experience and 30+ successful implementations.
-              Start with our AI Readiness Assessment to chart your path forward.
+              Practical AI consulting grounded in 27+ years of real systems, ERP, MRP, and AI experience.
+              Start with the AI Readiness Assessment to chart your path forward, then work directly with Deveren to ship it.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -172,16 +172,16 @@ const ConsultingPage = () => {
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
-                <div className="text-3xl font-bold text-primary mb-2">9</div>
-                <div className="text-gray-300">Years Consulting Experience</div>
+                <div className="text-3xl font-bold text-primary mb-2">27+</div>
+                <div className="text-gray-300">Years of Systems &amp; AI Experience</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-accent mb-2">30+</div>
-                <div className="text-gray-300">Successful Implementations</div>
+                <div className="text-3xl font-bold text-accent mb-2">Hundreds</div>
+                <div className="text-gray-300">Solutions Architected</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-warning mb-2">$50K-$1M</div>
-                <div className="text-gray-300">Saved Per Client</div>
+                <div className="text-3xl font-bold text-warning mb-2">1:1</div>
+                <div className="text-gray-300">Work Directly With Deveren</div>
               </div>
             </div>
           </div>
@@ -203,8 +203,8 @@ const ConsultingPage = () => {
               Consulting Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive AI consulting to help you navigate your AI journey
-              with confidence and achieve measurable results.
+              Practical AI consulting to help you navigate your AI journey with
+              confidence &mdash; from assessment to a roadmap you can actually ship.
             </p>
           </div>
 
@@ -321,34 +321,31 @@ const ConsultingPage = () => {
         </Container>
       </section>
 
-      {/* Results Section */}
+      {/* Experience Section */}
       <section className="py-20 bg-gradient-to-r from-primary to-accent text-white">
         <Container>
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Proven Results
+              Built On Real Experience
             </h2>
             <p className="text-xl text-gray-100 max-w-3xl mx-auto">
-              Our consulting engagements deliver measurable business outcomes.
+              Roadmaps grounded in 27+ years of architecting real systems &mdash; AI, ERP,
+              MRP, and custom development &mdash; not slideware. You work directly with Deveren.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center max-w-4xl mx-auto">
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">30+</div>
-              <div className="text-gray-100">Successful Implementations</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">27+</div>
+              <div className="text-gray-100">Years of Systems &amp; AI Experience</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">0</div>
-              <div className="text-gray-100">Implementation Failures</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">Hundreds</div>
+              <div className="text-gray-100">Solutions Architected</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">8+</div>
-              <div className="text-gray-100">MEP Partnerships</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">$50K-$1M</div>
-              <div className="text-gray-100">Saved Per Client</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">Production</div>
+              <div className="text-gray-100">AI Solutions &amp; Workflows Deployed</div>
             </div>
           </div>
         </Container>
@@ -362,8 +359,8 @@ const ConsultingPage = () => {
               Start With 2 Hours Free
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              No commitment required. Let&apos;s discuss your AI goals and see how
-              our consulting services can help you achieve measurable results.
+              No commitment required. Let&apos;s discuss your AI goals and map out
+              a practical path forward together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="xl" variant="primary" asChild>

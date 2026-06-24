@@ -19,7 +19,7 @@ const IndustrySolutionsSection = () => {
         'Process optimization',
         'TSVMap Methodology'
       ],
-      caseStudy: '8+ MEP partnerships including SCMEP, Purdue MEP, Georgia MEP',
+      caseStudy: 'MEP partnerships including SCMEP, Purdue MEP, and Georgia MEP',
       href: '/manufacturing'
     },
     {
@@ -64,8 +64,8 @@ const IndustrySolutionsSection = () => {
             Specialized Technology for Your Industry
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We bring deep industry expertise combined with cutting-edge AI technology to deliver
-            solutions that address your specific challenges and opportunities.
+            27+ years of real systems experience, applied as practical AI that fits the specific
+            challenges and opportunities of your industry.
           </p>
         </div>
 
@@ -120,7 +120,7 @@ const IndustrySolutionsSection = () => {
                   </ul>
 
                   <div className="bg-gradient-to-r from-gray-50 to-gray-100 p-4 rounded-lg group-hover:from-primary/5 group-hover:to-accent/5 transition-all duration-300 border border-transparent group-hover:border-primary/20">
-                    <div className="text-sm font-medium text-gray-500 mb-1 group-hover:text-primary transition-colors duration-300">Case Study Result</div>
+                    <div className="text-sm font-medium text-gray-500 mb-1 group-hover:text-primary transition-colors duration-300">Proof Point</div>
                     <div className="text-sm text-gray-700 group-hover:text-gray-900 transition-colors duration-300 font-medium">{industry.caseStudy}</div>
                   </div>
                 </CardContent>
@@ -131,7 +131,7 @@ const IndustrySolutionsSection = () => {
 
         <div className="text-center mt-12">
           <Button variant="outline" size="lg" asChild>
-            <Link href="/case-studies">View All Case Studies</Link>
+            <Link href="/case-studies">See Proof Points & Engagements</Link>
           </Button>
         </div>
       </Container>

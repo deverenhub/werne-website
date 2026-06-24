@@ -6,7 +6,6 @@ import {
   faRocket,
   faArrowRight,
   faBuilding,
-  faDollarSign,
   faHandshake
 } from '@fortawesome/free-solid-svg-icons'
 
@@ -27,24 +26,26 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto text-center">
           <Badge variant="accent" size="lg" className="mb-6 animate-fade-in hover:animate-bounce-gentle">
             <Icon icon={faAward} className="mr-2" />
-            27+ Years in Technology | 2 Hours Free AI Consulting
+            AI Solution Architect | 27+ Years | 2 Hours Free AI Consulting
           </Badge>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight animate-slide-up">
             Turn Your Team&apos;s Knowledge Into{' '}
-            <span className="text-primary hover:animate-pulse-glow transition-all duration-300 cursor-default">AI That Works 24/7</span>
+            <span className="text-primary hover:animate-pulse-glow transition-all duration-300 cursor-default">Practical AI That Ships</span>
           </h1>
 
           <p className="text-lg md:text-xl text-primary font-semibold mb-6 animate-slide-up" style={{ animationDelay: '0.1s' }}>
-            AI Education & Consulting for{' '}
+            AI Education, Training & Deployment for{' '}
             <span className="text-accent">Manufacturing</span>,{' '}
             <span className="text-warning">Healthcare</span> &{' '}
             <span className="text-primary">Commercial Business</span>
           </p>
 
           <p className="text-lg md:text-xl text-gray-200 mb-10 leading-relaxed animate-slide-up-delayed max-w-3xl mx-auto">
-            Stop losing critical expertise when employees leave. Avoid expensive failed AI implementations.
-            We make AI simple and practical for companies with 10-600 employees, delivering measurable ROI without the complexity.
+            I&apos;m an AI Solution Architect with 27+ years building real systems &mdash; AI, ERP, MRP, and custom
+            development. I&apos;ve architected hundreds of solutions and deployed production AI in the field, and I work
+            directly with your team to capture tribal knowledge, learn AI, and deploy what actually ships &mdash; no hype,
+            no failed pilots.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-scale-in" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
@@ -67,26 +68,26 @@ const HeroSection = () => {
             <div className="animate-slide-right">
               <Icon icon={faBuilding} size="2xl" color="primary" className="mb-2" />
               <AnimatedCounter
-                value="30+"
-                label="Successful Implementations"
+                value="27+"
+                label="Years Building Real Systems"
                 color="primary"
                 duration={2500}
               />
             </div>
             <div className="animate-slide-up">
-              <Icon icon={faHandshake} size="2xl" color="accent" className="mb-2" />
+              <Icon icon={faRocket} size="2xl" color="accent" className="mb-2" />
               <AnimatedCounter
-                value="8+"
-                label="MEP Partnerships"
+                value="Hundreds"
+                label="of Solutions Architected"
                 color="accent"
                 duration={1500}
               />
             </div>
             <div className="animate-slide-left">
-              <Icon icon={faDollarSign} size="2xl" color="warning" className="mb-2" />
+              <Icon icon={faHandshake} size="2xl" color="warning" className="mb-2" />
               <AnimatedCounter
-                value="$50K-$1M"
-                label="Saved Per Client"
+                value="MEP"
+                label="Partner & Purdue MEP Instructor"
                 color="warning"
                 duration={3000}
               />

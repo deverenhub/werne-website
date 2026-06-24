@@ -3,18 +3,18 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Metadata } from 'next'
 import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Icon, Breadcrumb } from '@/components/ui'
-import { faGraduationCap, faChartBar, faRocket, faBuilding, faIndustry, faHospital, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+import { faGraduationCap, faChartBar, faRocket, faBuilding, faIndustry, faHospital, faCheckCircle, faClipboardList } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
   title: 'AI Training Programs - Purdue MEP AI Series & Bootcamps | Werne Enterprises',
-  description: 'AI training programs including Purdue MEP AI Series, AI the Spreadsheet Killer, and 12 Week AI Bootcamp. Custom corporate AI training. Contact for pricing.',
+  description: 'AI education and training for manufacturers and businesses — five courses, classes written and delivered for Purdue MEP, and the AI Readiness Assessment. Contact for pricing.',
 }
 
 const EducationPage = () => {
   const programs = [
     {
       title: 'Purdue MEP AI Series',
-      description: 'Comprehensive AI training program developed in partnership with Purdue MEP for manufacturing professionals.',
+      description: 'Classes written and delivered for Purdue MEP — practical AI training for manufacturing professionals.',
       icon: faGraduationCap,
       audience: 'Manufacturing Teams',
       duration: 'Multi-session series',
@@ -62,6 +62,24 @@ const EducationPage = () => {
         'Implementation planning',
         'Change management',
         'Capstone project'
+      ],
+      pricing: 'Contact for pricing',
+      mep_partner: false
+    },
+    {
+      title: 'AI Readiness Assessment',
+      description: 'Deveren\'s own methodology — developed and delivered firsthand — to gauge where your team stands and what to learn first.',
+      icon: faClipboardList,
+      audience: 'Leaders & Teams',
+      duration: 'Contact for details',
+      format: 'Guided assessment',
+      topics: [
+        'Current state and skills review',
+        'Data and tooling readiness',
+        'Prioritized learning path',
+        'Practical AI opportunities',
+        'Adoption roadmap',
+        'Next-step recommendations'
       ],
       pricing: 'Contact for pricing',
       mep_partner: false
@@ -168,8 +186,8 @@ const EducationPage = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Comprehensive AI training programs developed through MEP partnerships.
-              From the Purdue MEP AI Series to the 12 Week AI Bootcamp.
+              Practical AI education for manufacturers and businesses — five courses,
+              classes written and delivered for Purdue MEP, and the AI Readiness Assessment.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -183,12 +201,12 @@ const EducationPage = () => {
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
-                <div className="text-3xl font-bold text-primary mb-2">8+</div>
-                <div className="text-gray-300">MEP Partner Relationships</div>
+                <div className="text-3xl font-bold text-primary mb-2">5</div>
+                <div className="text-gray-300">Courses for Businesses &amp; MEPs</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-accent mb-2">4</div>
-                <div className="text-gray-300">Training Programs</div>
+                <div className="text-3xl font-bold text-accent mb-2">Purdue MEP</div>
+                <div className="text-gray-300">Classes Written &amp; Delivered</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-warning mb-2">Custom</div>
@@ -214,9 +232,10 @@ const EducationPage = () => {
               Training Programs
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              AI education programs developed through hands-on experience and
-              MEP network partnerships.
+              Five courses for businesses and MEPs, developed through hands-on
+              experience and delivered directly by Deveren.
             </p>
+            {/* NEEDS-FACT: titles/descriptions of the two remaining courses (3 are shown by name below: Purdue MEP AI Series, AI the Spreadsheet Killer, 12 Week AI Bootcamp) */}
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -287,7 +306,7 @@ const EducationPage = () => {
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our AI training programs have been developed and delivered
-              through partnerships with MEP organizations nationwide.
+              through partnerships across the MEP network.
             </p>
           </div>
 
@@ -303,34 +322,32 @@ const EducationPage = () => {
         </Container>
       </section>
 
-      {/* Stats Section */}
+      {/* Experience Section */}
       <section className="bg-gradient-to-r from-primary to-accent text-white py-16">
         <Container>
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Training Program Results
+              Taught By Someone Who Has Built It
             </h2>
             <p className="text-xl text-gray-100 max-w-3xl mx-auto">
-              Delivering AI education through MEP partnerships nationwide.
+              27+ years architecting real systems &mdash; AI, ERP, MRP, and custom development &mdash;
+              distilled into education you can actually use. Courses written and delivered for
+              Purdue MEP and other manufacturers and businesses.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center max-w-4xl mx-auto">
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">50+</div>
-              <div className="text-gray-100">Companies Trained</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">27+</div>
+              <div className="text-gray-100">Years of Systems &amp; AI Experience</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">8+</div>
-              <div className="text-gray-100">MEP Partnerships</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">5</div>
+              <div className="text-gray-100">Courses for Businesses &amp; MEPs</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">100+</div>
-              <div className="text-gray-100">Programs Delivered</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">4</div>
-              <div className="text-gray-100">Training Formats</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">Purdue MEP</div>
+              <div className="text-gray-100">Classes Written &amp; Delivered</div>
             </div>
           </div>
         </Container>

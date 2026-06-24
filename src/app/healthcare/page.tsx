@@ -81,22 +81,22 @@ const HealthcarePage = () => {
     },
     {
       title: 'Compliance-Aware AI',
-      description: 'AI solutions designed with healthcare compliance requirements in mind.',
+      description: 'AI solutions designed with regulated healthcare and medical-device compliance in mind.',
       icon: faShieldAlt,
       color: 'success',
       benefits: [
+        'Title 21 CFR Part 11 awareness',
+        'Medical-device DHR support',
         'HIPAA awareness',
-        'Data security focus',
-        'Audit trail capabilities',
-        'Privacy-first design'
+        'ITAR, CMMC & CUI experience'
       ],
       features: [
         'Compliance assessment',
-        'Security requirements',
+        'Device History Record (DHR) support',
+        'Electronic records & signatures (Part 11)',
         'Access control planning',
         'Documentation support',
-        'Training programs',
-        'Ongoing compliance monitoring'
+        'Training programs'
       ]
     }
   ]
@@ -146,33 +146,33 @@ const HealthcarePage = () => {
 
   const compliance = [
     {
-      area: 'HIPAA Compliance',
-      description: 'All solutions designed with HIPAA requirements in mind',
+      area: 'Title 21 CFR Part 11 & DHRs',
+      description: 'Real experience with medical-device records and electronic records & signatures',
+      considerations: [
+        'Device History Record (DHR) workflows',
+        'Electronic records & signatures (Part 11)',
+        'Audit trail capabilities',
+        'Traceability and documentation'
+      ]
+    },
+    {
+      area: 'ITAR, CMMC & CUI',
+      description: 'Experience helping regulated manufacturers adopt AI without breaking compliance',
+      considerations: [
+        'Controlled Unclassified Information (CUI) handling',
+        'Access control requirements',
+        'Secure data storage and logging',
+        'Documentation and traceability'
+      ]
+    },
+    {
+      area: 'HIPAA Awareness',
+      description: 'Solutions designed with patient privacy and HIPAA requirements in mind',
       considerations: [
         'Protected health information handling',
-        'Access control requirements',
-        'Audit trail capabilities',
-        'Data encryption standards'
-      ]
-    },
-    {
-      area: 'Data Security',
-      description: 'Security-first approach to healthcare AI',
-      considerations: [
-        'Secure data storage',
-        'Encrypted communications',
-        'Access logging',
-        'Breach prevention'
-      ]
-    },
-    {
-      area: 'Privacy Protection',
-      description: 'Patient privacy at the core of every solution',
-      considerations: [
         'Minimum necessary access',
-        'De-identification capabilities',
-        'Consent management',
-        'Privacy impact assessments'
+        'De-identification considerations',
+        'Data encryption standards'
       ]
     }
   ]
@@ -204,8 +204,11 @@ const HealthcarePage = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              AI education, custom development, and consulting for healthcare organizations.
-              Compliance-aware solutions designed with HIPAA requirements in mind.
+              AI education, custom development, and consulting for healthcare and
+              medical-device organizations. I help regulated manufacturers adopt AI
+              without breaking compliance &mdash; with real experience spanning
+              Title 21 CFR Part 11, medical-device Device History Records (DHRs),
+              ITAR, CMMC, and CUI.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -219,16 +222,16 @@ const HealthcarePage = () => {
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
-                <div className="text-3xl font-bold text-accent mb-2">Compliance</div>
-                <div className="text-gray-300">HIPAA-Aware Design</div>
+                <div className="text-3xl font-bold text-accent mb-2">27+ Years</div>
+                <div className="text-gray-300">Real Systems &amp; Compliance Experience</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary mb-2">30+</div>
-                <div className="text-gray-300">Successful Implementations</div>
+                <div className="text-3xl font-bold text-primary mb-2">CFR Part 11</div>
+                <div className="text-gray-300">Title 21 &amp; DHR Expertise</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-warning mb-2">2 Hours</div>
-                <div className="text-gray-300">Free Consultation</div>
+                <div className="text-gray-300">Free AI Consulting</div>
               </div>
             </div>
           </div>
@@ -342,7 +345,9 @@ const HealthcarePage = () => {
               Compliance-Aware Approach
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              All healthcare AI solutions are designed with compliance requirements in mind.
+              Grounded in real engagements with regulated manufacturers &mdash; spanning
+              Title 21 CFR Part 11, medical-device DHRs, ITAR, CMMC, and CUI &mdash;
+              every solution is designed with compliance requirements in mind.
             </p>
           </div>
 
@@ -378,29 +383,31 @@ const HealthcarePage = () => {
         <Container>
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Healthcare AI Results
+              Why Healthcare Teams Work With Me
             </h2>
             <p className="text-xl text-gray-100 max-w-3xl mx-auto">
-              Delivering compliance-aware AI solutions for healthcare organizations.
+              A practical AI partner who has actually built the systems &mdash; and
+              navigated the compliance that regulated healthcare and medical-device
+              manufacturers live with every day.
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">30+</div>
-              <div className="text-gray-100">Custom Solutions</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">27+ Years</div>
+              <div className="text-gray-100">Systems &amp; Compliance Experience</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">100%</div>
-              <div className="text-gray-100">Compliance-First</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">CFR Part 11</div>
+              <div className="text-gray-100">Title 21 &amp; DHR Expertise</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">15+</div>
-              <div className="text-gray-100">AI Applications</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">Solo</div>
+              <div className="text-gray-100">You Work Directly With Deveren</div>
             </div>
             <div>
               <div className="text-4xl md:text-5xl font-bold mb-2">2 Hours</div>
-              <div className="text-gray-100">Free Consulting</div>
+              <div className="text-gray-100">Free AI Consulting</div>
             </div>
           </div>
         </Container>

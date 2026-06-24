@@ -20,14 +20,14 @@ import {
 
 export const metadata: Metadata = {
   title: 'Commercial Business Solutions - AI Training & Consulting | Werne Enterprises',
-  description: 'AI education, consulting, and custom development for commercial businesses. 9 years experience. 2 hours free AI consulting.',
+  description: 'Practical AI education, training, and deployment for commercial businesses. 27+ years building real systems. 2 hours of free AI consulting.',
 }
 
 const CommercialPage = () => {
   const solutions = [
     {
       title: 'AI Training for Business',
-      description: 'Comprehensive AI education programs to build your team\'s capabilities.',
+      description: 'Practical AI education drawn from five courses developed for businesses and MEPs, built to grow your team\'s real capabilities.',
       icon: faGraduationCap,
       color: 'primary',
       benefits: [
@@ -184,8 +184,9 @@ const CommercialPage = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              AI education, custom development, and consulting for commercial businesses.
-              Capture tribal knowledge, automate processes, and build your team&apos;s AI capabilities.
+              Practical AI for operations, customer service, and the back office &mdash;
+              built on 27+ years of real systems experience. Capture institutional knowledge,
+              automate the busywork, and build your team&apos;s AI capabilities.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -199,16 +200,16 @@ const CommercialPage = () => {
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
-                <div className="text-3xl font-bold text-warning mb-2">9</div>
-                <div className="text-gray-300">Years Consulting Experience</div>
+                <div className="text-3xl font-bold text-warning mb-2">27+</div>
+                <div className="text-gray-300">Years Building Real Systems</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary mb-2">30+</div>
-                <div className="text-gray-300">Successful Implementations</div>
+                <div className="text-3xl font-bold text-primary mb-2">Hundreds</div>
+                <div className="text-gray-300">Of Solutions Architected</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-accent mb-2">2 Hours</div>
-                <div className="text-gray-300">Free Consultation</div>
+                <div className="text-gray-300">Free AI Consulting</div>
               </div>
             </div>
           </div>
@@ -223,8 +224,9 @@ const CommercialPage = () => {
               Commercial AI Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive AI services designed for commercial businesses with
+              Practical AI services designed for commercial businesses with
               {idealClient.employees} employees and {idealClient.revenue} in revenue.
+              You work directly with Deveren on every engagement.
             </p>
           </div>
 
@@ -267,7 +269,7 @@ const CommercialPage = () => {
 
                 <CardFooter>
                   <Button asChild className="w-full">
-                    <Link href="/book-time">Learn More</Link>
+                    <Link href="/book-time">Talk Through This With Deveren</Link>
                   </Button>
                 </CardFooter>
               </Card>
@@ -361,7 +363,7 @@ const CommercialPage = () => {
             <Button size="xl" asChild>
               <a href="https://smarthive.online" target="_blank" rel="noopener noreferrer">
                 <Icon icon={faArrowUpRightFromSquare} className="mr-2" size="xs" />
-                Learn More About SmartHive
+                Explore SmartHive
                 <span className="sr-only">(opens in new tab)</span>
               </a>
             </Button>
@@ -377,7 +379,7 @@ const CommercialPage = () => {
               Why Work With Us
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              9 years of consulting experience helping businesses adopt technology strategically.
+              27+ years of real systems experience helping businesses adopt technology strategically.
             </p>
           </div>
 
@@ -387,7 +389,7 @@ const CommercialPage = () => {
                 <Icon icon={faHandshake} size="3xl" color="primary" className="mb-4" />
                 <h3 className="text-xl font-semibold text-secondary mb-3">Experienced Partner</h3>
                 <p className="text-gray-600">
-                  9 years helping businesses navigate technology decisions with 30+ successful implementations.
+                  27+ years architecting hundreds of solutions across AI, ERP, MRP, and custom development &mdash; you work directly with Deveren.
                 </p>
               </CardContent>
             </Card>
@@ -420,29 +422,29 @@ const CommercialPage = () => {
         <Container>
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Proven Track Record
+              Real Experience, Real Systems
             </h2>
             <p className="text-xl text-gray-100 max-w-3xl mx-auto">
-              9 years of consulting experience across manufacturing, healthcare, and commercial businesses.
+              27+ years building real systems across manufacturing, healthcare, and commercial businesses.
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">30+</div>
-              <div className="text-gray-100">Successful Implementations</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">27+</div>
+              <div className="text-gray-100">Years of Experience</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">0</div>
-              <div className="text-gray-100">Implementation Failures</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">Hundreds</div>
+              <div className="text-gray-100">Of Solutions Architected</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">9</div>
-              <div className="text-gray-100">Years Experience</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">Five</div>
+              <div className="text-gray-100">Courses for Businesses &amp; MEPs</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">$50K-$1M</div>
-              <div className="text-gray-100">Saved Per Client</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">Production</div>
+              <div className="text-gray-100">AI Solutions Deployed</div>
             </div>
           </div>
         </Container>
@@ -453,11 +455,12 @@ const CommercialPage = () => {
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Start With 2 Hours Free
+              Start With 2 Hours of Free AI Consulting
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              No commitment required. Let&apos;s discuss your business AI goals
-              and see if we&apos;re a good fit.
+              Pick one process that eats your team&apos;s time &mdash; customer service,
+              reporting, document handling &mdash; and we&apos;ll sketch a practical AI
+              fix you can actually ship. Straight talk with Deveren, no sales pitch.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="xl" variant="primary" asChild>

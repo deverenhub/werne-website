@@ -56,7 +56,7 @@ export default function TermsOfService() {
             <div className="bg-primary/10 p-4 rounded-lg mb-8 flex items-center">
               <Icon icon={faCalendarAlt} color="primary" className="mr-3" />
               <span className="text-gray-700">
-                <strong>Effective Date:</strong> January 2025
+                <strong>Effective Date:</strong> January 2026
               </span>
             </div>
 
@@ -187,11 +187,11 @@ export default function TermsOfService() {
               <ul className="space-y-3 text-gray-700 mb-4">
                 <li className="flex items-start">
                   <Icon icon={faHospital} color="primary" className="mr-3 mt-1" />
-                  <span><strong>Healthcare:</strong> All healthcare data is handled in compliance with HIPAA regulations</span>
+                  <span><strong>Healthcare:</strong> Health information is handled in line with applicable requirements, with safeguards tailored to each engagement and experience spanning Title 21 CFR Part 11 and medical-device DHRs</span>
                 </li>
                 <li className="flex items-start">
                   <Icon icon={faIndustry} color="primary" className="mr-3 mt-1" />
-                  <span><strong>Manufacturing:</strong> Proprietary manufacturing data is protected with industry-standard security</span>
+                  <span><strong>Manufacturing:</strong> Proprietary manufacturing data is protected with industry-standard security, informed by experience with ITAR, CMMC, and CUI requirements</span>
                 </li>
                 <li className="flex items-start">
                   <Icon icon={faStore} color="primary" className="mr-3 mt-1" />
@@ -265,12 +265,13 @@ export default function TermsOfService() {
                 Industry Compliance
               </h2>
               <p className="text-gray-700 mb-4">
-                We maintain compliance with relevant industry standards and regulations:
+                We work within the standards and regulations that apply to our clients&apos; industries, drawing on
+                hands-on experience in regulated environments:
               </p>
               <ul className="space-y-3 text-gray-700 mb-4">
                 <li className="flex items-start">
                   <Icon icon={faAward} color="primary" className="mr-3 mt-1" />
-                  <span><strong>Small Business Certification:</strong> NAICS codes 541690, 541511, 541990</span>
+                  <span><strong>Business Classification:</strong> Registered under NAICS codes 541690, 541511, and 541990</span>
                 </li>
                 <li className="flex items-start">
                   <Icon icon={faHandshake} color="primary" className="mr-3 mt-1" />
@@ -278,7 +279,7 @@ export default function TermsOfService() {
                 </li>
                 <li className="flex items-start">
                   <Icon icon={faBalanceScale} color="primary" className="mr-3 mt-1" />
-                  <span><strong>Industry Standards:</strong> Compliance with relevant manufacturing and healthcare regulations</span>
+                  <span><strong>Regulated-Industry Experience:</strong> Engagements spanning ITAR, CMMC, Title 21 CFR Part 11, and CUI requirements</span>
                 </li>
               </ul>
             </section>

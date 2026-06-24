@@ -15,7 +15,7 @@ const WhyPartnerSection = () => {
     {
       icon: faBullseye,
       title: 'AI Education Expert',
-      description: 'Creator of Purdue MEP AI Series, AI the Spreadsheet Killer, 12 Week AI Bootcamp',
+      description: 'Wrote and delivered classes for Purdue MEP, plus five courses for businesses and MEPs',
       color: 'secondary'
     },
     {
@@ -27,19 +27,19 @@ const WhyPartnerSection = () => {
     {
       icon: faCheck,
       title: 'Proven Methodologies',
-      description: 'TSVMap Methodology and AI Readiness Assessment with 30+ implementations',
+      description: 'TSVMap Methodology and a hands-on AI Readiness Assessment built from real engagements',
       color: 'success'
     },
     {
       icon: faLightbulb,
-      title: '45+ Developer Team Access',
-      description: 'Solo consultant with access to expert development resources when needed',
+      title: 'Work Directly With Deveren',
+      description: 'A solo practice - you work directly with the architect, not a hand-off to a junior team',
       color: 'warning'
     },
     {
       icon: faChartBar,
-      title: 'Real Savings',
-      description: 'Saved manufacturers $50K - $1M in system expenses per engagement',
+      title: '27+ Years of Experience',
+      description: 'Hundreds of solutions architected across AI, ERP, MRP, and custom development',
       color: 'accent'
     }
   ]
@@ -52,12 +52,13 @@ const WhyPartnerSection = () => {
             Why Partner With Werne Enterprises
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            We bring a unique combination of deep technical expertise, industry-specific knowledge,
-            and a proven track record of business impact. Our specialization in Manufacturing, Healthcare,
-            and Commercial Business positions us as your ideal technology partner.
+            Deveren brings 27+ years of real systems and IT experience, having architected hundreds
+            of solutions across AI, ERP, MRP, and custom development. Today that experience goes into
+            educating, training, and deploying practical AI for Manufacturing, Healthcare, and
+            Commercial Business - and you work directly with him on every engagement.
           </p>
           <Badge variant="primary" size="lg">
-            Industry Expertise Meets Innovation Excellence
+            27+ Years of Real Systems Experience
           </Badge>
         </div>
 

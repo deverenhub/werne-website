@@ -14,7 +14,7 @@ export default function Accessibility() {
           
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-600 mb-8">
-              <strong>Last Updated:</strong> January 2025
+              <strong>Last Updated:</strong> January 2026
             </p>
 
             <section className="mb-8">
@@ -110,14 +110,14 @@ export default function Accessibility() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-secondary mb-4">Ongoing Efforts</h2>
               <p className="text-gray-700 mb-4">
-                We are continuously working to improve the accessibility of our website and services:
+                As a solo practice, Deveren personally reviews and works to improve the accessibility of this
+                website and our services:
               </p>
               <ul className="list-disc pl-6 text-gray-700 mb-4">
-                <li>Regular accessibility audits and testing</li>
-                <li>User feedback incorporation</li>
-                <li>Staff training on accessibility best practices</li>
-                <li>Updates to meet evolving accessibility standards</li>
-                <li>Third-party accessibility tool integration</li>
+                <li>Periodic accessibility reviews and testing of the website</li>
+                <li>Incorporating user feedback as it comes in</li>
+                <li>Keeping current with evolving accessibility standards</li>
+                <li>Using automated accessibility tools to catch issues</li>
               </ul>
             </section>
 
@@ -155,14 +155,14 @@ export default function Accessibility() {
                 We welcome your feedback on the accessibility of our website and services. If you encounter any accessibility barriers or have suggestions for improvement, please contact us:
               </p>
               <div className="bg-gray-50 p-6 rounded-lg">
-                <p className="text-gray-700 mb-2"><strong>Accessibility Coordinator</strong></p>
+                <p className="text-gray-700 mb-2"><strong>Deveren Werne</strong></p>
                 <p className="text-gray-700 mb-2">Werne Enterprises LLC</p>
                 <p className="text-gray-700 mb-2">607 Creekway Court</p>
                 <p className="text-gray-700 mb-2">Greer, SC 29651</p>
                 <p className="text-gray-700 mb-2">Phone: <a href="tel:8649915656" className="text-primary hover:underline">864-991-5656</a></p>
                 <p className="text-gray-700 mb-4">Email: <a href="mailto:accessibility@werneenterprises.com" className="text-primary hover:underline">accessibility@werneenterprises.com</a></p>
                 <p className="text-gray-700 text-sm">
-                  We aim to respond to accessibility feedback within 2 business days.
+                  We aim to respond to accessibility feedback promptly.
                 </p>
               </div>
             </section>
@@ -170,13 +170,13 @@ export default function Accessibility() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-secondary mb-4">Assessment and Testing</h2>
               <p className="text-gray-700 mb-4">
-                This accessibility statement is based on self-evaluation and testing with various assistive technologies. 
-                We regularly review and update our accessibility practices to ensure continued compliance with accessibility standards.
+                This accessibility statement is based on self-evaluation and testing with various assistive technologies.
+                We review and update our accessibility practices as the site evolves, working toward the standard below.
               </p>
               <p className="text-gray-700 mb-4">
-                <strong>Assessment Date:</strong> January 2025<br />
+                <strong>Assessment Date:</strong> January 2026<br />
                 <strong>Assessment Method:</strong> Self-evaluation and automated testing tools<br />
-                <strong>Standards:</strong> WCAG 2.1 Level AA
+                <strong>Target Standard:</strong> WCAG 2.1 Level AA
               </p>
             </section>
           </div>

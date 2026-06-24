@@ -1,26 +1,7 @@
-'use client'
-
-import React, { useState } from 'react'
 import Link from 'next/link'
-import { Container, Button, Input, ExternalLink } from '@/components/ui'
+import { Container, ExternalLink } from '@/components/ui'
 
 const Footer = () => {
-  const [email, setEmail] = useState('')
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
-
-  const handleNewsletterSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!email) return
-
-    setIsLoading(true)
-    // Simulate submission delay
-    await new Promise(resolve => setTimeout(resolve, 800))
-    setIsLoading(false)
-    setIsSubmitted(true)
-    setEmail('')
-  }
-
   const footerLinks = {
     services: [
       { name: 'AI Innovation Services', href: '/services/ai-innovation' },
@@ -42,75 +23,30 @@ const Footer = () => {
       { name: 'Privacy Policy', href: '/privacy' },
       { name: 'Terms of Service', href: '/terms' },
       { name: 'Accessibility', href: '/accessibility' },
-    ]
+    ],
   }
 
   return (
     <footer className="bg-secondary text-white">
-      {/* Newsletter Section */}
+      {/* CTA Section (replaces the previous non-functional newsletter form) */}
       <div className="border-b border-gray-600">
         <Container>
           <div className="py-10 md:py-12">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-8">
-              {/* Newsletter Text */}
-              <div className="md:max-w-md">
+              <div className="md:max-w-lg">
                 <h3 className="text-xl md:text-2xl font-bold mb-2">
-                  Get AI Insights Delivered
+                  Ready to put AI to work?
                 </h3>
                 <p className="text-gray-300 text-sm md:text-base">
-                  Weekly tips on AI adoption for mid-sized businesses
+                  Start with 2 free hours of practical AI consulting — no commitment, no jargon.
                 </p>
               </div>
-
-              {/* Newsletter Form */}
-              <div className="flex-1 md:max-w-lg">
-                {isSubmitted ? (
-                  <div className="flex items-center gap-3 bg-green-500/10 border border-green-500/30 rounded-lg px-4 py-3">
-                    <svg
-                      className="w-5 h-5 text-green-400 flex-shrink-0"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <span className="text-green-400 font-medium">
-                      Thanks for subscribing! Check your inbox soon.
-                    </span>
-                  </div>
-                ) : (
-                  <form
-                    onSubmit={handleNewsletterSubmit}
-                    className="flex flex-col sm:flex-row gap-3"
-                  >
-                    <div className="flex-1">
-                      <Input
-                        type="email"
-                        placeholder="Enter your email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                        aria-label="Email address for newsletter"
-                        className="bg-white/10 border-gray-500 text-white placeholder:text-gray-400 focus:bg-white/15 focus:border-primary"
-                      />
-                    </div>
-                    <Button
-                      type="submit"
-                      variant="primary"
-                      loading={isLoading}
-                      className="sm:flex-shrink-0"
-                    >
-                      Subscribe
-                    </Button>
-                  </form>
-                )}
-              </div>
+              <Link
+                href="/book-time"
+                className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 font-semibold text-white hover:opacity-90 transition-opacity whitespace-nowrap"
+              >
+                Book 2 Free Hours
+              </Link>
             </div>
           </div>
         </Container>
@@ -126,8 +62,9 @@ const Footer = () => {
                 Werne <span className="text-primary">Enterprises</span>
               </div>
               <p className="text-gray-300 mb-6 max-w-md">
-                AI Education, Consulting & Custom Development for Manufacturing, Healthcare & Commercial Business.
-                27+ years of technology experience delivering practical, measurable results.
+                Practical AI for Manufacturing, Healthcare &amp; Commercial business —
+                education, training, and solutions architected and deployed. 27+ years of
+                systems and IT experience.
               </p>
               <div className="space-y-2 text-sm text-gray-300">
                 <p>Greenville, SC</p>
@@ -209,7 +146,7 @@ const Footer = () => {
         <div className="border-t border-gray-600 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-sm text-gray-300 mb-4 md:mb-0">
-              <p>© 2025 Werne Enterprises LLC. All Rights Reserved.</p>
+              <p>© {new Date().getFullYear()} Werne Enterprises LLC. All Rights Reserved.</p>
               <p className="mt-1">Small Business | NAICS: 541690, 541511, 541990</p>
             </div>
 

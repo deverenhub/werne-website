@@ -68,7 +68,7 @@ const PartnerLogosSection = () => {
       <Container>
         <div className="text-center mb-8">
           <p className="text-sm uppercase tracking-wider text-gray-500 font-semibold">
-            Trusted by MEP Partners Nationwide
+            Trusted by MEP Partners
           </p>
         </div>
 

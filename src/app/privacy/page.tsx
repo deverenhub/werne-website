@@ -52,7 +52,7 @@ export default function PrivacyPolicy() {
             <div className="bg-primary/10 p-4 rounded-lg mb-8 flex items-center">
               <Icon icon={faCalendarAlt} color="primary" className="mr-3" />
               <span className="text-gray-700">
-                <strong>Effective Date:</strong> January 2025
+                <strong>Effective Date:</strong> January 2026
               </span>
             </div>
 
@@ -216,7 +216,10 @@ export default function PrivacyPolicy() {
                 Healthcare Clients
               </h3>
               <p className="text-gray-700 mb-4">
-                For healthcare-related services, we maintain HIPAA compliance and implement additional safeguards to protect health information.
+                For healthcare and medical-device clients, we handle health information in line with applicable
+                requirements and implement additional safeguards appropriate to each engagement. Our compliance
+                experience spans regulated environments including Title 21 CFR Part 11 and medical-device Device
+                History Records (DHRs).
               </p>
 
               <h3 className="text-xl font-medium text-secondary mb-3 flex items-center">
@@ -224,7 +227,9 @@ export default function PrivacyPolicy() {
                 Manufacturing Clients
               </h3>
               <p className="text-gray-700 mb-4">
-                We understand the sensitivity of manufacturing data and implement industry-standard security protocols to protect proprietary information.
+                We understand the sensitivity of manufacturing data and implement industry-standard security protocols
+                to protect proprietary information. We have experience working within regulated manufacturing
+                environments, including ITAR, CMMC, and CUI requirements.
               </p>
             </section>
 

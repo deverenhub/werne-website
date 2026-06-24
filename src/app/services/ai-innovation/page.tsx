@@ -44,7 +44,7 @@ const AIInnovationPage = () => {
       features: [
         'Custom AI applications',
         'Business process automation',
-        'Integration with existing systems',
+        'Integration with existing ERP / MRP & systems',
         'Scalable architecture',
         'Ongoing optimization',
         'Full ownership of solution'
@@ -180,12 +180,12 @@ const AIInnovationPage = () => {
                 <div className="text-gray-300">Tribal Knowledge AI Platform</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-accent mb-2">30+</div>
-                <div className="text-gray-300">Successful Implementations</div>
+                <div className="text-3xl font-bold text-accent mb-2">27+ Years</div>
+                <div className="text-gray-300">Architecting Real Systems</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-warning mb-2">45+</div>
-                <div className="text-gray-300">Developer Team Access</div>
+                <div className="text-3xl font-bold text-warning mb-2">Direct</div>
+                <div className="text-gray-300">You Work With Deveren</div>
               </div>
             </div>
           </div>
@@ -207,8 +207,9 @@ const AIInnovationPage = () => {
               AI Development Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From SmartHive.online to custom AI applications, we build AI solutions
-              that solve real business problems.
+              From SmartHive.online to custom applications, I architect and deploy
+              practical AI solutions and workflows that integrate with your existing
+              ERP, MRP, and systems.
             </p>
           </div>
 
@@ -369,7 +370,7 @@ const AIInnovationPage = () => {
                 <CardContent className="p-6 text-center">
                   <Icon icon={faBullseye} size="4xl" color="primary" className="mb-3" />
                   <h3 className="font-semibold text-secondary mb-2">Deploy & Use</h3>
-                  <p className="text-gray-600 text-sm">24/7 access to your organization&apos;s collective expertise</p>
+                  <p className="text-gray-600 text-sm">Always-available access to your organization&apos;s collective expertise</p>
                 </CardContent>
               </Card>
             </div>

@@ -39,7 +39,7 @@ const ServicesPage = () => {
         'Tribal Knowledge Capture',
         'AI Persona Development',
         'Custom AI Applications',
-        'RAG Implementation',
+        'ERP / MRP & Systems Integration',
         'AI Integration Services'
       ],
       pricing: 'Contact for pricing',
@@ -48,7 +48,7 @@ const ServicesPage = () => {
     },
     {
       title: 'AI Consulting',
-      description: 'Strategic AI consulting with 9 years of experience and 30+ successful implementations. Zero failures.',
+      description: 'Strategic AI consulting grounded in 27+ years architecting real systems, with practical guidance you can act on.',
       icon: faWrench,
       color: 'secondary',
       features: [
@@ -74,7 +74,7 @@ const ServicesPage = () => {
         'Infrastructure Assessment',
         'Skills Gap Analysis',
         'Prioritized Roadmap',
-        'ROI Projections'
+        'Practical Next Steps'
       ],
       pricing: '2 Hours Free',
       href: '/book-time',
@@ -155,8 +155,8 @@ const ServicesPage = () => {
               Our Service Offerings
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive AI services designed for businesses with 10-600 employees
-              and $10M-$500M in revenue.
+              Practical AI services for mid-market manufacturers and businesses,
+              delivered directly by Deveren.
             </p>
           </div>
 
@@ -224,8 +224,8 @@ const ServicesPage = () => {
               Our Proven Process
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A practical approach that has delivered 30+ successful implementations
-              with zero failures.
+              A practical approach refined over 27+ years of architecting and
+              deploying real systems.
             </p>
           </div>
 
@@ -248,29 +248,30 @@ const ServicesPage = () => {
         <Container>
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Proven Results
+              Real Experience, Real Systems
             </h2>
             <p className="text-xl text-gray-100 max-w-3xl mx-auto">
-              27+ years in technology. 30+ successful implementations. Zero failures.
+              27+ years architecting real systems, with production AI solutions and
+              workflows built, deployed, and running.
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">30+</div>
-              <div className="text-gray-100">Successful Implementations</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">27+</div>
+              <div className="text-gray-100">Years of Systems &amp; IT Experience</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">8+</div>
-              <div className="text-gray-100">MEP Partnerships</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">Hundreds</div>
+              <div className="text-gray-100">of Solutions Architected</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">$50K-$1M</div>
-              <div className="text-gray-100">Saved Per Client</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">5</div>
+              <div className="text-gray-100">Courses for Businesses &amp; MEPs</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">0</div>
-              <div className="text-gray-100">Implementation Failures</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">Production</div>
+              <div className="text-gray-100">AI Solutions &amp; Workflows Deployed</div>
             </div>
           </div>
         </Container>

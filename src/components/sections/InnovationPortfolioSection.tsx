@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import Image from 'next/image'
 import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Icon, Badge } from '@/components/ui'
 import {
@@ -27,9 +28,10 @@ const InnovationPortfolioSection = () => {
     },
     {
       title: 'AI Training Programs',
-      subtitle: 'Proven AI Education Curriculum',
-      description: 'Comprehensive AI training developed and delivered through MEP partnerships. From spreadsheet automation to full AI implementation.',
-      features: ['Purdue MEP AI Series', 'AI the Spreadsheet Killer', '12 Week AI Bootcamp', 'Custom Corporate Training'],
+      subtitle: 'AI Education for Businesses & MEPs',
+      description: 'Five courses developed for businesses and MEPs, including classes written and delivered for Purdue MEP. From spreadsheet automation to full AI adoption.',
+      features: ['Wrote & delivered Purdue MEP classes', 'Five courses for businesses & MEPs', 'AI the Spreadsheet Killer', 'Custom corporate training'],
+      cta: 'Explore Training',
       href: '/services/education',
       icon: faGraduationCap,
       color: 'accent',
@@ -39,8 +41,9 @@ const InnovationPortfolioSection = () => {
     {
       title: 'AI Consulting Services',
       subtitle: 'Strategic AI Implementation',
-      description: 'AI Readiness Assessments and strategic consulting to help businesses navigate their AI journey with confidence.',
-      features: ['AI Readiness Assessment', 'Implementation Strategy', '9 Years Consulting Experience', '30+ Successful Projects'],
+      description: 'AI Readiness Assessments and strategic consulting to help businesses navigate their AI journey with confidence - backed by 27+ years of real systems experience.',
+      features: ['AI Readiness Assessment', 'Implementation strategy', '27+ years of systems experience', 'Production AI we\'ve built & deployed'],
+      cta: 'Book a Consultation',
       href: '/book-time',
       icon: faIndustry,
       color: 'warning',
@@ -100,8 +103,8 @@ const InnovationPortfolioSection = () => {
                 </div>
               </CardContent>
 
-              {platform.external && (
-                <CardFooter>
+              <CardFooter>
+                {platform.external ? (
                   <Button asChild className="w-full">
                     <a href={platform.href} target="_blank" rel="noopener noreferrer">
                       <Icon icon={faArrowUpRightFromSquare} className="mr-2" size="xs" />
@@ -109,8 +112,12 @@ const InnovationPortfolioSection = () => {
                       <span className="sr-only">(opens in new tab)</span>
                     </a>
                   </Button>
-                </CardFooter>
-              )}
+                ) : (
+                  <Button asChild className="w-full">
+                    <Link href={platform.href}>{platform.cta}</Link>
+                  </Button>
+                )}
+              </CardFooter>
             </Card>
           ))}
         </div>

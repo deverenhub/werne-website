@@ -12,8 +12,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
-  title: 'AI Blog - Insights & Education | Werne Enterprises',
-  description: 'AI education content, implementation guides, and industry insights from Werne Enterprises. Coming soon.',
+  title: 'AI Insights & Education | Werne Enterprises',
+  description: 'Practical AI education content and implementation guides from Werne Enterprises, drawn from 27+ years of hands-on systems and IT experience.',
+  // Thin page until articles are published — keep it out of the index for now.
+  robots: { index: false },
 }
 
 const BlogPage = () => {
@@ -35,32 +37,33 @@ const BlogPage = () => {
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="accent" size="lg" className="mb-6">
               <Icon icon={faBook} className="mr-2" />
-              Coming Soon
+              AI Education
             </Badge>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              AI Education{' '}
-              <span className="text-primary">Blog</span>
+              AI{' '}
+              <span className="text-primary">Insights</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              We&apos;re building a resource of AI education content, implementation guides,
-              and industry insights. Subscribe to be notified when we launch.
+              Practical AI education and implementation guides, drawn from 27+ years of
+              hands-on systems work. New articles are on the way — in the meantime, explore
+              the courses and resources.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="xl" asChild>
-                <Link href="/contact">Get Notified</Link>
+                <Link href="/resources">Explore Resources</Link>
               </Button>
               <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-secondary" asChild>
-                <Link href="/resources">View Resources</Link>
+                <Link href="/book-time">Book 2 Free Hours</Link>
               </Button>
             </div>
           </div>
         </Container>
       </section>
 
-      {/* Coming Soon Content */}
+      {/* What to Expect */}
       <section className="py-20 bg-gray-50">
         <Container>
           <div className="text-center mb-16">
@@ -68,8 +71,8 @@ const BlogPage = () => {
               What to Expect
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our blog will feature practical AI education content based on our
-              9 years of consulting experience.
+              Practical AI education content based on 27+ years of hands-on systems and IT
+              experience.
             </p>
           </div>
 
@@ -112,7 +115,7 @@ const BlogPage = () => {
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Can&apos;t Wait for the Blog?
+              Want Guidance Now?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Start with 2 hours free AI consulting and get personalized guidance

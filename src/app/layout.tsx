@@ -17,22 +17,21 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "AI Innovation Services | Manufacturing, Healthcare & Commercial | Werne Enterprises",
+    default: "AI Consulting, Training & Solutions for Manufacturing, Healthcare & Commercial | Werne Enterprises",
     template: "%s | Werne Enterprises"
   },
-  description: "Transform your business with AI education, consulting & custom AI development. 27+ years technology experience serving manufacturing, healthcare & commercial business. 2 hours free AI consulting.",
+  description: "A practical AI partner who's actually built the systems. 27+ years of systems and IT experience — educating, training, and architecting & deploying AI solutions for manufacturing, healthcare & commercial business. Start with 2 hours of free AI consulting.",
   keywords: [
-    "AI innovation services",
-    "artificial intelligence consulting",
-    "RAG implementation",
-    "MCP integration",
+    "AI consulting services",
+    "AI solution architect",
+    "AI readiness assessment",
+    "AI training",
     "manufacturing AI",
     "healthcare AI",
-    "commercial AI solutions",
-    "predictive maintenance",
-    "AI automation",
-    "Greer South Carolina",
-    "AI consulting services"
+    "medical device compliance",
+    "ERP MRP integration",
+    "AI workflow automation",
+    "South Carolina AI consultant"
   ],
   authors: [{ name: "Werne Enterprises LLC" }],
   creator: "Werne Enterprises LLC",
@@ -51,23 +50,22 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://werneenterprises.com",
     siteName: "Werne Enterprises",
-    title: "AI Innovation Services | Manufacturing, Healthcare & Commercial",
-    description: "Transform your business with AI education, consulting & custom AI development. 27+ years technology experience serving manufacturing, healthcare & commercial business.",
+    title: "AI Consulting, Training & Solutions | Manufacturing, Healthcare & Commercial",
+    description: "27+ years of systems and IT experience — educating, training, and architecting & deploying practical AI for manufacturing, healthcare & commercial business.",
     images: [
       {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Werne Enterprises - AI Innovation for Manufacturing, Healthcare & Commercial Business",
+        // NEEDS-FACT: replace with a designed 1200x630 og-image.jpg added to /public
+        url: "/werne-logo.png",
+        alt: "Werne Enterprises - practical AI for Manufacturing, Healthcare & Commercial Business",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Innovation Services | Manufacturing, Healthcare & Commercial",
-    description: "Transform your business with AI education, consulting & custom AI development. 27+ years technology experience.",
-    images: ["/twitter-image.jpg"],
-    creator: "@werneenterprises",
+    title: "AI Consulting, Training & Solutions | Manufacturing, Healthcare & Commercial",
+    description: "27+ years of systems and IT experience — practical AI, architected and deployed.",
+    // NEEDS-FACT: replace with a designed 1200x630 twitter-image.jpg added to /public
+    images: ["/werne-logo.png"],
   },
   robots: {
     index: true,
@@ -92,10 +90,10 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Werne Enterprises LLC",
-    "description": "AI Education, Consulting & Custom Development for Manufacturing, Healthcare & Commercial Business",
+    "description": "AI education, training, and solution architecture & deployment for Manufacturing, Healthcare & Commercial Business",
     "url": "https://werneenterprises.com",
-    "logo": "https://werneenterprises.com/logo.png",
-    "image": "https://werneenterprises.com/og-image.jpg",
+    "logo": "https://werneenterprises.com/werne-logo.png",
+    "image": "https://werneenterprises.com/werne-logo.png",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Greenville",
@@ -118,19 +116,14 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Werne Enterprises",
-    "url": "https://werneenterprises.com",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://werneenterprises.com/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
+    "url": "https://werneenterprises.com"
   };
 
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Werne Enterprises LLC",
-    "image": "https://werneenterprises.com/og-image.jpg",
+    "image": "https://werneenterprises.com/werne-logo.png",
     "telephone": "+1-864-991-5656",
     "email": "deveren@werneenterprises.com",
     "address": {
@@ -182,17 +175,11 @@ export default function RootLayout({
         />
 
         {/* Preconnect to external domains */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-
-        {/* DNS prefetch for performance */}
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
-        {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        {/* Favicon & app icons are served automatically via App Router conventions
+            (src/app/icon.png and src/app/apple-icon.png) */}
 
         {/* Manifest */}
         <link rel="manifest" href="/manifest.json" />

@@ -17,8 +17,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
-  title: 'Our Work - AI Consulting Success | Werne Enterprises',
-  description: 'Explore our track record of 30+ successful AI implementations across manufacturing, healthcare, and commercial businesses. 9 years of consulting experience.',
+  title: 'Our Work - AI Track Record | Werne Enterprises',
+  description: 'Our track record across manufacturing, healthcare, and commercial businesses — AI training, tribal-knowledge capture, and custom AI solutions architected and deployed. 27+ years of hands-on systems experience.',
 }
 
 const CaseStudiesPage = () => {
@@ -38,7 +38,7 @@ const CaseStudiesPage = () => {
     {
       name: 'Healthcare',
       icon: faHeart,
-      description: 'Compliance-aware AI solutions for healthcare organizations.',
+      description: 'Compliance-aware AI solutions for healthcare and medical-device organizations.',
       examples: [
         'HIPAA-aware AI training',
         'Workflow automation consulting',
@@ -65,7 +65,7 @@ const CaseStudiesPage = () => {
     {
       title: 'AI Training & Education',
       icon: faGraduationCap,
-      description: 'Build your team\'s AI capabilities with proven training programs developed through MEP partnerships.',
+      description: 'Build your team\'s AI capabilities with courses developed and delivered through MEP partnerships, including Purdue MEP.',
       examples: [
         'Purdue MEP AI Series',
         'AI the Spreadsheet Killer',
@@ -80,7 +80,7 @@ const CaseStudiesPage = () => {
       examples: [
         'Expert knowledge interviews',
         'AI persona creation',
-        '24/7 knowledge access',
+        'On-demand knowledge access',
         'New employee training acceleration'
       ]
     },
@@ -98,21 +98,21 @@ const CaseStudiesPage = () => {
     {
       title: 'Custom AI Development',
       icon: faChartBar,
-      description: 'Build AI solutions tailored to your specific business needs and workflows.',
+      description: 'Architect and deploy AI solutions tailored to your specific business needs and workflows.',
       examples: [
         'SmartHive.online platform',
         'Business process automation',
-        'Integration with existing systems',
+        'Integration with existing ERP/MRP systems',
         'Ongoing optimization'
       ]
     }
   ]
 
   const trackRecord = [
-    { label: 'Successful Implementations', value: '30+' },
-    { label: 'Implementation Failures', value: '0' },
-    { label: 'MEP Partnerships', value: '8+' },
-    { label: 'Years Consulting', value: '9' }
+    { label: 'Years Building Real Systems', value: '27+' },
+    { label: 'Solutions Architected', value: 'Hundreds' },
+    { label: 'Courses for Businesses & MEPs', value: '5' },
+    { label: 'Instructor & Partner', value: 'Purdue MEP' }
   ]
 
   const mepPartners = [
@@ -128,28 +128,28 @@ const CaseStudiesPage = () => {
 
   const successFactors = [
     {
-      factor: 'Industry Experience',
+      factor: 'Real Systems Experience',
       icon: faAward,
-      description: '9 years consulting with manufacturers and businesses, understanding the unique challenges each faces.',
+      description: '27+ years architecting real systems across AI, ERP, MRP, and custom development for manufacturers and businesses.',
       impact: 'Solutions that fit your specific industry needs'
     },
     {
       factor: 'Proven Methodologies',
       icon: faLightbulb,
-      description: 'TSVMap and AI Readiness Assessment methodologies developed through real-world implementations.',
+      description: 'TSVMap and the AI Readiness Assessment, developed through real-world engagements.',
       impact: 'Reduced risk and predictable outcomes'
     },
     {
       factor: 'MEP Network',
       icon: faHandshake,
-      description: '8+ MEP partnerships providing access to proven training programs and industry connections.',
+      description: 'MEP partnerships including Purdue MEP, SCMEP, and Georgia MEP, providing proven training programs and industry connections.',
       impact: 'Cost-effective solutions with local support'
     },
     {
       factor: 'Practical Focus',
       icon: faBrain,
       description: 'We focus on practical AI applications that deliver real business value, not hype.',
-      impact: 'Measurable results: $50K-$1M saved per client'
+      impact: 'Practical AI that ships and delivers real operational value'
     }
   ]
 
@@ -170,7 +170,7 @@ const CaseStudiesPage = () => {
         <Container className="relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="primary" size="lg" className="mb-6">
-              30+ Successful Implementations
+              27+ Years of Real Systems Experience
             </Badge>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
@@ -179,8 +179,9 @@ const CaseStudiesPage = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              9 years of consulting experience helping manufacturers, healthcare organizations,
-              and commercial businesses adopt AI strategically. Zero implementation failures.
+              27+ years of hands-on systems and IT experience helping manufacturers, healthcare
+              organizations, and commercial businesses adopt AI strategically — practical
+              solutions architected, built, and deployed.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -300,8 +301,8 @@ const CaseStudiesPage = () => {
               MEP Network Partner
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Trusted partner of Manufacturing Extension Partnership organizations
-              across the country, delivering AI training and consulting to manufacturers.
+              Trusted partner of Manufacturing Extension Partnership organizations,
+              delivering AI training and consulting to manufacturers.
             </p>
           </div>
 
@@ -355,34 +356,34 @@ const CaseStudiesPage = () => {
         </Container>
       </section>
 
-      {/* Results Section */}
+      {/* Track Record Section */}
       <section className="py-20 bg-gradient-to-r from-primary to-accent text-white">
         <Container>
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Proven Results
+              Built and Deployed
             </h2>
             <p className="text-xl text-gray-100 max-w-3xl mx-auto">
-              Our consulting engagements deliver measurable business outcomes.
+              Practical AI, architected and deployed — grounded in decades of real systems work.
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">30+</div>
-              <div className="text-gray-100">Successful Implementations</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">27+</div>
+              <div className="text-gray-100">Years Building Real Systems</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">0</div>
-              <div className="text-gray-100">Implementation Failures</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">Hundreds</div>
+              <div className="text-gray-100">Solutions Architected</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">8+</div>
-              <div className="text-gray-100">MEP Partnerships</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">5</div>
+              <div className="text-gray-100">Courses for Businesses & MEPs</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">$50K-$1M</div>
-              <div className="text-gray-100">Saved Per Client</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">Purdue MEP</div>
+              <div className="text-gray-100">Instructor & Partner</div>
             </div>
           </div>
         </Container>

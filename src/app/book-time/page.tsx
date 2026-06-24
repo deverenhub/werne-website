@@ -20,33 +20,33 @@ import {
 
 export const metadata: Metadata = {
   title: 'Book 2 Hours Free AI Consulting | Werne Enterprises',
-  description: 'Schedule your FREE 2-hour AI consulting session. Discuss AI training, custom development, or consulting needs with 9 years of experience.',
+  description: 'Schedule your free 2-hour AI consulting session. Discuss AI training, custom development, or consulting needs directly with Deveren Werne, drawing on 27+ years of real systems experience.',
 }
 
 const faqData = [
   {
     question: 'Is the 2 hours really free?',
-    answer: 'Yes, absolutely. We believe in providing value upfront and building relationships based on trust. The 2 hours are completely free with no hidden fees or obligations.'
+    answer: 'Yes. I believe in providing value upfront and building relationships based on trust. The 2 hours are completely free, with no hidden fees or obligations.'
   },
   {
     question: 'What if I\'m not sure which consultation type is right for me?',
-    answer: 'No problem! Just pick the one that seems closest to your needs. We\'ll adjust our discussion based on what you actually need help with.'
+    answer: 'No problem. Just pick the one that seems closest to your needs, and I\'ll adjust our discussion based on what you actually need help with.'
   },
   {
     question: 'Can I bring other team members to the consultation?',
-    answer: 'Absolutely! We encourage having relevant stakeholders participate. Please let us know when scheduling so we can plan accordingly.'
+    answer: 'Absolutely. I encourage having relevant stakeholders participate. Just let me know when scheduling so we can plan accordingly.'
   },
   {
     question: 'What happens after the consultation?',
-    answer: 'We\'ll provide a summary of our discussion, relevant resources, and clear next steps if you choose to move forward. There\'s no pressure to commit to anything.'
+    answer: 'I\'ll send a summary of our discussion, relevant resources, and clear next steps if you choose to move forward. There\'s no pressure to commit to anything.'
   },
   {
     question: 'Do you work with companies outside manufacturing, healthcare, and commercial?',
-    answer: 'While we specialize in these three industries, our AI expertise applies broadly. Contact us to discuss your specific industry.'
+    answer: 'I focus on these three industries, but 27+ years of real systems and AI experience applies broadly. Reach out to discuss your specific industry.'
   },
   {
     question: 'How quickly can I get on your calendar?',
-    answer: 'We typically can schedule consultations within 1-2 weeks. Contact us to find a time that works for you.'
+    answer: 'I can typically schedule consultations within 1-2 weeks. Reach out to find a time that works for you.'
   }
 ]
 
@@ -70,7 +70,7 @@ const BookTimePage = () => {
       icon: faBrain,
       duration: 'Up to 2 hours',
       price: 'FREE',
-      description: 'Evaluate your organization\'s preparedness for AI adoption and identify the best opportunities.',
+      description: 'Walk through my AI Readiness Assessment methodology to evaluate where your organization stands and identify the best opportunities to start.',
       includes: [
         'Current state analysis',
         'Data readiness evaluation',
@@ -86,12 +86,12 @@ const BookTimePage = () => {
       icon: faGraduationCap,
       duration: 'Up to 2 hours',
       price: 'FREE',
-      description: 'Discuss your team\'s AI training needs and explore our education programs.',
+      description: 'Discuss your team\'s AI training needs and explore the five courses I\'ve developed for businesses and MEPs.',
       includes: [
         'Training needs assessment',
-        'Program recommendations',
+        'Course recommendations',
         'Curriculum overview',
-        'Implementation planning',
+        'Rollout planning',
         'Pricing discussion'
       ],
       ideal_for: 'Teams wanting to build AI capabilities',
@@ -102,10 +102,10 @@ const BookTimePage = () => {
       icon: faChartLine,
       duration: 'Up to 2 hours',
       price: 'FREE',
-      description: 'Explore custom AI solutions including SmartHive.online for tribal knowledge capture.',
+      description: 'Explore practical AI solutions and workflows I design and deploy, including SmartHive for capturing tribal knowledge.',
       includes: [
         'Use case exploration',
-        'SmartHive.online demo',
+        'SmartHive walkthrough',
         'Technical requirements',
         'Integration planning',
         'Project scoping'
@@ -118,10 +118,10 @@ const BookTimePage = () => {
       icon: faIndustry,
       duration: 'Up to 2 hours',
       price: 'FREE',
-      description: 'Focused discussion on manufacturing, healthcare, or commercial business AI challenges.',
+      description: 'A focused discussion on manufacturing, healthcare, or commercial AI challenges, including adopting AI without breaking compliance.',
       includes: [
         'Industry challenge analysis',
-        'Compliance considerations',
+        'Compliance considerations (ITAR, CMMC, Title 21 CFR Part 11, CUI, DHRs)',
         'Best practices sharing',
         'Solution recommendations',
         'Implementation approach'
@@ -167,27 +167,27 @@ const BookTimePage = () => {
   const whatToExpect = [
     {
       phase: 'Pre-Consultation',
-      description: 'We\'ll send you a brief questionnaire to understand your needs before our meeting.',
+      description: 'I\'ll send you a brief questionnaire to understand your needs before our meeting.',
       duration: '5-10 minutes'
     },
     {
       phase: 'Discovery Discussion',
-      description: 'We\'ll explore your business challenges, objectives, and current situation.',
+      description: 'We\'ll explore your business challenges, objectives, and current situation together.',
       duration: '30-45 minutes'
     },
     {
       phase: 'Solution Exploration',
-      description: 'We\'ll discuss potential solutions, approaches, and how we might help.',
+      description: 'We\'ll discuss potential solutions, approaches, and how I can help.',
       duration: '45-60 minutes'
     },
     {
       phase: 'Next Steps',
-      description: 'We\'ll outline potential next steps and provide preliminary recommendations.',
+      description: 'I\'ll outline potential next steps and provide preliminary recommendations.',
       duration: '15-30 minutes'
     },
     {
       phase: 'Follow-up',
-      description: 'We\'ll send you a summary of our discussion and any relevant resources.',
+      description: 'I\'ll send you a summary of our discussion and any relevant resources.',
       duration: 'Within 24 hours'
     }
   ]
@@ -227,8 +227,8 @@ const BookTimePage = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Start your AI journey with a free consultation. We&apos;ll discuss your challenges,
-              explore solutions, and determine if we&apos;re a good fit—no strings attached.
+              Start your AI journey with a free consultation. You&apos;ll work directly with Deveren
+              to discuss your challenges, explore solutions, and decide if we&apos;re a good fit—no strings attached.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -248,13 +248,13 @@ const BookTimePage = () => {
               </div>
               <div>
                 <Icon icon={faClock} size="xl" color="accent" className="mb-4" />
-                <div className="text-3xl font-bold text-accent mb-2">9 Years</div>
-                <div className="text-gray-300">Consulting Experience</div>
+                <div className="text-3xl font-bold text-accent mb-2">27+ Years</div>
+                <div className="text-gray-300">Real Systems Experience</div>
               </div>
               <div>
                 <Icon icon={faCheckCircle} size="xl" color="warning" className="mb-4" />
-                <div className="text-3xl font-bold text-warning mb-2">30+</div>
-                <div className="text-gray-300">Successful Implementations</div>
+                <div className="text-3xl font-bold text-warning mb-2">Hundreds</div>
+                <div className="text-gray-300">Solutions Architected</div>
               </div>
             </div>
           </div>
@@ -502,7 +502,7 @@ const BookTimePage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="xl" variant="primary" asChild>
-                <Link href="/contact">
+                <Link href="#schedule-now">
                   <Icon icon={faCalendarCheck} className="mr-2" />
                   Schedule Free Consultation
                 </Link>

@@ -12,7 +12,6 @@ import {
   faChartLine,
   faIndustry,
   faGraduationCap,
-  faClock,
   faCheckCircle,
   faMapMarkerAlt,
   faBusinessTime,
@@ -26,16 +25,16 @@ import {
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 export const metadata: Metadata = {
-  title: 'Contact Werne Enterprises - Schedule Your Technology Consultation',
-  description: 'Contact Werne Enterprises for AI innovation, technology consulting, and digital transformation services. Schedule your free consultation today.',
+  title: 'Contact Werne Enterprises - Talk With Deveren Werne',
+  description: 'Reach Deveren Werne directly to discuss practical AI for your manufacturing or business team. Start with 2 hours of free AI consulting.',
 }
 
 const ContactPage = () => {
   const contactMethods = [
     {
-      method: 'Schedule Consultation',
+      method: 'Book Time With Deveren',
       icon: faCalendarCheck,
-      description: 'Book a free 30-minute consultation to discuss your technology needs and objectives.',
+      description: 'Start with 2 hours of free AI consulting to talk through your goals and what is practical for your team.',
       action: 'Schedule Now',
       href: '/book-time',
       primary: true
@@ -43,7 +42,7 @@ const ContactPage = () => {
     {
       method: 'Email',
       icon: faEnvelope,
-      description: 'Send us a detailed message about your project requirements and timeline.',
+      description: 'Send me a note about your project, timeline, and the problems you are trying to solve.',
       action: 'Send Email',
       href: 'mailto:deveren@werneenterprises.com',
       primary: false
@@ -51,7 +50,7 @@ const ContactPage = () => {
     {
       method: 'Phone',
       icon: faPhone,
-      description: 'Call us directly to discuss urgent projects or immediate technology needs.',
+      description: 'Call directly to talk through an urgent project or an immediate question.',
       action: 'Call Now',
       href: 'tel:+1-864-991-5656',
       primary: false
@@ -59,7 +58,7 @@ const ContactPage = () => {
     {
       method: 'LinkedIn',
       icon: faLinkedin,
-      description: 'Connect with our leadership team on LinkedIn for professional networking.',
+      description: 'Connect with Deveren on LinkedIn to follow the work and stay in touch.',
       action: 'Connect',
       href: 'https://linkedin.com/company/werne-enterprises',
       primary: false
@@ -68,55 +67,55 @@ const ContactPage = () => {
 
   const serviceAreas = [
     {
-      service: 'AI Innovation Consultation',
+      service: 'AI Readiness Assessment',
       icon: faBrain,
-      description: 'Explore RAG implementation, MCP protocols, and custom AI development opportunities.',
-      duration: '45-60 minutes',
-      ideal_for: 'Technical teams and decision makers ready to implement AI solutions'
+      description: 'A practical look at where AI can actually help your business, using my own AI Readiness Assessment methodology.',
+      ideal_for: 'Teams and decision makers deciding where to start with AI'
     },
     {
-      service: 'Technology Strategy Session',
+      service: 'AI Strategy Conversation',
       icon: faChartLine,
-      description: 'Comprehensive review of your technology landscape and digital transformation roadmap.',
-      duration: '60-90 minutes',
-      ideal_for: 'Executive teams planning major technology initiatives'
+      description: 'A grounded review of your systems and a realistic roadmap for adopting and deploying AI that ships.',
+      ideal_for: 'Owners and leaders planning their next technology move'
     },
     {
       service: 'Industry Solutions Review',
       icon: faIndustry,
-      description: 'Focused discussion on manufacturing, healthcare, or commercial business specific challenges.',
-      duration: '30-45 minutes',
-      ideal_for: 'Industry professionals seeking specialized technology solutions'
+      description: 'A focused discussion on the specific challenges in manufacturing, healthcare and medical device, or commercial business, including compliance-aware work spanning ITAR, CMMC, Title 21 CFR Part 11, CUI, and medical-device DHRs.',
+      ideal_for: 'Manufacturers and businesses with regulated or specialized needs'
     },
     {
-      service: 'Training Program Planning',
+      service: 'Education & Training Planning',
       icon: faGraduationCap,
-      description: 'Design custom education and workshop programs for your team\'s skill development.',
-      duration: '30-45 minutes',
-      ideal_for: 'HR leaders and training managers building AI capabilities'
+      description: 'Plan AI education and training for your team, drawing on five courses developed for businesses and MEPs and classes written and delivered for Purdue MEP.',
+      ideal_for: 'Leaders building real AI skills across their team'
     }
   ]
 
   const faq = [
     {
-      question: 'What should I prepare for our initial consultation?',
-      answer: 'Come prepared with information about your current technology infrastructure, key business challenges, and strategic objectives. If possible, have relevant stakeholders available to participate in the discussion.'
+      question: 'Who will I actually be working with?',
+      answer: 'Me, directly. Werne Enterprises is a solo practice, so you work with Deveren from the first conversation through design and deployment. No handoffs to a team you have never met.'
     },
     {
-      question: 'How quickly can we start a project after our consultation?',
-      answer: 'Project timelines vary based on scope and complexity. Simple consulting engagements can begin within 1-2 weeks, while comprehensive AI implementations typically start within 4-6 weeks after agreement.'
+      question: 'What should I prepare for our first conversation?',
+      answer: 'Bring a sense of your current systems, the business problems you are trying to solve, and what a good outcome would look like. If you can, have the people closest to those problems in the room.'
     },
     {
-      question: 'Do you work with businesses outside your three core industries?',
-      answer: 'While we specialize in manufacturing, healthcare, and commercial business, our technology expertise applies to many industries. Contact us to discuss how our solutions might apply to your specific sector.'
+      question: 'How quickly can we start after we talk?',
+      answer: 'It depends on scope. Smaller engagements can begin quickly, and larger AI work starts once we have agreed on a clear plan. I will give you an honest, specific timeline based on your situation.'
     },
     {
-      question: 'What is the typical ROI timeline for your solutions?',
-      answer: 'Most clients see measurable improvements within 3-6 months, with full ROI typically achieved within 12-18 months. We work with you to establish clear success metrics from the beginning.'
+      question: 'Do you work with businesses outside manufacturing, healthcare, and commercial?',
+      answer: 'Those are the areas I focus on, but 27+ years of real systems experience applies well beyond them. Reach out and we can talk through whether it is a fit for your business.'
     },
     {
-      question: 'Do you provide ongoing support after implementation?',
-      answer: 'Yes, we offer comprehensive ongoing support, maintenance, and optimization services. Our goal is to be your long-term technology partner, not just a project vendor.'
+      question: 'Do you help with compliance-sensitive environments?',
+      answer: 'Yes. I help regulated manufacturers adopt AI without breaking compliance, with experience spanning ITAR, CMMC, Title 21 CFR Part 11, CUI, and medical-device DHRs.'
+    },
+    {
+      question: 'Do you stay involved after a solution is deployed?',
+      answer: 'Yes. My goal is to be a long-term partner, not a one-off vendor, so I stay available to support, tune, and extend what we build together.'
     }
   ]
 
@@ -135,19 +134,19 @@ const ContactPage = () => {
       method: 'Consultation Requests',
       icon: faCalendarCheck,
       time: 'Within 24 hours',
-      description: 'We\'ll respond to schedule your consultation and send calendar options'
+      description: 'I\'ll reply to get your free AI consulting session on the calendar'
     },
     {
       method: 'General Inquiries',
       icon: faEnvelope,
-      time: 'Within 4-6 hours',
-      description: 'Email responses during business hours (9 AM - 5 PM EST)'
+      time: 'Same business day',
+      description: 'Email replies during business hours (9 AM - 5 PM EST)'
     },
     {
-      method: 'Urgent Support',
+      method: 'Active Projects',
       icon: faHeadset,
-      time: 'Within 2 hours',
-      description: 'For existing clients with urgent technical issues'
+      time: 'Prompt and direct',
+      description: 'If we are working together, you reach me directly, not a queue'
     }
   ]
 
@@ -178,8 +177,8 @@ const ContactPage = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Ready to transform your business with AI innovation and technology solutions?
-              Start with 2 hours of FREE AI consulting and discover what&apos;s possible.
+              Want to put practical AI to work in your business? Start with 2 hours of
+              free AI consulting with Deveren and we&apos;ll figure out what actually makes sense.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -187,7 +186,7 @@ const ContactPage = () => {
                 <Link href="/book-time">
                   <span className="flex items-center">
                     <Icon icon={faCalendarCheck} size="sm" className="mr-2" />
-                    Schedule Free Consultation
+                    Book 2 Hours Free
                   </span>
                 </Link>
               </Button>
@@ -212,8 +211,8 @@ const ContactPage = () => {
               Get In Touch
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the contact method that works best for you. We&apos;re here to help you
-              explore how technology can transform your business.
+              Pick whatever works best for you. However you reach out, you&apos;re talking
+              directly with Deveren about what practical AI could do for your business.
             </p>
           </div>
 
@@ -263,7 +262,8 @@ const ContactPage = () => {
               Consultation Options
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We offer different types of consultations based on your specific needs and objectives.
+              A few ways we can start, depending on where you are. Each one begins with your
+              2 hours of free AI consulting.
             </p>
           </div>
 
@@ -282,14 +282,6 @@ const ContactPage = () => {
 
                 <CardContent>
                   <div className="space-y-3">
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium text-secondary flex items-center">
-                        <Icon icon={faClock} size="xs" className="mr-2" />
-                        Duration:
-                      </span>
-                      <span className="text-gray-700">{service.duration}</span>
-                    </div>
-
                     <div>
                       <span className="font-medium text-secondary flex items-center">
                         <Icon icon={faUsers} size="xs" className="mr-2" />
@@ -324,7 +316,7 @@ const ContactPage = () => {
               Response Times
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We prioritize timely communication and will respond to your inquiry promptly.
+              I keep communication simple and prompt. Here&apos;s roughly when you can expect to hear back.
             </p>
           </div>
 
@@ -408,22 +400,21 @@ const ContactPage = () => {
             <div className="bg-gray-100 p-8 rounded-xl">
               <h3 className="text-2xl font-bold text-secondary mb-4 flex items-center">
                 <Icon icon={faGlobeAmericas} size="lg" color="primary" className="mr-3" />
-                Serving Clients Nationwide
+                Rooted in SC, Working Wherever You Are
               </h3>
               <p className="text-gray-600 mb-6">
-                Based in Greenville, SC, we serve clients across the
-                United States through on-site visits, remote consultations, and virtual
-                implementation support.
+                Based in Greenville, SC, I work with manufacturers and businesses both nearby
+                and beyond, through on-site visits, remote sessions, and virtual delivery.
               </p>
 
               <div className="space-y-3">
                 <div className="flex items-center">
                   <Icon icon={faCheckCircle} size="xs" color="primary" className="mr-3" />
-                  <span className="text-gray-700">On-site consultations available nationwide</span>
+                  <span className="text-gray-700">On-site visits when it helps</span>
                 </div>
                 <div className="flex items-center">
                   <Icon icon={faCheckCircle} size="xs" color="primary" className="mr-3" />
-                  <span className="text-gray-700">Remote implementation and support</span>
+                  <span className="text-gray-700">Remote design, deployment, and support</span>
                 </div>
                 <div className="flex items-center">
                   <Icon icon={faCheckCircle} size="xs" color="primary" className="mr-3" />
@@ -431,7 +422,7 @@ const ContactPage = () => {
                 </div>
                 <div className="flex items-center">
                   <Icon icon={faCheckCircle} size="xs" color="primary" className="mr-3" />
-                  <span className="text-gray-700">24/7 technical support for clients</span>
+                  <span className="text-gray-700">You work directly with Deveren, start to finish</span>
                 </div>
               </div>
             </div>
@@ -444,8 +435,8 @@ const ContactPage = () => {
         <Container>
           <div className="max-w-4xl mx-auto">
             <ContactForm
-              title="Send Us a Message"
-              subtitle="Fill out the form below and we'll get back to you within 24 hours. For urgent matters, please call us directly."
+              title="Send a Message"
+              subtitle="Fill out the form below and I'll get back to you within 24 hours. For anything urgent, please call directly."
             />
           </div>
         </Container>
@@ -460,7 +451,7 @@ const ContactPage = () => {
               Frequently Asked Questions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Common questions about our consultation process and services.
+              A few things people ask before we start working together.
             </p>
           </div>
 
@@ -501,15 +492,15 @@ const ContactPage = () => {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-100 mb-8">
-              Take the first step toward transforming your business with AI and technology solutions.
-              Schedule your free consultation today and discover what&apos;s possible.
+              Let&apos;s talk about practical AI for your business. Book your 2 hours of free
+              AI consulting and we&apos;ll figure out the right first step together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="xl" variant="primary" asChild>
                 <Link href="/book-time">
                   <span className="flex items-center">
                     <Icon icon={faCalendarCheck} size="sm" className="mr-2" />
-                    Schedule Free Consultation
+                    Book 2 Hours Free
                   </span>
                 </Link>
               </Button>

@@ -24,22 +24,22 @@ const AboutPage = () => {
   const leadership = [
     {
       name: 'Deveren Werne',
-      role: 'Founder & AI Consultant',
-      bio: 'Born in 1971, Deveren started with technology at age 13 in 1984 with an Atari and has been working professionally in technology since 1998 - 27+ years of hands-on experience. As a solo consultant with access to a 45+ developer team when needed, he brings a unique combination of deep technical expertise and practical business acumen.',
+      role: 'AI Solution Architect & Founder',
+      bio: 'Deveren brings 27+ years of real systems and IT experience - spanning AI, ERP, MRP, and custom development - and has architected hundreds of technology solutions over that time. He works directly with every client: an AI solution architect and practical partner who has actually built the systems, now helping teams learn, adopt, and deploy AI that ships.',
       expertise: [
         'AI Education & Training',
-        'Custom AI Development',
-        'AI Readiness Assessments',
+        'Custom AI Development & Deployment',
+        'AI Readiness Assessment',
+        'ERP / MRP & Systems Architecture',
         'TSVMap Methodology',
-        'Manufacturing Technology',
-        'Business Process Optimization'
+        'Compliance-Aware AI (ITAR, CMMC, Title 21 CFR Part 11, CUI, DHRs)'
       ],
       achievements: [
-        '30+ successful implementations, zero failures',
-        '8+ MEP partnerships (SCMEP, Purdue MEP, Georgia MEP, and more)',
-        'Saved manufacturers $50K - $1M in system expenses',
-        'Creator of SmartHive.online',
-        'Creator of AI training curriculum for MEP network'
+        'Architected hundreds of solutions across AI, ERP, MRP, and custom development',
+        'Built and deployed production AI solutions and workflows',
+        'Wrote and delivered classes for Purdue MEP',
+        'Developed five courses for businesses and MEPs',
+        'Creator of SmartHive.online; founder of TSVMap'
       ]
     }
   ]
@@ -48,12 +48,12 @@ const AboutPage = () => {
     {
       year: '1984',
       milestone: 'Technology Journey Begins',
-      description: 'At age 13, Deveren began exploring technology with an Atari, sparking a lifelong passion for innovation.'
+      description: 'Deveren began exploring technology with an early home computer, sparking a lifelong passion for building systems.'
     },
     {
       year: '1998',
-      milestone: 'Mojoe.net Founded',
-      description: 'Started professional technology career, beginning 27+ years of hands-on technology experience.'
+      milestone: 'Professional Career Begins',
+      description: 'Started a professional technology career, beginning 27+ years of hands-on experience across AI, ERP, MRP, and custom development.'
     },
     {
       year: '2001',
@@ -67,8 +67,8 @@ const AboutPage = () => {
     },
     {
       year: '2020s',
-      milestone: 'AI Innovation Leadership',
-      description: 'Pioneered AI education and consulting, creating SmartHive.online, developing MEP AI training programs, and establishing 8+ MEP partnerships.'
+      milestone: 'Practical AI for Manufacturers & Businesses',
+      description: 'Built SmartHive.online, wrote and delivered classes for Purdue MEP, developed five courses for businesses and MEPs, and now designs and deploys practical AI alongside MEP partners.'
     }
   ]
 
@@ -77,37 +77,37 @@ const AboutPage = () => {
       value: 'Education First',
       icon: faGraduationCap,
       color: 'primary',
-      description: 'We believe in empowering teams with AI knowledge. From our Purdue MEP AI Series to the 12 Week AI Bootcamp, we build lasting capabilities.'
+      description: 'I empower teams with AI knowledge - from classes written and delivered for Purdue MEP to five courses for businesses and MEPs - building capabilities that last.'
     },
     {
       value: 'Practical Results',
       icon: faBullseye,
       color: 'secondary',
-      description: '30+ successful implementations with zero failures. Every solution is designed to produce measurable business outcomes.'
+      description: 'Practical AI that actually ships. With 27+ years architecting real systems, every solution is designed to produce measurable business outcomes.'
     },
     {
       value: 'Preserve Knowledge',
       icon: faBrain,
       color: 'accent',
-      description: 'With SmartHive.online, we help capture tribal knowledge from experienced employees and turn it into AI personas that preserve institutional wisdom.'
+      description: 'With SmartHive.online, I help capture tribal knowledge from experienced employees and turn it into AI personas that preserve institutional wisdom.'
     },
     {
       value: 'Genuine Partnership',
       icon: faHandshake,
       color: 'warning',
-      description: 'As a solo consultant, you work directly with me. No account managers, no handoffs - just direct access to expertise.'
+      description: 'A solo practice - you work directly with me. No account managers, no handoffs, just direct access to expertise.'
     },
     {
-      value: 'Real Savings',
+      value: 'Compliance-Aware',
       icon: faShield,
       color: 'success',
-      description: 'We\'ve saved manufacturers $50K - $1M per engagement in system expenses. Results you can measure.'
+      description: 'I help regulated manufacturers adopt AI without breaking compliance - experience spanning ITAR, CMMC, Title 21 CFR Part 11, CUI, and medical-device DHRs.'
     },
     {
-      value: 'Proven Network',
+      value: 'MEP Network',
       icon: faUsers,
       color: 'secondary',
-      description: '8+ MEP partnerships and access to a 45+ developer team means we have the resources for projects of any scale.'
+      description: 'Partner of Manufacturing Extension Partnership organizations, bringing AI education and deployment to manufacturers and businesses.'
     }
   ]
 
@@ -115,41 +115,38 @@ const AboutPage = () => {
     {
       category: 'Track Record',
       metrics: [
-        { label: 'Successful Implementations', value: '30+' },
         { label: 'Years in Technology', value: '27+' },
-        { label: 'Implementation Failures', value: '0' },
-        { label: 'Years Consulting', value: '9' }
+        { label: 'Solutions Architected', value: 'Hundreds' },
+        { label: 'Courses Developed', value: '5' },
+        { label: 'Practice', value: 'Solo' }
       ]
     },
     {
-      category: 'Partnerships',
+      category: 'What I Build',
       metrics: [
-        { label: 'MEP Partnerships', value: '8+' },
-        { label: 'Developer Team Access', value: '45+' },
-        { label: 'AI Training Programs', value: '4' },
-        { label: 'States Served', value: 'Nationwide' }
+        { label: 'Disciplines', value: 'AI · ERP · MRP' },
+        { label: 'Platforms', value: 'SmartHive · TSVMap' },
+        { label: 'Production AI', value: 'Built & Deployed' },
+        { label: 'Classes for', value: 'Purdue MEP' }
       ]
     },
     {
-      category: 'Client Impact',
+      category: 'Who I Serve',
       metrics: [
-        { label: 'Savings Per Client', value: '$50K-$1M' },
         { label: 'Ideal Company Size', value: '10-600' },
         { label: 'Ideal Revenue', value: '$10M-$500M' },
+        { label: 'Industries', value: 'Mfg · Healthcare · Commercial' },
         { label: 'Free Consultation', value: '2 Hours' }
       ]
     }
   ]
 
+  // NOTE: Only MEP partners confirmed on the truth sheet are listed.
+  // Add more here only when verified. {/* NEEDS-FACT: full verified list of MEP partners */}
   const mepPartners = [
     'SCMEP (South Carolina MEP)',
-    'FloridaMakes',
     'Purdue MEP',
-    'Georgia MEP',
-    'MassMEP',
-    'TechSolve',
-    'Manufacturers Edge',
-    'DVIRC'
+    'Georgia MEP'
   ]
 
   const products = [
@@ -180,7 +177,7 @@ const AboutPage = () => {
     },
     {
       name: 'AI Readiness Assessment',
-      description: 'Evaluate your organization\'s AI preparedness',
+      description: 'My own methodology to evaluate your organization\'s AI preparedness and map a practical path to deployment',
       type: 'Methodology'
     }
   ]
@@ -212,9 +209,10 @@ const AboutPage = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              AI education, consulting, and custom development for businesses ready to
-              harness the power of artificial intelligence. Based in Greenville, SC,
-              serving clients nationwide.
+              AI education, training, and practical development for manufacturers and
+              businesses ready to adopt AI that ships. An AI solution architect with
+              27+ years building real systems. Based in South Carolina, working with
+              clients beyond SC.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -277,8 +275,8 @@ const AboutPage = () => {
                   <div className="mb-4">
                     <Icon icon={faRocket} size="4xl" color="warning" />
                   </div>
-                  <h4 className="text-xl font-semibold text-secondary mb-2">AI Consulting</h4>
-                  <p className="text-gray-600">9 years of consulting experience with 30+ implementations and zero failures.</p>
+                  <h4 className="text-xl font-semibold text-secondary mb-2">AI Consulting & Deployment</h4>
+                  <p className="text-gray-600">27+ years architecting real systems - now designing and deploying production AI solutions and workflows that ship.</p>
                 </CardContent>
               </Card>
             </div>
@@ -294,8 +292,8 @@ const AboutPage = () => {
               Meet Deveren Werne
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Solo consultant with 27+ years of technology experience and access to a
-              45+ developer team when projects require it.
+              AI solution architect with 27+ years of hands-on technology experience.
+              A solo practice - you work directly with Deveren on every engagement.
             </p>
           </div>
 
@@ -409,7 +407,7 @@ const AboutPage = () => {
               Our Journey
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From an Atari in 1984 to leading AI consulting today.
+              From early computing to architecting and deploying practical AI today.
             </p>
           </div>
 

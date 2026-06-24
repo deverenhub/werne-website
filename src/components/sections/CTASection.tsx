@@ -19,8 +19,9 @@ const CTASection = () => {
             Start With 2 Hours Free AI Consulting
           </h2>
           <p className="text-xl md:text-2xl mb-8 text-white animate-slide-up-delayed">
-            Discover how AI can transform your business. No commitment required.
-            Let&apos;s explore what&apos;s possible together.
+            Work directly with an AI Solution Architect who has actually built and deployed
+            production AI &mdash; not just advised on it. No commitment required. Let&apos;s map
+            what&apos;s practical for your business.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-scale-in" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
@@ -51,20 +52,20 @@ const CTASection = () => {
 
           <div className="border-t border-white/20 pt-8">
             <p className="text-lg text-white mb-4">
-              27+ years in technology. 30+ successful implementations. Zero failures.
+              27+ years building real systems. Hundreds of solutions architected. Production AI built and deployed.
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm text-white">
               <span className="flex items-center gap-2 hover:text-white transition-colors duration-300 animate-slide-up" style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
                 <Icon icon={faCheck} size="lg" className="text-white animate-bounce-gentle" />
-                8+ MEP Partnerships
+                MEP Partner &amp; Purdue MEP Instructor
               </span>
               <span className="flex items-center gap-2 hover:text-white transition-colors duration-300 animate-slide-up" style={{ animationDelay: '0.8s', animationFillMode: 'both' }}>
                 <Icon icon={faCheck} size="lg" className="text-white animate-bounce-gentle" style={{ animationDelay: '0.5s' }} />
-                $50K-$1M Saved Per Client
+                Five Courses for Businesses &amp; MEPs
               </span>
               <span className="flex items-center gap-2 hover:text-white transition-colors duration-300 animate-slide-up" style={{ animationDelay: '1s', animationFillMode: 'both' }}>
                 <Icon icon={faCheck} size="lg" className="text-white animate-bounce-gentle" style={{ animationDelay: '1s' }} />
-                AI Education Expert
+                AI Readiness Assessment
               </span>
               <span className="flex items-center gap-2 hover:text-white transition-colors duration-300 animate-slide-up" style={{ animationDelay: '1.2s', animationFillMode: 'both' }}>
                 <Icon icon={faCheck} size="lg" className="text-white animate-bounce-gentle" style={{ animationDelay: '1.5s' }} />
