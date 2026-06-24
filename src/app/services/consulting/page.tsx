@@ -2,8 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Metadata } from 'next'
-import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Icon, Breadcrumb } from '@/components/ui'
-import { faClipboardList, faBullseye, faMap, faWrench, faIndustry, faHospital, faBuilding, faCheck, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Breadcrumb } from '@/components/ui'
 
 export const metadata: Metadata = {
   title: 'AI Consulting Services - Strategy & Implementation',
@@ -15,7 +14,6 @@ const ConsultingPage = () => {
     {
       title: 'AI Readiness Assessment',
       description: 'Deveren\'s own methodology for evaluating your organization\'s readiness to adopt AI — developed and delivered firsthand.',
-      icon: faClipboardList,
       deliverables: [
         'Current state analysis',
         'Data readiness evaluation',
@@ -30,7 +28,6 @@ const ConsultingPage = () => {
     {
       title: 'AI Strategy Development',
       description: 'Create a practical AI strategy aligned with your business objectives.',
-      icon: faBullseye,
       deliverables: [
         'AI opportunity mapping',
         'Technology recommendations',
@@ -45,7 +42,6 @@ const ConsultingPage = () => {
     {
       title: 'TSVMap Methodology',
       description: 'Our proven technology strategy and vendor mapping approach developed for manufacturers.',
-      icon: faMap,
       deliverables: [
         'Technology landscape mapping',
         'Vendor evaluation',
@@ -60,7 +56,6 @@ const ConsultingPage = () => {
     {
       title: 'Implementation Support',
       description: 'Hands-on guidance during AI implementation and organizational change.',
-      icon: faWrench,
       deliverables: [
         'Project management support',
         'Technical guidance',
@@ -88,7 +83,6 @@ const ConsultingPage = () => {
   const expertise = [
     {
       area: 'Manufacturing',
-      icon: faIndustry,
       focus: [
         'Process optimization',
         'ERP system evaluation',
@@ -100,7 +94,6 @@ const ConsultingPage = () => {
     },
     {
       area: 'Healthcare',
-      icon: faHospital,
       focus: [
         'Compliance-aware AI adoption',
         'Title 21 CFR Part 11 experience',
@@ -112,7 +105,6 @@ const ConsultingPage = () => {
     },
     {
       area: 'Commercial Business',
-      icon: faBuilding,
       focus: [
         'CRM optimization',
         'Business intelligence',
@@ -133,35 +125,37 @@ const ConsultingPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-secondary via-secondary-dark to-secondary py-20 lg:py-32 text-white overflow-hidden">
+      <section className="relative bg-secondary py-20 lg:py-32 text-white overflow-hidden">
+        {/* Background image with duotone scrim */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/team/deveren-werne.jpg"
-            alt="Consulting background"
+            alt="Deveren Werne, AI consultant with 27+ years of systems experience"
             fill
-            className="object-cover opacity-20"
+            className="object-cover"
             priority
             sizes="100vw"
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/85 to-secondary/50" />
         </div>
         <Container className="relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="accent" size="lg" className="mb-6">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-5">
               AI Consulting Services
-            </Badge>
+            </p>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.08] mb-6">
               AI{' '}
               <span className="text-primary">Consulting</span>{' '}
               Services
             </h1>
 
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 max-w-2xl">
               Practical AI consulting grounded in 27+ years of real systems, ERP, MRP, and AI experience.
               Start with the AI Readiness Assessment to chart your path forward, then work directly with Deveren to ship it.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Button size="xl" asChild>
                 <Link href="/book-time">Get 2 Hours Free Consulting</Link>
               </Button>
@@ -170,17 +164,17 @@ const ConsultingPage = () => {
               </Button>
             </div>
 
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8 border-t border-white/10 pt-8">
               <div>
-                <div className="text-3xl font-bold text-primary mb-2">27+</div>
+                <div className="text-3xl font-bold text-white mb-2">27+</div>
                 <div className="text-gray-300">Years of Systems &amp; AI Experience</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-accent mb-2">Hundreds</div>
+                <div className="text-3xl font-bold text-white mb-2">Hundreds</div>
                 <div className="text-gray-300">Solutions Architected</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-warning mb-2">1:1</div>
+                <div className="text-3xl font-bold text-white mb-2">1:1</div>
                 <div className="text-gray-300">Work Directly With Deveren</div>
               </div>
             </div>
@@ -198,11 +192,14 @@ const ConsultingPage = () => {
       {/* Consulting Services */}
       <section id="services" className="py-20 bg-gray-50">
         <Container>
-          <div className="text-center mb-16">
+          <div className="max-w-3xl mb-16">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
+              What I Offer
+            </p>
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               Consulting Services
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600">
               Practical AI consulting to help you navigate your AI journey with
               confidence &mdash; from assessment to a roadmap you can actually ship.
             </p>
@@ -212,14 +209,9 @@ const ConsultingPage = () => {
             {consultingServices.map((service, index) => (
               <Card key={index} className="h-full">
                 <CardHeader>
-                  <div className="flex items-center mb-4">
-                    <Icon icon={service.icon} size="4xl" color="primary" className="mr-4" />
-                    <div>
-                      <CardTitle className="text-2xl">{service.title}</CardTitle>
-                      <div className="text-primary font-semibold">{service.pricing}</div>
-                    </div>
-                  </div>
-                  <CardDescription className="text-lg">
+                  <CardTitle className="text-2xl">{service.title}</CardTitle>
+                  <div className="text-[#2E7D32] font-semibold mt-1">{service.pricing}</div>
+                  <CardDescription className="text-lg mt-2">
                     {service.description}
                   </CardDescription>
                 </CardHeader>
@@ -227,11 +219,11 @@ const ConsultingPage = () => {
                 <CardContent className="flex-1">
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-semibold text-secondary mb-2">What You Get</h4>
+                      <h4 className="font-semibold text-secondary mb-3">What You Get</h4>
                       <ul className="space-y-2">
                         {service.deliverables.map((deliverable, deliverableIndex) => (
-                          <li key={deliverableIndex} className="flex items-start">
-                            <Icon icon={faCheck} size="lg" color="success" className="mr-2" />
+                          <li key={deliverableIndex} className="flex items-start gap-2">
+                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#2E7D32]" aria-hidden="true" />
                             <span className="text-gray-700 text-sm">{deliverable}</span>
                           </li>
                         ))}
@@ -254,11 +246,14 @@ const ConsultingPage = () => {
       {/* MEP Partners */}
       <section className="py-20 bg-white">
         <Container>
-          <div className="text-center mb-16">
+          <div className="max-w-3xl mb-16">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
+              Network &amp; Reach
+            </p>
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               MEP Network Partner
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600">
               Trusted partner of Manufacturing Extension Partnership organizations
               across the country, bringing proven methodologies to manufacturers.
             </p>
@@ -279,11 +274,14 @@ const ConsultingPage = () => {
       {/* Industry Expertise */}
       <section className="py-20 bg-gray-50">
         <Container>
-          <div className="text-center mb-16">
+          <div className="max-w-3xl mb-16">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
+              Where I Work
+            </p>
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               Industry Expertise
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600">
               Deep understanding of industry-specific challenges and opportunities
               across our three core sectors.
             </p>
@@ -293,15 +291,14 @@ const ConsultingPage = () => {
             {expertise.map((industry, index) => (
               <Card key={index} className="h-full">
                 <CardHeader>
-                  <Icon icon={industry.icon} size="4xl" color="primary" className="mb-4 text-center" />
-                  <CardTitle className="text-2xl text-center">{industry.area}</CardTitle>
+                  <CardTitle className="text-2xl">{industry.area}</CardTitle>
                 </CardHeader>
 
                 <CardContent>
                   <ul className="space-y-2">
                     {industry.focus.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-start">
-                        <Icon icon={faCheckCircle} size="sm" color="primary" className="mr-2" />
+                      <li key={itemIndex} className="flex items-start gap-2">
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#2E7D32]" aria-hidden="true" />
                         <span className="text-gray-700 text-sm">{item}</span>
                       </li>
                     ))}
@@ -322,30 +319,33 @@ const ConsultingPage = () => {
       </section>
 
       {/* Experience Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-accent text-white">
+      <section className="py-20 bg-secondary text-white">
         <Container>
-          <div className="text-center mb-12">
+          <div className="max-w-3xl mb-12">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-4">
+              Proven Track Record
+            </p>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Built On Real Experience
             </h2>
-            <p className="text-xl text-gray-100 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300">
               Roadmaps grounded in 27+ years of architecting real systems &mdash; AI, ERP,
               MRP, and custom development &mdash; not slideware. You work directly with Deveren.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-white/10 pt-8">
             <div>
               <div className="text-4xl md:text-5xl font-bold mb-2">27+</div>
-              <div className="text-gray-100">Years of Systems &amp; AI Experience</div>
+              <div className="text-gray-300">Years of Systems &amp; AI Experience</div>
             </div>
             <div>
               <div className="text-4xl md:text-5xl font-bold mb-2">Hundreds</div>
-              <div className="text-gray-100">Solutions Architected</div>
+              <div className="text-gray-300">Solutions Architected</div>
             </div>
             <div>
               <div className="text-4xl md:text-5xl font-bold mb-2">Production</div>
-              <div className="text-gray-100">AI Solutions &amp; Workflows Deployed</div>
+              <div className="text-gray-300">AI Solutions &amp; Workflows Deployed</div>
             </div>
           </div>
         </Container>

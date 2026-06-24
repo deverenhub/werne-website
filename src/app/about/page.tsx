@@ -2,18 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Metadata } from 'next'
-import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, Badge, Icon } from '@/components/ui'
-import {
-  faBullseye,
-  faHandshake,
-  faShield,
-  faRocket,
-  faCheck,
-  faStar,
-  faGraduationCap,
-  faBrain,
-  faUsers
-} from '@fortawesome/free-solid-svg-icons'
+import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, Badge } from '@/components/ui'
 
 export const metadata: Metadata = {
   title: 'About Werne Enterprises - 27+ Years of Technology Experience',
@@ -75,38 +64,26 @@ const AboutPage = () => {
   const values = [
     {
       value: 'Education First',
-      icon: faGraduationCap,
-      color: 'primary',
       description: 'I empower teams with AI knowledge - from classes written and delivered for Purdue MEP to five courses for businesses and MEPs - building capabilities that last.'
     },
     {
       value: 'Practical Results',
-      icon: faBullseye,
-      color: 'secondary',
       description: 'Practical AI that actually ships. With 27+ years architecting real systems, every solution is designed to produce measurable business outcomes.'
     },
     {
       value: 'Preserve Knowledge',
-      icon: faBrain,
-      color: 'accent',
       description: 'With SmartHive.online, I help capture tribal knowledge from experienced employees and turn it into AI personas that preserve institutional wisdom.'
     },
     {
       value: 'Genuine Partnership',
-      icon: faHandshake,
-      color: 'warning',
       description: 'A solo practice - you work directly with me. No account managers, no handoffs, just direct access to expertise.'
     },
     {
       value: 'Compliance-Aware',
-      icon: faShield,
-      color: 'success',
       description: 'I help regulated manufacturers adopt AI without breaking compliance - experience spanning ITAR, CMMC, Title 21 CFR Part 11, CUI, and medical-device DHRs.'
     },
     {
       value: 'MEP Network',
-      icon: faUsers,
-      color: 'secondary',
       description: 'Partner of Manufacturing Extension Partnership organizations, bringing AI education and deployment to manufacturers and businesses.'
     }
   ]
@@ -149,6 +126,21 @@ const AboutPage = () => {
     'Georgia MEP'
   ]
 
+  const offerings = [
+    {
+      title: 'AI Education',
+      description: 'Multiple training programs including the Purdue MEP AI Series and 12 Week AI Bootcamp.'
+    },
+    {
+      title: 'Custom AI Development',
+      description: 'Creator of SmartHive.online - turn your team\'s tribal knowledge into AI personas.'
+    },
+    {
+      title: 'AI Consulting & Deployment',
+      description: '27+ years architecting real systems - now designing and deploying production AI solutions and workflows that ship.'
+    }
+  ]
+
   const products = [
     {
       name: 'SmartHive.online',
@@ -185,37 +177,41 @@ const AboutPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-secondary via-secondary-dark to-secondary py-20 lg:py-32 text-white overflow-hidden">
+      <section className="relative bg-secondary text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/team/deveren-werne.jpg"
             alt="Deveren Werne speaking at AI technology conference"
             fill
-            className="object-cover opacity-20"
+            className="object-cover"
             priority
             sizes="100vw"
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/85 to-secondary/50" />
         </div>
         <Container className="relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-3xl py-20 lg:py-28">
             <Badge variant="primary" size="lg" className="mb-6">
               27+ Years in Technology | 2 Hours Free AI Consulting
             </Badge>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              About{' '}
-              <span className="text-primary">Werne</span>{' '}
-              Enterprises
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-5">
+              About Werne Enterprises
+            </p>
+
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-[1.08]">
+              An AI solution architect who has{' '}
+              <span className="text-primary">actually built the systems</span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
               AI education, training, and practical development for manufacturers and
               businesses ready to adopt AI that ships. An AI solution architect with
               27+ years building real systems. Based in South Carolina, working with
               clients beyond SC.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Button size="xl" asChild>
                 <Link href="/book-time">Get 2 Hours Free</Link>
               </Button>
@@ -230,10 +226,13 @@ const AboutPage = () => {
       {/* Mission & Vision */}
       <section className="py-20 bg-gray-50">
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
                 Our Mission
+              </p>
+              <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
+                AI made practical for mid-sized business
               </h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 To make AI accessible and practical for mid-sized businesses. We focus on
@@ -250,35 +249,17 @@ const AboutPage = () => {
             </div>
 
             <div className="space-y-6">
-              <Card>
-                <CardContent className="p-6">
-                  <div className="mb-4">
-                    <Icon icon={faGraduationCap} size="4xl" color="primary" />
-                  </div>
-                  <h4 className="text-xl font-semibold text-secondary mb-2">AI Education</h4>
-                  <p className="text-gray-600">Multiple training programs including the Purdue MEP AI Series and 12 Week AI Bootcamp.</p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-6">
-                  <div className="mb-4">
-                    <Icon icon={faBrain} size="4xl" color="accent" />
-                  </div>
-                  <h4 className="text-xl font-semibold text-secondary mb-2">Custom AI Development</h4>
-                  <p className="text-gray-600">Creator of SmartHive.online - turn your team&apos;s tribal knowledge into AI personas.</p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-6">
-                  <div className="mb-4">
-                    <Icon icon={faRocket} size="4xl" color="warning" />
-                  </div>
-                  <h4 className="text-xl font-semibold text-secondary mb-2">AI Consulting & Deployment</h4>
-                  <p className="text-gray-600">27+ years architecting real systems - now designing and deploying production AI solutions and workflows that ship.</p>
-                </CardContent>
-              </Card>
+              {offerings.map((offering, index) => (
+                <Card key={index}>
+                  <CardContent className="p-6">
+                    <p className="text-sm font-semibold text-[#2E7D32] mb-2 tabular-nums">
+                      {String(index + 1).padStart(2, '0')}
+                    </p>
+                    <h4 className="text-xl font-semibold text-secondary mb-2">{offering.title}</h4>
+                    <p className="text-gray-600">{offering.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </Container>
@@ -287,11 +268,14 @@ const AboutPage = () => {
       {/* Leadership Section */}
       <section id="leadership" className="py-20 bg-white">
         <Container>
-          <div className="text-center mb-16">
+          <div className="max-w-3xl mb-16">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
+              Leadership
+            </p>
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               Meet Deveren Werne
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600">
               AI solution architect with 27+ years of hands-on technology experience.
               A solo practice - you work directly with Deveren on every engagement.
             </p>
@@ -301,29 +285,29 @@ const AboutPage = () => {
             <Card key={index} className="overflow-hidden mb-8">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div className="p-8">
-                  <div className="relative w-40 h-40 mx-auto mb-6">
+                  <div className="relative w-full aspect-square max-w-[18rem] mx-auto mb-6 overflow-hidden rounded-2xl">
                     <Image
                       src="/images/team/deveren-werne.jpg"
                       alt="Deveren Werne, AI consultant and founder of Werne Enterprises"
                       fill
-                      className="object-cover rounded-full border-4 border-white shadow-lg"
-                      sizes="160px"
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 80vw, 288px"
                     />
                   </div>
-                  <h3 className="text-3xl font-bold text-secondary mb-2 text-center">{leader.name}</h3>
-                  <div className="text-xl text-primary font-semibold mb-4 text-center">{leader.role}</div>
+                  <h3 className="text-3xl font-bold text-secondary mb-2">{leader.name}</h3>
+                  <div className="text-xl text-[#2E7D32] font-semibold mb-4">{leader.role}</div>
                   <p className="text-gray-600 leading-relaxed">{leader.bio}</p>
                 </div>
 
                 <div className="bg-gray-50 p-8">
                   <h4 className="text-lg font-semibold text-secondary mb-4">Core Expertise</h4>
-                  <ul className="space-y-2">
+                  <ul className="space-y-3">
                     {leader.expertise.map((skill, skillIndex) => (
-                      <li key={skillIndex} className="flex items-start">
-                        <div className="mr-2 mt-1">
-                          <Icon icon={faCheck} size="lg" color="primary" />
-                        </div>
-                        <span className="text-gray-700 text-sm">{skill}</span>
+                      <li
+                        key={skillIndex}
+                        className="text-gray-700 text-sm leading-relaxed border-l-2 border-[#2E7D32]/40 pl-3"
+                      >
+                        {skill}
                       </li>
                     ))}
                   </ul>
@@ -331,13 +315,13 @@ const AboutPage = () => {
 
                 <div className="bg-primary/5 p-8">
                   <h4 className="text-lg font-semibold text-secondary mb-4">Key Achievements</h4>
-                  <ul className="space-y-2">
+                  <ul className="space-y-3">
                     {leader.achievements.map((achievement, achievementIndex) => (
-                      <li key={achievementIndex} className="flex items-start">
-                        <div className="mr-2 mt-1">
-                          <Icon icon={faStar} size="lg" color="accent" />
-                        </div>
-                        <span className="text-gray-700 text-sm">{achievement}</span>
+                      <li
+                        key={achievementIndex}
+                        className="text-gray-700 text-sm leading-relaxed border-l-2 border-[#2E7D32]/40 pl-3"
+                      >
+                        {achievement}
                       </li>
                     ))}
                   </ul>
@@ -351,11 +335,14 @@ const AboutPage = () => {
       {/* MEP Partners */}
       <section className="py-20 bg-gray-50">
         <Container>
-          <div className="text-center mb-16">
+          <div className="max-w-3xl mb-16">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
+              MEP Network
+            </p>
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               MEP Network Partners
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600">
               Trusted partner of Manufacturing Extension Partnership organizations across the country.
             </p>
           </div>
@@ -364,7 +351,6 @@ const AboutPage = () => {
             {mepPartners.map((partner, index) => (
               <Card key={index} className="text-center">
                 <CardContent className="p-6">
-                  <Icon icon={faHandshake} size="2xl" color="primary" className="mb-3" />
                   <p className="font-semibold text-secondary">{partner}</p>
                 </CardContent>
               </Card>
@@ -376,11 +362,14 @@ const AboutPage = () => {
       {/* Products & Methodologies */}
       <section className="py-20 bg-white">
         <Container>
-          <div className="text-center mb-16">
+          <div className="max-w-3xl mb-16">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
+              Products & Methodologies
+            </p>
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               Products & Methodologies
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600">
               AI platforms, training programs, and methodologies developed by Werne Enterprises.
             </p>
           </div>
@@ -402,22 +391,23 @@ const AboutPage = () => {
       {/* Company Timeline */}
       <section className="py-20 bg-gray-50">
         <Container>
-          <div className="text-center mb-16">
+          <div className="max-w-3xl mb-16">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
+              Our Journey
+            </p>
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               Our Journey
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600">
               From early computing to architecting and deploying practical AI today.
             </p>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-10 max-w-3xl">
             {timeline.map((event, index) => (
-              <div key={index} className="flex items-start">
-                <div className="bg-primary text-white w-20 h-20 rounded-full flex items-center justify-center text-sm font-bold mr-6 flex-shrink-0">
-                  {event.year}
-                </div>
+              <div key={index} className="flex items-start gap-6 border-l-2 border-[#2E7D32]/30 pl-6">
                 <div className="flex-1">
+                  <p className="text-sm font-semibold text-[#2E7D32] mb-1 tabular-nums">{event.year}</p>
                   <h3 className="text-2xl font-bold text-secondary mb-2">{event.milestone}</h3>
                   <p className="text-gray-600 leading-relaxed">{event.description}</p>
                 </div>
@@ -430,26 +420,25 @@ const AboutPage = () => {
       {/* Core Values */}
       <section className="py-20 bg-white">
         <Container>
-          <div className="text-center mb-16">
+          <div className="max-w-3xl mb-16">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
+              Core Values
+            </p>
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               Our Core Values
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600">
               The principles that guide our approach to AI consulting and client relationships.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value, index) => (
-              <Card key={index} className="text-center h-full">
+              <Card key={index} className="h-full">
                 <CardHeader>
-                  <div className="mb-4">
-                    <Icon
-                      icon={value.icon}
-                      size="4xl"
-                      color={value.color as 'primary' | 'secondary' | 'accent' | 'warning' | 'success'}
-                    />
-                  </div>
+                  <p className="text-sm font-semibold text-[#2E7D32] mb-2 tabular-nums">
+                    {String(index + 1).padStart(2, '0')}
+                  </p>
                   <CardTitle className="text-xl">{value.value}</CardTitle>
                 </CardHeader>
 
@@ -463,13 +452,16 @@ const AboutPage = () => {
       </section>
 
       {/* Achievements */}
-      <section className="py-20 bg-gradient-to-r from-primary to-accent text-white">
+      <section className="py-20 bg-secondary text-white">
         <Container>
-          <div className="text-center mb-16">
+          <div className="max-w-3xl mb-16">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-4">
+              By the Numbers
+            </p>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               By the Numbers
             </h2>
-            <p className="text-xl text-gray-100 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300">
               Verified facts and figures from our work.
             </p>
           </div>
@@ -478,15 +470,15 @@ const AboutPage = () => {
             {achievements.map((category, index) => (
               <Card key={index} className="bg-white/10 border-white/20">
                 <CardHeader>
-                  <CardTitle className="text-xl text-center text-white">{category.category}</CardTitle>
+                  <CardTitle className="text-xl text-white">{category.category}</CardTitle>
                 </CardHeader>
 
                 <CardContent>
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-2 gap-y-6 gap-x-4">
                     {category.metrics.map((metric, metricIndex) => (
-                      <div key={metricIndex} className="text-center">
-                        <div className="text-2xl font-bold text-white mb-1">{metric.value}</div>
-                        <div className="text-gray-200 text-sm">{metric.label}</div>
+                      <div key={metricIndex}>
+                        <div className="text-2xl font-bold text-primary mb-1">{metric.value}</div>
+                        <div className="text-gray-300 text-sm">{metric.label}</div>
                       </div>
                     ))}
                   </div>
@@ -498,9 +490,12 @@ const AboutPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-secondary text-white">
+      <section className="border-t border-white/10 py-20 bg-secondary text-white">
         <Container>
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-4">
+              Get Started
+            </p>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Start With 2 Hours Free
             </h2>
@@ -508,7 +503,7 @@ const AboutPage = () => {
               No commitment required. Let&apos;s discuss your AI goals and see if we&apos;re a good fit.
               I work directly with every client - no account managers or handoffs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Button size="xl" variant="primary" asChild>
                 <Link href="/book-time">Book Free Consultation</Link>
               </Button>

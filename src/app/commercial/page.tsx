@@ -2,19 +2,9 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Metadata } from 'next'
-import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Icon } from '@/components/ui'
+import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Icon } from '@/components/ui'
 import {
-  faChartBar,
-  faCogs,
-  faGraduationCap,
-  faBrain,
   faCheck,
-  faCircle,
-  faHandshake,
-  faLightbulb,
-  faUserTie,
-  faRobot,
-  faBook,
   faArrowUpRightFromSquare
 } from '@fortawesome/free-solid-svg-icons'
 
@@ -28,8 +18,6 @@ const CommercialPage = () => {
     {
       title: 'AI Training for Business',
       description: 'Practical AI education drawn from five courses developed for businesses and MEPs, built to grow your team\'s real capabilities.',
-      icon: faGraduationCap,
-      color: 'primary',
       benefits: [
         'Business-specific AI curriculum',
         'Practical implementation training',
@@ -48,8 +36,6 @@ const CommercialPage = () => {
     {
       title: 'Custom AI Development',
       description: 'Build AI solutions with SmartHive.online and custom development for your business needs.',
-      icon: faBrain,
-      color: 'secondary',
       benefits: [
         'Tribal knowledge capture',
         'Custom workflow automation',
@@ -68,8 +54,6 @@ const CommercialPage = () => {
     {
       title: 'Business Intelligence',
       description: 'AI consulting for data-driven decision making and business analytics.',
-      icon: faChartBar,
-      color: 'accent',
       benefits: [
         'Data strategy development',
         'Analytics implementation',
@@ -88,8 +72,6 @@ const CommercialPage = () => {
     {
       title: 'Process Automation',
       description: 'AI consulting for streamlining operations and reducing manual work.',
-      icon: faCogs,
-      color: 'warning',
       benefits: [
         'Workflow optimization',
         'Manual task reduction',
@@ -159,27 +141,28 @@ const CommercialPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-secondary via-secondary-dark to-secondary py-20 lg:py-32 text-white overflow-hidden">
-        {/* Background Image */}
+      <section className="relative bg-secondary py-20 lg:py-32 text-white overflow-hidden">
+        {/* Background image with duotone scrim */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/industries/commercial.jpg"
             alt="Modern commercial office with business professionals collaborating on AI strategy"
             fill
-            className="object-cover opacity-20"
+            className="object-cover"
             priority
             sizes="100vw"
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/80 to-secondary/40" />
         </div>
         <Container className="relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="warning" size="lg" className="mb-6">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-5">
               Commercial Business AI Solutions
-            </Badge>
+            </p>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
               AI Solutions for{' '}
-              <span className="text-warning">Commercial</span>{' '}
+              <span className="text-primary">Commercial</span>{' '}
               Business
             </h1>
 
@@ -189,7 +172,7 @@ const CommercialPage = () => {
               automate the busywork, and build your team&apos;s AI capabilities.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Button size="xl" asChild>
                 <Link href="/book-time">Get 2 Hours Free</Link>
               </Button>
@@ -198,17 +181,17 @@ const CommercialPage = () => {
               </Button>
             </div>
 
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8 border-t border-white/10 pt-8">
               <div>
-                <div className="text-3xl font-bold text-warning mb-2">27+</div>
+                <div className="text-3xl font-bold text-white mb-2">27+</div>
                 <div className="text-gray-300">Years Building Real Systems</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary mb-2">Hundreds</div>
+                <div className="text-3xl font-bold text-white mb-2">Hundreds</div>
                 <div className="text-gray-300">Of Solutions Architected</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-accent mb-2">2 Hours</div>
+                <div className="text-3xl font-bold text-white mb-2">2 Hours</div>
                 <div className="text-gray-300">Free AI Consulting</div>
               </div>
             </div>
@@ -219,11 +202,14 @@ const CommercialPage = () => {
       {/* Solutions Section */}
       <section id="solutions" className="py-20 bg-gray-50">
         <Container>
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
+          <div className="max-w-3xl mb-16">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Commercial AI Solutions
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
+              Practical AI, Built Around Your Operation
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600">
               Practical AI services designed for commercial businesses with
               {idealClient.employees} employees and {idealClient.revenue} in revenue.
               You work directly with Deveren on every engagement.
@@ -234,37 +220,20 @@ const CommercialPage = () => {
             {solutions.map((solution, index) => (
               <Card key={index} className="h-full">
                 <CardHeader>
-                  <div className="flex items-center mb-4">
-                    <div className="mr-4">
-                      <Icon
-                        icon={solution.icon}
-                        size="4xl"
-                        color={solution.color as 'primary' | 'secondary' | 'accent' | 'warning'}
-                      />
-                    </div>
-                    <div>
-                      <CardTitle className="text-2xl">{solution.title}</CardTitle>
-                      <p className="text-lg text-gray-600 mt-2">{solution.description}</p>
-                    </div>
-                  </div>
+                  <CardTitle className="text-2xl">{solution.title}</CardTitle>
+                  <p className="text-lg text-gray-600 mt-2">{solution.description}</p>
                 </CardHeader>
 
                 <CardContent className="flex-1">
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold text-secondary mb-2">Key Benefits</h4>
-                      <ul className="space-y-2">
-                        {solution.benefits.map((benefit, benefitIndex) => (
-                          <li key={benefitIndex} className="flex items-start">
-                            <div className="mr-2 mt-1">
-                              <Icon icon={faCheck} size="lg" color="success" />
-                            </div>
-                            <span className="text-gray-700">{benefit}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
+                  <h4 className="font-semibold text-secondary mb-3">Key Benefits</h4>
+                  <ul className="space-y-2">
+                    {solution.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-start">
+                        <Icon icon={faCheck} size="xs" className="mr-2 mt-1 shrink-0 text-[#2E7D32]" />
+                        <span className="text-gray-700">{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </CardContent>
 
                 <CardFooter>
@@ -281,11 +250,14 @@ const CommercialPage = () => {
       {/* AI Applications */}
       <section className="py-20 bg-white">
         <Container>
-          <div className="text-center mb-16">
+          <div className="max-w-3xl mb-16">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
+              AI Applications
+            </p>
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               AI Applications for Business
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600">
               Areas where AI can improve your business operations and customer experience.
             </p>
           </div>
@@ -299,13 +271,10 @@ const CommercialPage = () => {
                 </CardHeader>
 
                 <CardContent>
-                  <ul className="space-y-2">
+                  <ul className="divide-y divide-gray-100 border-t border-gray-100">
                     {application.examples.map((example, exampleIndex) => (
-                      <li key={exampleIndex} className="flex items-start">
-                        <div className="mr-2 mt-1">
-                          <Icon icon={faCircle} size="lg" color="warning" />
-                        </div>
-                        <span className="text-gray-700">{example}</span>
+                      <li key={exampleIndex} className="py-2.5 text-gray-700">
+                        {example}
                       </li>
                     ))}
                   </ul>
@@ -319,10 +288,10 @@ const CommercialPage = () => {
       {/* SmartHive Feature */}
       <section className="py-20 bg-gray-50">
         <Container>
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="accent" size="lg" className="mb-6">
+          <div className="max-w-3xl mb-12">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Featured Solution
-            </Badge>
+            </p>
 
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               Capture Business Knowledge with SmartHive
@@ -334,39 +303,36 @@ const CommercialPage = () => {
               that are always available to support operations and train new employees.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <Card>
-                <CardContent className="p-6 text-center">
-                  <Icon icon={faUserTie} size="4xl" color="primary" className="mb-3" />
-                  <h3 className="font-semibold text-secondary mb-2">Interview Experts</h3>
-                  <p className="text-gray-600 text-sm">Capture knowledge from your most experienced team members</p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-6 text-center">
-                  <Icon icon={faRobot} size="4xl" color="accent" className="mb-3" />
-                  <h3 className="font-semibold text-secondary mb-2">Create AI Personas</h3>
-                  <p className="text-gray-600 text-sm">Transform expertise into always-available AI assistants</p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-6 text-center">
-                  <Icon icon={faBook} size="4xl" color="warning" className="mb-3" />
-                  <h3 className="font-semibold text-secondary mb-2">Preserve Knowledge</h3>
-                  <p className="text-gray-600 text-sm">Business knowledge that stays with your company</p>
-                </CardContent>
-              </Card>
-            </div>
-
             <Button size="xl" asChild>
               <a href="https://smarthive.online" target="_blank" rel="noopener noreferrer">
-                <Icon icon={faArrowUpRightFromSquare} className="mr-2" size="xs" />
                 Explore SmartHive
+                <Icon icon={faArrowUpRightFromSquare} className="ml-2" size="xs" />
                 <span className="sr-only">(opens in new tab)</span>
               </a>
             </Button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="font-semibold text-secondary mb-2">Interview Experts</h3>
+                <p className="text-gray-600 text-sm">Capture knowledge from your most experienced team members</p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="font-semibold text-secondary mb-2">Create AI Personas</h3>
+                <p className="text-gray-600 text-sm">Transform expertise into always-available AI assistants</p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="font-semibold text-secondary mb-2">Preserve Knowledge</h3>
+                <p className="text-gray-600 text-sm">Business knowledge that stays with your company</p>
+              </CardContent>
+            </Card>
           </div>
         </Container>
       </section>
@@ -374,19 +340,21 @@ const CommercialPage = () => {
       {/* Why Choose Us */}
       <section className="py-20 bg-white">
         <Container>
-          <div className="text-center mb-16">
+          <div className="max-w-3xl mb-16">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
+              The Difference
+            </p>
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               Why Work With Us
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600">
               27+ years of real systems experience helping businesses adopt technology strategically.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center">
+            <Card>
               <CardContent className="p-8">
-                <Icon icon={faHandshake} size="3xl" color="primary" className="mb-4" />
                 <h3 className="text-xl font-semibold text-secondary mb-3">Experienced Partner</h3>
                 <p className="text-gray-600">
                   27+ years architecting hundreds of solutions across AI, ERP, MRP, and custom development &mdash; you work directly with Deveren.
@@ -394,9 +362,8 @@ const CommercialPage = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center">
+            <Card>
               <CardContent className="p-8">
-                <Icon icon={faLightbulb} size="3xl" color="warning" className="mb-4" />
                 <h3 className="text-xl font-semibold text-secondary mb-3">Practical Approach</h3>
                 <p className="text-gray-600">
                   Focus on practical AI applications that deliver real business value, not hype.
@@ -404,9 +371,8 @@ const CommercialPage = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center">
+            <Card>
               <CardContent className="p-8">
-                <Icon icon={faBrain} size="3xl" color="accent" className="mb-4" />
                 <h3 className="text-xl font-semibold text-secondary mb-3">Custom Solutions</h3>
                 <p className="text-gray-600">
                   AI solutions tailored to your specific business needs with SmartHive.online and custom development.
@@ -418,33 +384,36 @@ const CommercialPage = () => {
       </section>
 
       {/* Results Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-accent text-white">
+      <section className="py-20 bg-secondary text-white">
         <Container>
-          <div className="text-center mb-12">
+          <div className="max-w-3xl mb-12">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-4">
+              Track Record
+            </p>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Real Experience, Real Systems
             </h2>
-            <p className="text-xl text-gray-100 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300">
               27+ years building real systems across manufacturing, healthcare, and commercial businesses.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-12">
             <div>
               <div className="text-4xl md:text-5xl font-bold mb-2">27+</div>
-              <div className="text-gray-100">Years of Experience</div>
+              <div className="text-gray-300">Years of Experience</div>
             </div>
             <div>
               <div className="text-4xl md:text-5xl font-bold mb-2">Hundreds</div>
-              <div className="text-gray-100">Of Solutions Architected</div>
+              <div className="text-gray-300">Of Solutions Architected</div>
             </div>
             <div>
               <div className="text-4xl md:text-5xl font-bold mb-2">Five</div>
-              <div className="text-gray-100">Courses for Businesses &amp; MEPs</div>
+              <div className="text-gray-300">Courses for Businesses &amp; MEPs</div>
             </div>
             <div>
               <div className="text-4xl md:text-5xl font-bold mb-2">Production</div>
-              <div className="text-gray-100">AI Solutions Deployed</div>
+              <div className="text-gray-300">AI Solutions Deployed</div>
             </div>
           </div>
         </Container>

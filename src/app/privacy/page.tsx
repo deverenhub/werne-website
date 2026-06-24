@@ -1,28 +1,5 @@
-import { Container, Icon, Badge, Button } from '@/components/ui'
+import { Container, Button } from '@/components/ui'
 import Link from 'next/link'
-import { 
-  faShield,
-  faInfoCircle,
-  faDatabase,
-  faUserShield,
-  faGlobe,
-  faCogs,
-  faShareAlt,
-  faLock,
-  faHospital,
-  faIndustry,
-  faUserEdit,
-  faCookie,
-  faEdit,
-  faEnvelope,
-  faPhone,
-  faMapMarkerAlt,
-  faCalendarAlt,
-  faUsers,
-  faChartLine,
-  faFileContract,
-  faExclamationTriangle
-} from '@fortawesome/free-solid-svg-icons'
 
 export const metadata = {
   title: 'Privacy Policy - Werne Enterprises LLC',
@@ -31,173 +8,124 @@ export const metadata = {
 
 export default function PrivacyPolicy() {
   return (
-    <div className="py-16 bg-white">
+    <div className="py-16 lg:py-24 bg-white">
       <Container size="md">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <Badge variant="outline" size="lg" className="mb-4">
-              <Icon icon={faShield} className="mr-2" />
+          <header className="mb-16">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Legal Information
-            </Badge>
-            <h1 className="text-4xl font-bold text-secondary mb-4 flex items-center justify-center">
-              <Icon icon={faShield} size="lg" className="mr-3" color="primary" />
+            </p>
+            <h1 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               Privacy Policy
             </h1>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 mb-6">
               How we protect and handle your personal information
             </p>
-          </div>
-          
-          <div className="prose prose-lg max-w-none">
-            <div className="bg-primary/10 p-4 rounded-lg mb-8 flex items-center">
-              <Icon icon={faCalendarAlt} color="primary" className="mr-3" />
-              <span className="text-gray-700">
-                <strong>Effective Date:</strong> January 2026
-              </span>
-            </div>
+            <p className="text-sm text-gray-500 border-t border-gray-200 pt-6">
+              <strong className="text-gray-700">Effective Date:</strong> January 2026
+            </p>
+          </header>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-secondary mb-4 flex items-center">
-                <Icon icon={faInfoCircle} color="primary" className="mr-3" />
+          <div className="prose prose-lg max-w-none">
+            <section className="mb-12">
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-3">
+                Overview
+              </p>
+              <h2 className="text-2xl font-semibold text-secondary mb-4">
                 Introduction
               </h2>
               <p className="text-gray-700 mb-4">
-                Werne Enterprises LLC (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy. 
-                This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you 
+                Werne Enterprises LLC (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy.
+                This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you
                 visit our website or use our services.
               </p>
             </section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-secondary mb-4 flex items-center">
-                <Icon icon={faDatabase} color="primary" className="mr-3" />
+            <section className="mb-12">
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-3">
+                Collection
+              </p>
+              <h2 className="text-2xl font-semibold text-secondary mb-4">
                 Information We Collect
               </h2>
-              
-              <h3 className="text-xl font-medium text-secondary mb-3 flex items-center">
-                <Icon icon={faUserShield} color="accent" className="mr-2" />
+
+              <h3 className="text-xl font-medium text-secondary mb-3">
                 Personal Information
               </h3>
               <p className="text-gray-700 mb-4">
                 We may collect personal information that you voluntarily provide to us when you:
               </p>
-              <ul className="space-y-2 text-gray-700 mb-4">
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  Register for our services
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  Request information about our AI solutions
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  Subscribe to our newsletter
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  Contact us through our website
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  Participate in surveys or feedback forms
-                </li>
+              <ul className="space-y-2 text-gray-700 mb-6 list-disc pl-6 marker:text-[#2E7D32]">
+                <li>Register for our services</li>
+                <li>Request information about our AI solutions</li>
+                <li>Subscribe to our newsletter</li>
+                <li>Contact us through our website</li>
+                <li>Participate in surveys or feedback forms</li>
               </ul>
 
-              <h3 className="text-xl font-medium text-secondary mb-3 flex items-center">
-                <Icon icon={faGlobe} color="accent" className="mr-2" />
+              <h3 className="text-xl font-medium text-secondary mb-3">
                 Automatically Collected Information
               </h3>
               <p className="text-gray-700 mb-4">
                 When you visit our website, we may automatically collect certain information about your device, including:
               </p>
-              <ul className="space-y-2 text-gray-700 mb-4">
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  IP address and location data
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  Browser type and version
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  Operating system
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  Pages visited and time spent on site
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  Referring website
-                </li>
+              <ul className="space-y-2 text-gray-700 mb-4 list-disc pl-6 marker:text-[#2E7D32]">
+                <li>IP address and location data</li>
+                <li>Browser type and version</li>
+                <li>Operating system</li>
+                <li>Pages visited and time spent on site</li>
+                <li>Referring website</li>
               </ul>
             </section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-secondary mb-4 flex items-center">
-                <Icon icon={faCogs} color="primary" className="mr-3" />
+            <section className="mb-12">
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-3">
+                Usage
+              </p>
+              <h2 className="text-2xl font-semibold text-secondary mb-4">
                 How We Use Your Information
               </h2>
               <p className="text-gray-700 mb-4">
                 We use the information we collect to:
               </p>
-              <ul className="space-y-2 text-gray-700 mb-4">
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  Provide, operate, and maintain our services
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  Improve and personalize your experience
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  Communicate with you about our services
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  Send you industry-specific insights and updates
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  Comply with legal obligations
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  Protect against fraud and security threats
-                </li>
+              <ul className="space-y-2 text-gray-700 mb-4 list-disc pl-6 marker:text-[#2E7D32]">
+                <li>Provide, operate, and maintain our services</li>
+                <li>Improve and personalize your experience</li>
+                <li>Communicate with you about our services</li>
+                <li>Send you industry-specific insights and updates</li>
+                <li>Comply with legal obligations</li>
+                <li>Protect against fraud and security threats</li>
               </ul>
             </section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-secondary mb-4 flex items-center">
-                <Icon icon={faShareAlt} color="primary" className="mr-3" />
+            <section className="mb-12">
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-3">
+                Disclosure
+              </p>
+              <h2 className="text-2xl font-semibold text-secondary mb-4">
                 Information Sharing and Disclosure
               </h2>
               <p className="text-gray-700 mb-4">
                 We do not sell, trade, or otherwise transfer your personal information to third parties except in the following circumstances:
               </p>
-              <ul className="space-y-3 text-gray-700 mb-4">
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  <span><strong>Service Providers:</strong> We may share information with trusted third-party service providers who assist us in operating our website and conducting our business</span>
+              <ul className="space-y-3 text-gray-700 mb-4 list-none pl-0">
+                <li className="border-l-2 border-gray-200 pl-4">
+                  <strong>Service Providers:</strong> We may share information with trusted third-party service providers who assist us in operating our website and conducting our business
                 </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  <span><strong>Legal Requirements:</strong> We may disclose information when required by law or to protect our rights, property, or safety</span>
+                <li className="border-l-2 border-gray-200 pl-4">
+                  <strong>Legal Requirements:</strong> We may disclose information when required by law or to protect our rights, property, or safety
                 </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  <span><strong>Business Transfers:</strong> Information may be transferred in connection with a merger, acquisition, or sale of business assets</span>
+                <li className="border-l-2 border-gray-200 pl-4">
+                  <strong>Business Transfers:</strong> Information may be transferred in connection with a merger, acquisition, or sale of business assets
                 </li>
               </ul>
             </section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-secondary mb-4 flex items-center">
-                <Icon icon={faLock} color="primary" className="mr-3" />
+            <section className="mb-12">
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-3">
+                Security
+              </p>
+              <h2 className="text-2xl font-semibold text-secondary mb-4">
                 Data Security
               </h2>
               <p className="text-gray-700 mb-4">
@@ -205,25 +133,25 @@ export default function PrivacyPolicy() {
               </p>
             </section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-secondary mb-4 flex items-center">
-                <Icon icon={faChartLine} color="primary" className="mr-3" />
+            <section className="mb-12">
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-3">
+                Industries
+              </p>
+              <h2 className="text-2xl font-semibold text-secondary mb-4">
                 Industry-Specific Considerations
               </h2>
-              
-              <h3 className="text-xl font-medium text-secondary mb-3 flex items-center">
-                <Icon icon={faHospital} color="accent" className="mr-2" />
+
+              <h3 className="text-xl font-medium text-secondary mb-3">
                 Healthcare Clients
               </h3>
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-700 mb-6">
                 For healthcare and medical-device clients, we handle health information in line with applicable
                 requirements and implement additional safeguards appropriate to each engagement. Our compliance
                 experience spans regulated environments including Title 21 CFR Part 11 and medical-device Device
                 History Records (DHRs).
               </p>
 
-              <h3 className="text-xl font-medium text-secondary mb-3 flex items-center">
-                <Icon icon={faIndustry} color="accent" className="mr-2" />
+              <h3 className="text-xl font-medium text-secondary mb-3">
                 Manufacturing Clients
               </h3>
               <p className="text-gray-700 mb-4">
@@ -233,41 +161,30 @@ export default function PrivacyPolicy() {
               </p>
             </section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-secondary mb-4 flex items-center">
-                <Icon icon={faUserEdit} color="primary" className="mr-3" />
+            <section className="mb-12">
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-3">
+                Your Rights
+              </p>
+              <h2 className="text-2xl font-semibold text-secondary mb-4">
                 Your Rights
               </h2>
               <p className="text-gray-700 mb-4">
                 Depending on your location, you may have the right to:
               </p>
-              <ul className="space-y-2 text-gray-700 mb-4">
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  Access your personal information
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  Correct inaccurate information
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  Delete your personal information
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  Object to processing of your information
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  Data portability
-                </li>
+              <ul className="space-y-2 text-gray-700 mb-4 list-disc pl-6 marker:text-[#2E7D32]">
+                <li>Access your personal information</li>
+                <li>Correct inaccurate information</li>
+                <li>Delete your personal information</li>
+                <li>Object to processing of your information</li>
+                <li>Data portability</li>
               </ul>
             </section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-secondary mb-4 flex items-center">
-                <Icon icon={faCookie} color="primary" className="mr-3" />
+            <section className="mb-12">
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-3">
+                Cookies
+              </p>
+              <h2 className="text-2xl font-semibold text-secondary mb-4">
                 Cookies and Tracking
               </h2>
               <p className="text-gray-700 mb-4">
@@ -275,9 +192,11 @@ export default function PrivacyPolicy() {
               </p>
             </section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-secondary mb-4 flex items-center">
-                <Icon icon={faEdit} color="primary" className="mr-3" />
+            <section className="mb-12">
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-3">
+                Updates
+              </p>
+              <h2 className="text-2xl font-semibold text-secondary mb-4">
                 Changes to This Policy
               </h2>
               <p className="text-gray-700 mb-4">
@@ -285,67 +204,51 @@ export default function PrivacyPolicy() {
               </p>
             </section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-secondary mb-4 flex items-center">
-                <Icon icon={faEnvelope} color="primary" className="mr-3" />
+            <section className="mb-12">
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-3">
+                Contact
+              </p>
+              <h2 className="text-2xl font-semibold text-secondary mb-4">
                 Contact Us
               </h2>
               <p className="text-gray-700 mb-4">
                 If you have any questions about this Privacy Policy, please contact us:
               </p>
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <p className="text-gray-700 mb-3 flex items-center">
-                  <Icon icon={faUsers} color="primary" className="mr-2" />
+              <div className="bg-gray-50 border border-gray-200 p-6 rounded-2xl">
+                <p className="text-gray-700 mb-3">
                   <strong>Werne Enterprises LLC</strong>
                 </p>
-                <p className="text-gray-700 mb-3 flex items-start">
-                  <Icon icon={faMapMarkerAlt} color="primary" className="mr-2 mt-1" />
-                  <span>607 Creekway Court<br />Greer, SC 29651</span>
+                <p className="text-gray-700 mb-3">
+                  607 Creekway Court<br />Greer, SC 29651
                 </p>
-                <p className="text-gray-700 mb-3 flex items-center">
-                  <Icon icon={faPhone} color="primary" className="mr-2" />
-                  <span>Phone: <a href="tel:8649915656" className="text-primary hover:underline">864-991-5656</a></span>
+                <p className="text-gray-700 mb-3">
+                  Phone: <a href="tel:8649915656" className="text-[#2E7D32] hover:underline">864-991-5656</a>
                 </p>
-                <p className="text-gray-700 mb-4 flex items-center">
-                  <Icon icon={faEnvelope} color="primary" className="mr-2" />
-                  <span>Email: <a href="mailto:info@werneenterprises.com" className="text-primary hover:underline">info@werneenterprises.com</a></span>
+                <p className="text-gray-700 mb-4">
+                  Email: <a href="mailto:info@werneenterprises.com" className="text-[#2E7D32] hover:underline">info@werneenterprises.com</a>
                 </p>
                 <div className="mt-4 pt-4 border-t border-gray-200">
                   <Button asChild className="w-full sm:w-auto">
-                    <Link href="/contact">
-                      <Icon icon={faEnvelope} className="mr-2" />
-                      Contact Us About Privacy
-                    </Link>
+                    <Link href="/contact">Contact Us About Privacy</Link>
                   </Button>
                 </div>
               </div>
             </section>
-            
-            <div className="mt-12 p-6 bg-primary/5 rounded-lg border border-primary/20">
-              <div className="flex items-start">
-                <Icon icon={faExclamationTriangle} color="warning" className="mr-3 mt-1" />
-                <div>
-                  <h3 className="font-semibold text-secondary mb-2">Questions About This Policy?</h3>
-                  <p className="text-gray-700 mb-4">
-                    If you have any questions about how we handle your data or this privacy policy, 
-                    please don&apos;t hesitate to reach out to us. We&apos;re committed to transparency and 
-                    protecting your privacy.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <Button asChild size="sm">
-                      <Link href="/contact">
-                        <Icon icon={faEnvelope} className="mr-2" />
-                        Contact Us
-                      </Link>
-                    </Button>
-                    <Button asChild variant="outline" size="sm">
-                      <Link href="/terms">
-                        <Icon icon={faFileContract} className="mr-2" />
-                        View Terms of Service
-                      </Link>
-                    </Button>
-                  </div>
-                </div>
+
+            <div className="mt-12 p-6 bg-gray-50 rounded-2xl border border-gray-200">
+              <h3 className="font-semibold text-secondary mb-2">Questions About This Policy?</h3>
+              <p className="text-gray-700 mb-4">
+                If you have any questions about how we handle your data or this privacy policy,
+                please don&apos;t hesitate to reach out to us. We&apos;re committed to transparency and
+                protecting your privacy.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Button asChild size="sm">
+                  <Link href="/contact">Contact Us</Link>
+                </Button>
+                <Button asChild variant="outline" size="sm">
+                  <Link href="/terms">View Terms of Service</Link>
+                </Button>
               </div>
             </div>
           </div>
