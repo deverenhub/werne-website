@@ -1,9 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { Metadata } from 'next'
 import Script from 'next/script'
-import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Icon } from '@/components/ui'
+import { ParallaxImage, Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Icon } from '@/components/ui'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
@@ -183,16 +182,9 @@ const BookTimePage = () => {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-secondary py-20 lg:py-32 text-white overflow-hidden">
+      <section className="relative bg-secondary py-16 lg:py-24 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/team/deveren-werne.jpg"
-            alt="Deveren Werne, AI Solution Architect at Werne Enterprises"
-            fill
-            className="object-cover object-top"
-            priority
-            sizes="100vw"
-          />
+          <ParallaxImage src="/images/team/deveren-werne.jpg" alt="Deveren Werne, AI Solution Architect at Werne Enterprises" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/80 to-secondary/40" />
         </div>
         <Container className="relative z-10">
@@ -240,9 +232,9 @@ const BookTimePage = () => {
       </section>
 
       {/* Schedule Section */}
-      <section id="schedule-now" className="py-20 bg-gray-50">
+      <section id="schedule-now" className="py-16 bg-gray-50">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Book Now
             </p>
@@ -292,9 +284,9 @@ const BookTimePage = () => {
       </section>
 
       {/* Consultation Types */}
-      <section id="consultation-types" className="py-20 bg-white">
+      <section id="consultation-types" className="py-16 bg-white">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Consultation Types
             </p>
@@ -359,9 +351,9 @@ const BookTimePage = () => {
       </section>
 
       {/* Preparation Guide */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Preparation
             </p>
@@ -403,9 +395,9 @@ const BookTimePage = () => {
       </section>
 
       {/* What to Expect */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               The Process
             </p>
@@ -437,9 +429,9 @@ const BookTimePage = () => {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               FAQ
             </p>
@@ -468,7 +460,7 @@ const BookTimePage = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-secondary border-t border-white/10 text-white">
+      <section className="py-16 bg-secondary border-t border-white/10 text-white">
         <Container>
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-4">

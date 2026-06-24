@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Metadata } from 'next'
-import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, Badge } from '@/components/ui'
+import { ParallaxImage, Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, Badge } from '@/components/ui'
 
 export const metadata: Metadata = {
   title: 'About Werne Enterprises - 27+ Years of Technology Experience',
@@ -179,18 +179,11 @@ const AboutPage = () => {
       {/* Hero Section */}
       <section className="relative bg-secondary text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/team/deveren-werne.jpg"
-            alt="Deveren Werne speaking at AI technology conference"
-            fill
-            className="object-cover"
-            priority
-            sizes="100vw"
-          />
+          <ParallaxImage src="/images/team/deveren-werne.jpg" alt="Deveren Werne speaking at AI technology conference" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/85 to-secondary/50" />
         </div>
         <Container className="relative z-10">
-          <div className="max-w-3xl py-20 lg:py-28">
+          <div className="max-w-3xl py-16 lg:py-28">
             <Badge variant="primary" size="lg" className="mb-6">
               27+ Years in Technology | 2 Hours Free AI Consulting
             </Badge>
@@ -224,7 +217,7 @@ const AboutPage = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
@@ -266,9 +259,9 @@ const AboutPage = () => {
       </section>
 
       {/* Leadership Section */}
-      <section id="leadership" className="py-20 bg-white">
+      <section id="leadership" className="py-16 bg-white">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Leadership
             </p>
@@ -333,9 +326,9 @@ const AboutPage = () => {
       </section>
 
       {/* MEP Partners */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               MEP Network
             </p>
@@ -360,9 +353,9 @@ const AboutPage = () => {
       </section>
 
       {/* Products & Methodologies */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Products & Methodologies
             </p>
@@ -389,9 +382,9 @@ const AboutPage = () => {
       </section>
 
       {/* Company Timeline */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Our Journey
             </p>
@@ -418,9 +411,9 @@ const AboutPage = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Core Values
             </p>
@@ -452,9 +445,9 @@ const AboutPage = () => {
       </section>
 
       {/* Achievements */}
-      <section className="py-20 bg-secondary text-white">
+      <section className="py-16 bg-secondary text-white">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-4">
               By the Numbers
             </p>
@@ -490,7 +483,7 @@ const AboutPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="border-t border-white/10 py-20 bg-secondary text-white">
+      <section className="border-t border-white/10 py-16 bg-secondary text-white">
         <Container>
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-4">

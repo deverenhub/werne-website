@@ -1,8 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { Metadata } from 'next'
-import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Breadcrumb } from '@/components/ui'
+import { ParallaxImage, Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Breadcrumb } from '@/components/ui'
 
 export const metadata: Metadata = {
   title: 'AI Training Programs - Purdue MEP AI Series & Bootcamps',
@@ -154,17 +153,10 @@ const EducationPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-secondary py-20 lg:py-32 text-white overflow-hidden">
+      <section className="relative bg-secondary py-16 lg:py-24 text-white overflow-hidden">
         {/* Background image with duotone scrim */}
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/products/smarthive-dashboard.jpg"
-            alt="AI training dashboard used in Werne Enterprises education programs"
-            fill
-            className="object-cover"
-            priority
-            sizes="100vw"
-          />
+          <ParallaxImage src="/images/products/smarthive-dashboard.jpg" alt="AI training dashboard used in Werne Enterprises education programs" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/85 to-secondary/50" />
         </div>
         <Container className="relative z-10">
@@ -218,9 +210,9 @@ const EducationPage = () => {
       </section>
 
       {/* Core Programs */}
-      <section id="programs" className="py-20 bg-gray-50">
+      <section id="programs" className="py-16 bg-gray-50">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               The Curriculum
             </p>
@@ -293,9 +285,9 @@ const EducationPage = () => {
       </section>
 
       {/* MEP Partners */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Network &amp; Reach
             </p>
@@ -321,7 +313,7 @@ const EducationPage = () => {
       </section>
 
       {/* Experience Section */}
-      <section className="bg-secondary text-white py-20">
+      <section className="bg-secondary text-white py-16">
         <Container>
           <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-4">
@@ -355,9 +347,9 @@ const EducationPage = () => {
       </section>
 
       {/* Industry-Specific Training */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Tailored By Sector
             </p>
@@ -407,7 +399,7 @@ const EducationPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-secondary text-white">
+      <section className="py-16 bg-secondary text-white">
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">

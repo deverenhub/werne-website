@@ -1,8 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { Metadata } from 'next'
-import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Icon } from '@/components/ui'
+import { ParallaxImage, Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Icon } from '@/components/ui'
 import {
   faCheck,
   faArrowUpRightFromSquare
@@ -141,17 +140,10 @@ const CommercialPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-secondary py-20 lg:py-32 text-white overflow-hidden">
+      <section className="relative bg-secondary py-16 lg:py-24 text-white overflow-hidden">
         {/* Background image with duotone scrim */}
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/industries/commercial.jpg"
-            alt="Modern commercial office with business professionals collaborating on AI strategy"
-            fill
-            className="object-cover"
-            priority
-            sizes="100vw"
-          />
+          <ParallaxImage src="/images/industries/commercial.jpg" alt="Modern commercial office with business professionals collaborating on AI strategy" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/80 to-secondary/40" />
         </div>
         <Container className="relative z-10">
@@ -200,9 +192,9 @@ const CommercialPage = () => {
       </section>
 
       {/* Solutions Section */}
-      <section id="solutions" className="py-20 bg-gray-50">
+      <section id="solutions" className="py-16 bg-gray-50">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Commercial AI Solutions
             </p>
@@ -248,9 +240,9 @@ const CommercialPage = () => {
       </section>
 
       {/* AI Applications */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               AI Applications
             </p>
@@ -286,7 +278,7 @@ const CommercialPage = () => {
       </section>
 
       {/* SmartHive Feature */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <Container>
           <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
@@ -338,9 +330,9 @@ const CommercialPage = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               The Difference
             </p>
@@ -384,7 +376,7 @@ const CommercialPage = () => {
       </section>
 
       {/* Results Section */}
-      <section className="py-20 bg-secondary text-white">
+      <section className="py-16 bg-secondary text-white">
         <Container>
           <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-4">
@@ -420,7 +412,7 @@ const CommercialPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-secondary text-white">
+      <section className="py-16 bg-secondary text-white">
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">

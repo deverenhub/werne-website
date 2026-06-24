@@ -22,7 +22,7 @@ const BlogPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-secondary via-secondary-dark to-secondary py-20 lg:py-32 text-white overflow-hidden">
+      <section className="relative bg-gradient-to-br from-secondary via-secondary-dark to-secondary py-16 lg:py-24 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/products/smarthive-dashboard.jpg"
@@ -64,9 +64,9 @@ const BlogPage = () => {
       </section>
 
       {/* What to Expect */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <Container>
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               What to Expect
             </h2>
@@ -111,7 +111,7 @@ const BlogPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-secondary text-white">
+      <section className="py-16 bg-secondary text-white">
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">

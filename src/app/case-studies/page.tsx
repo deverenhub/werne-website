@@ -1,8 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { Metadata } from 'next'
-import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Icon } from '@/components/ui'
+import { ParallaxImage, Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Icon } from '@/components/ui'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
@@ -131,16 +130,9 @@ const CaseStudiesPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-secondary py-20 lg:py-32 text-white overflow-hidden">
+      <section className="relative bg-secondary py-16 lg:py-24 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/industries/manufacturing.jpg"
-            alt="Manufacturing facility where Werne Enterprises has architected and deployed AI"
-            fill
-            className="object-cover"
-            priority
-            sizes="100vw"
-          />
+          <ParallaxImage src="/images/industries/manufacturing.jpg" alt="Manufacturing facility where Werne Enterprises has architected and deployed AI" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/80 to-secondary/40" />
         </div>
         <Container className="relative z-10">
@@ -182,9 +174,9 @@ const CaseStudiesPage = () => {
       </section>
 
       {/* Industries We Serve */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Industries We Serve
             </p>
@@ -231,9 +223,9 @@ const CaseStudiesPage = () => {
       </section>
 
       {/* What We Do */}
-      <section id="what-we-do" className="py-20 bg-white">
+      <section id="what-we-do" className="py-16 bg-white">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Our Services
             </p>
@@ -270,9 +262,9 @@ const CaseStudiesPage = () => {
       </section>
 
       {/* MEP Partners */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               MEP Network
             </p>
@@ -298,9 +290,9 @@ const CaseStudiesPage = () => {
       </section>
 
       {/* Success Factors */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Why It Works
             </p>
@@ -335,7 +327,7 @@ const CaseStudiesPage = () => {
       </section>
 
       {/* Track Record Section */}
-      <section className="py-20 bg-secondary text-white">
+      <section className="py-16 bg-secondary text-white">
         <Container>
           <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-4">
@@ -371,7 +363,7 @@ const CaseStudiesPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-secondary border-t border-white/10 text-white">
+      <section className="py-16 bg-secondary border-t border-white/10 text-white">
         <Container>
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-4">

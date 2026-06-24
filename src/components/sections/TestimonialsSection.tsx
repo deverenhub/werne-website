@@ -111,10 +111,10 @@ const TestimonialsSection = () => {
   if (testimonials.length === 0) return null
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-16 bg-gray-50">
       <Container>
         {/* Section Header */}
-        <div className="max-w-4xl mx-auto text-center mb-16">
+        <div className="max-w-4xl mx-auto text-center mb-12">
           <Badge variant="accent" size="lg" className="mb-4">
             Client Success Stories
           </Badge>

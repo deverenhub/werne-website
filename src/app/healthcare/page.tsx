@@ -1,8 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { Metadata } from 'next'
-import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui'
+import { ParallaxImage, Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui'
 
 export const metadata: Metadata = {
   title: 'Healthcare Solutions - AI Training & Consulting',
@@ -164,17 +163,10 @@ const HealthcarePage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-secondary py-20 lg:py-32 text-white overflow-hidden">
+      <section className="relative bg-secondary py-16 lg:py-24 text-white overflow-hidden">
         {/* Background image with duotone scrim */}
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/industries/healthcare.jpg"
-            alt="Healthcare professional using AI-powered medical technology for patient care"
-            fill
-            className="object-cover"
-            priority
-            sizes="100vw"
-          />
+          <ParallaxImage src="/images/industries/healthcare.jpg" alt="Healthcare professional using AI-powered medical technology for patient care" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/85 to-secondary/50" />
         </div>
         <Container className="relative z-10">
@@ -224,9 +216,9 @@ const HealthcarePage = () => {
       </section>
 
       {/* Solutions Section */}
-      <section id="solutions" className="py-20 bg-gray-50">
+      <section id="solutions" className="py-16 bg-gray-50">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               What I Offer
             </p>
@@ -275,9 +267,9 @@ const HealthcarePage = () => {
       </section>
 
       {/* AI Applications */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Where AI Helps
             </p>
@@ -314,9 +306,9 @@ const HealthcarePage = () => {
       </section>
 
       {/* Compliance Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Built for Regulated Work
             </p>
@@ -355,7 +347,7 @@ const HealthcarePage = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-secondary text-white py-20">
+      <section className="bg-secondary text-white py-16">
         <Container>
           <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-4">
@@ -393,7 +385,7 @@ const HealthcarePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-secondary text-white border-t border-white/10">
+      <section className="py-16 bg-secondary text-white border-t border-white/10">
         <Container>
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-4">

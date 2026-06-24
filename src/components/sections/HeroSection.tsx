@@ -59,7 +59,7 @@ const HeroSection = () => {
       />
 
       <Container className="relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center py-20 lg:py-28">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center py-16 lg:py-28">
           {/* Left: content */}
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-5">

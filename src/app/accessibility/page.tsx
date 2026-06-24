@@ -10,7 +10,7 @@ export default function Accessibility() {
     <div className="py-16 lg:py-24 bg-white">
       <Container size="md">
         <div className="max-w-4xl mx-auto">
-          <header className="mb-16">
+          <header className="mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Accessibility
             </p>

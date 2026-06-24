@@ -1,8 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { Metadata } from 'next'
-import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Icon } from '@/components/ui'
+import { ParallaxImage, Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Icon } from '@/components/ui'
 import ContactForm from '@/components/forms/ContactForm'
 import {
   faCalendarCheck,
@@ -134,16 +133,9 @@ const ContactPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-secondary py-20 lg:py-32 text-white overflow-hidden">
+      <section className="relative bg-secondary py-16 lg:py-24 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/team/deveren-werne.jpg"
-            alt="Deveren Werne, AI Solution Architect and founder of Werne Enterprises"
-            fill
-            className="object-cover object-top"
-            priority
-            sizes="100vw"
-          />
+          <ParallaxImage src="/images/team/deveren-werne.jpg" alt="Deveren Werne, AI Solution Architect and founder of Werne Enterprises" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/85 to-secondary/50" />
         </div>
         <Container className="relative z-10">
@@ -176,9 +168,9 @@ const ContactPage = () => {
       </section>
 
       {/* Contact Methods */}
-      <section id="contact-options" className="py-20 bg-gray-50">
+      <section id="contact-options" className="py-16 bg-gray-50">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Get In Touch
             </p>
@@ -226,9 +218,9 @@ const ContactPage = () => {
       </section>
 
       {/* Consultation Types */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Consultation Options
             </p>
@@ -272,9 +264,9 @@ const ContactPage = () => {
       </section>
 
       {/* Response Times */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Response Times
             </p>
@@ -304,9 +296,9 @@ const ContactPage = () => {
       </section>
 
       {/* Office Information */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Office Information
             </p>
@@ -392,7 +384,7 @@ const ContactPage = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <Container>
           <div className="max-w-4xl mx-auto">
             <ContactForm
@@ -404,9 +396,9 @@ const ContactPage = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               FAQ
             </p>

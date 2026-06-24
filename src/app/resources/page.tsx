@@ -174,7 +174,7 @@ const ResourcesPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-secondary via-secondary-dark to-secondary py-20 lg:py-32 text-white overflow-hidden">
+      <section className="relative bg-gradient-to-br from-secondary via-secondary-dark to-secondary py-16 lg:py-24 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/products/smarthive-dashboard.jpg"
@@ -230,9 +230,9 @@ const ResourcesPage = () => {
       </section>
 
       {/* Training Programs */}
-      <section id="training-programs" className="py-20 bg-gray-50">
+      <section id="training-programs" className="py-16 bg-gray-50">
         <Container>
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               <Icon icon={faGraduationCap} className="mr-3" />
               AI Training Programs
@@ -285,9 +285,9 @@ const ResourcesPage = () => {
       </section>
 
       {/* Industry Focus */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <Container>
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               Industry-Specific Training
             </h2>
@@ -331,9 +331,9 @@ const ResourcesPage = () => {
       </section>
 
       {/* Products & Methodologies */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <Container>
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               <Icon icon={faBrain} className="mr-3" />
               Products & Methodologies
@@ -383,9 +383,9 @@ const ResourcesPage = () => {
       </section>
 
       {/* MEP Partners */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <Container>
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               <Icon icon={faHandshake} className="mr-3" />
               MEP Network Partners
@@ -410,9 +410,9 @@ const ResourcesPage = () => {
       </section>
 
       {/* Course Excerpts */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <Container>
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               <Icon icon={faLightbulb} className="mr-3" />
               Course Excerpts & Samples
@@ -447,7 +447,7 @@ const ResourcesPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-secondary text-white">
+      <section className="py-16 bg-secondary text-white">
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">

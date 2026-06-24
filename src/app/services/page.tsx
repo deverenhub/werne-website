@@ -1,8 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { Metadata } from 'next'
-import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Icon } from '@/components/ui'
+import { ParallaxImage, Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Icon } from '@/components/ui'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
@@ -102,18 +101,11 @@ const ServicesPage = () => {
       {/* Hero Section */}
       <section className="relative bg-secondary text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/products/smarthive-dashboard.jpg"
-            alt="SmartHive AI dashboard built by Werne Enterprises"
-            fill
-            className="object-cover"
-            priority
-            sizes="100vw"
-          />
+          <ParallaxImage src="/images/products/smarthive-dashboard.jpg" alt="SmartHive AI dashboard built by Werne Enterprises" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/85 to-secondary/50" />
         </div>
         <Container className="relative z-10">
-          <div className="max-w-3xl py-20 lg:py-28">
+          <div className="max-w-3xl py-16 lg:py-28">
             <Badge variant="primary" size="lg" className="mb-6">
               AI Education | Consulting | Custom Development
             </Badge>
@@ -145,9 +137,9 @@ const ServicesPage = () => {
       </section>
 
       {/* Services Grid */}
-      <section id="services" className="py-20 bg-gray-50">
+      <section id="services" className="py-16 bg-gray-50">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Service Offerings
             </p>
@@ -208,9 +200,9 @@ const ServicesPage = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Our Process
             </p>
@@ -238,7 +230,7 @@ const ServicesPage = () => {
       </section>
 
       {/* Statistics Section */}
-      <section className="py-20 bg-secondary text-white">
+      <section className="py-16 bg-secondary text-white">
         <Container>
           <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-4">
@@ -275,7 +267,7 @@ const ServicesPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="border-t border-white/10 py-20 bg-secondary text-white">
+      <section className="border-t border-white/10 py-16 bg-secondary text-white">
         <Container>
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-4">

@@ -28,9 +28,9 @@ const WhyPartnerSection = () => {
   ]
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-16 bg-white">
       <Container>
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-12">
           <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
             Why Partner With Us
           </p>
@@ -45,7 +45,7 @@ const WhyPartnerSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10 mb-16 max-w-5xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10 mb-12 max-w-5xl">
           {advantages.map((advantage, index) => (
             <div key={index}>
               <p className="text-sm font-semibold text-[#2E7D32] mb-2 tabular-nums">

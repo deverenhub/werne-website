@@ -1,8 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { Metadata } from 'next'
-import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Icon } from '@/components/ui'
+import { ParallaxImage, Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Icon } from '@/components/ui'
 import { faCheck, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
@@ -153,17 +152,10 @@ const ManufacturingPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-secondary py-20 lg:py-32 text-white overflow-hidden">
+      <section className="relative bg-secondary py-16 lg:py-24 text-white overflow-hidden">
         {/* Background Image with duotone scrim */}
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/industries/manufacturing.jpg"
-            alt="Manufacturing facility with industrial automation and robotics systems"
-            fill
-            className="object-cover"
-            priority
-            sizes="100vw"
-          />
+          <ParallaxImage src="/images/industries/manufacturing.jpg" alt="Manufacturing facility with industrial automation and robotics systems" priority />
           <div
             aria-hidden="true"
             className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/85 to-secondary/50"
@@ -214,9 +206,9 @@ const ManufacturingPage = () => {
       </section>
 
       {/* Solutions Section */}
-      <section id="solutions" className="py-20 bg-gray-50">
+      <section id="solutions" className="py-16 bg-gray-50">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               What We Offer
             </p>
@@ -271,9 +263,9 @@ const ManufacturingPage = () => {
       </section>
 
       {/* MEP Partners */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               MEP Network
             </p>
@@ -299,9 +291,9 @@ const ManufacturingPage = () => {
       </section>
 
       {/* AI Applications */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <Container>
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Where AI Helps
             </p>
@@ -337,7 +329,7 @@ const ManufacturingPage = () => {
       </section>
 
       {/* SmartHive Feature */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <Container>
           <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
@@ -389,7 +381,7 @@ const ManufacturingPage = () => {
       </section>
 
       {/* Results Section */}
-      <section className="py-20 bg-secondary text-white">
+      <section className="py-16 bg-secondary text-white">
         <Container>
           <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-4">
@@ -426,7 +418,7 @@ const ManufacturingPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-secondary text-white">
+      <section className="py-16 bg-secondary text-white">
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
