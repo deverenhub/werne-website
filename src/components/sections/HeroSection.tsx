@@ -4,42 +4,95 @@ import { Button, Container, Icon } from '@/components/ui'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 /**
- * Abstract, on-brand "knowledge network" visual rendered as SVG — crisp at any size,
- * lightweight, and disciplined to the brand palette.
+ * Premium, on-brand "knowledge → AI core" visual rendered as SVG — crisp at any size,
+ * lightweight, and disciplined to the brand palette, with subtle accessible motion.
  * NOTE: swap this panel for a real annotated SmartHive screenshot when one is available.
  */
+const MID: [number, number][] = [
+  [95, 70], [150, 252], [206, 120], [250, 300], [382, 86], [420, 210], [356, 292], [110, 168],
+]
+const FAR: [number, number][] = [
+  [58, 300], [442, 58], [200, 38], [444, 320], [40, 120], [330, 40], [468, 150], [150, 330],
+]
+
 const NetworkVisual = () => (
-  <div className="relative rounded-2xl border border-white/10 bg-[#0A1E2E] shadow-2xl overflow-hidden aspect-[4/3]">
+  <div className="relative rounded-2xl border border-white/10 shadow-2xl overflow-hidden aspect-[4/3] bg-gradient-to-br from-[#11304a] to-[#07151f]">
+    <div
+      aria-hidden="true"
+      className="absolute inset-0"
+      style={{ background: 'radial-gradient(58% 55% at 62% 50%, rgba(76,175,80,0.20), transparent 70%)' }}
+    />
     <svg
-      viewBox="0 0 400 300"
-      className="w-full h-full"
+      viewBox="0 0 480 360"
+      className="relative w-full h-full"
       role="img"
-      aria-label="Abstract visualization of team expertise becoming an AI knowledge network"
+      aria-label="Abstract visualization of team knowledge connecting into a central AI core"
     >
       <defs>
-        <radialGradient id="heroGlow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#4CAF50" stopOpacity="0.85" />
+        <radialGradient id="core" cx="42%" cy="40%" r="65%">
+          <stop offset="0%" stopColor="#C8E6C9" />
+          <stop offset="45%" stopColor="#4CAF50" />
+          <stop offset="100%" stopColor="#2E7D32" />
+        </radialGradient>
+        <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#4CAF50" stopOpacity="0.5" />
           <stop offset="100%" stopColor="#4CAF50" stopOpacity="0" />
         </radialGradient>
+        <linearGradient id="link" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stopColor="#4CAF50" stopOpacity="0.04" />
+          <stop offset="100%" stopColor="#4CAF50" stopOpacity="0.65" />
+        </linearGradient>
+        <pattern id="heroDots" width="24" height="24" patternUnits="userSpaceOnUse">
+          <circle cx="1.5" cy="1.5" r="1.5" fill="#ffffff" opacity="0.05" />
+        </pattern>
       </defs>
-      <g stroke="#2E7D32" strokeWidth="1" opacity="0.55">
-        <line className="hero-line" x1="60" y1="80" x2="165" y2="135" />
-        <line className="hero-line" style={{ animationDelay: '-0.6s' }} x1="165" y1="135" x2="285" y2="70" />
-        <line className="hero-line" style={{ animationDelay: '-1.2s' }} x1="165" y1="135" x2="250" y2="215" />
-        <line className="hero-line" style={{ animationDelay: '-1.8s' }} x1="250" y1="215" x2="345" y2="160" />
-        <line className="hero-line" style={{ animationDelay: '-2.4s' }} x1="60" y1="80" x2="110" y2="225" />
-        <line className="hero-line" style={{ animationDelay: '-3s' }} x1="110" y1="225" x2="250" y2="215" />
-        <line className="hero-line" style={{ animationDelay: '-3.6s' }} x1="285" y1="70" x2="345" y2="160" />
-        <line className="hero-line" style={{ animationDelay: '-4.2s' }} x1="60" y1="80" x2="165" y2="135" />
+
+      <rect width="480" height="360" fill="url(#heroDots)" />
+
+      {/* connector lines from each node to the core */}
+      <g stroke="url(#link)" strokeWidth="1.25" fill="none">
+        {MID.map(([x, y], i) => (
+          <line
+            key={i}
+            className="hero-line"
+            x1={x}
+            y1={y}
+            x2="300"
+            y2="180"
+            style={{ animationDelay: `${(-i * 0.6).toFixed(1)}s` }}
+          />
+        ))}
       </g>
+
+      {/* far, faint nodes for depth */}
+      <g fill="#4CAF50" opacity="0.22">
+        {FAR.map(([x, y], i) => (
+          <circle key={i} cx={x} cy={y} r="2.5" />
+        ))}
+      </g>
+
+      {/* mid nodes with soft halos */}
+      {MID.map(([x, y], i) => (
+        <g key={i}>
+          <circle cx={x} cy={y} r="11" fill="url(#coreGlow)" />
+          <circle
+            className="hero-node"
+            cx={x}
+            cy={y}
+            r="4.5"
+            fill="#81C784"
+            style={{ animationDelay: `${(-i * 0.4).toFixed(1)}s` }}
+          />
+        </g>
+      ))}
+
+      {/* central AI core */}
       <g>
-        <circle className="hero-glow" cx="165" cy="135" r="38" fill="url(#heroGlow)" />
-        <circle className="hero-node" cx="165" cy="135" r="9" fill="#4CAF50" />
-        <circle className="hero-node" style={{ animationDelay: '-0.4s' }} cx="60" cy="80" r="6" fill="#81C784" />
-        <circle className="hero-node" style={{ animationDelay: '-0.8s' }} cx="285" cy="70" r="7" fill="#4CAF50" />
-        <circle className="hero-node" style={{ animationDelay: '-1.2s' }} cx="250" cy="215" r="8" fill="#4CAF50" />
-        <circle className="hero-node" style={{ animationDelay: '-1.6s' }} cx="110" cy="225" r="5" fill="#81C784" />
-        <circle className="hero-node" style={{ animationDelay: '-2s' }} cx="345" cy="160" r="6" fill="#81C784" />
+        <circle className="hero-glow" cx="300" cy="180" r="78" fill="url(#coreGlow)" />
+        <circle cx="300" cy="180" r="40" fill="none" stroke="#4CAF50" strokeOpacity="0.22" strokeWidth="1" />
+        <circle cx="300" cy="180" r="27" fill="none" stroke="#4CAF50" strokeOpacity="0.45" strokeWidth="1" />
+        <circle className="hero-node" cx="300" cy="180" r="15" fill="url(#core)" />
+        <circle cx="295" cy="174" r="4" fill="#ffffff" opacity="0.55" />
       </g>
     </svg>
   </div>
@@ -107,7 +160,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right: visual */}
-          <div className="relative">
+          <div className="relative hero-enter" style={{ animationDelay: '0.12s' }}>
             <NetworkVisual />
           </div>
         </div>
