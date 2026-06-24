@@ -23,23 +23,23 @@ const NetworkVisual = () => (
         </radialGradient>
       </defs>
       <g stroke="#2E7D32" strokeWidth="1" opacity="0.55">
-        <line x1="60" y1="80" x2="165" y2="135" />
-        <line x1="165" y1="135" x2="285" y2="70" />
-        <line x1="165" y1="135" x2="250" y2="215" />
-        <line x1="250" y1="215" x2="345" y2="160" />
-        <line x1="60" y1="80" x2="110" y2="225" />
-        <line x1="110" y1="225" x2="250" y2="215" />
-        <line x1="285" y1="70" x2="345" y2="160" />
-        <line x1="60" y1="80" x2="165" y2="135" />
+        <line className="hero-line" x1="60" y1="80" x2="165" y2="135" />
+        <line className="hero-line" style={{ animationDelay: '-0.6s' }} x1="165" y1="135" x2="285" y2="70" />
+        <line className="hero-line" style={{ animationDelay: '-1.2s' }} x1="165" y1="135" x2="250" y2="215" />
+        <line className="hero-line" style={{ animationDelay: '-1.8s' }} x1="250" y1="215" x2="345" y2="160" />
+        <line className="hero-line" style={{ animationDelay: '-2.4s' }} x1="60" y1="80" x2="110" y2="225" />
+        <line className="hero-line" style={{ animationDelay: '-3s' }} x1="110" y1="225" x2="250" y2="215" />
+        <line className="hero-line" style={{ animationDelay: '-3.6s' }} x1="285" y1="70" x2="345" y2="160" />
+        <line className="hero-line" style={{ animationDelay: '-4.2s' }} x1="60" y1="80" x2="165" y2="135" />
       </g>
       <g>
-        <circle cx="165" cy="135" r="38" fill="url(#heroGlow)" />
-        <circle cx="165" cy="135" r="9" fill="#4CAF50" />
-        <circle cx="60" cy="80" r="6" fill="#81C784" />
-        <circle cx="285" cy="70" r="7" fill="#4CAF50" />
-        <circle cx="250" cy="215" r="8" fill="#4CAF50" />
-        <circle cx="110" cy="225" r="5" fill="#81C784" />
-        <circle cx="345" cy="160" r="6" fill="#81C784" />
+        <circle className="hero-glow" cx="165" cy="135" r="38" fill="url(#heroGlow)" />
+        <circle className="hero-node" cx="165" cy="135" r="9" fill="#4CAF50" />
+        <circle className="hero-node" style={{ animationDelay: '-0.4s' }} cx="60" cy="80" r="6" fill="#81C784" />
+        <circle className="hero-node" style={{ animationDelay: '-0.8s' }} cx="285" cy="70" r="7" fill="#4CAF50" />
+        <circle className="hero-node" style={{ animationDelay: '-1.2s' }} cx="250" cy="215" r="8" fill="#4CAF50" />
+        <circle className="hero-node" style={{ animationDelay: '-1.6s' }} cx="110" cy="225" r="5" fill="#81C784" />
+        <circle className="hero-node" style={{ animationDelay: '-2s' }} cx="345" cy="160" r="6" fill="#81C784" />
       </g>
     </svg>
   </div>
@@ -61,7 +61,7 @@ const HeroSection = () => {
       <Container className="relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center py-16 lg:py-28">
           {/* Left: content */}
-          <div>
+          <div className="hero-enter">
             <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-5">
               AI Solution Architect · 27+ Years
             </p>

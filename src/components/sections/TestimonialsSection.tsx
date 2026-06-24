@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardContent, Container, Icon, Badge } from '@/components/ui'
+import { Card, CardContent, Container, Icon, Badge, Reveal } from '@/components/ui'
 import { faQuoteLeft, faStar } from '@fortawesome/free-solid-svg-icons'
 
 interface Testimonial {
@@ -114,7 +114,7 @@ const TestimonialsSection = () => {
     <section className="py-16 bg-gray-50">
       <Container>
         {/* Section Header */}
-        <div className="max-w-4xl mx-auto text-center mb-12">
+        <Reveal className="max-w-4xl mx-auto text-center mb-12">
           <Badge variant="accent" size="lg" className="mb-4">
             Client Success Stories
           </Badge>
@@ -125,12 +125,14 @@ const TestimonialsSection = () => {
             Real results from manufacturers and businesses across Manufacturing, Healthcare,
             and Commercial sectors.
           </p>
-        </div>
+        </Reveal>
 
         {/* Testimonial Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <TestimonialCard key={index} testimonial={testimonial} />
+            <Reveal key={index} delay={index * 80} className="h-full">
+              <TestimonialCard testimonial={testimonial} />
+            </Reveal>
           ))}
         </div>
       </Container>

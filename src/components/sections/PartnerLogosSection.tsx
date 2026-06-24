@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { Container } from '@/components/ui'
+import { Container, Reveal } from '@/components/ui'
 
 interface Partner {
   name: string
@@ -49,7 +49,7 @@ const PartnerLogo = ({ partner }: PartnerLogoProps) => {
         src={partner.logo}
         alt={`${partner.name} logo`}
         fill
-        className="object-contain"
+        className="object-contain grayscale opacity-60 transition-[filter,opacity,transform] duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-105"
         onError={() => setHasError(true)}
         sizes="(max-width: 768px) 140px, 160px"
       />
@@ -61,17 +61,17 @@ const PartnerLogosSection = () => {
   return (
     <section className="py-16 bg-white border-y border-gray-200">
       <Container>
-        <div className="mb-10">
+        <Reveal className="mb-10">
           <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32]">
             Trusted by MEP partners
           </p>
-        </div>
+        </Reveal>
 
-        <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-8 md:gap-x-14">
+        <Reveal delay={80} className="flex flex-wrap justify-center items-center gap-x-10 gap-y-8 md:gap-x-14">
           {partners.map((partner) => (
             <PartnerLogo key={partner.slug} partner={partner} />
           ))}
-        </div>
+        </Reveal>
       </Container>
     </section>
   )

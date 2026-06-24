@@ -14,13 +14,13 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = 'primary', size = 'md', asChild = false, loading = false, shimmer = false, magnetic = false, children, ...props }, ref) => {
-    const baseClasses = 'inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-secondary disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group active:scale-[0.98]'
+    const baseClasses = 'inline-flex items-center justify-center rounded-lg font-medium transition-[background-color,box-shadow,transform,color] duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-secondary disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group active:scale-[0.98] active:translate-y-0 active:shadow-md'
     
     // WCAG 2.1 AA-verified button colors: white text on each background meets >=4.5:1
     // (green #2E7D32 5.13:1, teal #00838F 4.52:1, orange #C2410C 5.18:1). The bright
     // brand tokens stay reserved for highlights on dark backgrounds (hero text).
     const variants = {
-      primary: 'bg-[#2E7D32] text-white hover:bg-[#1B5E20] focus-visible:ring-[#2E7D32] hover:shadow-lg hover:shadow-black/20 hover:-translate-y-0.5',
+      primary: 'bg-[#2E7D32] text-white hover:bg-[#1B5E20] focus-visible:ring-[#2E7D32] hover:shadow-xl hover:shadow-[#2E7D32]/25 hover:-translate-y-0.5',
       secondary: 'bg-secondary text-white hover:bg-secondary-dark focus-visible:ring-secondary hover:shadow-lg hover:shadow-secondary/25 hover:-translate-y-0.5',
       accent: 'bg-[#00838F] text-white hover:bg-[#006064] focus-visible:ring-[#00838F] hover:shadow-lg hover:shadow-black/20 hover:-translate-y-0.5',
       outline: 'border-2 border-[#2E7D32] text-[#2E7D32] hover:bg-[#2E7D32] hover:text-white focus-visible:ring-[#2E7D32] hover:shadow-lg hover:-translate-y-0.5',

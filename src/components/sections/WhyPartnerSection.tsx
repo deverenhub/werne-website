@@ -1,7 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Button, Container } from '@/components/ui'
+import { Button, Container, Icon, Reveal } from '@/components/ui'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const WhyPartnerSection = () => {
   const advantages = [
@@ -30,7 +31,7 @@ const WhyPartnerSection = () => {
   return (
     <section className="py-16 bg-white">
       <Container>
-        <div className="max-w-3xl mb-12">
+        <Reveal className="max-w-3xl mb-12">
           <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
             Why Partner With Us
           </p>
@@ -43,28 +44,30 @@ const WhyPartnerSection = () => {
             educating, training, and deploying practical AI for Manufacturing, Healthcare, and
             Commercial Business - and you work directly with him on every engagement.
           </p>
-        </div>
+        </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10 mb-12 max-w-5xl">
           {advantages.map((advantage, index) => (
-            <div key={index}>
-              <p className="text-sm font-semibold text-[#2E7D32] mb-2 tabular-nums">
-                {String(index + 1).padStart(2, '0')}
-              </p>
-              <h3 className="text-lg font-semibold text-secondary mb-2">{advantage.title}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">{advantage.description}</p>
-            </div>
+            <Reveal key={index} delay={(index % 3) * 80}>
+              <div className="group rounded-xl -mx-3 px-3 py-2 transition-transform duration-200 hover:-translate-y-0.5">
+                <p className="text-sm font-semibold text-[#2E7D32] mb-2 tabular-nums transition-transform duration-200 group-hover:-translate-y-0.5">
+                  {String(index + 1).padStart(2, '0')}
+                </p>
+                <h3 className="text-lg font-semibold text-secondary mb-2">{advantage.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{advantage.description}</p>
+              </div>
+            </Reveal>
           ))}
         </div>
 
-        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8">
+        <Reveal className="bg-gray-50 border border-gray-200 rounded-2xl p-8">
           <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="relative w-40 h-40 flex-shrink-0">
+            <div className="group relative w-40 h-40 flex-shrink-0 overflow-hidden rounded-2xl">
               <Image
                 src="/images/team/deveren-werne.jpg"
                 alt="Deveren Werne, AI consultant and founder of Werne Enterprises"
                 fill
-                className="object-cover rounded-2xl"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
                 sizes="160px"
               />
             </div>
@@ -77,11 +80,14 @@ const WhyPartnerSection = () => {
                 discover how AI can transform your operations with no upfront commitment.
               </p>
               <Button size="lg" asChild>
-                <Link href="/book-time">Book Free Consultation</Link>
+                <Link href="/book-time" className="group">
+                  Book Free Consultation
+                  <Icon icon={faArrowRight} className="transition-transform group-hover:translate-x-1" />
+                </Link>
               </Button>
             </div>
           </div>
-        </div>
+        </Reveal>
       </Container>
     </section>
   )

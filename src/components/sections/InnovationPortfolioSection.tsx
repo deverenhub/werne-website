@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Icon, Badge } from '@/components/ui'
-import { faArrowUpRightFromSquare, faCheck } from '@fortawesome/free-solid-svg-icons'
+import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Icon, Badge, Reveal } from '@/components/ui'
+import { faArrowUpRightFromSquare, faArrowRight, faCheck } from '@fortawesome/free-solid-svg-icons'
 
 const InnovationPortfolioSection = () => {
   const platforms = [
@@ -42,7 +42,7 @@ const InnovationPortfolioSection = () => {
   return (
     <section className="py-16 bg-gray-50">
       <Container>
-        <div className="max-w-3xl mb-12">
+        <Reveal className="max-w-3xl mb-12">
           <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
             Innovation Portfolio
           </p>
@@ -53,18 +53,19 @@ const InnovationPortfolioSection = () => {
             Proven technology platforms and methodologies that deliver real-world results
             across Manufacturing, Healthcare, and Commercial Business sectors.
           </p>
-        </div>
+        </Reveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {platforms.map((platform, index) => (
-            <Card key={index} className="h-full flex flex-col overflow-hidden">
+            <Reveal key={index} delay={index * 80} className="h-full">
+            <Card className="group h-full flex flex-col overflow-hidden">
               {platform.image && (
                 <div className="relative h-48 w-full overflow-hidden">
                   <Image
                     src={platform.image}
                     alt={platform.imageAlt}
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                     sizes="(max-width: 1024px) 100vw, 33vw"
                   />
                 </div>
@@ -103,11 +104,15 @@ const InnovationPortfolioSection = () => {
                   </Button>
                 ) : (
                   <Button asChild className="w-full">
-                    <Link href={platform.href}>{platform.cta}</Link>
+                    <Link href={platform.href}>
+                      {platform.cta}
+                      <Icon icon={faArrowRight} className="ml-2 transition-transform duration-200 group-hover:translate-x-1" size="xs" />
+                    </Link>
                   </Button>
                 )}
               </CardFooter>
             </Card>
+            </Reveal>
           ))}
         </div>
       </Container>

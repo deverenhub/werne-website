@@ -194,6 +194,74 @@ h1 { letter-spacing: -0.03em; }
   will-change: transform;
 }
 
+/* ============================================
+   HERO: Knowledge-network "is it alive" motion
+   ============================================ */
+
+/* Gentle node breathing — scales subtly around its own center */
+@keyframes heroPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.18);
+    opacity: 1;
+  }
+}
+
+/* Slow data flow along the connecting lines */
+@keyframes heroFlow {
+  to {
+    stroke-dashoffset: -48;
+  }
+}
+
+/* Soft pulse for the central glow */
+@keyframes heroGlowPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.12);
+    opacity: 1;
+  }
+}
+
+/* Quiet entrance for the hero left column */
+@keyframes heroEnter {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-node {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: heroPulse 3s ease-in-out infinite;
+}
+
+.hero-line {
+  stroke-dasharray: 5 7;
+  animation: heroFlow 5s linear infinite;
+}
+
+.hero-glow {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: heroGlowPulse 4s ease-in-out infinite;
+}
+
+.hero-enter {
+  animation: heroEnter 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
 /* Better text rendering */
 body {
   -webkit-font-smoothing: antialiased;
@@ -229,6 +297,18 @@ body {
   }
 
   .hover-lift:hover {
+    transform: none;
+  }
+
+  .hero-node,
+  .hero-line,
+  .hero-glow {
+    animation: none;
+  }
+
+  .hero-enter {
+    animation: none;
+    opacity: 1;
     transform: none;
   }
 }

@@ -1,12 +1,13 @@
 import React from 'react'
 import Link from 'next/link'
-import { Button, Container } from '@/components/ui'
+import { Button, Container, Icon, Reveal } from '@/components/ui'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const CTASection = () => {
   return (
     <section className="border-t border-white/10 bg-secondary py-24">
       <Container>
-        <div className="max-w-3xl">
+        <Reveal className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-4">
             Get Started
           </p>
@@ -20,8 +21,11 @@ const CTASection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 sm:items-center mb-12">
-            <Button size="lg" variant="primary" asChild>
-              <Link href="/book-time">Get 2 Hours Free</Link>
+            <Button size="lg" variant="primary" asChild className="group text-base shadow-md hover:shadow-lg">
+              <Link href="/book-time">
+                Get 2 Hours Free
+                <Icon icon={faArrowRight} className="ml-2 transition-transform duration-200 group-hover:translate-x-1" size="xs" />
+              </Link>
             </Button>
             <a
               href="tel:8649915656"
@@ -45,7 +49,7 @@ const CTASection = () => {
               <span>Creator of SmartHive.online</span>
             </div>
           </div>
-        </div>
+        </Reveal>
       </Container>
     </section>
   )
