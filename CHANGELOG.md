@@ -25,6 +25,10 @@ Format based on [Keep a Changelog](https://keepachangelog.com/).
 - Added engaging, reduced-motion-safe **motion**: animated hero, scroll-reveal sections,
   hover micro-interactions (image zoom, CTA arrows, card lift), sharper green CTAs.
 - Design direction documented in `DESIGN_MODERNIZATION_BRIEF.md`.
+- **Design tuning pass:** more generous "Quiet Authority" vertical rhythm — homepage
+  content sections bumped to `py-20 lg:py-28` and the closing CTA to `lg:py-32` (partner
+  strip kept tight). Removed dead, off-brand `.gradient-mesh` rainbow CSS (unused; also
+  referenced a non-existent `gradientX` keyframe).
 
 ### Fixed — Accessibility & Security
 - WCAG 2.1 AA contrast on CTAs, focus ring, and skip link; `prefers-reduced-motion`
@@ -34,6 +38,11 @@ Format based on [Keep a Changelog](https://keepachangelog.com/).
 - Removed the `/test-contact` debug route; added branded `not-found.tsx` + `error.tsx`;
   CSP `frame-src` added so the Outlook booking iframe renders.
 - Fixed the doubled "| Werne Enterprises" brand suffix on 11 page titles.
+- Generated the missing PWA icons (`icon-192.png`, `icon-512.png`, `apple-touch-icon.png`
+  from the logo) — resolves the manifest `icon-192.png` 404 / console error; corrected the
+  manifest `theme_color` from a stray blue (`#2563eb`) to brand navy (`#1A3A52`).
+- `not-found` "404" numeral switched from bright `text-primary` (`#4CAF50`, ~2.8:1 on the
+  light panel) to the AA green `#2E7D32` for WCAG-compliant contrast.
 
 ### Pending (owner-supplied / deferred)
 - Real images (SmartHive screenshots, founder/scene photos), real testimonial quotes,

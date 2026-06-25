@@ -5,7 +5,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const CTASection = () => {
   return (
-    <section className="border-t border-white/10 bg-secondary py-24">
+    <section className="border-t border-white/10 bg-secondary py-24 lg:py-32">
       <Container>
         <Reveal className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-4">

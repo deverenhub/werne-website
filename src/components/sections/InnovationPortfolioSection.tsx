@@ -40,7 +40,7 @@ const InnovationPortfolioSection = () => {
   ]
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-20 lg:py-28 bg-gray-50">
       <Container>
         <Reveal className="max-w-3xl mb-12">
           <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">

@@ -149,13 +149,6 @@ h1 { letter-spacing: -0.03em; }
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Gradient mesh backgrounds */
-.gradient-mesh {
-  background: linear-gradient(135deg, var(--primary-green) 0%, var(--vibrant-teal) 25%, var(--deep-navy) 50%, var(--primary-green) 75%, var(--vibrant-teal) 100%);
-  background-size: 200% 200%;
-  animation: gradientX 8s ease infinite;
-}
-
 /* Shimmer loading effect */
 .shimmer {
   position: relative;
@@ -285,11 +278,6 @@ body {
   .scroll-animate {
     opacity: 1;
     transform: none;
-  }
-
-  .gradient-mesh {
-    animation: none;
-    background-size: 100% 100%;
   }
 
   .shimmer::after {
