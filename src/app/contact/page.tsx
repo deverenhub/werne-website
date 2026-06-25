@@ -1,41 +1,27 @@
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { Metadata } from 'next'
-import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Icon } from '@/components/ui'
+import { ParallaxImage, Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Icon } from '@/components/ui'
 import ContactForm from '@/components/forms/ContactForm'
 import {
   faCalendarCheck,
   faEnvelope,
   faPhone,
-  faBrain,
-  faChartLine,
-  faIndustry,
-  faGraduationCap,
-  faClock,
-  faCheckCircle,
-  faMapMarkerAlt,
-  faBusinessTime,
-  faQuestionCircle,
-  faRocket,
-  faHandshake,
-  faGlobeAmericas,
-  faHeadset,
-  faUsers
+  faCheck
 } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 export const metadata: Metadata = {
-  title: 'Contact Werne Enterprises - Schedule Your Technology Consultation',
-  description: 'Contact Werne Enterprises for AI innovation, technology consulting, and digital transformation services. Schedule your free consultation today.',
+  title: 'Contact Werne Enterprises - Talk With Deveren Werne',
+  description: 'Reach Deveren Werne directly to discuss practical AI for your manufacturing or business team. Start with 2 hours of free AI consulting.',
 }
 
 const ContactPage = () => {
   const contactMethods = [
     {
-      method: 'Schedule Consultation',
+      method: 'Book Time With Deveren',
       icon: faCalendarCheck,
-      description: 'Book a free 30-minute consultation to discuss your technology needs and objectives.',
+      description: 'Start with 2 hours of free AI consulting to talk through your goals and what is practical for your team.',
       action: 'Schedule Now',
       href: '/book-time',
       primary: true
@@ -43,7 +29,7 @@ const ContactPage = () => {
     {
       method: 'Email',
       icon: faEnvelope,
-      description: 'Send us a detailed message about your project requirements and timeline.',
+      description: 'Send me a note about your project, timeline, and the problems you are trying to solve.',
       action: 'Send Email',
       href: 'mailto:deveren@werneenterprises.com',
       primary: false
@@ -51,7 +37,7 @@ const ContactPage = () => {
     {
       method: 'Phone',
       icon: faPhone,
-      description: 'Call us directly to discuss urgent projects or immediate technology needs.',
+      description: 'Call directly to talk through an urgent project or an immediate question.',
       action: 'Call Now',
       href: 'tel:+1-864-991-5656',
       primary: false
@@ -59,7 +45,7 @@ const ContactPage = () => {
     {
       method: 'LinkedIn',
       icon: faLinkedin,
-      description: 'Connect with our leadership team on LinkedIn for professional networking.',
+      description: 'Connect with Deveren on LinkedIn to follow the work and stay in touch.',
       action: 'Connect',
       href: 'https://linkedin.com/company/werne-enterprises',
       primary: false
@@ -68,55 +54,51 @@ const ContactPage = () => {
 
   const serviceAreas = [
     {
-      service: 'AI Innovation Consultation',
-      icon: faBrain,
-      description: 'Explore RAG implementation, MCP protocols, and custom AI development opportunities.',
-      duration: '45-60 minutes',
-      ideal_for: 'Technical teams and decision makers ready to implement AI solutions'
+      service: 'AI Readiness Assessment',
+      description: 'A practical look at where AI can actually help your business, using my own AI Readiness Assessment methodology.',
+      ideal_for: 'Teams and decision makers deciding where to start with AI'
     },
     {
-      service: 'Technology Strategy Session',
-      icon: faChartLine,
-      description: 'Comprehensive review of your technology landscape and digital transformation roadmap.',
-      duration: '60-90 minutes',
-      ideal_for: 'Executive teams planning major technology initiatives'
+      service: 'AI Strategy Conversation',
+      description: 'A grounded review of your systems and a realistic roadmap for adopting and deploying AI that ships.',
+      ideal_for: 'Owners and leaders planning their next technology move'
     },
     {
       service: 'Industry Solutions Review',
-      icon: faIndustry,
-      description: 'Focused discussion on manufacturing, healthcare, or commercial business specific challenges.',
-      duration: '30-45 minutes',
-      ideal_for: 'Industry professionals seeking specialized technology solutions'
+      description: 'A focused discussion on the specific challenges in manufacturing, healthcare and medical device, or commercial business, including compliance-aware work spanning ITAR, CMMC, Title 21 CFR Part 11, CUI, and medical-device DHRs.',
+      ideal_for: 'Manufacturers and businesses with regulated or specialized needs'
     },
     {
-      service: 'Training Program Planning',
-      icon: faGraduationCap,
-      description: 'Design custom education and workshop programs for your team\'s skill development.',
-      duration: '30-45 minutes',
-      ideal_for: 'HR leaders and training managers building AI capabilities'
+      service: 'Education & Training Planning',
+      description: 'Plan AI education and training for your team, drawing on five courses developed for businesses and MEPs and classes written and delivered for Purdue MEP.',
+      ideal_for: 'Leaders building real AI skills across their team'
     }
   ]
 
   const faq = [
     {
-      question: 'What should I prepare for our initial consultation?',
-      answer: 'Come prepared with information about your current technology infrastructure, key business challenges, and strategic objectives. If possible, have relevant stakeholders available to participate in the discussion.'
+      question: 'Who will I actually be working with?',
+      answer: 'Me, directly. Werne Enterprises is a solo practice, so you work with Deveren from the first conversation through design and deployment. No handoffs to a team you have never met.'
     },
     {
-      question: 'How quickly can we start a project after our consultation?',
-      answer: 'Project timelines vary based on scope and complexity. Simple consulting engagements can begin within 1-2 weeks, while comprehensive AI implementations typically start within 4-6 weeks after agreement.'
+      question: 'What should I prepare for our first conversation?',
+      answer: 'Bring a sense of your current systems, the business problems you are trying to solve, and what a good outcome would look like. If you can, have the people closest to those problems in the room.'
     },
     {
-      question: 'Do you work with businesses outside your three core industries?',
-      answer: 'While we specialize in manufacturing, healthcare, and commercial business, our technology expertise applies to many industries. Contact us to discuss how our solutions might apply to your specific sector.'
+      question: 'How quickly can we start after we talk?',
+      answer: 'It depends on scope. Smaller engagements can begin quickly, and larger AI work starts once we have agreed on a clear plan. I will give you an honest, specific timeline based on your situation.'
     },
     {
-      question: 'What is the typical ROI timeline for your solutions?',
-      answer: 'Most clients see measurable improvements within 3-6 months, with full ROI typically achieved within 12-18 months. We work with you to establish clear success metrics from the beginning.'
+      question: 'Do you work with businesses outside manufacturing, healthcare, and commercial?',
+      answer: 'Those are the areas I focus on, but 27+ years of real systems experience applies well beyond them. Reach out and we can talk through whether it is a fit for your business.'
     },
     {
-      question: 'Do you provide ongoing support after implementation?',
-      answer: 'Yes, we offer comprehensive ongoing support, maintenance, and optimization services. Our goal is to be your long-term technology partner, not just a project vendor.'
+      question: 'Do you help with compliance-sensitive environments?',
+      answer: 'Yes. I help regulated manufacturers adopt AI without breaking compliance, with experience spanning ITAR, CMMC, Title 21 CFR Part 11, CUI, and medical-device DHRs.'
+    },
+    {
+      question: 'Do you stay involved after a solution is deployed?',
+      answer: 'Yes. My goal is to be a long-term partner, not a one-off vendor, so I stay available to support, tune, and extend what we build together.'
     }
   ]
 
@@ -133,40 +115,31 @@ const ContactPage = () => {
   const responseTime = [
     {
       method: 'Consultation Requests',
-      icon: faCalendarCheck,
       time: 'Within 24 hours',
-      description: 'We\'ll respond to schedule your consultation and send calendar options'
+      description: 'I\'ll reply to get your free AI consulting session on the calendar'
     },
     {
       method: 'General Inquiries',
-      icon: faEnvelope,
-      time: 'Within 4-6 hours',
-      description: 'Email responses during business hours (9 AM - 5 PM EST)'
+      time: 'Same business day',
+      description: 'Email replies during business hours (9 AM - 5 PM EST)'
     },
     {
-      method: 'Urgent Support',
-      icon: faHeadset,
-      time: 'Within 2 hours',
-      description: 'For existing clients with urgent technical issues'
+      method: 'Active Projects',
+      time: 'Prompt and direct',
+      description: 'If we are working together, you reach me directly, not a queue'
     }
   ]
 
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-secondary via-secondary-dark to-secondary py-20 lg:py-32 text-white overflow-hidden">
+      <section className="relative bg-secondary py-16 lg:py-24 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/team/deveren-werne.jpg"
-            alt="Contact background"
-            fill
-            className="object-cover opacity-20"
-            priority
-            sizes="100vw"
-          />
+          <ParallaxImage src="/images/team/deveren-werne.jpg" alt="Deveren Werne, AI Solution Architect and founder of Werne Enterprises" priority />
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/85 to-secondary/50" />
         </div>
         <Container className="relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-3xl">
             <Badge variant="primary" size="lg" className="mb-6">
               Get Started Today
             </Badge>
@@ -177,27 +150,17 @@ const ContactPage = () => {
               Enterprises
             </h1>
 
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Ready to transform your business with AI innovation and technology solutions?
-              Start with 2 hours of FREE AI consulting and discover what&apos;s possible.
+            <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
+              Want to put practical AI to work in your business? Start with 2 hours of
+              free AI consulting with Deveren and we&apos;ll figure out what actually makes sense.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Button size="xl" asChild>
-                <Link href="/book-time">
-                  <span className="flex items-center">
-                    <Icon icon={faCalendarCheck} size="sm" className="mr-2" />
-                    Schedule Free Consultation
-                  </span>
-                </Link>
+                <Link href="/book-time">Book 2 Hours Free</Link>
               </Button>
               <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-secondary" asChild>
-                <Link href="#contact-options">
-                  <span className="flex items-center">
-                    <Icon icon={faHandshake} size="sm" className="mr-2" />
-                    View Contact Options
-                  </span>
-                </Link>
+                <Link href="#contact-options">View Contact Options</Link>
               </Button>
             </div>
           </div>
@@ -205,34 +168,33 @@ const ContactPage = () => {
       </section>
 
       {/* Contact Methods */}
-      <section id="contact-options" className="py-20 bg-gray-50">
+      <section id="contact-options" className="py-16 bg-gray-50">
         <Container>
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
+          <div className="max-w-3xl mb-12">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Get In Touch
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
+              Reach Out However Works Best
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the contact method that works best for you. We&apos;re here to help you
-              explore how technology can transform your business.
+            <p className="text-xl text-gray-600">
+              Pick whatever works best for you. However you reach out, you&apos;re talking
+              directly with Deveren about what practical AI could do for your business.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {contactMethods.map((method, index) => (
-              <Card key={index} className={`text-center h-full ${method.primary ? 'ring-2 ring-primary border-primary' : ''}`}>
+              <Card key={index} className={`h-full ${method.primary ? 'ring-2 ring-primary border-primary' : ''}`}>
                 {method.primary && (
-                  <div className="bg-primary text-white text-center py-2 text-sm font-medium rounded-t-xl">
+                  <div className="bg-primary text-white text-center py-2 text-sm font-medium rounded-t-2xl">
                     Recommended
                   </div>
                 )}
 
                 <CardHeader>
                   <div className="mb-4">
-                    <Icon
-                      icon={method.icon}
-                      size="2xl"
-                      color={method.primary ? 'primary' : 'secondary'}
-                    />
+                    <Icon icon={method.icon} size="sm" className="text-[#2E7D32]" />
                   </div>
                   <CardTitle className="text-xl">{method.method}</CardTitle>
                   <CardDescription>
@@ -256,14 +218,18 @@ const ContactPage = () => {
       </section>
 
       {/* Consultation Types */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <Container>
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
+          <div className="max-w-3xl mb-12">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Consultation Options
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
+              A Few Ways We Can Start
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We offer different types of consultations based on your specific needs and objectives.
+            <p className="text-xl text-gray-600">
+              A few ways we can start, depending on where you are. Each one begins with your
+              2 hours of free AI consulting.
             </p>
           </div>
 
@@ -271,9 +237,6 @@ const ContactPage = () => {
             {serviceAreas.map((service, index) => (
               <Card key={index} className="h-full">
                 <CardHeader>
-                  <div className="mb-4">
-                    <Icon icon={service.icon} size="xl" color="primary" />
-                  </div>
                   <CardTitle className="text-2xl">{service.service}</CardTitle>
                   <CardDescription className="text-lg">
                     {service.description}
@@ -281,33 +244,17 @@ const ContactPage = () => {
                 </CardHeader>
 
                 <CardContent>
-                  <div className="space-y-3">
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium text-secondary flex items-center">
-                        <Icon icon={faClock} size="xs" className="mr-2" />
-                        Duration:
-                      </span>
-                      <span className="text-gray-700">{service.duration}</span>
-                    </div>
-
-                    <div>
-                      <span className="font-medium text-secondary flex items-center">
-                        <Icon icon={faUsers} size="xs" className="mr-2" />
-                        Ideal For:
-                      </span>
-                      <p className="text-gray-700 mt-1">{service.ideal_for}</p>
-                    </div>
+                  <div>
+                    <span className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32]">
+                      Ideal For
+                    </span>
+                    <p className="text-gray-700 mt-1">{service.ideal_for}</p>
                   </div>
                 </CardContent>
 
                 <CardFooter>
                   <Button asChild className="w-full">
-                    <Link href="/book-time">
-                      <span className="flex items-center justify-center">
-                        <Icon icon={faCalendarCheck} size="xs" className="mr-2" />
-                        Schedule This Consultation
-                      </span>
-                    </Link>
+                    <Link href="/book-time">Schedule This Consultation</Link>
                   </Button>
                 </CardFooter>
               </Card>
@@ -317,26 +264,26 @@ const ContactPage = () => {
       </section>
 
       {/* Response Times */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <Container>
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
+          <div className="max-w-3xl mb-12">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Response Times
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
+              When You Can Expect to Hear Back
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We prioritize timely communication and will respond to your inquiry promptly.
+            <p className="text-xl text-gray-600">
+              I keep communication simple and prompt. Here&apos;s roughly when you can expect to hear back.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {responseTime.map((item, index) => (
-              <Card key={index} className="text-center">
+              <Card key={index}>
                 <CardHeader>
-                  <div className="mb-4">
-                    <Icon icon={item.icon} size="xl" color="accent" />
-                  </div>
                   <CardTitle className="text-xl">{item.method}</CardTitle>
-                  <div className="text-2xl font-bold text-primary">{item.time}</div>
+                  <div className="text-2xl font-bold text-[#2E7D32]">{item.time}</div>
                 </CardHeader>
 
                 <CardContent>
@@ -349,18 +296,21 @@ const ContactPage = () => {
       </section>
 
       {/* Office Information */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <Container>
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
+          <div className="max-w-3xl mb-12">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
               Office Information
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
+              Where to Find Us
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Visit us in person or reach out through any of our contact methods.
+            <p className="text-xl text-gray-600">
+              Reach out through any of the contact methods below, or connect in person.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
               {offices.map((office, index) => (
                 <Card key={index}>
@@ -370,32 +320,28 @@ const ContactPage = () => {
 
                   <CardContent className="space-y-4">
                     <div>
-                      <h4 className="font-semibold text-secondary mb-1 flex items-center">
-                        <Icon icon={faMapMarkerAlt} size="xs" className="mr-2" />
+                      <h4 className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-1">
                         Address
                       </h4>
                       <p className="text-gray-700 whitespace-pre-line">{office.address}</p>
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-secondary mb-1 flex items-center">
-                        <Icon icon={faPhone} size="xs" className="mr-2" />
+                      <h4 className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-1">
                         Phone
                       </h4>
                       <p className="text-gray-700">{office.phone}</p>
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-secondary mb-1 flex items-center">
-                        <Icon icon={faEnvelope} size="xs" className="mr-2" />
+                      <h4 className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-1">
                         Email
                       </h4>
                       <p className="text-gray-700">{office.email}</p>
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-secondary mb-1 flex items-center">
-                        <Icon icon={faBusinessTime} size="xs" className="mr-2" />
+                      <h4 className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-1">
                         Business Hours
                       </h4>
                       <p className="text-gray-700">{office.hours}</p>
@@ -405,66 +351,66 @@ const ContactPage = () => {
               ))}
             </div>
 
-            <div className="bg-gray-100 p-8 rounded-xl">
-              <h3 className="text-2xl font-bold text-secondary mb-4 flex items-center">
-                <Icon icon={faGlobeAmericas} size="lg" color="primary" className="mr-3" />
-                Serving Clients Nationwide
+            <div className="bg-gray-50 border border-gray-200 p-8 rounded-2xl">
+              <h3 className="text-2xl font-bold text-secondary mb-4">
+                Rooted in SC, Working Wherever You Are
               </h3>
               <p className="text-gray-600 mb-6">
-                Based in Greenville, SC, we serve clients across the
-                United States through on-site visits, remote consultations, and virtual
-                implementation support.
+                Based in Greenville, SC, I work with manufacturers and businesses both nearby
+                and beyond, through on-site visits, remote sessions, and virtual delivery.
               </p>
 
-              <div className="space-y-3">
-                <div className="flex items-center">
-                  <Icon icon={faCheckCircle} size="xs" color="primary" className="mr-3" />
-                  <span className="text-gray-700">On-site consultations available nationwide</span>
-                </div>
-                <div className="flex items-center">
-                  <Icon icon={faCheckCircle} size="xs" color="primary" className="mr-3" />
-                  <span className="text-gray-700">Remote implementation and support</span>
-                </div>
-                <div className="flex items-center">
-                  <Icon icon={faCheckCircle} size="xs" color="primary" className="mr-3" />
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <Icon icon={faCheck} size="xs" className="mr-3 mt-1 shrink-0 text-[#2E7D32]" />
+                  <span className="text-gray-700">On-site visits when it helps</span>
+                </li>
+                <li className="flex items-start">
+                  <Icon icon={faCheck} size="xs" className="mr-3 mt-1 shrink-0 text-[#2E7D32]" />
+                  <span className="text-gray-700">Remote design, deployment, and support</span>
+                </li>
+                <li className="flex items-start">
+                  <Icon icon={faCheck} size="xs" className="mr-3 mt-1 shrink-0 text-[#2E7D32]" />
                   <span className="text-gray-700">Virtual training and workshops</span>
-                </div>
-                <div className="flex items-center">
-                  <Icon icon={faCheckCircle} size="xs" color="primary" className="mr-3" />
-                  <span className="text-gray-700">24/7 technical support for clients</span>
-                </div>
-              </div>
+                </li>
+                <li className="flex items-start">
+                  <Icon icon={faCheck} size="xs" className="mr-3 mt-1 shrink-0 text-[#2E7D32]" />
+                  <span className="text-gray-700">You work directly with Deveren, start to finish</span>
+                </li>
+              </ul>
             </div>
           </div>
         </Container>
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <Container>
           <div className="max-w-4xl mx-auto">
             <ContactForm
-              title="Send Us a Message"
-              subtitle="Fill out the form below and we'll get back to you within 24 hours. For urgent matters, please call us directly."
+              title="Send a Message"
+              subtitle="Fill out the form below and I'll get back to you within 24 hours. For anything urgent, please call directly."
             />
           </div>
         </Container>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <Container>
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6 flex items-center justify-center">
-              <Icon icon={faQuestionCircle} size="xl" color="accent" className="mr-4" />
+          <div className="max-w-3xl mb-12">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
+              FAQ
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Common questions about our consultation process and services.
+            <p className="text-xl text-gray-600">
+              A few things people ask before we start working together.
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-6">
+          <div className="max-w-4xl space-y-6">
             {faq.map((item, index) => (
               <Card key={index}>
                 <CardHeader>
@@ -478,48 +424,35 @@ const ContactPage = () => {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="mt-12">
             <p className="text-gray-600 mb-4">Have a different question?</p>
             <Button asChild variant="outline">
-              <Link href="mailto:deveren@werneenterprises.com">
-                <span className="flex items-center">
-                  <Icon icon={faEnvelope} size="xs" className="mr-2" />
-                  Ask Us Directly
-                </span>
-              </Link>
+              <Link href="mailto:deveren@werneenterprises.com">Ask Us Directly</Link>
             </Button>
           </div>
         </Container>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-secondary text-white">
+      <section className="border-t border-white/10 bg-secondary py-24 text-white">
         <Container>
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 flex items-center justify-center">
-              <Icon icon={faRocket} size="xl" className="mr-4" />
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-4">
+              Get Started
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-100 mb-8">
-              Take the first step toward transforming your business with AI and technology solutions.
-              Schedule your free consultation today and discover what&apos;s possible.
+            <p className="text-xl text-gray-300 mb-10">
+              Let&apos;s talk about practical AI for your business. Book your 2 hours of free
+              AI consulting and we&apos;ll figure out the right first step together.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Button size="xl" variant="primary" asChild>
-                <Link href="/book-time">
-                  <span className="flex items-center">
-                    <Icon icon={faCalendarCheck} size="sm" className="mr-2" />
-                    Schedule Free Consultation
-                  </span>
-                </Link>
+                <Link href="/book-time">Book 2 Hours Free</Link>
               </Button>
-              <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-primary" asChild>
-                <Link href="mailto:deveren@werneenterprises.com">
-                  <span className="flex items-center">
-                    <Icon icon={faEnvelope} size="sm" className="mr-2" />
-                    Send Email Instead
-                  </span>
-                </Link>
+              <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-secondary" asChild>
+                <Link href="mailto:deveren@werneenterprises.com">Send Email Instead</Link>
               </Button>
             </div>
           </div>

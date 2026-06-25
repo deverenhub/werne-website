@@ -38,7 +38,8 @@ const DEFAULT_FORM_VALUES: Partial<ContactFormData> = {
   name: '',
   email: '',
   company: '',
-  message: ''
+  message: '',
+  website: '' // honeypot — stays empty for humans
 }
 
 export const useContactForm = (): UseContactFormReturn => {

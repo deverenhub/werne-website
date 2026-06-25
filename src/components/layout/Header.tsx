@@ -179,6 +179,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ item, isOpen, onToggle, onC
     >
       <button
         ref={buttonRef}
+        id={`${dropdownId}-button`}
         type="button"
         onClick={onToggle}
         onKeyDown={handleKeyDown}

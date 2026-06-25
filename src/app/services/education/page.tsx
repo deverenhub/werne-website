@@ -1,21 +1,18 @@
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { Metadata } from 'next'
-import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Icon, Breadcrumb } from '@/components/ui'
-import { faGraduationCap, faChartBar, faRocket, faBuilding, faIndustry, faHospital, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+import { ParallaxImage, Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Breadcrumb } from '@/components/ui'
 
 export const metadata: Metadata = {
-  title: 'AI Training Programs - Purdue MEP AI Series & Bootcamps | Werne Enterprises',
-  description: 'AI training programs including Purdue MEP AI Series, AI the Spreadsheet Killer, and 12 Week AI Bootcamp. Custom corporate AI training. Contact for pricing.',
+  title: 'AI Training Programs - Purdue MEP AI Series & Bootcamps',
+  description: 'AI education and training for manufacturers and businesses — five courses, classes written and delivered for Purdue MEP, and the AI Readiness Assessment. Contact for pricing.',
 }
 
 const EducationPage = () => {
   const programs = [
     {
       title: 'Purdue MEP AI Series',
-      description: 'Comprehensive AI training program developed in partnership with Purdue MEP for manufacturing professionals.',
-      icon: faGraduationCap,
+      description: 'Classes written and delivered for Purdue MEP — practical AI training for manufacturing professionals.',
       audience: 'Manufacturing Teams',
       duration: 'Multi-session series',
       format: 'In-person or virtual',
@@ -33,7 +30,6 @@ const EducationPage = () => {
     {
       title: 'AI the Spreadsheet Killer',
       description: 'Learn how AI transforms data management and eliminates spreadsheet dependency.',
-      icon: faChartBar,
       audience: 'Business Professionals',
       duration: 'Contact for details',
       format: 'Workshop format',
@@ -51,7 +47,6 @@ const EducationPage = () => {
     {
       title: '12 Week AI Bootcamp',
       description: 'Intensive AI implementation program for teams ready to deploy AI in their organizations.',
-      icon: faRocket,
       audience: 'Implementation Teams',
       duration: '12 weeks',
       format: 'Blended learning',
@@ -67,9 +62,25 @@ const EducationPage = () => {
       mep_partner: false
     },
     {
+      title: 'AI Readiness Assessment',
+      description: 'Deveren\'s own methodology — developed and delivered firsthand — to gauge where your team stands and what to learn first.',
+      audience: 'Leaders & Teams',
+      duration: 'Contact for details',
+      format: 'Guided assessment',
+      topics: [
+        'Current state and skills review',
+        'Data and tooling readiness',
+        'Prioritized learning path',
+        'Practical AI opportunities',
+        'Adoption roadmap',
+        'Next-step recommendations'
+      ],
+      pricing: 'Contact for pricing',
+      mep_partner: false
+    },
+    {
       title: 'Custom Corporate Training',
       description: 'Tailored AI training programs designed for your organization\'s specific needs and goals.',
-      icon: faBuilding,
       audience: 'Your Teams',
       duration: 'Flexible',
       format: 'Customized to requirements',
@@ -100,7 +111,6 @@ const EducationPage = () => {
   const industries = [
     {
       name: 'Manufacturing',
-      icon: faIndustry,
       focus_areas: [
         'AI for process optimization',
         'Predictive maintenance concepts',
@@ -112,7 +122,6 @@ const EducationPage = () => {
     },
     {
       name: 'Healthcare',
-      icon: faHospital,
       focus_areas: [
         'AI applications in healthcare',
         'Compliance considerations',
@@ -124,7 +133,6 @@ const EducationPage = () => {
     },
     {
       name: 'Commercial Business',
-      icon: faBuilding,
       focus_areas: [
         'AI for business operations',
         'Customer experience AI',
@@ -145,34 +153,29 @@ const EducationPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-secondary via-secondary-dark to-secondary py-20 lg:py-32 text-white overflow-hidden">
+      <section className="relative bg-secondary py-16 lg:py-24 text-white overflow-hidden">
+        {/* Background image with duotone scrim */}
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/products/smarthive-dashboard.jpg"
-            alt="Education background"
-            fill
-            className="object-cover opacity-20"
-            priority
-            sizes="100vw"
-          />
+          <ParallaxImage src="/images/products/smarthive-dashboard.jpg" alt="AI training dashboard used in Werne Enterprises education programs" priority />
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/85 to-secondary/50" />
         </div>
         <Container className="relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="accent" size="lg" className="mb-6">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-5">
               AI Training Programs
-            </Badge>
+            </p>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.08] mb-6">
               AI Education &{' '}
               <span className="text-primary">Training</span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Comprehensive AI training programs developed through MEP partnerships.
-              From the Purdue MEP AI Series to the 12 Week AI Bootcamp.
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 max-w-2xl">
+              Practical AI education for manufacturers and businesses — five courses,
+              classes written and delivered for Purdue MEP, and the AI Readiness Assessment.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Button size="xl" asChild>
                 <Link href="/book-time">Discuss Training Needs</Link>
               </Button>
@@ -181,17 +184,17 @@ const EducationPage = () => {
               </Button>
             </div>
 
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8 border-t border-white/10 pt-8">
               <div>
-                <div className="text-3xl font-bold text-primary mb-2">8+</div>
-                <div className="text-gray-300">MEP Partner Relationships</div>
+                <div className="text-3xl font-bold text-white mb-2">5</div>
+                <div className="text-gray-300">Courses for Businesses &amp; MEPs</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-accent mb-2">4</div>
-                <div className="text-gray-300">Training Programs</div>
+                <div className="text-3xl font-bold text-white mb-2">Purdue MEP</div>
+                <div className="text-gray-300">Classes Written &amp; Delivered</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-warning mb-2">Custom</div>
+                <div className="text-3xl font-bold text-white mb-2">Custom</div>
                 <div className="text-gray-300">Corporate Training Available</div>
               </div>
             </div>
@@ -207,16 +210,20 @@ const EducationPage = () => {
       </section>
 
       {/* Core Programs */}
-      <section id="programs" className="py-20 bg-gray-50">
+      <section id="programs" className="py-16 bg-gray-50">
         <Container>
-          <div className="text-center mb-16">
+          <div className="max-w-3xl mb-12">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
+              The Curriculum
+            </p>
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               Training Programs
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              AI education programs developed through hands-on experience and
-              MEP network partnerships.
+            <p className="text-xl text-gray-600">
+              Five courses for businesses and MEPs, developed through hands-on
+              experience and delivered directly by Deveren.
             </p>
+            {/* NEEDS-FACT: titles/descriptions of the two remaining courses (3 are shown by name below: Purdue MEP AI Series, AI the Spreadsheet Killer, 12 Week AI Bootcamp) */}
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -229,15 +236,14 @@ const EducationPage = () => {
                 )}
 
                 <CardHeader>
-                  <Icon icon={program.icon} size="4xl" color="primary" className="mb-4 text-center" />
-                  <CardTitle className="text-2xl text-center">{program.title}</CardTitle>
-                  <CardDescription className="text-lg text-center">
+                  <div className="flex flex-wrap items-center gap-3 mb-3">
+                    <Badge variant="outline">{program.audience}</Badge>
+                    <span className="text-[#2E7D32] font-semibold text-sm">{program.pricing}</span>
+                  </div>
+                  <CardTitle className="text-2xl">{program.title}</CardTitle>
+                  <CardDescription className="text-lg mt-2">
                     {program.description}
                   </CardDescription>
-                  <div className="text-center mt-4 space-y-2">
-                    <Badge variant="outline">{program.audience}</Badge>
-                    <div className="text-primary font-semibold">{program.pricing}</div>
-                  </div>
                 </CardHeader>
 
                 <CardContent className="flex-1">
@@ -254,11 +260,11 @@ const EducationPage = () => {
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-secondary mb-2">Topics Covered</h4>
-                      <ul className="space-y-1">
+                      <h4 className="font-semibold text-secondary mb-3">Topics Covered</h4>
+                      <ul className="space-y-2">
                         {program.topics.map((topic, topicIndex) => (
-                          <li key={topicIndex} className="flex items-start">
-                            <Icon icon={faCheckCircle} size="sm" color="primary" className="mr-2" />
+                          <li key={topicIndex} className="flex items-start gap-2">
+                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#2E7D32]" aria-hidden="true" />
                             <span className="text-gray-700 text-sm">{topic}</span>
                           </li>
                         ))}
@@ -279,15 +285,18 @@ const EducationPage = () => {
       </section>
 
       {/* MEP Partners */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <Container>
-          <div className="text-center mb-16">
+          <div className="max-w-3xl mb-12">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
+              Network &amp; Reach
+            </p>
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               MEP Network Partners
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600">
               Our AI training programs have been developed and delivered
-              through partnerships with MEP organizations nationwide.
+              through partnerships across the MEP network.
             </p>
           </div>
 
@@ -303,47 +312,51 @@ const EducationPage = () => {
         </Container>
       </section>
 
-      {/* Stats Section */}
-      <section className="bg-gradient-to-r from-primary to-accent text-white py-16">
+      {/* Experience Section */}
+      <section className="bg-secondary text-white py-16">
         <Container>
-          <div className="text-center mb-12">
+          <div className="max-w-3xl mb-12">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-4">
+              Why Learn Here
+            </p>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Training Program Results
+              Taught By Someone Who Has Built It
             </h2>
-            <p className="text-xl text-gray-100 max-w-3xl mx-auto">
-              Delivering AI education through MEP partnerships nationwide.
+            <p className="text-xl text-gray-300">
+              27+ years architecting real systems &mdash; AI, ERP, MRP, and custom development &mdash;
+              distilled into education you can actually use. Courses written and delivered for
+              Purdue MEP and other manufacturers and businesses.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-white/10 pt-8">
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">50+</div>
-              <div className="text-gray-100">Companies Trained</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">27+</div>
+              <div className="text-gray-300">Years of Systems &amp; AI Experience</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">8+</div>
-              <div className="text-gray-100">MEP Partnerships</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">5</div>
+              <div className="text-gray-300">Courses for Businesses &amp; MEPs</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">100+</div>
-              <div className="text-gray-100">Programs Delivered</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">4</div>
-              <div className="text-gray-100">Training Formats</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">Purdue MEP</div>
+              <div className="text-gray-300">Classes Written &amp; Delivered</div>
             </div>
           </div>
         </Container>
       </section>
 
       {/* Industry-Specific Training */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <Container>
-          <div className="text-center mb-16">
+          <div className="max-w-3xl mb-12">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
+              Tailored By Sector
+            </p>
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               Industry-Specific Training
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600">
               Training content tailored to the unique challenges and opportunities
               in your industry.
             </p>
@@ -353,8 +366,7 @@ const EducationPage = () => {
             {industries.map((industry, index) => (
               <Card key={index} className="h-full">
                 <CardHeader>
-                  <Icon icon={industry.icon} size="4xl" color="primary" className="mb-4 text-center" />
-                  <CardTitle className="text-2xl text-center">{industry.name}</CardTitle>
+                  <CardTitle className="text-2xl">{industry.name}</CardTitle>
                 </CardHeader>
 
                 <CardContent className="flex-1">
@@ -363,8 +375,8 @@ const EducationPage = () => {
                       <h4 className="font-semibold text-secondary mb-3">Training Focus Areas</h4>
                       <ul className="space-y-2">
                         {industry.focus_areas.map((area, areaIndex) => (
-                          <li key={areaIndex} className="flex items-start">
-                            <Icon icon={faCheckCircle} size="sm" color="primary" className="mr-2" />
+                          <li key={areaIndex} className="flex items-start gap-2">
+                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#2E7D32]" aria-hidden="true" />
                             <span className="text-gray-700 text-sm">{area}</span>
                           </li>
                         ))}
@@ -387,7 +399,7 @@ const EducationPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-secondary text-white">
+      <section className="py-16 bg-secondary text-white">
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">

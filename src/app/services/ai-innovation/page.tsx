@@ -6,7 +6,7 @@ import { Button, Container, Card, CardHeader, CardTitle, CardContent, CardFooter
 import { faBrain, faCogs, faLink, faIndustry, faHospital, faBuilding, faBook, faRobot, faBullseye, faCheck, faCheckCircle, faStar, faArrowRight, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
-  title: 'Custom AI Development - SmartHive & AI Solutions | Werne Enterprises',
+  title: 'Custom AI Development - SmartHive & AI Solutions',
   description: 'Custom AI development including SmartHive.online for tribal knowledge capture. Build AI personas that preserve your team\'s expertise. Contact for pricing.',
 }
 
@@ -44,7 +44,7 @@ const AIInnovationPage = () => {
       features: [
         'Custom AI applications',
         'Business process automation',
-        'Integration with existing systems',
+        'Integration with existing ERP / MRP & systems',
         'Scalable architecture',
         'Ongoing optimization',
         'Full ownership of solution'
@@ -134,7 +134,7 @@ const AIInnovationPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-secondary via-secondary-dark to-secondary py-20 lg:py-32 text-white overflow-hidden">
+      <section className="relative bg-gradient-to-br from-secondary via-secondary-dark to-secondary py-16 lg:py-24 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/products/smarthive-dashboard.jpg"
@@ -180,12 +180,12 @@ const AIInnovationPage = () => {
                 <div className="text-gray-300">Tribal Knowledge AI Platform</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-accent mb-2">30+</div>
-                <div className="text-gray-300">Successful Implementations</div>
+                <div className="text-3xl font-bold text-accent mb-2">27+ Years</div>
+                <div className="text-gray-300">Architecting Real Systems</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-warning mb-2">45+</div>
-                <div className="text-gray-300">Developer Team Access</div>
+                <div className="text-3xl font-bold text-warning mb-2">Direct</div>
+                <div className="text-gray-300">You Work With Deveren</div>
               </div>
             </div>
           </div>
@@ -200,15 +200,16 @@ const AIInnovationPage = () => {
       </section>
 
       {/* AI Services Section */}
-      <section id="services" className="py-20 bg-gray-50">
+      <section id="services" className="py-16 bg-gray-50">
         <Container>
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               AI Development Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From SmartHive.online to custom AI applications, we build AI solutions
-              that solve real business problems.
+              From SmartHive.online to custom applications, I architect and deploy
+              practical AI solutions and workflows that integrate with your existing
+              ERP, MRP, and systems.
             </p>
           </div>
 
@@ -275,9 +276,9 @@ const AIInnovationPage = () => {
       </section>
 
       {/* Industry Applications */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <Container>
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               Industry Applications
             </h2>
@@ -319,7 +320,7 @@ const AIInnovationPage = () => {
       </section>
 
       {/* SmartHive Featured */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="primary" size="lg" className="mb-6">
@@ -369,7 +370,7 @@ const AIInnovationPage = () => {
                 <CardContent className="p-6 text-center">
                   <Icon icon={faBullseye} size="4xl" color="primary" className="mb-3" />
                   <h3 className="font-semibold text-secondary mb-2">Deploy & Use</h3>
-                  <p className="text-gray-600 text-sm">24/7 access to your organization&apos;s collective expertise</p>
+                  <p className="text-gray-600 text-sm">Always-available access to your organization&apos;s collective expertise</p>
                 </CardContent>
               </Card>
             </div>
@@ -386,7 +387,7 @@ const AIInnovationPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-secondary text-white">
+      <section className="py-16 bg-secondary text-white">
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">

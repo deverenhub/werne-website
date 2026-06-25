@@ -158,6 +158,18 @@ export const ContactForm: React.FC<ContactFormProps> = ({
           </div>
         )}
 
+        {/* Honeypot field — hidden from humans; bots that fill it are silently rejected */}
+        <div aria-hidden="true" className="absolute left-[-9999px] top-[-9999px] h-0 w-0 overflow-hidden">
+          <label htmlFor="website">Leave this field empty</label>
+          <input
+            {...register('website')}
+            id="website"
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+          />
+        </div>
+
         {/* Name Field */}
         <div className="relative">
           <Input

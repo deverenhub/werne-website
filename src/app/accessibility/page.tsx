@@ -7,32 +7,47 @@ export const metadata = {
 
 export default function Accessibility() {
   return (
-    <div className="py-16 bg-white">
+    <div className="py-16 lg:py-24 bg-white">
       <Container size="md">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-secondary mb-8">Accessibility Statement</h1>
-          
-          <div className="prose prose-lg max-w-none">
-            <p className="text-gray-600 mb-8">
-              <strong>Last Updated:</strong> January 2025
+          <header className="mb-12">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
+              Accessibility
             </p>
+            <h1 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
+              Accessibility Statement
+            </h1>
+            <p className="text-xl text-gray-600 mb-6">
+              Our commitment to ensuring digital accessibility for people with disabilities.
+            </p>
+            <p className="text-sm text-gray-500 border-t border-gray-200 pt-6">
+              <strong className="text-gray-700">Last Updated:</strong> January 2026
+            </p>
+          </header>
 
-            <section className="mb-8">
+          <div className="prose prose-lg max-w-none">
+            <section className="mb-12">
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-3">
+                Our Commitment
+              </p>
               <h2 className="text-2xl font-semibold text-secondary mb-4">Our Commitment to Accessibility</h2>
               <p className="text-gray-700 mb-4">
-                Werne Enterprises LLC is committed to ensuring digital accessibility for people with disabilities. 
-                We are continually improving the user experience for everyone and applying the relevant accessibility standards 
+                Werne Enterprises LLC is committed to ensuring digital accessibility for people with disabilities.
+                We are continually improving the user experience for everyone and applying the relevant accessibility standards
                 to ensure we provide equal access to information and functionality for all users.
               </p>
             </section>
 
-            <section className="mb-8">
+            <section className="mb-12">
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-3">
+                Standards
+              </p>
               <h2 className="text-2xl font-semibold text-secondary mb-4">Accessibility Standards</h2>
               <p className="text-gray-700 mb-4">
-                We strive to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA standards. 
+                We strive to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA standards.
                 These guidelines help make web content more accessible to people with disabilities, including:
               </p>
-              <ul className="list-disc pl-6 text-gray-700 mb-4">
+              <ul className="list-disc pl-6 text-gray-700 mb-4 marker:text-[#2E7D32]">
                 <li>Visual impairments (blindness, low vision, color blindness)</li>
                 <li>Hearing impairments (deafness, hard of hearing)</li>
                 <li>Mobility impairments</li>
@@ -40,14 +55,17 @@ export default function Accessibility() {
               </ul>
             </section>
 
-            <section className="mb-8">
+            <section className="mb-12">
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-3">
+                Features
+              </p>
               <h2 className="text-2xl font-semibold text-secondary mb-4">Accessibility Features</h2>
               <p className="text-gray-700 mb-4">
                 Our website includes the following accessibility features:
               </p>
-              
+
               <h3 className="text-xl font-medium text-secondary mb-3">Navigation and Structure</h3>
-              <ul className="list-disc pl-6 text-gray-700 mb-4">
+              <ul className="list-disc pl-6 text-gray-700 mb-6 marker:text-[#2E7D32]">
                 <li>Logical heading structure (H1, H2, H3, etc.)</li>
                 <li>Descriptive page titles</li>
                 <li>Clear navigation menus</li>
@@ -56,7 +74,7 @@ export default function Accessibility() {
               </ul>
 
               <h3 className="text-xl font-medium text-secondary mb-3">Visual Design</h3>
-              <ul className="list-disc pl-6 text-gray-700 mb-4">
+              <ul className="list-disc pl-6 text-gray-700 mb-6 marker:text-[#2E7D32]">
                 <li>High contrast color combinations</li>
                 <li>Readable font sizes and types</li>
                 <li>Meaningful color coding with additional indicators</li>
@@ -65,7 +83,7 @@ export default function Accessibility() {
               </ul>
 
               <h3 className="text-xl font-medium text-secondary mb-3">Interactive Elements</h3>
-              <ul className="list-disc pl-6 text-gray-700 mb-4">
+              <ul className="list-disc pl-6 text-gray-700 mb-4 marker:text-[#2E7D32]">
                 <li>Keyboard-accessible navigation</li>
                 <li>Focus indicators for interactive elements</li>
                 <li>Descriptive link text</li>
@@ -74,16 +92,19 @@ export default function Accessibility() {
               </ul>
             </section>
 
-            <section className="mb-8">
+            <section className="mb-12">
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-3">
+                By Industry
+              </p>
               <h2 className="text-2xl font-semibold text-secondary mb-4">Industry-Specific Accessibility Considerations</h2>
-              
+
               <h3 className="text-xl font-medium text-secondary mb-3">Healthcare Accessibility</h3>
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-700 mb-6">
                 Our healthcare AI solutions are designed with accessibility in mind, ensuring that clinical decision support tools and patient interfaces meet healthcare accessibility standards.
               </p>
 
               <h3 className="text-xl font-medium text-secondary mb-3">Manufacturing Accessibility</h3>
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-700 mb-6">
                 Our manufacturing solutions include accessible interfaces for operators with various abilities, ensuring inclusive participation in AI-enhanced manufacturing processes.
               </p>
 
@@ -93,12 +114,15 @@ export default function Accessibility() {
               </p>
             </section>
 
-            <section className="mb-8">
+            <section className="mb-12">
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-3">
+                Compatibility
+              </p>
               <h2 className="text-2xl font-semibold text-secondary mb-4">Assistive Technology Compatibility</h2>
               <p className="text-gray-700 mb-4">
                 Our website is designed to be compatible with assistive technologies, including:
               </p>
-              <ul className="list-disc pl-6 text-gray-700 mb-4">
+              <ul className="list-disc pl-6 text-gray-700 mb-4 marker:text-[#2E7D32]">
                 <li>Screen readers (NVDA, JAWS, VoiceOver)</li>
                 <li>Voice recognition software</li>
                 <li>Keyboard navigation tools</li>
@@ -107,26 +131,32 @@ export default function Accessibility() {
               </ul>
             </section>
 
-            <section className="mb-8">
+            <section className="mb-12">
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-3">
+                Ongoing Efforts
+              </p>
               <h2 className="text-2xl font-semibold text-secondary mb-4">Ongoing Efforts</h2>
               <p className="text-gray-700 mb-4">
-                We are continuously working to improve the accessibility of our website and services:
+                As a solo practice, Deveren personally reviews and works to improve the accessibility of this
+                website and our services:
               </p>
-              <ul className="list-disc pl-6 text-gray-700 mb-4">
-                <li>Regular accessibility audits and testing</li>
-                <li>User feedback incorporation</li>
-                <li>Staff training on accessibility best practices</li>
-                <li>Updates to meet evolving accessibility standards</li>
-                <li>Third-party accessibility tool integration</li>
+              <ul className="list-disc pl-6 text-gray-700 mb-4 marker:text-[#2E7D32]">
+                <li>Periodic accessibility reviews and testing of the website</li>
+                <li>Incorporating user feedback as it comes in</li>
+                <li>Keeping current with evolving accessibility standards</li>
+                <li>Using automated accessibility tools to catch issues</li>
               </ul>
             </section>
 
-            <section className="mb-8">
+            <section className="mb-12">
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-3">
+                Known Limitations
+              </p>
               <h2 className="text-2xl font-semibold text-secondary mb-4">Known Limitations</h2>
               <p className="text-gray-700 mb-4">
                 While we strive for full accessibility, we acknowledge that some areas may need improvement:
               </p>
-              <ul className="list-disc pl-6 text-gray-700 mb-4">
+              <ul className="list-disc pl-6 text-gray-700 mb-4 marker:text-[#2E7D32]">
                 <li>Some third-party embedded content may have limited accessibility</li>
                 <li>Complex data visualizations may require alternative formats</li>
                 <li>Certain PDF documents may need accessible versions</li>
@@ -136,12 +166,15 @@ export default function Accessibility() {
               </p>
             </section>
 
-            <section className="mb-8">
+            <section className="mb-12">
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-3">
+                Alternative Access
+              </p>
               <h2 className="text-2xl font-semibold text-secondary mb-4">Alternative Access Methods</h2>
               <p className="text-gray-700 mb-4">
                 If you encounter accessibility barriers on our website, we offer alternative ways to access our information and services:
               </p>
-              <ul className="list-disc pl-6 text-gray-700 mb-4">
+              <ul className="list-disc pl-6 text-gray-700 mb-4 marker:text-[#2E7D32]">
                 <li>Phone consultations for detailed service information</li>
                 <li>Email correspondence for written communications</li>
                 <li>Alternative document formats upon request</li>
@@ -149,34 +182,40 @@ export default function Accessibility() {
               </ul>
             </section>
 
-            <section className="mb-8">
+            <section className="mb-12">
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-3">
+                Feedback
+              </p>
               <h2 className="text-2xl font-semibold text-secondary mb-4">Feedback and Support</h2>
               <p className="text-gray-700 mb-4">
                 We welcome your feedback on the accessibility of our website and services. If you encounter any accessibility barriers or have suggestions for improvement, please contact us:
               </p>
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <p className="text-gray-700 mb-2"><strong>Accessibility Coordinator</strong></p>
+              <div className="bg-gray-50 border border-gray-200 p-6 rounded-2xl">
+                <p className="text-gray-700 mb-2"><strong>Deveren Werne</strong></p>
                 <p className="text-gray-700 mb-2">Werne Enterprises LLC</p>
                 <p className="text-gray-700 mb-2">607 Creekway Court</p>
                 <p className="text-gray-700 mb-2">Greer, SC 29651</p>
-                <p className="text-gray-700 mb-2">Phone: <a href="tel:8649915656" className="text-primary hover:underline">864-991-5656</a></p>
-                <p className="text-gray-700 mb-4">Email: <a href="mailto:accessibility@werneenterprises.com" className="text-primary hover:underline">accessibility@werneenterprises.com</a></p>
+                <p className="text-gray-700 mb-2">Phone: <a href="tel:8649915656" className="text-[#2E7D32] hover:underline">864-991-5656</a></p>
+                <p className="text-gray-700 mb-4">Email: <a href="mailto:accessibility@werneenterprises.com" className="text-[#2E7D32] hover:underline">accessibility@werneenterprises.com</a></p>
                 <p className="text-gray-700 text-sm">
-                  We aim to respond to accessibility feedback within 2 business days.
+                  We aim to respond to accessibility feedback promptly.
                 </p>
               </div>
             </section>
 
-            <section className="mb-8">
+            <section className="mb-12">
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-3">
+                Assessment
+              </p>
               <h2 className="text-2xl font-semibold text-secondary mb-4">Assessment and Testing</h2>
               <p className="text-gray-700 mb-4">
-                This accessibility statement is based on self-evaluation and testing with various assistive technologies. 
-                We regularly review and update our accessibility practices to ensure continued compliance with accessibility standards.
+                This accessibility statement is based on self-evaluation and testing with various assistive technologies.
+                We review and update our accessibility practices as the site evolves, working toward the standard below.
               </p>
               <p className="text-gray-700 mb-4">
-                <strong>Assessment Date:</strong> January 2025<br />
+                <strong>Assessment Date:</strong> January 2026<br />
                 <strong>Assessment Method:</strong> Self-evaluation and automated testing tools<br />
-                <strong>Standards:</strong> WCAG 2.1 Level AA
+                <strong>Target Standard:</strong> WCAG 2.1 Level AA
               </p>
             </section>
           </div>

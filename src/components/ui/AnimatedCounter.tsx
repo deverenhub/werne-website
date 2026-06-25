@@ -37,6 +37,16 @@ export function AnimatedCounter({
   useEffect(() => {
     if (isVisible && !hasAnimated && numericValue > 0) {
       setHasAnimated(true)
+
+      // Respect reduced-motion: skip the count-up animation and show the final value
+      const prefersReducedMotion =
+        typeof window !== 'undefined' &&
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      if (prefersReducedMotion) {
+        setCount(numericValue)
+        return
+      }
+
       const startTime = Date.now()
 
       const timer = setInterval(() => {

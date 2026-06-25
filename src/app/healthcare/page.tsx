@@ -1,19 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { Metadata } from 'next'
-import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Icon } from '@/components/ui'
-import {
-  faClock,
-  faShieldAlt,
-  faGraduationCap,
-  faBrain,
-  faCheck,
-  faCircle
-} from '@fortawesome/free-solid-svg-icons'
+import { ParallaxImage, Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui'
 
 export const metadata: Metadata = {
-  title: 'Healthcare Solutions - AI Training & Consulting | Werne Enterprises',
+  title: 'Healthcare Solutions - AI Training & Consulting',
   description: 'AI education, consulting, and custom development for healthcare organizations. Compliance-aware solutions. 2 hours free AI consulting.',
 }
 
@@ -22,8 +13,6 @@ const HealthcarePage = () => {
     {
       title: 'AI Training for Healthcare',
       description: 'Compliance-aware AI education programs designed for healthcare teams.',
-      icon: faGraduationCap,
-      color: 'primary',
       benefits: [
         'Healthcare-specific AI curriculum',
         'HIPAA compliance awareness',
@@ -42,8 +31,6 @@ const HealthcarePage = () => {
     {
       title: 'Custom AI Development',
       description: 'Build healthcare AI solutions with SmartHive.online and custom development.',
-      icon: faBrain,
-      color: 'secondary',
       benefits: [
         'Tribal knowledge capture',
         'Custom workflow automation',
@@ -62,8 +49,6 @@ const HealthcarePage = () => {
     {
       title: 'Workflow Optimization',
       description: 'AI consulting for optimizing healthcare workflows and operations.',
-      icon: faClock,
-      color: 'accent',
       benefits: [
         'Process efficiency analysis',
         'Automation opportunities',
@@ -81,22 +66,20 @@ const HealthcarePage = () => {
     },
     {
       title: 'Compliance-Aware AI',
-      description: 'AI solutions designed with healthcare compliance requirements in mind.',
-      icon: faShieldAlt,
-      color: 'success',
+      description: 'AI solutions designed with regulated healthcare and medical-device compliance in mind.',
       benefits: [
+        'Title 21 CFR Part 11 awareness',
+        'Medical-device DHR support',
         'HIPAA awareness',
-        'Data security focus',
-        'Audit trail capabilities',
-        'Privacy-first design'
+        'ITAR, CMMC & CUI experience'
       ],
       features: [
         'Compliance assessment',
-        'Security requirements',
+        'Device History Record (DHR) support',
+        'Electronic records & signatures (Part 11)',
         'Access control planning',
         'Documentation support',
-        'Training programs',
-        'Ongoing compliance monitoring'
+        'Training programs'
       ]
     }
   ]
@@ -146,33 +129,33 @@ const HealthcarePage = () => {
 
   const compliance = [
     {
-      area: 'HIPAA Compliance',
-      description: 'All solutions designed with HIPAA requirements in mind',
+      area: 'Title 21 CFR Part 11 & DHRs',
+      description: 'Real experience with medical-device records and electronic records & signatures',
+      considerations: [
+        'Device History Record (DHR) workflows',
+        'Electronic records & signatures (Part 11)',
+        'Audit trail capabilities',
+        'Traceability and documentation'
+      ]
+    },
+    {
+      area: 'ITAR, CMMC & CUI',
+      description: 'Experience helping regulated manufacturers adopt AI without breaking compliance',
+      considerations: [
+        'Controlled Unclassified Information (CUI) handling',
+        'Access control requirements',
+        'Secure data storage and logging',
+        'Documentation and traceability'
+      ]
+    },
+    {
+      area: 'HIPAA Awareness',
+      description: 'Solutions designed with patient privacy and HIPAA requirements in mind',
       considerations: [
         'Protected health information handling',
-        'Access control requirements',
-        'Audit trail capabilities',
-        'Data encryption standards'
-      ]
-    },
-    {
-      area: 'Data Security',
-      description: 'Security-first approach to healthcare AI',
-      considerations: [
-        'Secure data storage',
-        'Encrypted communications',
-        'Access logging',
-        'Breach prevention'
-      ]
-    },
-    {
-      area: 'Privacy Protection',
-      description: 'Patient privacy at the core of every solution',
-      considerations: [
         'Minimum necessary access',
-        'De-identification capabilities',
-        'Consent management',
-        'Privacy impact assessments'
+        'De-identification considerations',
+        'Data encryption standards'
       ]
     }
   ]
@@ -180,35 +163,32 @@ const HealthcarePage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-secondary via-secondary-dark to-secondary py-20 lg:py-32 text-white overflow-hidden">
-        {/* Background Image */}
+      <section className="relative bg-secondary py-16 lg:py-24 text-white overflow-hidden">
+        {/* Background image with duotone scrim */}
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/industries/healthcare.jpg"
-            alt="Healthcare professional using AI-powered medical technology for patient care"
-            fill
-            className="object-cover opacity-20"
-            priority
-            sizes="100vw"
-          />
+          <ParallaxImage src="/images/industries/healthcare.jpg" alt="Healthcare professional using AI-powered medical technology for patient care" priority />
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/85 to-secondary/50" />
         </div>
         <Container className="relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="accent" size="lg" className="mb-6">
-              Healthcare AI Solutions | Compliance-Aware
-            </Badge>
-
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              AI Solutions for{' '}
-              <span className="text-accent">Healthcare</span>
-            </h1>
-
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              AI education, custom development, and consulting for healthcare organizations.
-              Compliance-aware solutions designed with HIPAA requirements in mind.
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-5">
+              Healthcare AI Solutions · Compliance-Aware
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.08] mb-6">
+              AI Solutions for{' '}
+              <span className="text-primary">Healthcare</span>
+            </h1>
+
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 max-w-2xl">
+              AI education, custom development, and consulting for healthcare and
+              medical-device organizations. I help regulated manufacturers adopt AI
+              without breaking compliance &mdash; with real experience spanning
+              Title 21 CFR Part 11, medical-device Device History Records (DHRs),
+              ITAR, CMMC, and CUI.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4">
               <Button size="xl" asChild>
                 <Link href="/book-time">Get 2 Hours Free</Link>
               </Button>
@@ -217,18 +197,18 @@ const HealthcarePage = () => {
               </Button>
             </div>
 
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8 border-t border-white/10 pt-8">
               <div>
-                <div className="text-3xl font-bold text-accent mb-2">Compliance</div>
-                <div className="text-gray-300">HIPAA-Aware Design</div>
+                <div className="text-3xl font-bold text-white mb-2">27+ Years</div>
+                <div className="text-gray-300">Real Systems &amp; Compliance Experience</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary mb-2">30+</div>
-                <div className="text-gray-300">Successful Implementations</div>
+                <div className="text-3xl font-bold text-white mb-2">CFR Part 11</div>
+                <div className="text-gray-300">Title 21 &amp; DHR Expertise</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-warning mb-2">2 Hours</div>
-                <div className="text-gray-300">Free Consultation</div>
+                <div className="text-3xl font-bold text-white mb-2">2 Hours</div>
+                <div className="text-gray-300">Free AI Consulting</div>
               </div>
             </div>
           </div>
@@ -236,13 +216,16 @@ const HealthcarePage = () => {
       </section>
 
       {/* Solutions Section */}
-      <section id="solutions" className="py-20 bg-gray-50">
+      <section id="solutions" className="py-16 bg-gray-50">
         <Container>
-          <div className="text-center mb-16">
+          <div className="max-w-3xl mb-12">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
+              What I Offer
+            </p>
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               Healthcare AI Solutions
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600">
               AI education, consulting, and custom development designed for
               healthcare organizations with compliance awareness.
             </p>
@@ -252,31 +235,18 @@ const HealthcarePage = () => {
             {solutions.map((solution, index) => (
               <Card key={index} className="h-full">
                 <CardHeader>
-                  <div className="flex items-center mb-4">
-                    <div className="mr-4">
-                      <Icon
-                        icon={solution.icon}
-                        size="4xl"
-                        color={solution.color as 'primary' | 'secondary' | 'accent' | 'success'}
-                      />
-                    </div>
-                    <div>
-                      <CardTitle className="text-2xl">{solution.title}</CardTitle>
-                      <p className="text-lg text-gray-600 mt-2">{solution.description}</p>
-                    </div>
-                  </div>
+                  <CardTitle className="text-2xl">{solution.title}</CardTitle>
+                  <p className="text-lg text-gray-600 mt-2">{solution.description}</p>
                 </CardHeader>
 
                 <CardContent className="flex-1">
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-semibold text-secondary mb-2">Key Benefits</h4>
+                      <h4 className="font-semibold text-secondary mb-3">Key Benefits</h4>
                       <ul className="space-y-2">
                         {solution.benefits.map((benefit, benefitIndex) => (
-                          <li key={benefitIndex} className="flex items-start">
-                            <div className="mr-2 mt-1">
-                              <Icon icon={faCheck} size="lg" color="success" />
-                            </div>
+                          <li key={benefitIndex} className="flex items-start gap-2">
+                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#2E7D32]" aria-hidden="true" />
                             <span className="text-gray-700">{benefit}</span>
                           </li>
                         ))}
@@ -297,13 +267,16 @@ const HealthcarePage = () => {
       </section>
 
       {/* AI Applications */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <Container>
-          <div className="text-center mb-16">
+          <div className="max-w-3xl mb-12">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
+              Where AI Helps
+            </p>
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               AI Applications for Healthcare
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600">
               Areas where AI can improve healthcare operations and patient experience.
             </p>
           </div>
@@ -319,10 +292,8 @@ const HealthcarePage = () => {
                 <CardContent>
                   <ul className="space-y-2">
                     {application.examples.map((example, exampleIndex) => (
-                      <li key={exampleIndex} className="flex items-start">
-                        <div className="mr-2 mt-1">
-                          <Icon icon={faCircle} size="lg" color="accent" />
-                        </div>
+                      <li key={exampleIndex} className="flex items-start gap-2">
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#2E7D32]" aria-hidden="true" />
                         <span className="text-gray-700">{example}</span>
                       </li>
                     ))}
@@ -335,14 +306,19 @@ const HealthcarePage = () => {
       </section>
 
       {/* Compliance Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <Container>
-          <div className="text-center mb-16">
+          <div className="max-w-3xl mb-12">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
+              Built for Regulated Work
+            </p>
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               Compliance-Aware Approach
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              All healthcare AI solutions are designed with compliance requirements in mind.
+            <p className="text-xl text-gray-600">
+              Grounded in real engagements with regulated manufacturers &mdash; spanning
+              Title 21 CFR Part 11, medical-device DHRs, ITAR, CMMC, and CUI &mdash;
+              every solution is designed with compliance requirements in mind.
             </p>
           </div>
 
@@ -350,7 +326,6 @@ const HealthcarePage = () => {
             {compliance.map((item, index) => (
               <Card key={index} className="h-full">
                 <CardHeader>
-                  <Icon icon={faShieldAlt} size="2xl" color="success" className="mb-3" />
                   <CardTitle className="text-xl">{item.area}</CardTitle>
                   <CardDescription>{item.description}</CardDescription>
                 </CardHeader>
@@ -358,10 +333,8 @@ const HealthcarePage = () => {
                 <CardContent>
                   <ul className="space-y-2">
                     {item.considerations.map((consideration, considerationIndex) => (
-                      <li key={considerationIndex} className="flex items-start">
-                        <div className="mr-2 mt-1">
-                          <Icon icon={faCheck} size="lg" color="success" />
-                        </div>
+                      <li key={considerationIndex} className="flex items-start gap-2">
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#2E7D32]" aria-hidden="true" />
                         <span className="text-gray-700 text-sm">{consideration}</span>
                       </li>
                     ))}
@@ -374,42 +347,50 @@ const HealthcarePage = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-gradient-to-r from-primary to-accent text-white py-16">
+      <section className="bg-secondary text-white py-16">
         <Container>
-          <div className="text-center mb-12">
+          <div className="max-w-3xl mb-12">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-4">
+              Why It Works
+            </p>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Healthcare AI Results
+              Why Healthcare Teams Work With Me
             </h2>
-            <p className="text-xl text-gray-100 max-w-3xl mx-auto">
-              Delivering compliance-aware AI solutions for healthcare organizations.
+            <p className="text-xl text-gray-300">
+              A practical AI partner who has actually built the systems &mdash; and
+              navigated the compliance that regulated healthcare and medical-device
+              manufacturers live with every day.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-12">
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">30+</div>
-              <div className="text-gray-100">Custom Solutions</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">27+ Years</div>
+              <div className="text-gray-300">Systems &amp; Compliance Experience</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">100%</div>
-              <div className="text-gray-100">Compliance-First</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">CFR Part 11</div>
+              <div className="text-gray-300">Title 21 &amp; DHR Expertise</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">15+</div>
-              <div className="text-gray-100">AI Applications</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">Solo</div>
+              <div className="text-gray-300">You Work Directly With Deveren</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">2 Hours</div>
-              <div className="text-gray-100">Free Consulting</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">2 Hours</div>
+              <div className="text-gray-300">Free AI Consulting</div>
             </div>
           </div>
         </Container>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-secondary text-white">
+      <section className="py-16 bg-secondary text-white border-t border-white/10">
         <Container>
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-4">
+              Get Started
+            </p>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Start With 2 Hours Free
             </h2>
@@ -417,7 +398,7 @@ const HealthcarePage = () => {
               No commitment required. Let&apos;s discuss your healthcare AI goals
               and explore compliance-aware solutions together.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Button size="xl" variant="primary" asChild>
                 <Link href="/book-time">Book Free Consultation</Link>
               </Button>

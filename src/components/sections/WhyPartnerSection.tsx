@@ -1,90 +1,73 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Button, Container, Badge, Icon } from '@/components/ui'
-import {
-  faBullseye,
-  faRocket,
-  faCheck,
-  faLightbulb,
-  faChartBar
-} from '@fortawesome/free-solid-svg-icons'
+import { Button, Container, Icon, Reveal } from '@/components/ui'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const WhyPartnerSection = () => {
   const advantages = [
     {
-      icon: faBullseye,
       title: 'AI Education Expert',
-      description: 'Creator of Purdue MEP AI Series, AI the Spreadsheet Killer, 12 Week AI Bootcamp',
-      color: 'secondary'
+      description: 'Wrote and delivered classes for Purdue MEP, plus five courses for businesses and MEPs'
     },
     {
-      icon: faRocket,
       title: 'Custom AI Development',
-      description: 'Creator of SmartHive.online - captures tribal knowledge as AI personas',
-      color: 'primary'
+      description: 'Creator of SmartHive.online - captures tribal knowledge as AI personas'
     },
     {
-      icon: faCheck,
       title: 'Proven Methodologies',
-      description: 'TSVMap Methodology and AI Readiness Assessment with 30+ implementations',
-      color: 'success'
+      description: 'TSVMap Methodology and a hands-on AI Readiness Assessment built from real engagements'
     },
     {
-      icon: faLightbulb,
-      title: '45+ Developer Team Access',
-      description: 'Solo consultant with access to expert development resources when needed',
-      color: 'warning'
+      title: 'Work Directly With Deveren',
+      description: 'A solo practice - you work directly with the architect, not a hand-off to a junior team'
     },
     {
-      icon: faChartBar,
-      title: 'Real Savings',
-      description: 'Saved manufacturers $50K - $1M in system expenses per engagement',
-      color: 'accent'
+      title: '27+ Years of Experience',
+      description: 'Hundreds of solutions architected across AI, ERP, MRP, and custom development'
     }
   ]
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 lg:py-28 bg-white">
       <Container>
-        <div className="max-w-4xl mx-auto text-center mb-16">
+        <Reveal className="max-w-3xl mb-12">
+          <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
+            Why Partner With Us
+          </p>
           <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
             Why Partner With Werne Enterprises
           </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            We bring a unique combination of deep technical expertise, industry-specific knowledge,
-            and a proven track record of business impact. Our specialization in Manufacturing, Healthcare,
-            and Commercial Business positions us as your ideal technology partner.
+          <p className="text-xl text-gray-600">
+            Deveren brings 27+ years of real systems and IT experience, having architected hundreds
+            of solutions across AI, ERP, MRP, and custom development. Today that experience goes into
+            educating, training, and deploying practical AI for Manufacturing, Healthcare, and
+            Commercial Business - and you work directly with him on every engagement.
           </p>
-          <Badge variant="primary" size="lg">
-            Industry Expertise Meets Innovation Excellence
-          </Badge>
-        </div>
+        </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10 mb-12 max-w-5xl">
           {advantages.map((advantage, index) => (
-            <div key={index} className="text-center">
-              <div className="mb-4">
-                <Icon
-                  icon={advantage.icon}
-                  size="4xl"
-                  color={advantage.color as 'primary' | 'secondary' | 'accent' | 'warning' | 'success'}
-                />
+            <Reveal key={index} delay={(index % 3) * 80}>
+              <div className="group rounded-xl -mx-3 px-3 py-2 transition-transform duration-200 hover:-translate-y-0.5">
+                <p className="text-sm font-semibold text-[#2E7D32] mb-2 tabular-nums transition-transform duration-200 group-hover:-translate-y-0.5">
+                  {String(index + 1).padStart(2, '0')}
+                </p>
+                <h3 className="text-lg font-semibold text-secondary mb-2">{advantage.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{advantage.description}</p>
               </div>
-              <h3 className="text-lg font-semibold text-secondary mb-3">{advantage.title}</h3>
-              <p className="text-gray-600 text-sm">{advantage.description}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
 
-        <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8">
+        <Reveal className="bg-gray-50 border border-gray-200 rounded-2xl p-8">
           <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="relative w-40 h-40 flex-shrink-0">
+            <div className="group relative w-40 h-40 flex-shrink-0 overflow-hidden rounded-2xl">
               <Image
                 src="/images/team/deveren-werne.jpg"
                 alt="Deveren Werne, AI consultant and founder of Werne Enterprises"
                 fill
-                className="object-cover rounded-full border-4 border-white shadow-lg"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
                 sizes="160px"
               />
             </div>
@@ -97,11 +80,14 @@ const WhyPartnerSection = () => {
                 discover how AI can transform your operations with no upfront commitment.
               </p>
               <Button size="lg" asChild>
-                <Link href="/book-time">Book Free Consultation</Link>
+                <Link href="/book-time" className="group">
+                  Book Free Consultation
+                  <Icon icon={faArrowRight} className="transition-transform group-hover:translate-x-1" />
+                </Link>
               </Button>
             </div>
           </div>
-        </div>
+        </Reveal>
       </Container>
     </section>
   )

@@ -18,7 +18,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
-  title: 'Resources - AI Education & Training Programs | Werne Enterprises',
+  title: 'Resources - AI Education & Training Programs',
   description: 'AI training programs, educational resources, and consulting services. Purdue MEP AI Series, AI the Spreadsheet Killer, 12 Week AI Bootcamp.',
 }
 
@@ -26,7 +26,7 @@ const ResourcesPage = () => {
   const trainingPrograms = [
     {
       title: 'Purdue MEP AI Series',
-      description: 'Comprehensive AI training program developed in partnership with Purdue MEP for manufacturing professionals.',
+      description: 'AI training program written and delivered for Purdue MEP for manufacturing professionals.',
       audience: 'Manufacturing Teams',
       format: 'Multi-session series',
       topics: [
@@ -129,7 +129,7 @@ const ResourcesPage = () => {
       features: [
         'Expert knowledge capture',
         'AI persona creation',
-        '24/7 knowledge access',
+        'On-demand knowledge access',
         'Training acceleration'
       ],
       link: 'https://smarthive.online',
@@ -161,10 +161,20 @@ const ResourcesPage = () => {
     }
   ]
 
+  // Course excerpt placeholders — replace `excerpt` with real sample content and fill the
+  // titles for the two newest courses (five courses total, developed for businesses & MEPs).
+  const courseExcerpts = [
+    { title: 'Purdue MEP AI Series', excerpt: '' },
+    { title: 'AI the Spreadsheet Killer', excerpt: '' },
+    { title: '12 Week AI Bootcamp', excerpt: '' },
+    { title: 'New course (title coming)', excerpt: '' }, // NEEDS-FACT: course title + excerpt
+    { title: 'New course (title coming)', excerpt: '' }, // NEEDS-FACT: course title + excerpt
+  ]
+
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-secondary via-secondary-dark to-secondary py-20 lg:py-32 text-white overflow-hidden">
+      <section className="relative bg-gradient-to-br from-secondary via-secondary-dark to-secondary py-16 lg:py-24 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/products/smarthive-dashboard.jpg"
@@ -203,12 +213,12 @@ const ResourcesPage = () => {
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
-                <div className="text-3xl font-bold text-primary mb-2">8+</div>
-                <div className="text-gray-300">MEP Partnerships</div>
+                <div className="text-3xl font-bold text-primary mb-2">5</div>
+                <div className="text-gray-300">Courses Developed</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-accent mb-2">4</div>
-                <div className="text-gray-300">Training Programs</div>
+                <div className="text-3xl font-bold text-accent mb-2">Purdue MEP</div>
+                <div className="text-gray-300">Instructor & Partner</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-warning mb-2">2 Hours</div>
@@ -220,9 +230,9 @@ const ResourcesPage = () => {
       </section>
 
       {/* Training Programs */}
-      <section id="training-programs" className="py-20 bg-gray-50">
+      <section id="training-programs" className="py-16 bg-gray-50">
         <Container>
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               <Icon icon={faGraduationCap} className="mr-3" />
               AI Training Programs
@@ -265,7 +275,7 @@ const ResourcesPage = () => {
 
                 <CardFooter>
                   <Button asChild className="w-full">
-                    <Link href="/book-time">Learn More</Link>
+                    <Link href="/book-time">Discuss This Program</Link>
                   </Button>
                 </CardFooter>
               </Card>
@@ -275,9 +285,9 @@ const ResourcesPage = () => {
       </section>
 
       {/* Industry Focus */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <Container>
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               Industry-Specific Training
             </h2>
@@ -321,9 +331,9 @@ const ResourcesPage = () => {
       </section>
 
       {/* Products & Methodologies */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <Container>
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               <Icon icon={faBrain} className="mr-3" />
               Products & Methodologies
@@ -373,16 +383,16 @@ const ResourcesPage = () => {
       </section>
 
       {/* MEP Partners */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <Container>
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               <Icon icon={faHandshake} className="mr-3" />
               MEP Network Partners
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our AI training programs have been developed and delivered
-              through partnerships with MEP organizations nationwide.
+              through partnerships across the MEP network.
             </p>
           </div>
 
@@ -399,39 +409,45 @@ const ResourcesPage = () => {
         </Container>
       </section>
 
-      {/* Blog Preview */}
-      <section className="py-20 bg-gray-50">
+      {/* Course Excerpts */}
+      <section className="py-16 bg-gray-50">
         <Container>
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               <Icon icon={faLightbulb} className="mr-3" />
-              AI Insights
+              Course Excerpts & Samples
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Stay informed with our latest thoughts on AI adoption,
-              implementation best practices, and industry trends.
+              Previews and sample lessons from the five courses I&apos;ve developed for
+              businesses and MEPs. Full excerpts are being prepared.
             </p>
           </div>
 
-          <div className="max-w-2xl mx-auto text-center">
-            <Card>
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-secondary mb-4">Coming Soon: AI Blog</h3>
-                <p className="text-gray-600 mb-6">
-                  We&apos;re building a resource of AI education content, implementation guides,
-                  and industry insights. Subscribe to be notified when we launch.
-                </p>
-                <Button asChild>
-                  <Link href="/contact">Get Notified</Link>
-                </Button>
-              </CardContent>
-            </Card>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {courseExcerpts.map((course, index) => (
+              <Card key={index} className="h-full border-2 border-dashed border-gray-200">
+                <CardContent className="p-8 flex flex-col h-full">
+                  <span className="self-start mb-3 text-xs font-medium uppercase tracking-wide text-gray-400 bg-gray-100 px-2 py-0.5 rounded">
+                    Excerpt pending
+                  </span>
+                  <h3 className="text-xl font-bold text-secondary mb-3">{course.title}</h3>
+                  <p className="italic text-gray-400 flex-grow">
+                    {course.excerpt || 'A sample lesson or excerpt from this course will appear here.'}
+                  </p>
+                  <div className="mt-6">
+                    <Button asChild variant="outline" className="w-full">
+                      <Link href="/contact">Request a sample</Link>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </Container>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-secondary text-white">
+      <section className="py-16 bg-secondary text-white">
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">

@@ -18,7 +18,16 @@ export async function POST(request: NextRequest) {
   return withRateLimit(request, async () => {
     const startTime = Date.now()
     const clientIP = getClientIP(request)
-    
+
+    // CSRF defense: browsers attach Origin on POST; reject disallowed cross-origin posts.
+    const requestOrigin = request.headers.get('origin')
+    if (requestOrigin && !getAllowedOrigin(request)) {
+      return NextResponse.json(
+        { error: 'Forbidden', message: 'Cross-origin requests are not allowed.' },
+        { status: 403 }
+      )
+    }
+
     try {
       // Parse request body
       let body: unknown
@@ -32,6 +41,20 @@ export async function POST(request: NextRequest) {
             message: 'Request body must be valid JSON' 
           },
           { status: 400 }
+        )
+      }
+
+      // Honeypot: a hidden "website" field humans never fill. If present, accept
+      // silently (so bots don't learn they were blocked) without sending email.
+      if (
+        body &&
+        typeof body === 'object' &&
+        typeof (body as Record<string, unknown>).website === 'string' &&
+        ((body as Record<string, unknown>).website as string).trim() !== ''
+      ) {
+        return NextResponse.json(
+          { success: true, message: 'Thank you for your message! We\'ll get back to you within 24 hours.' },
+          { status: 200 }
         )
       }
 
@@ -73,11 +96,7 @@ export async function POST(request: NextRequest) {
       if (isSuspicious) {
         console.warn('[Contact API] Suspicious submission detected:', {
           ip: clientIP,
-          data: {
-            name: validatedData.name,
-            company: validatedData.company,
-            messageLength: validatedData.message.length
-          }
+          messageLength: validatedData.message.length
         })
 
         // Use strict rate limiting for suspicious submissions
@@ -105,12 +124,8 @@ export async function POST(request: NextRequest) {
         // (In production, you might want to flag for manual review)
       }
 
-      // Send emails
-      console.log('[Contact API] Sending emails for:', {
-        name: validatedData.name,
-        company: validatedData.company,
-        ip: clientIP
-      })
+      // Send emails (PII intentionally omitted from logs)
+      console.log('[Contact API] Sending emails', { ip: clientIP })
 
       const emailResult = await sendContactEmails(validatedData)
 
@@ -120,11 +135,7 @@ export async function POST(request: NextRequest) {
           errors: emailResult.errors,
           notification: emailResult.notification,
           confirmation: emailResult.confirmation,
-          data: {
-            name: validatedData.name,
-            email: validatedData.email,
-            company: validatedData.company
-          }
+          ip: clientIP
         })
 
         // In development, allow form submission to succeed even if emails fail
@@ -159,8 +170,6 @@ export async function POST(request: NextRequest) {
       // Success response
       const processingTime = Date.now() - startTime
       console.log('[Contact API] Success:', {
-        name: validatedData.name,
-        company: validatedData.company,
         processingTime: `${processingTime}ms`,
         notification: emailResult.notification.success,
         confirmation: emailResult.confirmation.success,
@@ -214,22 +223,12 @@ export async function GET(request: NextRequest) {
     const clientIP = getClientIP(request)
     const rateLimitStatus = contactFormRateLimiter.status(clientIP)
 
+    // Return only static config — no per-IP rate-limit status (avoids a state oracle)
     return NextResponse.json({
       config: {
         maxSubmissions: rateLimitStatus.limit,
         windowMs: 60 * 60 * 1000, // 1 hour
-        fields: [
-          'name',
-          'email',
-          'company',
-          'message'
-        ]
-      },
-      rateLimit: {
-        limit: rateLimitStatus.limit,
-        remaining: rateLimitStatus.remaining,
-        reset: rateLimitStatus.reset,
-        resetDate: new Date(rateLimitStatus.reset).toISOString()
+        fields: ['name', 'email', 'company', 'message']
       }
     })
   } catch (error) {

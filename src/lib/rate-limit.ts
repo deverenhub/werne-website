@@ -132,22 +132,31 @@ export function getClientIP(request: Request): string {
   // Try to get IP from various headers (for different proxy setups)
   const headers = request.headers
   
-  const xForwardedFor = headers.get('x-forwarded-for')
-  if (xForwardedFor) {
-    // x-forwarded-for can contain multiple IPs, use the first one
-    return xForwardedFor.split(',')[0].trim()
-  }
-  
-  const xRealIP = headers.get('x-real-ip')
-  if (xRealIP) {
-    return xRealIP.trim()
-  }
-  
+  // Basic IPv4/IPv6 validation so spoofed/garbage values can't poison the cache
+  const isValidIP = (ip: string): boolean =>
+    /^(\d{1,3}\.){3}\d{1,3}$/.test(ip) || /^[0-9a-fA-F:]+$/.test(ip)
+
+  // Prefer platform-set headers (Vercel/Cloudflare set these to the real client IP
+  // and are harder to spoof than a client-supplied x-forwarded-for).
   const cfConnectingIP = headers.get('cf-connecting-ip')
-  if (cfConnectingIP) {
+  if (cfConnectingIP && isValidIP(cfConnectingIP.trim())) {
     return cfConnectingIP.trim()
   }
-  
+
+  const xRealIP = headers.get('x-real-ip')
+  if (xRealIP && isValidIP(xRealIP.trim())) {
+    return xRealIP.trim()
+  }
+
+  const xForwardedFor = headers.get('x-forwarded-for')
+  if (xForwardedFor) {
+    // Use the first hop, but only if it's a well-formed IP
+    const first = xForwardedFor.split(',')[0].trim()
+    if (isValidIP(first)) {
+      return first
+    }
+  }
+
   // Fallback for development or direct connections
   return 'unknown'
 }
@@ -178,17 +187,16 @@ export function isSuspiciousSubmission(data: Record<string, unknown>): boolean {
   ]
   
   const message = typeof data.message === 'string' ? data.message : ''
-  const firstName = typeof data.firstName === 'string' ? data.firstName : ''
-  const lastName = typeof data.lastName === 'string' ? data.lastName : ''
+  const name = typeof data.name === 'string' ? data.name : ''
   const company = typeof data.company === 'string' ? data.company : ''
-  
+
   // Check message content
   if (suspiciousPatterns.some(pattern => pattern.test(message))) {
     return true
   }
-  
+
   // Check if name looks suspicious
-  if (suspiciousPatterns.some(pattern => pattern.test(firstName + ' ' + lastName))) {
+  if (suspiciousPatterns.some(pattern => pattern.test(name))) {
     return true
   }
   

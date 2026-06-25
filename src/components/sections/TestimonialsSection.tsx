@@ -1,76 +1,82 @@
 import React from 'react'
-import { Card, CardContent, Container, Icon, Badge } from '@/components/ui'
+import { Card, CardContent, Container, Icon, Badge, Reveal } from '@/components/ui'
 import { faQuoteLeft, faStar } from '@fortawesome/free-solid-svg-icons'
 
 interface Testimonial {
   quote: string
-  authorName: string
-  title: string
-  company: string
+  // Anonymized attribution ONLY: role + industry/region. No real names or company names.
+  attribution: string
   industry: 'Manufacturing' | 'Healthcare' | 'Commercial'
   rating: number
+  isPlaceholder?: boolean
 }
 
+/*
+  PLACEHOLDERS below — replace each `quote` with a REAL, client-approved, anonymized
+  testimonial, then remove the `isPlaceholder` flag. Use role + industry/region only;
+  never a real person or company name. Cards marked isPlaceholder render with a visible
+  "Placeholder" label so nothing can be mistaken for (or ship as) a real endorsement.
+*/
 const testimonials: Testimonial[] = [
   {
-    quote: "Werne Enterprises helped us capture 30 years of tribal knowledge from our senior machinists before retirement. Their SmartHive platform transformed how we train new operators - what used to take 18 months now takes 6. The ROI was evident within the first quarter.",
-    authorName: "Michael Torres",
-    title: "VP of Operations",
-    company: "Precision Manufacturing Co.",
-    industry: "Manufacturing",
-    rating: 5
+    quote: 'Add a real, client-approved quote here.',
+    attribution: 'Operations leader, manufacturer (anonymized)',
+    industry: 'Manufacturing',
+    rating: 5,
+    isPlaceholder: true,
   },
   {
-    quote: "The AI Readiness Assessment was eye-opening. It showed us exactly where we were wasting resources on manual processes and gave us a clear roadmap for implementation. Within 6 months, we reduced administrative overhead by 40% while improving patient data accuracy.",
-    authorName: "Dr. Sarah Chen",
-    title: "Chief Medical Officer",
-    company: "Regional Health Partners",
-    industry: "Healthcare",
-    rating: 5
+    quote: 'Add a real, client-approved quote here.',
+    attribution: 'Quality / compliance leader, medical-device maker (anonymized)',
+    industry: 'Healthcare',
+    rating: 5,
+    isPlaceholder: true,
   },
   {
-    quote: "As a growing commercial business, we needed AI guidance that was practical, not theoretical. Deveren's consulting approach delivered immediate value - our customer service automation paid for itself in 90 days and freed our team to focus on strategic growth.",
-    authorName: "James Richardson",
-    title: "CEO",
-    company: "Summit Business Solutions",
-    industry: "Commercial",
-    rating: 5
-  }
+    quote: 'Add a real, client-approved quote here.',
+    attribution: 'Owner / operator, commercial business (anonymized)',
+    industry: 'Commercial',
+    rating: 5,
+    isPlaceholder: true,
+  },
 ]
 
 const industryColors = {
   Manufacturing: 'bg-primary/10 text-primary',
   Healthcare: 'bg-accent/10 text-accent',
-  Commercial: 'bg-secondary/10 text-secondary'
+  Commercial: 'bg-secondary/10 text-secondary',
 }
 
-const StarRating = ({ rating }: { rating: number }) => {
-  return (
-    <div className="flex gap-1">
-      {[...Array(5)].map((_, index) => (
-        <Icon
-          key={index}
-          icon={faStar}
-          size="xs"
-          className={index < rating ? 'text-warning' : 'text-gray-300'}
-        />
-      ))}
-    </div>
-  )
-}
+const StarRating = ({ rating }: { rating: number }) => (
+  <div className="flex gap-1" role="img" aria-label={`${rating} out of 5 stars`}>
+    {[...Array(5)].map((_, index) => (
+      <Icon
+        key={index}
+        icon={faStar}
+        size="xs"
+        className={index < rating ? 'text-warning' : 'text-gray-300'}
+      />
+    ))}
+  </div>
+)
 
 const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
+  const { isPlaceholder } = testimonial
   return (
-    <Card glow className="h-full">
+    <Card
+      glow={!isPlaceholder}
+      className={`h-full ${isPlaceholder ? 'border-2 border-dashed border-gray-200' : ''}`}
+    >
       <CardContent className="p-8 flex flex-col h-full">
+        {isPlaceholder && (
+          <span className="self-start mb-3 text-xs font-medium uppercase tracking-wide text-gray-400 bg-gray-100 px-2 py-0.5 rounded">
+            Placeholder
+          </span>
+        )}
+
         {/* Quote Icon */}
         <div className="mb-4">
-          <Icon
-            icon={faQuoteLeft}
-            size="xl"
-            color="primary"
-            className="opacity-50"
-          />
+          <Icon icon={faQuoteLeft} size="xl" color="primary" className="opacity-50" />
         </div>
 
         {/* Rating */}
@@ -79,27 +85,20 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
         </div>
 
         {/* Quote Text */}
-        <blockquote className="text-gray-700 text-base leading-relaxed mb-6 flex-grow">
+        <blockquote
+          className={`text-base leading-relaxed mb-6 flex-grow ${
+            isPlaceholder ? 'italic text-gray-400' : 'text-gray-700'
+          }`}
+        >
           &ldquo;{testimonial.quote}&rdquo;
         </blockquote>
 
-        {/* Author Info */}
-        <div className="flex items-center gap-4 pt-4 border-t border-gray-100">
-          {/* Placeholder Photo */}
-          <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center flex-shrink-0">
-            <span className="text-lg font-semibold text-secondary">
-              {testimonial.authorName.split(' ').map(n => n[0]).join('')}
-            </span>
-          </div>
-
-          <div className="flex-grow">
-            <p className="font-semibold text-secondary">{testimonial.authorName}</p>
-            <p className="text-sm text-gray-600">{testimonial.title}</p>
-            <p className="text-sm text-gray-500">{testimonial.company}</p>
-          </div>
-
-          {/* Industry Badge */}
-          <span className={`text-xs font-medium px-2.5 py-1 rounded-full ${industryColors[testimonial.industry]}`}>
+        {/* Anonymized Attribution */}
+        <div className="flex items-center justify-between gap-4 pt-4 border-t border-gray-100">
+          <p className="text-sm font-medium text-secondary">{testimonial.attribution}</p>
+          <span
+            className={`text-xs font-medium px-2.5 py-1 rounded-full ${industryColors[testimonial.industry]}`}
+          >
             {testimonial.industry}
           </span>
         </div>
@@ -109,35 +108,32 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
 }
 
 const TestimonialsSection = () => {
+  if (testimonials.length === 0) return null
+
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 lg:py-28 bg-gray-50">
       <Container>
         {/* Section Header */}
-        <div className="max-w-4xl mx-auto text-center mb-16">
+        <Reveal className="max-w-4xl mx-auto text-center mb-12">
           <Badge variant="accent" size="lg" className="mb-4">
             Client Success Stories
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
-            Trusted by Industry Leaders
+            What Clients Say
           </h2>
           <p className="text-xl text-gray-600">
-            See how organizations across Manufacturing, Healthcare, and Commercial sectors
-            have transformed their operations with our AI consulting and solutions.
+            Real results from manufacturers and businesses across Manufacturing, Healthcare,
+            and Commercial sectors.
           </p>
-        </div>
+        </Reveal>
 
         {/* Testimonial Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <TestimonialCard key={index} testimonial={testimonial} />
+            <Reveal key={index} delay={index * 80} className="h-full">
+              <TestimonialCard testimonial={testimonial} />
+            </Reveal>
           ))}
-        </div>
-
-        {/* Bottom CTA Text */}
-        <div className="text-center mt-12">
-          <p className="text-gray-600">
-            Join the growing list of organizations achieving measurable results with AI.
-          </p>
         </div>
       </Container>
     </section>

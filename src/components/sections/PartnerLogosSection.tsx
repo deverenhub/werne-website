@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { Container } from '@/components/ui'
+import { Container, Reveal } from '@/components/ui'
 
 interface Partner {
   name: string
@@ -27,13 +27,12 @@ interface PartnerLogoProps {
 
 const PartnerLogo = ({ partner }: PartnerLogoProps) => {
   const [hasError, setHasError] = useState(false)
-  const [isHovered, setIsHovered] = useState(false)
 
   if (hasError) {
     // Fallback to text badge if logo fails to load
     return (
       <div
-        className="px-6 py-3 bg-white rounded-lg shadow-sm border border-gray-200 text-gray-700 font-semibold text-sm hover:shadow-md hover:border-primary/30 hover:text-primary transition-all duration-300"
+        className="px-6 py-3 text-gray-700 font-semibold text-sm"
         title={partner.name}
       >
         {partner.name}
@@ -43,18 +42,14 @@ const PartnerLogo = ({ partner }: PartnerLogoProps) => {
 
   return (
     <div
-      className="relative w-[140px] h-[52px] md:w-[160px] md:h-[60px] bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md hover:border-primary/30 transition-all duration-300 cursor-pointer"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      className="relative w-[140px] h-[52px] md:w-[160px] md:h-[60px]"
       title={partner.name}
     >
       <Image
         src={partner.logo}
         alt={`${partner.name} logo`}
         fill
-        className={`object-contain p-2 transition-all duration-300 ${
-          isHovered ? 'grayscale-0 scale-105' : 'grayscale opacity-70'
-        }`}
+        className="object-contain grayscale opacity-60 transition-[filter,opacity,transform] duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-105"
         onError={() => setHasError(true)}
         sizes="(max-width: 768px) 140px, 160px"
       />
@@ -64,19 +59,19 @@ const PartnerLogo = ({ partner }: PartnerLogoProps) => {
 
 const PartnerLogosSection = () => {
   return (
-    <section className="py-12 bg-gray-100 border-y border-gray-200">
+    <section className="py-16 bg-white border-y border-gray-200">
       <Container>
-        <div className="text-center mb-8">
-          <p className="text-sm uppercase tracking-wider text-gray-500 font-semibold">
-            Trusted by MEP Partners Nationwide
+        <Reveal className="mb-10">
+          <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32]">
+            Trusted by MEP partners
           </p>
-        </div>
+        </Reveal>
 
-        <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6">
+        <Reveal delay={80} className="flex flex-wrap justify-center items-center gap-x-10 gap-y-8 md:gap-x-14">
           {partners.map((partner) => (
             <PartnerLogo key={partner.slug} partner={partner} />
           ))}
-        </div>
+        </Reveal>
       </Container>
     </section>
   )

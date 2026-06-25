@@ -1,78 +1,55 @@
 import React from 'react'
 import Link from 'next/link'
-import { Button, Container, Icon } from '@/components/ui'
-import { faCheck, faCalendarAlt, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { Button, Container, Icon, Reveal } from '@/components/ui'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const CTASection = () => {
   return (
-    <section className="relative py-20 bg-gradient-to-r from-primary via-accent to-primary bg-size-200 bg-pos-0 hover:bg-pos-100 transition-all duration-1000 overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/10 via-transparent to-white/5" />
-        <div className="absolute top-10 right-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-float" />
-        <div className="absolute bottom-10 left-10 w-24 h-24 bg-white/15 rounded-full blur-lg animate-float" style={{ animationDelay: '-2s' }} />
-      </div>
-
-      <Container className="relative z-10">
-        <div className="max-w-4xl mx-auto text-center text-white">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-slide-up">
+    <section className="border-t border-white/10 bg-secondary py-24 lg:py-32">
+      <Container>
+        <Reveal className="max-w-3xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-4">
+            Get Started
+          </p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Start With 2 Hours Free AI Consulting
           </h2>
-          <p className="text-xl md:text-2xl mb-8 text-white animate-slide-up-delayed">
-            Discover how AI can transform your business. No commitment required.
-            Let&apos;s explore what&apos;s possible together.
+          <p className="text-xl text-gray-300 mb-10">
+            Work directly with an AI Solution Architect who has actually built and deployed
+            production AI &mdash; not just advised on it. No commitment required. Let&apos;s map
+            what&apos;s practical for your business.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-scale-in" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
-            <Button
-              size="xl"
-              className="bg-white text-primary hover:bg-gray-100 hover:scale-105 hover:shadow-2xl"
-              shimmer
-              magnetic
-              asChild
-            >
+          <div className="flex flex-col sm:flex-row gap-4 sm:items-center mb-12">
+            <Button size="lg" variant="primary" asChild className="group text-base shadow-md hover:shadow-lg">
               <Link href="/book-time">
-                <Icon icon={faCalendarAlt} className="mr-2" />
                 Get 2 Hours Free
+                <Icon icon={faArrowRight} className="ml-2 transition-transform duration-200 group-hover:translate-x-1" size="xs" />
               </Link>
             </Button>
-            <Button
-              variant="outline"
-              size="xl"
-              className="border-white text-white hover:bg-white hover:text-primary hover:scale-105 hover:shadow-2xl"
-              asChild
+            <a
+              href="tel:8649915656"
+              className="inline-flex items-center text-gray-300 hover:text-white transition-colors font-medium"
             >
-              <a href="tel:8649915656">
-                <Icon icon={faPhone} className="mr-2" />
-                Call 864-991-5656
-              </a>
-            </Button>
+              Call 864-991-5656
+            </a>
           </div>
 
-          <div className="border-t border-white/20 pt-8">
-            <p className="text-lg text-white mb-4">
-              27+ years in technology. 30+ successful implementations. Zero failures.
+          <div className="border-t border-white/10 pt-8">
+            <p className="text-base text-gray-300 mb-4">
+              27+ years building real systems. Hundreds of solutions architected. Production AI built and deployed.
             </p>
-            <div className="flex flex-wrap justify-center gap-6 text-sm text-white">
-              <span className="flex items-center gap-2 hover:text-white transition-colors duration-300 animate-slide-up" style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
-                <Icon icon={faCheck} size="lg" className="text-white animate-bounce-gentle" />
-                8+ MEP Partnerships
-              </span>
-              <span className="flex items-center gap-2 hover:text-white transition-colors duration-300 animate-slide-up" style={{ animationDelay: '0.8s', animationFillMode: 'both' }}>
-                <Icon icon={faCheck} size="lg" className="text-white animate-bounce-gentle" style={{ animationDelay: '0.5s' }} />
-                $50K-$1M Saved Per Client
-              </span>
-              <span className="flex items-center gap-2 hover:text-white transition-colors duration-300 animate-slide-up" style={{ animationDelay: '1s', animationFillMode: 'both' }}>
-                <Icon icon={faCheck} size="lg" className="text-white animate-bounce-gentle" style={{ animationDelay: '1s' }} />
-                AI Education Expert
-              </span>
-              <span className="flex items-center gap-2 hover:text-white transition-colors duration-300 animate-slide-up" style={{ animationDelay: '1.2s', animationFillMode: 'both' }}>
-                <Icon icon={faCheck} size="lg" className="text-white animate-bounce-gentle" style={{ animationDelay: '1.5s' }} />
-                Creator of SmartHive.online
-              </span>
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-gray-400">
+              <span>MEP Partner &amp; Purdue MEP Instructor</span>
+              <span className="hidden sm:inline text-white/20">|</span>
+              <span>Five Courses for Businesses &amp; MEPs</span>
+              <span className="hidden sm:inline text-white/20">|</span>
+              <span>AI Readiness Assessment</span>
+              <span className="hidden sm:inline text-white/20">|</span>
+              <span>Creator of SmartHive.online</span>
             </div>
           </div>
-        </div>
+        </Reveal>
       </Container>
     </section>
   )

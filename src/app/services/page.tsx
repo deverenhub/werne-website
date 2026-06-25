@@ -1,12 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { Metadata } from 'next'
-import { Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Icon } from '@/components/ui'
-import { faBrain, faWrench, faGraduationCap, faCheck, faClipboardCheck } from '@fortawesome/free-solid-svg-icons'
+import { ParallaxImage, Button, Container, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Icon } from '@/components/ui'
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
 
 export const metadata: Metadata = {
-  title: 'Services - AI Education, Consulting & Custom Development | Werne Enterprises',
+  title: 'Services - AI Education, Consulting & Custom Development',
   description: 'AI Education, Custom AI Development, AI Consulting, and AI Training Programs for Manufacturing, Healthcare, and Commercial Business. 2 hours free consulting.',
 }
 
@@ -15,8 +14,6 @@ const ServicesPage = () => {
     {
       title: 'AI Education & Training',
       description: 'Comprehensive AI training programs including the Purdue MEP AI Series, AI the Spreadsheet Killer, and 12 Week AI Bootcamp.',
-      icon: faGraduationCap,
-      color: 'primary',
       features: [
         'Purdue MEP AI Series',
         'AI the Spreadsheet Killer Training',
@@ -32,14 +29,12 @@ const ServicesPage = () => {
     {
       title: 'Custom AI Development',
       description: 'Build custom AI solutions like SmartHive.online that capture tribal knowledge and create AI personas for your business.',
-      icon: faBrain,
-      color: 'accent',
       features: [
         'SmartHive.online Platform',
         'Tribal Knowledge Capture',
         'AI Persona Development',
         'Custom AI Applications',
-        'RAG Implementation',
+        'ERP / MRP & Systems Integration',
         'AI Integration Services'
       ],
       pricing: 'Contact for pricing',
@@ -48,9 +43,7 @@ const ServicesPage = () => {
     },
     {
       title: 'AI Consulting',
-      description: 'Strategic AI consulting with 9 years of experience and 30+ successful implementations. Zero failures.',
-      icon: faWrench,
-      color: 'secondary',
+      description: 'Strategic AI consulting grounded in 27+ years architecting real systems, with practical guidance you can act on.',
       features: [
         'AI Readiness Assessments',
         'AI Strategy Development',
@@ -66,15 +59,13 @@ const ServicesPage = () => {
     {
       title: 'AI Readiness Assessments',
       description: 'Evaluate your organization\'s preparedness for AI adoption with our proven assessment methodology.',
-      icon: faClipboardCheck,
-      color: 'warning',
       features: [
         'Current State Analysis',
         'Data Readiness Review',
         'Infrastructure Assessment',
         'Skills Gap Analysis',
         'Prioritized Roadmap',
-        'ROI Projections'
+        'Practical Next Steps'
       ],
       pricing: '2 Hours Free',
       href: '/book-time',
@@ -108,34 +99,32 @@ const ServicesPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-secondary via-secondary-dark to-secondary py-20 lg:py-32 text-white overflow-hidden">
+      <section className="relative bg-secondary text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/products/smarthive-dashboard.jpg"
-            alt="Services background"
-            fill
-            className="object-cover opacity-20"
-            priority
-            sizes="100vw"
-          />
+          <ParallaxImage src="/images/products/smarthive-dashboard.jpg" alt="SmartHive AI dashboard built by Werne Enterprises" priority />
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/85 to-secondary/50" />
         </div>
         <Container className="relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="accent" size="lg" className="mb-6">
+          <div className="max-w-3xl py-16 lg:py-28">
+            <Badge variant="primary" size="lg" className="mb-6">
               AI Education | Consulting | Custom Development
             </Badge>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-5">
+              AI Innovation &amp; Services
+            </p>
+
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-[1.08]">
               AI Innovation &{' '}
               <span className="text-primary">Services</span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
               From AI training programs to custom development, we help businesses
               harness the power of artificial intelligence. Start with 2 hours free consulting.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Button size="xl" asChild>
                 <Link href="/book-time">Get 2 Hours Free</Link>
               </Button>
@@ -148,15 +137,18 @@ const ServicesPage = () => {
       </section>
 
       {/* Services Grid */}
-      <section id="services" className="py-20 bg-gray-50">
+      <section id="services" className="py-16 bg-gray-50">
         <Container>
-          <div className="text-center mb-16">
+          <div className="max-w-3xl mb-12">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
+              Service Offerings
+            </p>
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               Our Service Offerings
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive AI services designed for businesses with 10-600 employees
-              and $10M-$500M in revenue.
+            <p className="text-xl text-gray-600">
+              Practical AI services for mid-market manufacturers and businesses,
+              delivered directly by Deveren.
             </p>
           </div>
 
@@ -170,18 +162,11 @@ const ServicesPage = () => {
                 )}
 
                 <CardHeader>
-                  <div className="mb-4">
-                    <Icon
-                      icon={service.icon}
-                      size="4xl"
-                      color={service.color as 'primary' | 'secondary' | 'accent' | 'warning'}
-                    />
-                  </div>
                   <CardTitle className="text-2xl">{service.title}</CardTitle>
                   <CardDescription className="text-lg">
                     {service.description}
                   </CardDescription>
-                  <div className="text-2xl font-bold text-primary mt-4">
+                  <div className="text-2xl font-bold text-[#2E7D32] mt-4">
                     {service.pricing}
                   </div>
                 </CardHeader>
@@ -190,9 +175,7 @@ const ServicesPage = () => {
                   <ul className="space-y-3">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start">
-                        <div className="mr-2 mt-1">
-                          <Icon icon={faCheck} size="lg" color="success" />
-                        </div>
+                        <Icon icon={faCheck} size="xs" className="mr-2 mt-1 shrink-0 text-[#2E7D32]" />
                         <span className="text-gray-700">{feature}</span>
                       </li>
                     ))}
@@ -217,15 +200,18 @@ const ServicesPage = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <Container>
-          <div className="text-center mb-16">
+          <div className="max-w-3xl mb-12">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#2E7D32] mb-4">
+              Our Process
+            </p>
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               Our Proven Process
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A practical approach that has delivered 30+ successful implementations
-              with zero failures.
+            <p className="text-xl text-gray-600">
+              A practical approach refined over 27+ years of architecting and
+              deploying real systems.
             </p>
           </div>
 
@@ -244,49 +230,56 @@ const ServicesPage = () => {
       </section>
 
       {/* Statistics Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-accent text-white">
+      <section className="py-16 bg-secondary text-white">
         <Container>
-          <div className="text-center mb-12">
+          <div className="max-w-3xl mb-12">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-4">
+              By the Numbers
+            </p>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Proven Results
+              Real Experience, Real Systems
             </h2>
-            <p className="text-xl text-gray-100 max-w-3xl mx-auto">
-              27+ years in technology. 30+ successful implementations. Zero failures.
+            <p className="text-xl text-gray-300">
+              27+ years architecting real systems, with production AI solutions and
+              workflows built, deployed, and running.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">30+</div>
-              <div className="text-gray-100">Successful Implementations</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">27+</div>
+              <div className="text-gray-300">Years of Systems &amp; IT Experience</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">8+</div>
-              <div className="text-gray-100">MEP Partnerships</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">Hundreds</div>
+              <div className="text-gray-300">of Solutions Architected</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">$50K-$1M</div>
-              <div className="text-gray-100">Saved Per Client</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">5</div>
+              <div className="text-gray-300">Courses for Businesses &amp; MEPs</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">0</div>
-              <div className="text-gray-100">Implementation Failures</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">Production</div>
+              <div className="text-gray-300">AI Solutions &amp; Workflows Deployed</div>
             </div>
           </div>
         </Container>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-secondary text-white">
+      <section className="border-t border-white/10 py-16 bg-secondary text-white">
         <Container>
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-4">
+              Get Started
+            </p>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Start With 2 Hours Free
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               No commitment required. Let&apos;s discuss your AI goals and see if we&apos;re a good fit.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Button size="xl" variant="primary" asChild>
                 <Link href="/book-time">Book Free Consultation</Link>
               </Button>

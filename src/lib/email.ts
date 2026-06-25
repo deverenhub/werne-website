@@ -308,9 +308,12 @@ export async function sendNotificationEmail(data: ContactFormData) {
     }
 
     const isUrgent = data.message.toLowerCase().includes('urgent')
-    const companyDisplay = data.company || 'Individual'
+    // Strip CRLF from any value used in a subject/header (header-injection defense)
+    const safeHeader = (s: string) => s.replace(/[\r\n]+/g, ' ').trim()
+    const safeName = safeHeader(data.name)
+    const companyDisplay = data.company ? safeHeader(data.company) : 'Individual'
 
-    const subject = `${isUrgent ? '🚨 URGENT: ' : ''}New Contact Inquiry from ${data.name} | ${companyDisplay}`
+    const subject = `${isUrgent ? '🚨 URGENT: ' : ''}New Contact Inquiry from ${safeName} | ${companyDisplay}`
     const htmlContent = createEmailTemplate(createNotificationContent(data))
 
     const result = await resend.emails.send({
@@ -321,7 +324,7 @@ export async function sendNotificationEmail(data: ContactFormData) {
       replyTo: data.email,
       headers: {
         'X-Priority': isUrgent ? '1' : '3',
-        'X-Contact-Company': data.company || 'Not provided',
+        'X-Contact-Company': data.company ? safeHeader(data.company) : 'Not provided',
       },
     })
 
