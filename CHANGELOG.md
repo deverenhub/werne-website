@@ -29,6 +29,14 @@ Format based on [Keep a Changelog](https://keepachangelog.com/).
   content sections bumped to `py-20 lg:py-28` and the closing CTA to `lg:py-32` (partner
   strip kept tight). Removed dead, off-brand `.gradient-mesh` rainbow CSS (unused; also
   referenced a non-existent `gradientX` keyframe).
+- **Hero rebuilt as a flagship, full-bleed visual** (benchmarked against QuantumBlack /
+  Neurons Lab / RTS Labs): replaced the small 4:3 SVG panel with a large animated HTML5
+  **canvas "knowledge-network → AI core"** — a drifting constellation of nodes with
+  proximity links, data pulses flowing into a luminous green core, depth via parallax
+  layers, and subtle pointer parallax (`HeroVisual.tsx`). Hero now fills the viewport
+  (`min-h-[calc(100svh-6rem)]`) with editorial `clamp()` display type and a navy
+  legibility scrim. Fully static under `prefers-reduced-motion`; pauses when scrolled
+  off-screen.
 
 ### Fixed — Accessibility & Security
 - WCAG 2.1 AA contrast on CTAs, focus ring, and skip link; `prefers-reduced-motion`
